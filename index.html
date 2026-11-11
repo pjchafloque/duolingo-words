@@ -501,6 +501,7 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
   // ---- State ----
   const state = {
     data: null, status: null, demo: false, courseKey: null,
+    show: null,
     q: "", sort: store.get("sort", "recent"), week: false,
     quiz: store.get("quiz", false), slow: store.get("slow", false),
   };
@@ -512,7 +513,12 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
     if (!state.data) return [];
     const keys = new Set(Object.keys(state.data.courses || {}));
     for (const k of state.data.known || []) if (k && k.learning && k.from) keys.add(keyOf(k));
-    return [...keys].sort();
+    const all = [...keys].sort();
+    // data/notebooks.json picks which courses get a tab, and in what order.
+    const show = state.show;
+    if (!show) return all;
+    const rank = (k) => show.indexOf(k.split("-")[0]);
+    return all.filter((k) => rank(k) >= 0).sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
   }
   function courseInfo(key) {
     if (!state.data || !key) return null;
@@ -563,6 +569,10 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
     if (!forceDemo) {
       try { data = await getJSON("data/words.json"); } catch { failed = true; }
       try { state.status = await getJSON("status.json"); } catch { state.status = null; }
+      try {
+        const nb = await getJSON("data/notebooks.json");
+        if (Array.isArray(nb.show) && nb.show.length) state.show = nb.show.map(String);
+      } catch { state.show = null; }
     }
     if (forceDemo || (failed && location.protocol === "file:") || (failed && !location.hostname.endsWith("github.io"))) {
       try {

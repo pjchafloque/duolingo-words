@@ -1,0 +1,4 @@
+{
+ "_how": "Which Duolingo courses get a tab, by language code, in tab order. Your account also has en (English) and zh (Chinese): add them here if you want those notebooks too.",
+ "show": ["fr", "pt"]
+}

@@ -31,7 +31,7 @@ Duolingo has no official API. This uses the same requests the Duolingo website m
 
 Duolingo only shares the word list of the course that's open in your app, so each run reads that one course. To bring in new Portuguese words, open Portuguese on Duolingo and either wait for the next hourly run or press "Sincronizar ahora" on the page. That opens the workflow on GitHub, where you click "Run workflow". Switching courses never loses words: each notebook keeps everything it has seen, and new words show up with the date a run first found them.
 
-The Portuguese tab shows up as soon as a run reads your course list, even before its words arrive. Each notebook has its own paper, school cursive and pronunciation guide. Linking to `…/duolingo-words/#pt` opens the Portuguese one directly.
+The Portuguese tab shows up as soon as a run reads your course list, even before its words arrive. `data/notebooks.json` decides which courses get a tab. Your account also has English and Chinese; add `"en"` or `"zh"` to its list to see them too. Each notebook has its own paper, school cursive and pronunciation guide. Linking to `…/duolingo-words/#pt` opens the Portuguese one directly.
 
 ## Fixing a pronunciation
 

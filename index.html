@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mon carnet de français</title>
+<meta name="description" content="Las palabras que aprendí en Duolingo, con su significado y cómo se pronuncian.">
+<meta name="theme-color" content="#fbfcfe" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131628" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23fbfcfe'/%3E%3Cg stroke='%237678cd' stroke-opacity='.55' stroke-width='2'%3E%3Cpath d='M0 22h64M0 38h64M0 54h64'/%3E%3C/g%3E%3Cpath d='M18 0v64' stroke='%23e2506a' stroke-width='3'/%3E%3Cpath d='M26 33c4-10 10-12 14-6s-2 12 4 12 8-8 10-12' fill='none' stroke='%232448c7' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/spectral-400.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="fonts/playwrite-fr-trad.woff" as="font" type="font/woff" crossorigin>
+<style>
+@font-face { font-family: "Spectral"; src: url("fonts/spectral-400.woff") format("woff"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Spectral"; src: url("fonts/spectral-400-italic.woff") format("woff"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Spectral"; src: url("fonts/spectral-600.woff") format("woff"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Playwrite FR Trad"; src: url("fonts/playwrite-fr-trad.woff") format("woff"); font-weight: 300; font-style: normal; font-display: swap; }
+
+/* Seyès paper: a fine line every 8px, a stronger one every 32px, and the red margin. */
+:root {
+  --paper: #fbfcfe;
+  --line-minor: rgba(118, 120, 205, .11);
+  --line-major: rgba(118, 120, 205, .30);
+  --line-vert: rgba(118, 120, 205, .09);
+  --margin-red: #e2506a;
+  --ink: #1d2140;
+  --ink-soft: #575d82;
+  --pen: #2448c7;
+  --pen-wash: rgba(36, 72, 199, .09);
+  --red-pen: #c4263f;
+  --tape: #ffffff;
+  --tape-edge: rgba(29, 33, 64, .14);
+  --grid-y: 23px;
+  --margin-x: 88px;
+  --gutter: 28px;
+  --serif: "Spectral", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --script: "Playwrite FR Trad", "Segoe Script", "Snell Roundhand", cursive;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #131628;
+    --line-minor: rgba(150, 158, 255, .07);
+    --line-major: rgba(150, 158, 255, .17);
+    --line-vert: rgba(150, 158, 255, .05);
+    --margin-red: #ff6b86;
+    --ink: #e8eaf7;
+    --ink-soft: #a6abcb;
+    --pen: #93adff;
+    --pen-wash: rgba(147, 173, 255, .13);
+    --red-pen: #ff8da2;
+    --tape: #262a44;
+    --tape-edge: rgba(232, 234, 247, .16);
+  }
+}
+@media (max-width: 719px) {
+  :root { --margin-x: 46px; --gutter: 14px; }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font: 400 18px/32px var(--serif);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--line-major) 1px, transparent 1px),
+    linear-gradient(var(--line-minor) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-vert) 1px, transparent 1px);
+  background-size: 100% 32px, 100% 8px, 32px 100%;
+  background-position: 0 var(--grid-y), 0 var(--grid-y), 0 0;
+}
+.page {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 32px 96px calc(var(--margin-x) + var(--gutter));
+}
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: var(--margin-x);
+  width: 1.5px;
+  background: var(--margin-red);
+  opacity: .7;
+}
+@media (max-width: 719px) { .page { padding-right: 16px; } }
+
+a { color: var(--pen); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--pen); outline-offset: 2px; border-radius: 4px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Cover */
+.title {
+  margin: 32px 0 32px;
+  font: 300 46px/96px var(--script);
+  letter-spacing: .005em;
+}
+@media (max-width: 719px) { .title { font-size: 28px; line-height: 64px; margin: 0 0 32px; } }
+.summary { margin: 0; max-width: 62ch; font-size: 19px; }
+.status { margin: 0; color: var(--ink-soft); font-size: 16px; }
+.status.bad { color: var(--red-pen); }
+.demo { margin: 0; color: var(--red-pen); font-size: 16px; font-style: italic; }
+
+/* Tools */
+.tools {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  margin: 32px 0 0;
+  padding: 16px 0 15px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line-major);
+}
+.tools::before { /* keep the margin line running behind the sticky bar */
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: calc(-1 * var(--gutter));
+  width: 1.5px;
+  background: var(--margin-red);
+  opacity: .7;
+}
+.search { flex: 1 1 260px; max-width: 420px; }
+.search input {
+  width: 100%;
+  height: 32px;
+  padding: 0 2px;
+  border: 0;
+  border-bottom: 1.5px solid var(--ink-soft);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: italic 400 18px/30px var(--serif);
+}
+.search input::placeholder { color: var(--ink-soft); opacity: .85; }
+.search input:focus { outline: none; border-bottom-color: var(--pen); }
+.search input::-webkit-search-cancel-button { filter: grayscale(1); }
+.toggles { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+.toggle, .seg button {
+  height: 32px;
+  padding: 0 2px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--ink-soft);
+  font: 400 17px/30px var(--serif);
+  cursor: pointer;
+}
+.toggle[aria-pressed="true"], .seg button[aria-pressed="true"] {
+  color: var(--ink);
+  border-bottom-color: var(--margin-red);
+}
+.toggle:hover, .seg button:hover { color: var(--ink); }
+.seg { display: flex; gap: 14px; }
+.course { font: 400 17px/30px var(--serif); color: var(--ink); background: transparent; border: 0; border-bottom: 1.5px solid var(--ink-soft); height: 32px; }
+
+/* Word list */
+.group { margin: 0; }
+.group > h2 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 32px 0 0;
+  font: 300 25px/64px var(--script);
+}
+.group > h2 .when { text-decoration: underline 2px var(--margin-red); text-underline-offset: 9px; text-decoration-skip-ink: none; }
+.group > h2 .count { font: italic 400 16px/32px var(--serif); color: var(--ink-soft); white-space: nowrap; }
+@media (max-width: 719px) {
+  .group > h2 { font-size: 19px; }
+  .tools { position: static; gap: 8px 16px; }
+  .toggles { gap: 4px 14px; }
+  .toggle, .seg button { font-size: 16px; }
+}
+@media (max-width: 479px) { .group > h2 .count { display: none; } }
+.entries { list-style: none; margin: 0; padding: 0; }
+.entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .9fr) minmax(0, 1.25fr);
+  column-gap: 24px;
+  padding: 0 8px;
+  margin: 0 -8px;
+  border-radius: 3px;
+}
+.entry.playing { background: var(--pen-wash); }
+.word { font-weight: 600; font-size: 21px; overflow-wrap: anywhere; }
+.pron { color: var(--pen); font-style: italic; font-size: 19px; overflow-wrap: anywhere; }
+.meaning { overflow-wrap: anywhere; }
+.note { display: block; color: var(--ink-soft); font-style: italic; font-size: 16px; }
+@media (max-width: 719px) {
+  .entry { display: block; padding-top: 0; padding-bottom: 0; }
+  .word { margin-right: 12px; }
+  .word, .pron { display: inline; }
+  .meaning { display: block; }
+}
+.play {
+  position: absolute;
+  top: 2px;
+  left: calc(-1 * var(--gutter) - 8px - 12px - 28px + 8px);
+  width: 28px; height: 28px;
+  display: grid; place-items: center;
+  padding: 0;
+  border: 1.5px solid var(--pen);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--pen);
+  cursor: pointer;
+}
+@media (max-width: 719px) { .play { left: calc(-1 * var(--gutter) - 8px - 6px - 28px + 8px); } }
+.play svg { width: 14px; height: 14px; }
+.play .bars { display: none; }
+.entry.playing .play { background: var(--pen); color: var(--paper); }
+.entry.playing .play .speaker { display: none; }
+.entry.playing .play .bars { display: block; }
+.bars rect { transform-origin: 50% 100%; animation: bar .8s ease-in-out infinite; }
+.bars rect:nth-child(2) { animation-delay: -.25s; }
+.bars rect:nth-child(3) { animation-delay: -.5s; }
+@keyframes bar { 0%, 100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+
+/* Review mode: meanings under correction tape */
+.meaning.covered .tape {
+  display: inline-block;
+  min-width: 7em;
+  max-width: 100%;
+  height: 24px;
+  vertical-align: -5px;
+  border: 1px solid var(--tape-edge);
+  border-radius: 2px;
+  background: var(--tape);
+  box-shadow: 0 1px 0 var(--tape-edge);
+  cursor: pointer;
+  padding: 0;
+}
+.meaning.covered .text, .meaning.covered .note { display: none; }
+.meaning:not(.covered) .tape { display: none; }
+
+.message { margin: 32px 0 0; max-width: 60ch; color: var(--ink-soft); font-style: italic; }
+
+/* Pronunciation guide */
+.legend { margin: 64px 0 0; max-width: 760px; }
+.legend summary { cursor: pointer; font: 600 19px/32px var(--serif); list-style: none; }
+.legend summary::-webkit-details-marker { display: none; }
+.legend summary::after { content: "  +"; font-family: var(--serif); color: var(--ink-soft); }
+.legend[open] summary::after { content: "  −"; }
+.legend p { margin: 0; color: var(--ink-soft); }
+.legend dl { display: grid; grid-template-columns: 6.5em 1fr; column-gap: 20px; margin: 0; }
+.legend dt { color: var(--pen); font-style: italic; font-size: 19px; }
+.legend dd { margin: 0; }
+.legend .eg { color: var(--ink-soft); white-space: nowrap; }
+@media (max-width: 719px) { .legend dl { grid-template-columns: 4.5em 1fr; } }
+
+footer { margin: 64px 0 0; max-width: 62ch; color: var(--ink-soft); font-size: 16px; }
+footer p { margin: 0; }
+footer .links { display: flex; flex-wrap: wrap; gap: 0 20px; }
+footer button { padding: 0; border: 0; background: none; color: var(--pen); font: inherit; text-decoration: underline 1px; text-underline-offset: 3px; cursor: pointer; }
+
+@media (prefers-reduced-motion: reduce) { .bars rect { animation: none; transform: none; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1 class="title" id="title">Mon carnet de français</h1>
+    <p class="summary" id="summary">&nbsp;</p>
+    <p class="status" id="status" hidden></p>
+    <p class="demo" id="demo" hidden></p>
+  </header>
+
+  <div class="tools" id="tools" role="search">
+    <label class="search"><span class="sr" id="searchLabel">Buscar</span>
+      <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Buscar">
+    </label>
+    <div class="toggles">
+      <select class="course" id="course" hidden></select>
+      <div class="seg" role="group" id="sortGroup">
+        <button type="button" data-sort="recent" aria-pressed="true">Recientes</button>
+        <button type="button" data-sort="az" aria-pressed="false">A–Z</button>
+      </div>
+      <button type="button" class="toggle" id="week" aria-pressed="false">Esta semana</button>
+      <button type="button" class="toggle" id="quiz" aria-pressed="false">Repaso</button>
+      <button type="button" class="toggle" id="slow" aria-pressed="false">Lento</button>
+    </div>
+  </div>
+
+  <main id="list"></main>
+
+  <details class="legend" id="legend" hidden>
+    <summary id="legendTitle">Cómo leer la pronunciación</summary>
+    <p id="legendIntro"></p>
+    <dl id="legendList"></dl>
+  </details>
+
+  <footer>
+    <p id="about"></p>
+    <p class="links">
+      <button type="button" id="langToggle">English</button>
+      <a href="tools.html" id="toolsLink">Exportar a mano</a>
+      <a href="#" id="repoLink" hidden>Código en GitHub</a>
+    </p>
+  </footer>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-speaker" viewBox="0 0 16 16"><path d="M2 6h2.6L8.5 2.8v10.4L4.6 10H2z" fill="currentColor"/><path d="M11 5.2c.9.8 1.4 1.7 1.4 2.8s-.5 2-1.4 2.8M12.9 3.3C14.3 4.6 15 6.2 15 8s-.7 3.4-2.1 4.7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 16 16"><rect x="2.5" y="3" width="2.4" height="10" rx="1.2" fill="currentColor"/><rect x="6.8" y="3" width="2.4" height="10" rx="1.2" fill="currentColor"/><rect x="11.1" y="3" width="2.4" height="10" rx="1.2" fill="currentColor"/></symbol>
+</svg>
+
+<script type="application/json" id="demoData">{"version":1,"current":"fr-es","courses":{"fr-es":{"learning":"fr","from":"es","name":"French","words":[{"text":"croissant","translations":["cruasán"],"audio":null,"ago":0.08,"seq":26,"pron":"cruasán","ipa":"kʁwasˈɑ̃"},{"text":"fromage","translations":["queso"],"audio":null,"ago":0.1,"seq":25,"pron":"fromash","ipa":"fʁɔmˈaʒ"},{"text":"bonjour","translations":["hola","buenos días"],"audio":null,"ago":0.12,"seq":24,"pron":"bonyur","ipa":"bɔ̃ʒˈuʁ"},{"text":"merci","translations":["gracias"],"audio":null,"ago":2,"seq":23,"pron":"mersí","ipa":"mɛʁsˈi"},{"text":"au revoir","translations":["adiós","hasta luego"],"audio":null,"ago":2,"seq":22,"pron":"orevuar","ipa":"oʁəvwˈaʁ"},{"text":"je m'appelle","translations":["me llamo"],"audio":null,"ago":2,"seq":21,"pron":"ye mapel","ipa":"ʒə mapˈɛl"},{"text":"enfant","translations":["niño","niña"],"audio":null,"ago":2,"seq":20,"pron":"anfán","ipa":"ɑ̃fˈɑ̃"},{"text":"huit","translations":["ocho"],"audio":null,"ago":5,"seq":19,"pron":"üit","ipa":"ɥˈit"},{"text":"fille","translations":["chica","hija"],"audio":null,"ago":5,"seq":18,"pron":"fiy","ipa":"fˈij"},{"text":"monsieur","translations":["señor"],"audio":null,"ago":5,"seq":17,"pron":"mesiö́","ipa":"məsjˈø"},{"text":"salut","translations":["hola","chao"],"audio":null,"ago":5,"seq":16,"pron":"salǘ","ipa":"salˈy"},{"text":"aujourd'hui","translations":["hoy"],"audio":null,"ago":12,"seq":15,"pron":"oyurdüí","ipa":"oʒuʁdɥˈi"},{"text":"oiseau","translations":["pájaro"],"audio":null,"ago":12,"seq":14,"pron":"uazó","ipa":"wazˈo"},{"text":"école","translations":["escuela"],"audio":null,"ago":12,"seq":13,"pron":"ecol","ipa":"ekˈɔl"},{"text":"café","translations":["café"],"audio":null,"ago":12,"seq":12,"pron":"café","ipa":"kafˈe"},{"text":"pomme","translations":["manzana"],"audio":null,"ago":12,"seq":11,"pron":"pom","ipa":"pˈɔm"},{"text":"tu","translations":["tú"],"audio":null,"ago":12,"seq":10,"pron":"tü","ipa":"tˈy"},{"text":"maison","translations":["casa"],"audio":null,"ago":12,"seq":9,"pron":"mezón","ipa":"mɛzˈɔ̃"},{"text":"garçon","translations":["chico","mesero"],"audio":null,"ago":12,"seq":8,"pron":"garsón","ipa":"ɡaʁsˈɔ̃"},{"text":"beaucoup","translations":["mucho"],"audio":null,"ago":12,"seq":7,"pron":"bocú","ipa":"bokˈu"},{"text":"s'il vous plaît","translations":["por favor"],"audio":null,"ago":12,"seq":6,"pron":"sil vu ple","ipa":"sil vu plˈɛ"},{"text":"voyage","translations":["viaje"],"audio":null,"ago":12,"seq":5,"pron":"vuayash","ipa":"vwajˈaʒ"},{"text":"rouge","translations":["rojo","roja"],"audio":null,"ago":12,"seq":4,"pron":"rush","ipa":"ʁˈuʒ"},{"text":"chat","translations":["gato"],"audio":null,"ago":12,"seq":3,"pron":"sha","ipa":"ʃˈa","note":"la t no suena"},{"text":"deux","translations":["dos"],"audio":null,"ago":12,"seq":2,"pron":"dö","ipa":"dˈø"},{"text":"cuisine","translations":["cocina"],"audio":null,"ago":12,"seq":1,"pron":"cüizín","ipa":"kɥizˈin"}]}}}</script>
+<script>
+(() => {
+  "use strict";
+
+  // ---- Words for the interface (the notebook itself speaks French) ----
+  const STR = {
+    es: {
+      search: "Buscar",
+      searchPh: (a, b) => `Buscar en ${a} o ${b}`,
+      sort: "Orden", recent: "Recientes", az: "A–Z", week: "Esta semana", quiz: "Repaso", slow: "Lento",
+      quizTitle: "Tapa los significados para repasar", slowTitle: "Audio más lento",
+      course: "Curso",
+      count: n => n === 1 ? "1 palabra" : `${num(n)} palabras`,
+      summary: (n, wk) => `${n === 1 ? "1 palabra aprendida" : num(n) + " palabras aprendidas"} en Duolingo.` +
+        (wk ? ` ${wk === 1 ? "1 nueva" : num(wk) + " nuevas"} esta semana.` : ""),
+      firstOnly: "Las palabras que aprendas a partir de hoy aparecerán con su fecha.",
+      checked: rel => `Revisado ${rel}.`,
+      failed: (msg) => `La última sincronización no funcionó: ${msg}`,
+      seeRun: "Ver en GitHub",
+      demo: "Vista previa con palabras de ejemplo. Tus palabras aparecen cuando la página está en GitHub y la sincronización ya corrió.",
+      empty: "Todavía no hay palabras. Cuando termine la primera sincronización, tus palabras de Duolingo aparecerán aquí.",
+      noMatch: q => `Ninguna palabra coincide con «${q}».`,
+      noWeek: "Esta semana todavía no hay palabras nuevas.",
+      play: w => `Escuchar «${w}»`,
+      reveal: w => `Mostrar el significado de «${w}»`,
+      noAudio: "Este navegador no puede leer palabras en voz alta.",
+      legendTitle: "Cómo leer la pronunciación",
+      legendIntro: "La pronunciación está escrita con letras del español. Estas son las que se leen distinto:",
+      about: "Las palabras vienen de tu lista de Duolingo y se actualizan solas cada 6 horas. Si una pronunciación no te convence, corrígela en data/overrides.json.",
+      tools: "Exportar a mano (plan B)", repo: "Código en GitHub", other: "English",
+      loadError: "No se pudo leer data/words.json. Revisa que el archivo exista en el repositorio.",
+      legend: [
+        ["ü", "Di «i» con los labios redondeados, como para silbar."],
+        ["ö", "Di «e» con los labios redondeados, como para decir «o»."],
+        ["an en on", "Vocal nasal: el aire sale también por la nariz y la n casi no suena."],
+        ["r", "La r francesa se dice al fondo de la garganta, parecida a una j suave. Nunca es la r de «perro»."],
+        ["y", "Antes de vocal suena como la «ll» argentina de «yo»."],
+        ["sh", "Como en «show»."],
+        ["z", "Una s que zumba, como una abeja."],
+        ["v", "Con los dientes de arriba sobre el labio de abajo. No es la b."],
+        ["á é í ó ú", "La tilde marca dónde va la fuerza. En francés casi siempre es la última sílaba."],
+      ],
+    },
+    en: {
+      search: "Search",
+      searchPh: (a, b) => `Search in ${a} or ${b}`,
+      sort: "Order", recent: "Recent", az: "A–Z", week: "This week", quiz: "Review", slow: "Slow",
+      quizTitle: "Cover the meanings to review", slowTitle: "Slower audio",
+      course: "Course",
+      count: n => n === 1 ? "1 word" : `${num(n)} words`,
+      summary: (n, wk) => `${n === 1 ? "1 word" : num(n) + " words"} learned on Duolingo.` +
+        (wk ? ` ${wk === 1 ? "1 new word" : num(wk) + " new words"} this week.` : ""),
+      firstOnly: "Words you learn from today on will show up with their date.",
+      checked: rel => `Checked ${rel}.`,
+      failed: (msg) => `The last sync didn't work: ${msg}`,
+      seeRun: "See it on GitHub",
+      demo: "Preview with sample words. Your words show up once the page is on GitHub and the sync has run.",
+      empty: "No words yet. When the first sync finishes, your Duolingo words will show up here.",
+      noMatch: q => `No word matches “${q}”.`,
+      noWeek: "No new words yet this week.",
+      play: w => `Listen to “${w}”`,
+      reveal: w => `Show the meaning of “${w}”`,
+      noAudio: "This browser can't read words aloud.",
+      legendTitle: "How to read the pronunciation",
+      legendIntro: "Pronunciations are written with Spanish letters. These are the ones that read differently:",
+      about: "Words come from your Duolingo list and update on their own every 6 hours. If a pronunciation looks wrong, fix it in data/overrides.json.",
+      tools: "Export by hand (plan B)", repo: "Code on GitHub", other: "Español",
+      loadError: "Couldn't read data/words.json. Check that the file exists in the repository.",
+      legend: [
+        ["ü", "Say “i” with your lips rounded, as if to whistle."],
+        ["ö", "Say “e” with your lips rounded, as if to say “o”."],
+        ["an en on", "Nasal vowel: air also goes out through the nose and the n is barely heard."],
+        ["r", "The French r is made at the back of the throat, close to a soft Spanish j. Never the rolled r of “perro”."],
+        ["y", "Before a vowel it sounds like the Argentine “ll” in “yo”."],
+        ["sh", "As in “show”."],
+        ["z", "A buzzing s, like a bee."],
+        ["v", "Upper teeth on the lower lip. Not a b."],
+        ["á é í ó ú", "The accent shows where the stress goes. In French it's almost always the last syllable."],
+      ],
+    },
+  };
+  // Which words illustrate each guide entry, tested on the pronunciation (p) and IPA (i).
+  const LEGEND_TESTS = [
+    (p) => /ü/.test(p),
+    (p) => /ö/.test(p),
+    (p, i) => /̃/.test(i.normalize("NFD")) && /[aeo]n|[aeo]m/.test(p),
+    (p, i) => /ʁ/.test(i),
+    (p, i) => /ʒ/.test(i) && /y/.test(p),
+    (p) => /sh/.test(p),
+    (p) => /z/.test(p),
+    (p) => /v/.test(p),
+    (p) => /[áéíóúǘ]|́/.test(p.normalize("NFC")),
+  ];
+  const SPEECH_TAGS = { fr: "fr-FR", es: "es-ES", pt: "pt-BR", en: "en-US", zh: "zh-CN", zs: "zh-CN", it: "it-IT", de: "de-DE", ja: "ja-JP", ko: "ko-KR" };
+  const DAY = 86400000;
+
+  // ---- Small helpers ----
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const fold = (s) => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/œ/g, "oe").replace(/æ/g, "ae").toLowerCase();
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem("carnet:" + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+    set(k, v) { try { localStorage.setItem("carnet:" + k, JSON.stringify(v)); } catch { /* private mode */ } },
+  };
+  let lang = "es";
+  const t = () => STR[lang];
+  const num = (n) => new Intl.NumberFormat(lang === "es" ? "es" : "en").format(n);
+  const langName = (code) => {
+    try { return new Intl.DisplayNames([lang], { type: "language" }).of(code); } catch { return code; }
+  };
+
+  // ---- State ----
+  const state = {
+    data: null, status: null, demo: false, courseKey: null,
+    q: "", sort: store.get("sort", "recent"), week: false,
+    quiz: store.get("quiz", false), slow: store.get("slow", false),
+  };
+  const revealed = new Set();
+
+  // ---- Loading ----
+  async function getJSON(url) {
+    const r = await fetch(url, { cache: "no-store" });
+    if (!r.ok) throw new Error(r.status + " " + url);
+    return r.json();
+  }
+  async function load() {
+    const forceDemo = new URLSearchParams(location.search).has("demo");
+    let data = null, failed = false;
+    if (!forceDemo) {
+      try { data = await getJSON("data/words.json"); } catch { failed = true; }
+      try { state.status = await getJSON("status.json"); } catch { state.status = null; }
+    }
+    if (forceDemo || (failed && location.protocol === "file:") || (failed && !location.hostname.endsWith("github.io"))) {
+      try {
+        data = JSON.parse($("#demoData").textContent);
+        state.demo = true;
+        // Sample dates are stored as "days ago" so the preview always looks current.
+        const now = Date.now();
+        for (const c of Object.values(data.courses)) for (const w of c.words) {
+          w.added = new Date(now - w.ago * DAY).toISOString();
+        }
+      } catch { data = null; }
+    }
+    if (!data) { showLoadError(); return; }
+    state.data = data;
+    const keys = Object.keys(data.courses || {});
+    state.courseKey = data.current && data.courses[data.current] ? data.current : keys[0] || null;
+    const course = state.courseKey ? data.courses[state.courseKey] : null;
+    lang = store.get("lang", course && course.from === "en" ? "en" : "es");
+    render();
+  }
+  function showLoadError() {
+    lang = store.get("lang", "es");
+    applyChrome();
+    $("#list").innerHTML = `<p class="message">${esc(t().loadError)}</p>`;
+  }
+
+  // ---- Words ----
+  function course() { return state.data && state.courseKey ? state.data.courses[state.courseKey] : null; }
+  function firstBatch(words) {
+    let min = null;
+    for (const w of words) if (w.added && (min === null || w.added < min)) min = w.added;
+    return min;
+  }
+  function isNew(w, first) {
+    return w.added && w.added !== first && Date.now() - Date.parse(w.added) < 7 * DAY;
+  }
+  function matches(w, q) {
+    if (!q) return true;
+    return fold(w.text).includes(q) || fold(w.pron).includes(q) ||
+      (w.translations || []).some((x) => fold(x).includes(q)) || fold(w.note).includes(q);
+  }
+
+  const frDay = new Intl.DateTimeFormat("fr-FR", { weekday: "long", day: "numeric", month: "long" });
+  const frDayYear = new Intl.DateTimeFormat("fr-FR", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  const frDate = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long" });
+  const frDateYear = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+  const dayKey = (iso) => { const d = new Date(iso); return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`; };
+
+  function groups(words, first) {
+    const out = [];
+    if (state.sort === "az") {
+      const sorted = [...words].sort((a, b) => a.text.localeCompare(b.text, "fr", { sensitivity: "base" }));
+      for (const w of sorted) {
+        const letter = (fold(w.text).match(/[a-z]/) || ["#"])[0].toUpperCase();
+        if (!out.length || out[out.length - 1].key !== letter) out.push({ key: letter, title: letter, words: [] });
+        out[out.length - 1].words.push(w);
+      }
+      return out;
+    }
+    const sorted = [...words].sort((a, b) => (b.added || "").localeCompare(a.added || "") || (b.seq || 0) - (a.seq || 0));
+    const thisYear = new Date().getFullYear();
+    for (const w of sorted) {
+      const isFirst = w.added === first;
+      const key = isFirst ? "first" : dayKey(w.added);
+      if (!out.length || out[out.length - 1].key !== key) {
+        const d = new Date(w.added);
+        const sameYear = d.getFullYear() === thisYear;
+        const title = isFirst
+          ? `Jusqu’au ${(sameYear ? frDate : frDateYear).format(d)}`
+          : (sameYear ? frDay : frDayYear).format(d);
+        out.push({ key, title, words: [] });
+      }
+      out[out.length - 1].words.push(w);
+    }
+    return out;
+  }
+
+  // ---- Rendering ----
+  function applyChrome() {
+    const c = course();
+    const s = t();
+    document.documentElement.lang = lang;
+    const learnName = c ? langName(c.learning) : langName("fr");
+    const fromName = c ? langName(c.from) : langName("es");
+    $("#title").textContent = !c || c.learning === "fr" ? "Mon carnet de français" : `${learnName.charAt(0).toUpperCase()}${learnName.slice(1)}`;
+    document.title = $("#title").textContent;
+    $("#searchLabel").textContent = s.search;
+    $("#q").placeholder = s.searchPh(learnName, fromName);
+    $("#sortGroup").setAttribute("aria-label", s.sort);
+    $('[data-sort="recent"]').textContent = s.recent;
+    $('[data-sort="az"]').textContent = s.az;
+    $("#week").textContent = s.week;
+    $("#quiz").textContent = s.quiz; $("#quiz").title = s.quizTitle;
+    $("#slow").textContent = s.slow; $("#slow").title = s.slowTitle;
+    for (const b of document.querySelectorAll("[data-sort]")) b.setAttribute("aria-pressed", String(b.dataset.sort === state.sort));
+    $("#week").setAttribute("aria-pressed", String(state.week));
+    $("#quiz").setAttribute("aria-pressed", String(state.quiz));
+    $("#slow").setAttribute("aria-pressed", String(state.slow));
+    $("#legendTitle").textContent = s.legendTitle;
+    $("#legendIntro").textContent = s.legendIntro;
+    $("#about").textContent = s.about;
+    $("#langToggle").textContent = s.other;
+    $("#toolsLink").textContent = s.tools;
+    $("#repoLink").textContent = s.repo;
+    const repo = state.status && state.status.repo;
+    $("#repoLink").hidden = !repo;
+    if (repo) $("#repoLink").href = `https://github.com/${repo}`;
+
+    const sel = $("#course");
+    const keys = state.data ? Object.keys(state.data.courses || {}) : [];
+    sel.hidden = keys.length < 2;
+    sel.setAttribute("aria-label", s.course);
+    if (keys.length > 1) {
+      sel.innerHTML = keys.map((k) => {
+        const cc = state.data.courses[k];
+        return `<option value="${esc(k)}"${k === state.courseKey ? " selected" : ""}>${esc(langName(cc.learning))} (${esc(langName(cc.from))})</option>`;
+      }).join("");
+    }
+  }
+
+  function relTime(iso) {
+    const diff = (Date.parse(iso) - Date.now()) / 1000;
+    const rtf = new Intl.RelativeTimeFormat(lang, { numeric: "auto" });
+    const abs = Math.abs(diff);
+    if (abs < 60) return rtf.format(Math.round(diff), "second");
+    if (abs < 3600) return rtf.format(Math.round(diff / 60), "minute");
+    if (abs < 86400) return rtf.format(Math.round(diff / 3600), "hour");
+    return rtf.format(Math.round(diff / 86400), "day");
+  }
+
+  function renderHeader(words, first) {
+    const s = t();
+    const wk = words.filter((w) => isNew(w, first)).length;
+    const onlyFirst = words.length > 0 && words.every((w) => w.added === first);
+    $("#summary").textContent = words.length
+      ? s.summary(words.length, wk) + (onlyFirst ? " " + s.firstOnly : "")
+      : " ";
+    const st = state.status;
+    const el = $("#status");
+    el.hidden = true; el.className = "status";
+    if (!state.demo && st && st.checked_at) {
+      el.hidden = false;
+      if (st.ok === false && st.message) {
+        el.classList.add("bad");
+        el.innerHTML = esc(s.failed(st.message)) + (st.run_url ? ` <a href="${esc(st.run_url)}">${esc(s.seeRun)}</a>` : "");
+      } else {
+        el.textContent = s.checked(relTime(st.checked_at));
+      }
+    }
+    $("#demo").hidden = !state.demo;
+    $("#demo").textContent = s.demo;
+  }
+
+  const SPEAKER = '<svg class="speaker" aria-hidden="true"><use href="#i-speaker"/></svg><svg class="bars" aria-hidden="true"><use href="#i-bars"/></svg>';
+
+  function entryHTML(w, idx) {
+    const s = t();
+    const covered = state.quiz && !revealed.has(w.text);
+    const meaning = (w.translations || []).join(", ");
+    return `<li class="entry" data-i="${idx}">` +
+      `<button type="button" class="play" aria-label="${esc(s.play(w.text))}">${SPEAKER}</button>` +
+      `<span class="word" lang="${esc(course().learning)}">${esc(w.text)}</span>` +
+      `<span class="pron"${w.ipa ? ` title="/${esc(w.ipa)}/"` : ""}>${esc(w.pron || "")}</span>` +
+      `<span class="meaning${covered ? " covered" : ""}">` +
+        `<button type="button" class="tape" aria-label="${esc(s.reveal(w.text))}"></button>` +
+        `<span class="text" lang="${esc(course().from)}">${esc(meaning)}</span>` +
+        (w.note ? `<span class="note">${esc(w.note)}</span>` : "") +
+      `</span></li>`;
+  }
+
+  let shown = [];
+  function render() {
+    applyChrome();
+    const c = course();
+    const words = c ? c.words || [] : [];
+    const first = firstBatch(words);
+    renderHeader(words, first);
+    renderLegend(words);
+    const list = $("#list");
+    if (!words.length) {
+      const msg = state.status && state.status.ok === false && state.status.message ? t().failed(state.status.message) : t().empty;
+      list.innerHTML = `<p class="message">${esc(msg)}</p>`;
+      return;
+    }
+    const q = fold(state.q.trim());
+    const filtered = words.filter((w) => matches(w, q) && (!state.week || isNew(w, first)));
+    if (!filtered.length) {
+      list.innerHTML = `<p class="message">${esc(q ? t().noMatch(state.q.trim()) : t().noWeek)}</p>`;
+      return;
+    }
+    shown = [];
+    let html = "";
+    for (const g of groups(filtered, first)) {
+      html += `<section class="group"><h2><span class="when">${esc(g.title)}</span><span class="count">${esc(t().count(g.words.length))}</span></h2><ol class="entries">`;
+      for (const w of g.words) { html += entryHTML(w, shown.length); shown.push(w); }
+      html += "</ol></section>";
+    }
+    list.innerHTML = html;
+  }
+
+  function renderLegend(words) {
+    const s = t();
+    const rows = [];
+    s.legend.forEach(([sym, text], i) => {
+      let best = null;
+      for (const w of words) {
+        if (!w.pron) continue;
+        if (LEGEND_TESTS[i](w.pron, w.ipa || "") && (!best || w.text.length < best.text.length)) best = w;
+      }
+      if (best) rows.push(`<dt>${esc(sym)}</dt><dd>${esc(text)} <span class="eg">${esc(best.text)} → ${esc(best.pron)}</span></dd>`);
+    });
+    $("#legendList").innerHTML = rows.join("");
+    $("#legend").hidden = rows.length === 0;
+  }
+
+  // ---- Audio ----
+  let current = null;
+  function stopAudio() {
+    if (current) {
+      try { current.audio && current.audio.pause(); } catch { /* ignore */ }
+      current.row && current.row.classList.remove("playing");
+      current = null;
+    }
+    if ("speechSynthesis" in window) speechSynthesis.cancel();
+  }
+  function pickVoice(tag) {
+    const voices = ("speechSynthesis" in window) ? speechSynthesis.getVoices() : [];
+    const base = tag.split("-")[0];
+    return voices.find((v) => v.lang === tag) || voices.find((v) => v.lang.replace("_", "-").startsWith(base)) || null;
+  }
+  function speak(w, row, token) {
+    if (!("speechSynthesis" in window)) { row.classList.remove("playing"); alert(t().noAudio); return; }
+    const c = course();
+    const tag = SPEECH_TAGS[c.learning] || c.learning;
+    const u = new SpeechSynthesisUtterance(w.text);
+    u.lang = tag;
+    const v = pickVoice(tag);
+    if (v) u.voice = v;
+    u.rate = state.slow ? 0.7 : 0.95;
+    const done = () => { if (current === token) { row.classList.remove("playing"); current = null; } };
+    u.onend = u.onerror = done;
+    // Some browsers never report the end of speech, so don't leave the row lit up forever.
+    setTimeout(done, 2500 + w.text.length * (state.slow ? 220 : 150));
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+  }
+  function play(w, row) {
+    stopAudio();
+    row.classList.add("playing");
+    const token = { row, audio: null };
+    current = token;
+    let fellBack = false;
+    const fallback = () => { if (fellBack || current !== token) return; fellBack = true; token.audio = null; speak(w, row, token); };
+    if (w.audio) {
+      const a = new Audio(w.audio);
+      token.audio = a;
+      a.preservesPitch = true;
+      a.playbackRate = state.slow ? 0.75 : 1;
+      a.onended = () => { if (current === token) { row.classList.remove("playing"); current = null; } };
+      a.onerror = fallback;
+      a.play().catch(fallback);
+      setTimeout(() => { if (current === token && token.audio === a && a.readyState < 2) fallback(); }, 6000);
+    } else {
+      speak(w, row, token);
+    }
+  }
+  if ("speechSynthesis" in window) speechSynthesis.onvoiceschanged = () => {};
+
+  // ---- Events ----
+  $("#list").addEventListener("click", (e) => {
+    const row = e.target.closest(".entry");
+    if (!row) return;
+    const w = shown[Number(row.dataset.i)];
+    if (!w) return;
+    if (e.target.closest(".tape")) {
+      revealed.add(w.text);
+      const m = row.querySelector(".meaning");
+      m.classList.remove("covered");
+      return;
+    }
+    if (e.target.closest(".play") || e.target.closest(".word") || e.target.closest(".pron")) play(w, row);
+  });
+  let timer = null;
+  $("#q").addEventListener("input", (e) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { state.q = e.target.value; render(); }, 90);
+  });
+  $("#q").addEventListener("keydown", (e) => { if (e.key === "Escape") { e.target.value = ""; state.q = ""; render(); } });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "/" && document.activeElement !== $("#q") && !e.metaKey && !e.ctrlKey) { e.preventDefault(); $("#q").focus(); }
+  });
+  for (const b of document.querySelectorAll("[data-sort]")) {
+    b.addEventListener("click", () => { state.sort = b.dataset.sort; store.set("sort", state.sort); render(); });
+  }
+  $("#week").addEventListener("click", () => { state.week = !state.week; render(); });
+  $("#quiz").addEventListener("click", () => { state.quiz = !state.quiz; revealed.clear(); store.set("quiz", state.quiz); render(); });
+  $("#slow").addEventListener("click", () => { state.slow = !state.slow; store.set("slow", state.slow); applyChrome(); });
+  $("#langToggle").addEventListener("click", () => { lang = lang === "es" ? "en" : "es"; store.set("lang", lang); render(); });
+  $("#course").addEventListener("change", (e) => { state.courseKey = e.target.value; revealed.clear(); render(); });
+
+  load();
+})();
+</script>
+</body>
+</html>

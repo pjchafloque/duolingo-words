@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan B · Mon carnet de français</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23fbfcfe'/%3E%3Cg stroke='%237678cd' stroke-opacity='.55' stroke-width='2'%3E%3Cpath d='M0 22h64M0 38h64M0 54h64'/%3E%3C/g%3E%3Cpath d='M18 0v64' stroke='%23e2506a' stroke-width='3'/%3E%3Cpath d='M26 33c4-10 10-12 14-6s-2 12 4 12 8-8 10-12' fill='none' stroke='%232448c7' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+@font-face { font-family: "Spectral"; src: url("fonts/spectral-400.woff") format("woff"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Spectral"; src: url("fonts/spectral-400-italic.woff") format("woff"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Spectral"; src: url("fonts/spectral-600.woff") format("woff"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Playwrite FR Trad"; src: url("fonts/playwrite-fr-trad.woff") format("woff"); font-weight: 300; font-display: swap; }
+:root {
+  --paper: #fbfcfe; --line-minor: rgba(118,120,205,.11); --line-major: rgba(118,120,205,.30); --line-vert: rgba(118,120,205,.09);
+  --margin-red: #e2506a; --ink: #1d2140; --ink-soft: #575d82; --pen: #2448c7; --margin-x: 88px; --gutter: 28px;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #131628; --line-minor: rgba(150,158,255,.07); --line-major: rgba(150,158,255,.17); --line-vert: rgba(150,158,255,.05);
+    --margin-red: #ff6b86; --ink: #e8eaf7; --ink-soft: #a6abcb; --pen: #93adff; }
+}
+@media (max-width: 719px) { :root { --margin-x: 46px; --gutter: 14px; } }
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; color: var(--ink);
+  font: 400 18px/32px "Spectral", Georgia, serif;
+  background: var(--paper);
+  background-image: linear-gradient(var(--line-major) 1px, transparent 1px), linear-gradient(var(--line-minor) 1px, transparent 1px), linear-gradient(90deg, var(--line-vert) 1px, transparent 1px);
+  background-size: 100% 32px, 100% 8px, 32px 100%;
+  background-position: 0 23px, 0 23px, 0 0;
+}
+.page { position: relative; max-width: 820px; min-height: 100vh; margin: 0 auto; padding: 32px 24px 96px calc(var(--margin-x) + var(--gutter)); }
+.page::before { content: ""; position: absolute; top: 0; bottom: 0; left: var(--margin-x); width: 1.5px; background: var(--margin-red); opacity: .7; }
+h1 { margin: 32px 0 32px; font: 300 46px/96px "Playwrite FR Trad", cursive; }
+@media (max-width: 719px) { h1 { font-size: 30px; line-height: 64px; margin-top: 0; } }
+p { margin: 0 0 32px; max-width: 62ch; }
+ol { margin: 0 0 32px; padding-left: 1.4em; max-width: 62ch; }
+li { margin: 0 0 32px; padding-left: .2em; }
+li::marker { font-weight: 600; color: var(--margin-red); }
+a { color: var(--pen); text-underline-offset: 3px; }
+.bookmarklet {
+  display: inline-block; margin: 0 0 0 4px; padding: 0 14px; border: 1.5px solid var(--pen); border-radius: 999px;
+  color: var(--pen); text-decoration: none; font-weight: 600; line-height: 30px; cursor: grab; background: var(--paper);
+}
+.soft { color: var(--ink-soft); font-style: italic; }
+code { font: inherit; font-style: italic; color: var(--pen); }
+:focus-visible { outline: 2px solid var(--pen); outline-offset: 2px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Plan B</h1>
+  <p>Si la sincronización automática deja de funcionar, este botón saca tu lista de palabras directamente de Duolingo para que la subas a GitHub. No necesita tu token: usa la sesión de Duolingo que ya tienes abierta en el navegador.</p>
+  <ol>
+    <li>Arrastra este botón a tu barra de marcadores:
+      <a class="bookmarklet" id="bookmarklet" href="#">Exportar de Duolingo</a><br>
+      <span class="soft">Si no ves la barra en Chrome, muéstrala con Cmd + Shift + B (Ctrl + Shift + B en Windows).</span></li>
+    <li>Abre <a href="https://www.duolingo.com/practice-hub/words">duolingo.com/practice-hub/words</a> con tu sesión iniciada y haz clic en el marcador. Se descarga un archivo con tus palabras.</li>
+    <li>Sube ese archivo a la carpeta <code>data/import</code> de tu repositorio (<span id="uploadHint">en GitHub: Add file → Upload files</span>). La página se actualiza sola uno o dos minutos después.</li>
+  </ol>
+  <p class="soft">Hacer clic en el botón desde esta página no hace nada. Funciona cuando está en tus marcadores y lo usas en duolingo.com.</p>
+  <p><a href="./">Volver al cuaderno</a></p>
+</div>
+<script>
+// Runs on www.duolingo.com when clicked from the bookmarks bar. It asks Duolingo
+// for the same list the Words page shows and downloads it as a file that
+// scripts/sync.py knows how to import. It must not use anything outside itself.
+async function exportDuolingoWords() {
+  if (location.hostname !== "www.duolingo.com") {
+    alert("Abre duolingo.com/practice-hub/words y vuelve a hacer clic en el marcador.");
+    return;
+  }
+  try {
+    const token = (document.cookie.split("; ").find((c) => c.startsWith("jwt_token=")) || "").slice(10);
+    if (!token) throw new Error("No has iniciado sesión en Duolingo.");
+    const userId = JSON.parse(atob(token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/"))).sub;
+    const headers = { Authorization: "Bearer " + token, "Content-Type": "application/json" };
+    const res = await fetch(`/2017-06-30/users/${userId}?fields=currentCourse`, { headers });
+    if (!res.ok) throw new Error(`Duolingo respondió ${res.status} al pedir tu curso.`);
+    const course = (await res.json()).currentCourse || {};
+    if (!course.learningLanguage || !course.fromLanguage) throw new Error("Duolingo no envió tu curso.");
+    const skills = [];
+    const seen = new Set();
+    for (const section of course.pathSectioned || []) {
+      for (const unit of section.units || []) {
+        for (const level of unit.levels || []) {
+          for (const meta of [level.pathLevelMetadata, level.pathLevelClientData]) {
+            for (const id of meta ? [meta.skillId, ...(meta.skillIds || [])] : []) {
+              if (!id || seen.has(id)) continue;
+              seen.add(id);
+              if (level.state === "locked") continue;
+              skills.push({
+                finishedLevels: level.state === "passed" || level.state === "legendary" ? 1 : 0,
+                finishedSessions: level.finishedSessions || 0,
+                skillId: { id },
+              });
+            }
+          }
+        }
+      }
+    }
+    if (!skills.length) {
+      for (const s of (course.skills || []).flat(3)) {
+        if (s && s.id && !seen.has(s.id) && ((s.finishedLevels || 0) > 0 || (s.finishedLessons || 0) > 0)) {
+          seen.add(s.id);
+          skills.push({ finishedLevels: s.finishedLevels || 0, finishedSessions: s.finishedLessons || 0, skillId: { id: s.id } });
+        }
+      }
+    }
+    const words = [];
+    let start = 0;
+    for (let page = 0; page < 200 && start !== null; page++) {
+      const r = await fetch(
+        `/2017-06-30/users/${userId}/courses/${course.learningLanguage}/${course.fromLanguage}/learned-lexemes?limit=100&sortBy=LEARNED_DATE&startIndex=${start}`,
+        { method: "POST", headers, body: JSON.stringify({ lastTotalLexemeCount: 0, progressedSkills: skills }) },
+      );
+      if (!r.ok) throw new Error(`Duolingo respondió ${r.status} al pedir tus palabras.`);
+      const body = await r.json();
+      if (!body || !Array.isArray(body.learnedLexemes)) throw new Error("Duolingo no envió tu lista de palabras.");
+      words.push(...body.learnedLexemes);
+      const next = body.pagination && body.pagination.nextStartIndex;
+      start = typeof next === "number" && next > start && body.learnedLexemes.length ? next : null;
+    }
+    if (!words.length) throw new Error("Duolingo envió una lista vacía.");
+    const file = {
+      format: "duolingo-words-export",
+      version: 1,
+      exported_at: new Date().toISOString(),
+      course: { learning: course.learningLanguage, from: course.fromLanguage },
+      learnedLexemes: words,
+    };
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(new Blob([JSON.stringify(file)], { type: "application/json" }));
+    link.download = `duolingo-words-${course.learningLanguage}-${course.fromLanguage}-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    alert(`Listo: ${words.length} palabras. Ahora sube el archivo a data/import en tu repositorio de GitHub.`);
+  } catch (err) {
+    alert("No funcionó: " + (err && err.message ? err.message : err));
+  }
+}
+
+document.getElementById("bookmarklet").href =
+  "javascript:" + encodeURIComponent("void (" + exportDuolingoWords.toString() + ")()");
+document.getElementById("bookmarklet").addEventListener("click", (e) => {
+  e.preventDefault();
+  alert("Arrastra el botón a tu barra de marcadores y úsalo en duolingo.com.");
+});
+
+// On GitHub Pages the address says whose repository this is, so link straight to the upload page.
+(() => {
+  const host = location.hostname;
+  if (!host.endsWith(".github.io")) return;
+  const owner = host.split(".")[0];
+  const repo = location.pathname.split("/").filter(Boolean)[0];
+  if (!repo) return;
+  const a = document.createElement("a");
+  a.href = `https://github.com/${owner}/${repo}/upload/main/data/import`;
+  a.textContent = "abrir la página para subirlo";
+  const hint = document.getElementById("uploadHint");
+  hint.textContent = "";
+  hint.appendChild(a);
+})();
+</script>
+</body>
+</html>

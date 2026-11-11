@@ -1,6 +1,258 @@
 {
  "version": 1,
- "current": null,
- "updated": null,
- "courses": {}
+ "current": "fr-es",
+ "updated": "2026-11-11T22:35:48Z",
+ "courses": {
+  "fr-es": {
+   "learning": "fr",
+   "from": "es",
+   "name": "French",
+   "words": [
+    {
+     "text": "au revoir",
+     "translations": [
+      "adiós"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/064427146ea75efd10026092e76369af",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 18,
+     "pron": "o revuar",
+     "ipa": "o ʁəvwˈaʁ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "parfait",
+     "translations": [
+      "perfecto"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/7d6e25bfdef9ef075840dd73bf7164e1",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 17,
+     "pron": "parfé",
+     "ipa": "paʁfˈɛ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "ou",
+     "translations": [
+      "o"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/75865e42ec06ae33c3218ea81a913ea0",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 16,
+     "pron": "u",
+     "ipa": "ˈu",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "monsieur",
+     "translations": [
+      "señor"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/242f2967ad0ba7b57790cd39ccecb0f7",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 15,
+     "pron": "mesiö́",
+     "ipa": "məsjˈø",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "non",
+     "translations": [
+      "no"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/850e31f3dcb9dd72dc8174b56e03237e",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 14,
+     "pron": "non",
+     "ipa": "nˈɔ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sandwich",
+     "translations": [
+      "bocadillo",
+      "emparedado",
+      "sándwich",
+      "torta"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/138df19827afe1de77267cc776e44620",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 13,
+     "pron": "sanduich",
+     "ipa": "sɑ̃dwˈitʃ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "merci",
+     "translations": [
+      "gracias"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/fac5ea4142b3fb684d14d70f2652e0c8",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 12,
+     "pron": "mersí",
+     "ipa": "mɛʁsˈi",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "et",
+     "translations": [
+      "y"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/98443ed555130d29c459da7c381b7516",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 11,
+     "pron": "e",
+     "ipa": "ˈe",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "oui",
+     "translations": [
+      "sí"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/6fc927926333a8acec77c72ef5a57276",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 10,
+     "pron": "ui",
+     "ipa": "wˈi",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "je voudrais",
+     "translations": [
+      "querría",
+      "quisiera"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/79ff2fa640c25c1960a6bf3e4f4760c0",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 9,
+     "pron": "ye vudré",
+     "ipa": "ʒə- vudʁˈɛ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "éclair",
+     "translations": [
+      "relámpago",
+      "éclair"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/eb4be6150551b5113e6e9865df945e3b",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 8,
+     "pron": "ecler",
+     "ipa": "eklˈɛʁ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "croissant",
+     "translations": [
+      "croissant"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/aa532805daa49b544189280b9706f089",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 7,
+     "pron": "cruasán",
+     "ipa": "kʁwasˈɑ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "s'il vous plaît",
+     "translations": [
+      "por favor"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/24340742b43c0d25b54742ed4593b400",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 6,
+     "pron": "sil vu ple",
+     "ipa": "sil vu plˈɛ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "bonjour",
+     "translations": [
+      "hola"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/62858858128bf5c325d5e8f01ab68439",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 5,
+     "pron": "bonyur",
+     "ipa": "bɔ̃ʒˈuʁ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "un",
+     "translations": [
+      "un",
+      "alguna"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/7ff596cc175668f23a38eedb89e96b69",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 4,
+     "pron": "en",
+     "ipa": "ˈœ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "madame",
+     "translations": [
+      "señora"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/080453045ea8e004bbdbc3842119f953",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 3,
+     "pron": "madam",
+     "ipa": "madˈam",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "café",
+     "translations": [
+      "café"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/6133fe9018967215c428d351e169eb78",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 2,
+     "pron": "café",
+     "ipa": "kafˈe",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "thé",
+     "translations": [
+      "té"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/74eeb03ea88403ec561777e879302dfe",
+     "added": "2026-11-11T22:35:48Z",
+     "seq": 1,
+     "pron": "te",
+     "ipa": "tˈe",
+     "pron_v": 1,
+     "pron_src": "auto"
+    }
+   ],
+   "dropped": {},
+   "duolingo_total": 18,
+   "count": 18
+  }
+ },
+ "imports": []
 }

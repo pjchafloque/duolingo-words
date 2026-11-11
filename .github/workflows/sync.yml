@@ -79,7 +79,7 @@ jobs:
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           mkdir -p _site
-          cp -r index.html tools.html fonts data _site/
+          cp -r index.html tools.html manifest.webmanifest fonts icons data _site/
           python3 scripts/status.py _site/status.json
 
       - uses: actions/configure-pages@v6

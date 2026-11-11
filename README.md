@@ -18,6 +18,10 @@ Page: https://pjchafloque.github.io/duolingo-words/
 
 3. Run it. Open the Actions tab, click "Sync words" on the left, then "Run workflow". A minute or two later the page is live at the address above.
 
+## On your iPhone
+
+Open the page in Safari, tap Share, then "Add to Home Screen". It gets the owl-and-penguin icon and opens like an app, without Safari's address bar.
+
 ## How it works
 
 - `.github/workflows/sync.yml` runs `scripts/sync.py` every hour, and also whenever something in the repo changes.

@@ -7,7 +7,14 @@
 <meta name="description" content="Las palabras que aprendí en Duolingo, con su significado y cómo se pronuncian.">
 <meta name="theme-color" content="#fbfcfe" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#131628" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23fbfcfe'/%3E%3Cg stroke='%237678cd' stroke-opacity='.55' stroke-width='2'%3E%3Cpath d='M0 22h64M0 38h64M0 54h64'/%3E%3C/g%3E%3Cpath d='M18 0v64' stroke='%23e2506a' stroke-width='3'/%3E%3Cpath d='M26 33c4-10 10-12 14-6s-2 12 4 12 8-8 10-12' fill='none' stroke='%232448c7' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="icons/favicon-64.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Mon carnet">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="preload" href="fonts/spectral-400.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="fonts/playwrite-fr-trad.woff" as="font" type="font/woff" crossorigin>
 <style>
@@ -99,6 +106,22 @@ body.paper-ruled {
   opacity: .7;
 }
 @media (max-width: 719px) { .page { padding-right: 16px; } }
+
+/* The logo sits in the margin, stuck on like a sticker. */
+.sticker {
+  position: absolute;
+  top: 40px;
+  left: calc(var(--margin-x) - 64px - 12px);
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(29, 33, 64, .16), 0 6px 14px rgba(29, 33, 64, .10);
+  transform: rotate(-4deg);
+}
+@media (max-width: 719px) {
+  .sticker { top: 22px; left: 5px; width: 36px; height: 36px; border-radius: 9px; }
+}
 
 a { color: var(--pen); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 :focus-visible { outline: 2px solid var(--pen); outline-offset: 2px; border-radius: 4px; }
@@ -296,6 +319,7 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
 </head>
 <body>
 <div class="page">
+  <img class="sticker" src="icons/logo.png" alt="" width="64" height="64" decoding="async">
   <header>
     <nav class="tabs" id="tabs" role="tablist" hidden></nav>
     <h1 class="title" id="title">Mon carnet de français</h1>

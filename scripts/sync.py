@@ -246,6 +246,35 @@ def current_course(user_id: str, jwt: str) -> tuple[str, str, list[dict]]:
     raise SyncError("Couldn't read your current Duolingo course (" + "; ".join(problems) + ").")
 
 
+def language_courses(user_id: str, jwt: str) -> list[dict] | None:
+    """The language courses on your Duolingo account that have any XP.
+
+    Duolingo only hands out the word list of the course that's open in your
+    app, so this list is how the page knows about a course (say Portuguese)
+    before the sync has caught it open.
+    """
+    try:
+        data = call("GET", f"/2017-06-30/users/{user_id}?fields=courses", jwt)
+    except (HttpProblem, SyncError) as problem:
+        warn(f"Couldn't read your list of courses ({problem}).")
+        return None
+    found = []
+    for course in (data or {}).get("courses") or []:
+        if not isinstance(course, dict):
+            continue
+        learning, source = course.get("learningLanguage"), course.get("fromLanguage")
+        if not isinstance(learning, str) or not isinstance(source, str):
+            continue
+        if course.get("subject") not in (None, "language"):
+            continue
+        if isinstance(course.get("xp"), (int, float)) and course["xp"] <= 0:
+            continue
+        found.append({"learning": learning, "from": source,
+                      "name": LANGUAGE_NAMES.get(learning, course.get("title") or learning)})
+    found.sort(key=lambda c: (c["learning"], c["from"]))
+    return found
+
+
 def learned_words(user_id: str, learning: str, source: str, skills: list[dict], jwt: str):
     path = f"/2017-06-30/users/{user_id}/courses/{learning}/{source}/learned-lexemes"
     bodies = [
@@ -451,7 +480,7 @@ def finish_words(entry: dict, overrides: dict | None) -> int:
 
 # --- Reporting -------------------------------------------------------------
 
-def report(notes: list[str], error: str | None, setup: str | None = None) -> None:
+def report(notes: list[str], error: str | None, setup: str | None = None, read: str | None = None) -> None:
     """Print what happened and hand a one-line status to the workflow.
 
     setup is a step you still have to do (like adding the token): the run
@@ -468,6 +497,7 @@ def report(notes: list[str], error: str | None, setup: str | None = None) -> Non
         with open(out, "a", encoding="utf-8") as fh:
             fh.write("message=" + " ".join(message.split())[:500] + "\n")
             fh.write("ok=" + ("false" if problem else "true") + "\n")
+            fh.write("read=" + (read or "") + "\n")
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
         with open(summary, "a", encoding="utf-8") as fh:
@@ -505,6 +535,12 @@ def main() -> int:
         warn(overrides_error)
     before = json.dumps(store, sort_keys=True, ensure_ascii=False)
 
+    def fingerprint(entry: dict) -> str:
+        return json.dumps({k: v for k, v in entry.items() if k != "updated"}, sort_keys=True, ensure_ascii=False)
+
+    before_courses = {key: fingerprint(entry) for key, entry in store["courses"].items()}
+    read_key = None
+
     notes += read_imports(store, stamp)
 
     jwt = clean_token(os.environ.get("DUOLINGO_JWT", ""))
@@ -526,6 +562,14 @@ def main() -> int:
             key, entry = course_entry(store, learning, source)
             new = merge(entry, lexemes, stamp, full=True)
             store["current"] = key
+            read_key = key
+            known = language_courses(user_id, jwt)
+            if known is not None:
+                if not any(c["learning"] == learning and c["from"] == source for c in known):
+                    known.append({"learning": learning, "from": source, "name": entry["name"]})
+                    known.sort(key=lambda c: (c["learning"], c["from"]))
+                if store.get("known") != known:
+                    store["known"] = known
             if total is not None:
                 entry["duolingo_total"] = total
             line = f"{entry['name']}: {len(entry['words'])} words, {len(new)} new"
@@ -543,6 +587,9 @@ def main() -> int:
             notes.append(f"Wrote {written} pronunciation{'s' if written != 1 else ''} for {entry['name']}.")
         entry["words"].sort(key=lambda w: -w.get("seq", 0))
         entry["count"] = len(entry["words"])
+    for key, entry in store["courses"].items():
+        if before_courses.get(key) != fingerprint(entry):
+            entry["updated"] = stamp
 
     if json.dumps(store, sort_keys=True, ensure_ascii=False) != before:
         store["updated"] = stamp
@@ -553,7 +600,7 @@ def main() -> int:
         notes.append("No changes to save.")
 
     error = error or overrides_error
-    report(notes, error, setup)
+    report(notes, error, setup, read_key)
     return 1 if error else 0
 
 

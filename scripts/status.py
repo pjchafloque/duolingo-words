@@ -26,6 +26,7 @@ status = {
     "checked_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
     "ok": ok,
     "message": message,
+    "read": os.environ.get("SYNC_READ", ""),  # the course whose words this run read
     "repo": os.environ.get("REPO", ""),
     "run_url": os.environ.get("RUN_URL", ""),
 }

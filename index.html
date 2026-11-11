@@ -15,6 +15,7 @@
 @font-face { font-family: "Spectral"; src: url("fonts/spectral-400-italic.woff") format("woff"); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: "Spectral"; src: url("fonts/spectral-600.woff") format("woff"); font-weight: 600; font-style: normal; font-display: swap; }
 @font-face { font-family: "Playwrite FR Trad"; src: url("fonts/playwrite-fr-trad.woff") format("woff"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Playwrite BR"; src: url("fonts/playwrite-br.woff") format("woff"); font-weight: 300; font-style: normal; font-display: swap; }
 
 /* Seyès paper: a fine line every 8px, a stronger one every 32px, and the red margin. */
 :root {
@@ -34,7 +35,9 @@
   --margin-x: 88px;
   --gutter: 28px;
   --serif: "Spectral", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  --script: "Playwrite FR Trad", "Segoe Script", "Snell Roundhand", cursive;
+  --script-fr: "Playwrite FR Trad", "Segoe Script", "Snell Roundhand", cursive;
+  --script-br: "Playwrite BR", "Playwrite FR Trad", "Segoe Script", cursive;
+  --script: var(--script-fr);
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
@@ -72,7 +75,15 @@ body {
   background-size: 100% 32px, 100% 8px, 32px 100%;
   background-position: 0 var(--grid-y), 0 var(--grid-y), 0 0;
 }
+/* Each notebook writes in its own school's cursive; the Portuguese one is a plain ruled caderno. */
+body.script-br { --script: var(--script-br); }
+body.paper-ruled {
+  background-image: linear-gradient(var(--line-major) 1px, transparent 1px);
+  background-size: 100% 32px;
+  background-position: 0 var(--grid-y);
+}
 .page {
+  min-height: 100vh;
   position: relative;
   max-width: 1080px;
   margin: 0 auto;
@@ -92,6 +103,24 @@ body {
 a { color: var(--pen); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 :focus-visible { outline: 2px solid var(--pen); outline-offset: 2px; border-radius: 4px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Notebook tabs */
+.tabs { display: flex; flex-wrap: wrap; gap: 0 32px; margin: 0; }
+.tab {
+  height: 64px;
+  padding: 0 2px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--ink-soft);
+  font: 300 24px/62px var(--script-fr);
+  cursor: pointer;
+}
+.tab.script-br { font-family: var(--script-br); }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--margin-red); }
+.tab:hover { color: var(--ink); }
+.tabs:not([hidden]) + .title { margin-top: 0; }
+@media (max-width: 719px) { .tab { font-size: 20px; } }
 
 /* Cover */
 .title {
@@ -160,7 +189,6 @@ a { color: var(--pen); text-decoration-thickness: 1px; text-underline-offset: 3p
 }
 .toggle:hover, .seg button:hover { color: var(--ink); }
 .seg { display: flex; gap: 14px; }
-.course { font: 400 17px/30px var(--serif); color: var(--ink); background: transparent; border: 0; border-bottom: 1.5px solid var(--ink-soft); height: 32px; }
 
 /* Word list */
 .group { margin: 0; }
@@ -269,6 +297,7 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
 <body>
 <div class="page">
   <header>
+    <nav class="tabs" id="tabs" role="tablist" hidden></nav>
     <h1 class="title" id="title">Mon carnet de français</h1>
     <p class="summary" id="summary">&nbsp;</p>
     <p class="status" id="status" hidden></p>
@@ -280,7 +309,6 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
       <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Buscar">
     </label>
     <div class="toggles">
-      <select class="course" id="course" hidden></select>
       <div class="seg" role="group" id="sortGroup">
         <button type="button" data-sort="recent" aria-pressed="true">Recientes</button>
         <button type="button" data-sort="az" aria-pressed="false">A–Z</button>
@@ -303,6 +331,7 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
     <p id="about"></p>
     <p class="links">
       <button type="button" id="langToggle">English</button>
+      <a href="#" id="syncLink" hidden>Sincronizar ahora</a>
       <a href="tools.html" id="toolsLink">Exportar a mano</a>
       <a href="#" id="repoLink" hidden>Código en GitHub</a>
     </p>
@@ -314,25 +343,29 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
   <symbol id="i-bars" viewBox="0 0 16 16"><rect x="2.5" y="3" width="2.4" height="10" rx="1.2" fill="currentColor"/><rect x="6.8" y="3" width="2.4" height="10" rx="1.2" fill="currentColor"/><rect x="11.1" y="3" width="2.4" height="10" rx="1.2" fill="currentColor"/></symbol>
 </svg>
 
-<script type="application/json" id="demoData">{"version":1,"current":"fr-es","courses":{"fr-es":{"learning":"fr","from":"es","name":"French","words":[{"text":"croissant","translations":["cruasán"],"audio":null,"ago":0.08,"seq":26,"pron":"cruasán","ipa":"kʁwasˈɑ̃"},{"text":"fromage","translations":["queso"],"audio":null,"ago":0.1,"seq":25,"pron":"fromash","ipa":"fʁɔmˈaʒ"},{"text":"bonjour","translations":["hola","buenos días"],"audio":null,"ago":0.12,"seq":24,"pron":"bonyur","ipa":"bɔ̃ʒˈuʁ"},{"text":"merci","translations":["gracias"],"audio":null,"ago":2,"seq":23,"pron":"mersí","ipa":"mɛʁsˈi"},{"text":"au revoir","translations":["adiós","hasta luego"],"audio":null,"ago":2,"seq":22,"pron":"orevuar","ipa":"oʁəvwˈaʁ"},{"text":"je m'appelle","translations":["me llamo"],"audio":null,"ago":2,"seq":21,"pron":"ye mapel","ipa":"ʒə mapˈɛl"},{"text":"enfant","translations":["niño","niña"],"audio":null,"ago":2,"seq":20,"pron":"anfán","ipa":"ɑ̃fˈɑ̃"},{"text":"huit","translations":["ocho"],"audio":null,"ago":5,"seq":19,"pron":"üit","ipa":"ɥˈit"},{"text":"fille","translations":["chica","hija"],"audio":null,"ago":5,"seq":18,"pron":"fiy","ipa":"fˈij"},{"text":"monsieur","translations":["señor"],"audio":null,"ago":5,"seq":17,"pron":"mesiö́","ipa":"məsjˈø"},{"text":"salut","translations":["hola","chao"],"audio":null,"ago":5,"seq":16,"pron":"salǘ","ipa":"salˈy"},{"text":"aujourd'hui","translations":["hoy"],"audio":null,"ago":12,"seq":15,"pron":"oyurdüí","ipa":"oʒuʁdɥˈi"},{"text":"oiseau","translations":["pájaro"],"audio":null,"ago":12,"seq":14,"pron":"uazó","ipa":"wazˈo"},{"text":"école","translations":["escuela"],"audio":null,"ago":12,"seq":13,"pron":"ecol","ipa":"ekˈɔl"},{"text":"café","translations":["café"],"audio":null,"ago":12,"seq":12,"pron":"café","ipa":"kafˈe"},{"text":"pomme","translations":["manzana"],"audio":null,"ago":12,"seq":11,"pron":"pom","ipa":"pˈɔm"},{"text":"tu","translations":["tú"],"audio":null,"ago":12,"seq":10,"pron":"tü","ipa":"tˈy"},{"text":"maison","translations":["casa"],"audio":null,"ago":12,"seq":9,"pron":"mezón","ipa":"mɛzˈɔ̃"},{"text":"garçon","translations":["chico","mesero"],"audio":null,"ago":12,"seq":8,"pron":"garsón","ipa":"ɡaʁsˈɔ̃"},{"text":"beaucoup","translations":["mucho"],"audio":null,"ago":12,"seq":7,"pron":"bocú","ipa":"bokˈu"},{"text":"s'il vous plaît","translations":["por favor"],"audio":null,"ago":12,"seq":6,"pron":"sil vu ple","ipa":"sil vu plˈɛ"},{"text":"voyage","translations":["viaje"],"audio":null,"ago":12,"seq":5,"pron":"vuayash","ipa":"vwajˈaʒ"},{"text":"rouge","translations":["rojo","roja"],"audio":null,"ago":12,"seq":4,"pron":"rush","ipa":"ʁˈuʒ"},{"text":"chat","translations":["gato"],"audio":null,"ago":12,"seq":3,"pron":"sha","ipa":"ʃˈa","note":"la t no suena"},{"text":"deux","translations":["dos"],"audio":null,"ago":12,"seq":2,"pron":"dö","ipa":"dˈø"},{"text":"cuisine","translations":["cocina"],"audio":null,"ago":12,"seq":1,"pron":"cüizín","ipa":"kɥizˈin"}]}}}</script>
+<script type="application/json" id="demoData">{"version":1,"current":"fr-es","courses":{"fr-es":{"learning":"fr","from":"es","name":"French","words":[{"text":"croissant","translations":["cruasán"],"audio":null,"ago":0.08,"seq":26,"pron":"cruasán","ipa":"kʁwasˈɑ̃"},{"text":"fromage","translations":["queso"],"audio":null,"ago":0.1,"seq":25,"pron":"fromash","ipa":"fʁɔmˈaʒ"},{"text":"bonjour","translations":["hola","buenos días"],"audio":null,"ago":0.12,"seq":24,"pron":"bonyur","ipa":"bɔ̃ʒˈuʁ"},{"text":"merci","translations":["gracias"],"audio":null,"ago":2,"seq":23,"pron":"mersí","ipa":"mɛʁsˈi"},{"text":"au revoir","translations":["adiós","hasta luego"],"audio":null,"ago":2,"seq":22,"pron":"orevuar","ipa":"oʁəvwˈaʁ"},{"text":"je m'appelle","translations":["me llamo"],"audio":null,"ago":2,"seq":21,"pron":"ye mapel","ipa":"ʒə mapˈɛl"},{"text":"enfant","translations":["niño","niña"],"audio":null,"ago":2,"seq":20,"pron":"anfán","ipa":"ɑ̃fˈɑ̃"},{"text":"huit","translations":["ocho"],"audio":null,"ago":5,"seq":19,"pron":"üit","ipa":"ɥˈit"},{"text":"fille","translations":["chica","hija"],"audio":null,"ago":5,"seq":18,"pron":"fiy","ipa":"fˈij"},{"text":"monsieur","translations":["señor"],"audio":null,"ago":5,"seq":17,"pron":"mesiö́","ipa":"məsjˈø"},{"text":"salut","translations":["hola","chao"],"audio":null,"ago":5,"seq":16,"pron":"salǘ","ipa":"salˈy"},{"text":"aujourd'hui","translations":["hoy"],"audio":null,"ago":12,"seq":15,"pron":"oyurdüí","ipa":"oʒuʁdɥˈi"},{"text":"oiseau","translations":["pájaro"],"audio":null,"ago":12,"seq":14,"pron":"uazó","ipa":"wazˈo"},{"text":"école","translations":["escuela"],"audio":null,"ago":12,"seq":13,"pron":"ecol","ipa":"ekˈɔl"},{"text":"café","translations":["café"],"audio":null,"ago":12,"seq":12,"pron":"café","ipa":"kafˈe"},{"text":"pomme","translations":["manzana"],"audio":null,"ago":12,"seq":11,"pron":"pom","ipa":"pˈɔm"},{"text":"tu","translations":["tú"],"audio":null,"ago":12,"seq":10,"pron":"tü","ipa":"tˈy"},{"text":"maison","translations":["casa"],"audio":null,"ago":12,"seq":9,"pron":"mezón","ipa":"mɛzˈɔ̃"},{"text":"garçon","translations":["chico","mesero"],"audio":null,"ago":12,"seq":8,"pron":"garsón","ipa":"ɡaʁsˈɔ̃"},{"text":"beaucoup","translations":["mucho"],"audio":null,"ago":12,"seq":7,"pron":"bocú","ipa":"bokˈu"},{"text":"s'il vous plaît","translations":["por favor"],"audio":null,"ago":12,"seq":6,"pron":"sil vu ple","ipa":"sil vu plˈɛ"},{"text":"voyage","translations":["viaje"],"audio":null,"ago":12,"seq":5,"pron":"vuayash","ipa":"vwajˈaʒ"},{"text":"rouge","translations":["rojo","roja"],"audio":null,"ago":12,"seq":4,"pron":"rush","ipa":"ʁˈuʒ"},{"text":"chat","translations":["gato"],"audio":null,"ago":12,"seq":3,"pron":"sha","ipa":"ʃˈa","note":"la t no suena"},{"text":"deux","translations":["dos"],"audio":null,"ago":12,"seq":2,"pron":"dö","ipa":"dˈø"},{"text":"cuisine","translations":["cocina"],"audio":null,"ago":12,"seq":1,"pron":"cüizín","ipa":"kɥizˈin"}]},"pt-es":{"learning":"pt","from":"es","name":"Portuguese","words":[{"text":"obrigado","translations":["gracias"],"audio":null,"ago":1,"seq":12,"pron":"obrigadu","ipa":"obɾiɡˈadʊ"},{"text":"coração","translations":["corazón"],"audio":null,"ago":1,"seq":11,"pron":"corasáun","ipa":"koɾasˈɐ̃w̃"},{"text":"bom dia","translations":["buenos días"],"audio":null,"ago":6,"seq":10,"pron":"bon yía","ipa":"bˈõ dʒˈiɐ"},{"text":"leite","translations":["leche"],"audio":null,"ago":6,"seq":9,"pron":"leichi","ipa":"lˈejtʃi"},{"text":"cachorro","translations":["perro"],"audio":null,"ago":6,"seq":8,"pron":"cashoju","ipa":"kaʃˈoxʊ"},{"text":"filho","translations":["hijo"],"audio":null,"ago":6,"seq":7,"pron":"fillu","ipa":"fˈiʎʊ"},{"text":"não","translations":["no"],"audio":null,"ago":15,"seq":6,"pron":"naun","ipa":"nˈɐ̃w̃"},{"text":"pão","translations":["pan"],"audio":null,"ago":15,"seq":5,"pron":"paun","ipa":"pˈɐ̃w̃"},{"text":"você","translations":["tú","usted"],"audio":null,"ago":15,"seq":4,"pron":"vosé","ipa":"vosˈe"},{"text":"casa","translations":["casa"],"audio":null,"ago":15,"seq":3,"pron":"caza","ipa":"kˈazɐ"},{"text":"tia","translations":["tía"],"audio":null,"ago":15,"seq":2,"pron":"chía","ipa":"tʃˈiɐ"},{"text":"Brasil","translations":["Brasil"],"audio":null,"ago":15,"seq":1,"pron":"brazíu","ipa":"bɾazˈiw"}]}},"known":[{"learning":"fr","from":"es","name":"French"},{"learning":"pt","from":"es","name":"Portuguese"}]}</script>
 <script>
 (() => {
   "use strict";
 
-  // ---- Words for the interface (the notebook itself speaks French) ----
+  // ---- Words for the interface (each notebook itself speaks the language it teaches) ----
   const STR = {
     es: {
       search: "Buscar",
       searchPh: (a, b) => `Buscar en ${a} o ${b}`,
+      notebooks: "Cuadernos",
       sort: "Orden", recent: "Recientes", az: "A–Z", week: "Esta semana", quiz: "Repaso", slow: "Lento",
       quizTitle: "Tapa los significados para repasar", slowTitle: "Audio más lento",
-      course: "Curso",
       count: n => n === 1 ? "1 palabra" : `${num(n)} palabras`,
       summary: (n, wk) => `${n === 1 ? "1 palabra aprendida" : num(n) + " palabras aprendidas"} en Duolingo.` +
         (wk ? ` ${wk === 1 ? "1 nueva" : num(wk) + " nuevas"} esta semana.` : ""),
       firstOnly: "Las palabras que aprendas a partir de hoy aparecerán con su fecha.",
       checked: rel => `Revisado ${rel}.`,
-      failed: (msg) => `La última sincronización no funcionó: ${msg}`,
+      updated: rel => `Actualizado ${rel}.`,
+      otherOpen: (open, here) => `Ahora Duolingo tiene abierto ${open}, y la sincronización solo puede leer el curso abierto. Para traer lo nuevo de ${here}, ábrelo en Duolingo y espera la próxima lectura (cada hora)`,
+      emptyOther: here => `Todavía no hay palabras de ${here}. La sincronización solo puede leer el curso que tienes abierto en Duolingo, así que abre ${here} en Duolingo y espera la próxima lectura (cada hora)`,
+      orPress: "o pulsa", syncNow: "Sincronizar ahora", syncTitle: "Se abre GitHub: ahí pulsa «Run workflow»",
+      failed: msg => `La última sincronización no funcionó: ${msg}`,
       seeRun: "Ver en GitHub",
       demo: "Vista previa con palabras de ejemplo. Tus palabras aparecen cuando la página está en GitHub y la sincronización ya corrió.",
       empty: "Todavía no hay palabras. Cuando termine la primera sincronización, tus palabras de Duolingo aparecerán aquí.",
@@ -343,33 +376,27 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
       noAudio: "Este navegador no puede leer palabras en voz alta.",
       legendTitle: "Cómo leer la pronunciación",
       legendIntro: "La pronunciación está escrita con letras del español. Estas son las que se leen distinto:",
-      about: "Las palabras vienen de tu lista de Duolingo y se actualizan solas cada 6 horas. Si una pronunciación no te convence, corrígela en data/overrides.json.",
+      about: "Las palabras vienen de tu lista de Duolingo y se actualizan solas cada hora. Si una pronunciación no te convence, corrígela en data/overrides.json.",
       tools: "Exportar a mano (plan B)", repo: "Código en GitHub", other: "English",
       loadError: "No se pudo leer data/words.json. Revisa que el archivo exista en el repositorio.",
-      legend: [
-        ["ü", "Di «i» con los labios redondeados, como para silbar."],
-        ["ö", "Di «e» con los labios redondeados, como para decir «o»."],
-        ["an en on", "Vocal nasal: el aire sale también por la nariz y la n casi no suena."],
-        ["r", "La r francesa se dice al fondo de la garganta, parecida a una j suave. Nunca es la r de «perro»."],
-        ["y", "Antes de vocal suena como la «ll» argentina de «yo»."],
-        ["sh", "Como en «show»."],
-        ["z", "Una s que zumba, como una abeja."],
-        ["v", "Con los dientes de arriba sobre el labio de abajo. No es la b."],
-        ["á é í ó ú", "La tilde marca dónde va la fuerza. En francés casi siempre es la última sílaba."],
-      ],
+      until: d => `Hasta el ${d}`,
     },
     en: {
       search: "Search",
       searchPh: (a, b) => `Search in ${a} or ${b}`,
+      notebooks: "Notebooks",
       sort: "Order", recent: "Recent", az: "A–Z", week: "This week", quiz: "Review", slow: "Slow",
       quizTitle: "Cover the meanings to review", slowTitle: "Slower audio",
-      course: "Course",
       count: n => n === 1 ? "1 word" : `${num(n)} words`,
       summary: (n, wk) => `${n === 1 ? "1 word" : num(n) + " words"} learned on Duolingo.` +
         (wk ? ` ${wk === 1 ? "1 new word" : num(wk) + " new words"} this week.` : ""),
       firstOnly: "Words you learn from today on will show up with their date.",
       checked: rel => `Checked ${rel}.`,
-      failed: (msg) => `The last sync didn't work: ${msg}`,
+      updated: rel => `Updated ${rel}.`,
+      otherOpen: (open, here) => `Duolingo has ${open} open right now, and the sync can only read the open course. To bring in what's new in ${here}, open it on Duolingo and wait for the next check (every hour)`,
+      emptyOther: here => `No ${here} words yet. The sync can only read the course you have open on Duolingo, so open ${here} there and wait for the next check (every hour)`,
+      orPress: "or press", syncNow: "Sync now", syncTitle: "Opens GitHub: press “Run workflow” there",
+      failed: msg => `The last sync didn't work: ${msg}`,
       seeRun: "See it on GitHub",
       demo: "Preview with sample words. Your words show up once the page is on GitHub and the sync has run.",
       empty: "No words yet. When the first sync finishes, your Duolingo words will show up here.",
@@ -380,34 +407,69 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
       noAudio: "This browser can't read words aloud.",
       legendTitle: "How to read the pronunciation",
       legendIntro: "Pronunciations are written with Spanish letters. These are the ones that read differently:",
-      about: "Words come from your Duolingo list and update on their own every 6 hours. If a pronunciation looks wrong, fix it in data/overrides.json.",
+      about: "Words come from your Duolingo list and update on their own every hour. If a pronunciation looks wrong, fix it in data/overrides.json.",
       tools: "Export by hand (plan B)", repo: "Code on GitHub", other: "Español",
       loadError: "Couldn't read data/words.json. Check that the file exists in the repository.",
-      legend: [
-        ["ü", "Say “i” with your lips rounded, as if to whistle."],
-        ["ö", "Say “e” with your lips rounded, as if to say “o”."],
-        ["an en on", "Nasal vowel: air also goes out through the nose and the n is barely heard."],
-        ["r", "The French r is made at the back of the throat, close to a soft Spanish j. Never the rolled r of “perro”."],
-        ["y", "Before a vowel it sounds like the Argentine “ll” in “yo”."],
-        ["sh", "As in “show”."],
-        ["z", "A buzzing s, like a bee."],
-        ["v", "Upper teeth on the lower lip. Not a b."],
-        ["á é í ó ú", "The accent shows where the stress goes. In French it's almost always the last syllable."],
-      ],
+      until: d => `Until ${d}`,
     },
   };
-  // Which words illustrate each guide entry, tested on the pronunciation (p) and IPA (i).
-  const LEGEND_TESTS = [
-    (p) => /ü/.test(p),
-    (p) => /ö/.test(p),
-    (p, i) => /̃/.test(i.normalize("NFD")) && /[aeo]n|[aeo]m/.test(p),
-    (p, i) => /ʁ/.test(i),
-    (p, i) => /ʒ/.test(i) && /y/.test(p),
-    (p) => /sh/.test(p),
-    (p) => /z/.test(p),
-    (p) => /v/.test(p),
-    (p) => /[áéíóúǘ]|́/.test(p.normalize("NFC")),
-  ];
+
+  // ---- One notebook per course ----
+  const NOTEBOOKS = {
+    fr: { title: "Mon carnet de français", tab: "Français", locale: "fr-FR", until: d => `Jusqu’au ${d}`, script: "fr", paper: "seyes" },
+    pt: { title: "Meu caderno de português", tab: "Português", locale: "pt-BR", until: d => `Até ${d}`, script: "br", paper: "ruled" },
+  };
+  function notebook(code) {
+    if (NOTEBOOKS[code]) return NOTEBOOKS[code];
+    let own = code;
+    try { own = new Intl.DisplayNames([code], { type: "language" }).of(code) || code; } catch { /* unknown code */ }
+    own = own.charAt(0).toUpperCase() + own.slice(1);
+    return { title: own, tab: own, locale: code, until: d => t().until(d), script: "fr", paper: "seyes" };
+  }
+
+  // ---- Pronunciation guide, per language. Each entry shows up only when one of
+  // your words uses it, with that word as the example. p = pronunciation, i = IPA.
+  const has = re => p => re.test(p);
+  const nasal = (p, i) => /̃/.test(i.normalize("NFD")) && /[aeiou][nm]/.test(p);
+  const accent = p => /[áéíóúǘ]|́/.test(p.normalize("NFC"));
+  const SAME = {
+    sh: { sym: "sh", test: has(/sh/), es: "Como en «show».", en: "As in “show”." },
+    v: { sym: "v", test: has(/v/), es: "Con los dientes de arriba sobre el labio de abajo. No es la b.", en: "Upper teeth on the lower lip. Not a b." },
+    u: { sym: "ü", test: has(/ü/), es: "Di «i» con los labios redondeados, como para silbar.", en: "Say “i” with your lips rounded, as if to whistle." },
+    o: { sym: "ö", test: has(/ö/), es: "Di «e» con los labios redondeados, como para decir «o».", en: "Say “e” with your lips rounded, as if to say “o”." },
+  };
+  const LEGENDS = {
+    fr: [
+      SAME.u, SAME.o,
+      { sym: "an en on", test: nasal, es: "Vocal nasal: el aire sale también por la nariz y la n casi no suena.", en: "Nasal vowel: air also goes out through the nose and the n is barely heard." },
+      { sym: "r", test: (p, i) => /ʁ/.test(i), es: "La r francesa se dice al fondo de la garganta, parecida a una j suave. Nunca es la r de «perro».", en: "The French r is made at the back of the throat, close to a soft Spanish j. Never the rolled r of “perro”." },
+      { sym: "y", test: (p, i) => /ʒ/.test(i) && /y/.test(p), es: "Antes de vocal suena como la «ll» argentina de «yo».", en: "Before a vowel it sounds like the Argentine “ll” in “yo”." },
+      SAME.sh,
+      { sym: "z", test: has(/z/), es: "Una s que zumba, como una abeja.", en: "A buzzing s, like a bee." },
+      SAME.v,
+      { sym: "á é í ó ú", test: accent, es: "La tilde marca dónde va la fuerza. En francés casi siempre es la última sílaba.", en: "The accent shows where the stress goes. In French it's almost always the last syllable." },
+    ],
+    pt: [
+      { sym: "an en in on un", test: nasal, es: "Vocal nasal: el aire sale también por la nariz y la n casi no suena.", en: "Nasal vowel: air also goes out through the nose and the n is barely heard." },
+      { sym: "j", test: (p, i) => /[xhχʁ]/.test(i) && /j/.test(p), es: "La r fuerte (al inicio de palabra o «rr») suena como una j suave.", en: "The strong r (at the start of a word or “rr”) sounds like a soft Spanish j." },
+      { sym: "ch", test: (p, i) => /tʃ/.test(i), es: "En Brasil, la t antes de i suena «ch».", en: "In Brazil, a t before i sounds like “ch”." },
+      { sym: "y", test: (p, i) => /ʒ/.test(i) && /y/.test(p), es: "Como la «ll» argentina de «yo». Así suenan la j y, en Brasil, la d antes de i.", en: "Like the Argentine “ll” in “yo”. That's the j, and in Brazil a d before i." },
+      SAME.sh,
+      { sym: "z", test: has(/z/), es: "Una s que zumba, como una abeja. Así suena la s entre vocales.", en: "A buzzing s, like a bee. That's an s between vowels." },
+      SAME.v,
+      { sym: "ll", test: (p, i) => /ʎ/.test(i), es: "La lengua toca el paladar, como una «li» muy rápida (lh).", en: "Tongue against the palate, like a very quick “li” (lh)." },
+      { sym: "u", test: (p, i) => /ʊ(\s|$)/.test(i), es: "La o del final suena casi como u.", en: "A final o sounds almost like u." },
+      { sym: "á é í ó ú", test: accent, es: "La tilde marca la sílaba fuerte.", en: "The accent marks the stressed syllable." },
+    ],
+    other: [
+      SAME.u, SAME.o,
+      { sym: "an en on", test: nasal, es: "Vocal nasal: el aire sale también por la nariz y la n casi no suena.", en: "Nasal vowel: air also goes out through the nose and the n is barely heard." },
+      SAME.sh,
+      { sym: "z", test: has(/z/), es: "Una s que zumba, como una abeja.", en: "A buzzing s, like a bee." },
+      SAME.v,
+      { sym: "á é í ó ú", test: accent, es: "La tilde marca la sílaba fuerte.", en: "The accent marks the stressed syllable." },
+    ],
+  };
   const SPEECH_TAGS = { fr: "fr-FR", es: "es-ES", pt: "pt-BR", en: "en-US", zh: "zh-CN", zs: "zh-CN", it: "it-IT", de: "de-DE", ja: "ja-JP", ko: "ko-KR" };
   const DAY = 86400000;
 
@@ -425,6 +487,16 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
   const langName = (code) => {
     try { return new Intl.DisplayNames([lang], { type: "language" }).of(code); } catch { return code; }
   };
+  const fmtCache = new Map();
+  function dateFmt(locale, opts) {
+    const key = locale + JSON.stringify(opts);
+    if (!fmtCache.has(key)) {
+      let f;
+      try { f = new Intl.DateTimeFormat(locale, opts); } catch { f = new Intl.DateTimeFormat("fr-FR", opts); }
+      fmtCache.set(key, f);
+    }
+    return fmtCache.get(key);
+  }
 
   // ---- State ----
   const state = {
@@ -433,6 +505,51 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
     quiz: store.get("quiz", false), slow: store.get("slow", false),
   };
   const revealed = new Set();
+
+  // ---- Courses ----
+  const keyOf = (c) => `${c.learning}-${c.from}`;
+  function courseKeys() {
+    if (!state.data) return [];
+    const keys = new Set(Object.keys(state.data.courses || {}));
+    for (const k of state.data.known || []) if (k && k.learning && k.from) keys.add(keyOf(k));
+    return [...keys].sort();
+  }
+  function courseInfo(key) {
+    if (!state.data || !key) return null;
+    const c = (state.data.courses || {})[key];
+    if (c) return c;
+    const k = (state.data.known || []).find((x) => keyOf(x) === key);
+    return k ? { learning: k.learning, from: k.from, name: k.name, words: [] } : null;
+  }
+  const course = () => courseInfo(state.courseKey);
+  function hashFor(key) {
+    const c = courseInfo(key);
+    if (!c) return "";
+    const twins = courseKeys().filter((k) => k.split("-")[0] === c.learning).length > 1;
+    return twins ? key : c.learning;
+  }
+  function keyFromHash() {
+    const h = decodeURIComponent(location.hash.slice(1));
+    if (!h) return null;
+    const keys = courseKeys();
+    return keys.find((k) => k === h) || keys.find((k) => k.split("-")[0] === h) || null;
+  }
+  function pickCourse() {
+    const keys = courseKeys();
+    const remembered = store.get("tab", "");
+    return keyFromHash() || (keys.includes(remembered) ? remembered : null) ||
+      (state.data.current && keys.includes(state.data.current) ? state.data.current : null) || keys[0] || null;
+  }
+  function selectCourse(key) {
+    if (!key || key === state.courseKey) return;
+    stopAudio();
+    state.courseKey = key;
+    store.set("tab", key);
+    revealed.clear();
+    const h = hashFor(key);
+    if (h) history.replaceState(null, "", "#" + h);
+    render();
+  }
 
   // ---- Loading ----
   async function getJSON(url) {
@@ -459,11 +576,11 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
       } catch { data = null; }
     }
     if (!data) { showLoadError(); return; }
+    data.courses = data.courses || {};
     state.data = data;
-    const keys = Object.keys(data.courses || {});
-    state.courseKey = data.current && data.courses[data.current] ? data.current : keys[0] || null;
-    const course = state.courseKey ? data.courses[state.courseKey] : null;
-    lang = store.get("lang", course && course.from === "en" ? "en" : "es");
+    state.courseKey = pickCourse();
+    const c = course();
+    lang = store.get("lang", c && c.from === "en" ? "en" : "es");
     render();
   }
   function showLoadError() {
@@ -473,7 +590,6 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
   }
 
   // ---- Words ----
-  function course() { return state.data && state.courseKey ? state.data.courses[state.courseKey] : null; }
   function firstBatch(words) {
     let min = null;
     for (const w of words) if (w.added && (min === null || w.added < min)) min = w.added;
@@ -487,17 +603,12 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
     return fold(w.text).includes(q) || fold(w.pron).includes(q) ||
       (w.translations || []).some((x) => fold(x).includes(q)) || fold(w.note).includes(q);
   }
-
-  const frDay = new Intl.DateTimeFormat("fr-FR", { weekday: "long", day: "numeric", month: "long" });
-  const frDayYear = new Intl.DateTimeFormat("fr-FR", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
-  const frDate = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long" });
-  const frDateYear = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" });
   const dayKey = (iso) => { const d = new Date(iso); return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`; };
 
-  function groups(words, first) {
+  function groups(words, first, nb) {
     const out = [];
     if (state.sort === "az") {
-      const sorted = [...words].sort((a, b) => a.text.localeCompare(b.text, "fr", { sensitivity: "base" }));
+      const sorted = [...words].sort((a, b) => a.text.localeCompare(b.text, nb.locale, { sensitivity: "base" }));
       for (const w of sorted) {
         const letter = (fold(w.text).match(/[a-z]/) || ["#"])[0].toUpperCase();
         if (!out.length || out[out.length - 1].key !== letter) out.push({ key: letter, title: letter, words: [] });
@@ -512,10 +623,10 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
       const key = isFirst ? "first" : dayKey(w.added);
       if (!out.length || out[out.length - 1].key !== key) {
         const d = new Date(w.added);
-        const sameYear = d.getFullYear() === thisYear;
+        const year = d.getFullYear() !== thisYear ? { year: "numeric" } : {};
         const title = isFirst
-          ? `Jusqu’au ${(sameYear ? frDate : frDateYear).format(d)}`
-          : (sameYear ? frDay : frDayYear).format(d);
+          ? nb.until(dateFmt(nb.locale, { day: "numeric", month: "long", ...year }).format(d))
+          : dateFmt(nb.locale, { weekday: "long", day: "numeric", month: "long", ...year }).format(d);
         out.push({ key, title, words: [] });
       }
       out[out.length - 1].words.push(w);
@@ -524,14 +635,39 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
   }
 
   // ---- Rendering ----
+  const syncUrl = () => `https://github.com/${state.status.repo}/actions/workflows/sync.yml`;
+  function syncClause() {
+    if (!state.status || !state.status.repo) return "";
+    return ` ${esc(t().orPress)} <a href="${esc(syncUrl())}" title="${esc(t().syncTitle)}">${esc(t().syncNow)}</a>`;
+  }
+
+  function renderTabs() {
+    const keys = courseKeys();
+    const nav = $("#tabs");
+    nav.hidden = keys.length < 2;
+    if (keys.length < 2) { nav.innerHTML = ""; return; }
+    nav.setAttribute("aria-label", t().notebooks);
+    nav.innerHTML = keys.map((k) => {
+      const c = courseInfo(k);
+      const nb = notebook(c.learning);
+      const sel = k === state.courseKey;
+      return `<button type="button" role="tab" class="tab script-${esc(nb.script)}" data-course="${esc(k)}" aria-selected="${sel}" aria-controls="list" tabindex="${sel ? 0 : -1}" lang="${esc(c.learning)}">${esc(nb.tab)}</button>`;
+    }).join("");
+  }
+
   function applyChrome() {
     const c = course();
     const s = t();
+    const nb = notebook(c ? c.learning : "fr");
     document.documentElement.lang = lang;
-    const learnName = c ? langName(c.learning) : langName("fr");
-    const fromName = c ? langName(c.from) : langName("es");
-    $("#title").textContent = !c || c.learning === "fr" ? "Mon carnet de français" : `${learnName.charAt(0).toUpperCase()}${learnName.slice(1)}`;
-    document.title = $("#title").textContent;
+    document.body.classList.toggle("paper-ruled", nb.paper === "ruled");
+    document.body.classList.toggle("script-br", nb.script === "br");
+    $("#title").textContent = nb.title;
+    $("#title").lang = c ? c.learning : "fr";
+    document.title = nb.title;
+    renderTabs();
+    const learnName = langName(c ? c.learning : "fr");
+    const fromName = langName(c ? c.from : "es");
     $("#searchLabel").textContent = s.search;
     $("#q").placeholder = s.searchPh(learnName, fromName);
     $("#sortGroup").setAttribute("aria-label", s.sort);
@@ -552,17 +688,12 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
     $("#repoLink").textContent = s.repo;
     const repo = state.status && state.status.repo;
     $("#repoLink").hidden = !repo;
-    if (repo) $("#repoLink").href = `https://github.com/${repo}`;
-
-    const sel = $("#course");
-    const keys = state.data ? Object.keys(state.data.courses || {}) : [];
-    sel.hidden = keys.length < 2;
-    sel.setAttribute("aria-label", s.course);
-    if (keys.length > 1) {
-      sel.innerHTML = keys.map((k) => {
-        const cc = state.data.courses[k];
-        return `<option value="${esc(k)}"${k === state.courseKey ? " selected" : ""}>${esc(langName(cc.learning))} (${esc(langName(cc.from))})</option>`;
-      }).join("");
+    $("#syncLink").hidden = !repo;
+    if (repo) {
+      $("#repoLink").href = `https://github.com/${repo}`;
+      $("#syncLink").href = syncUrl();
+      $("#syncLink").textContent = s.syncNow;
+      $("#syncLink").title = s.syncTitle;
     }
   }
 
@@ -576,8 +707,15 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
     return rtf.format(Math.round(diff / 86400), "day");
   }
 
+  // Is the selected course the one the last sync read (the one open on Duolingo)?
+  function readsThisCourse() {
+    const st = state.status;
+    return !st || !st.read || st.read === state.courseKey;
+  }
+
   function renderHeader(words, first) {
     const s = t();
+    const c = course();
     const wk = words.filter((w) => isNew(w, first)).length;
     const onlyFirst = words.length > 0 && words.every((w) => w.added === first);
     $("#summary").textContent = words.length
@@ -585,14 +723,21 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
       : " ";
     const st = state.status;
     const el = $("#status");
-    el.hidden = true; el.className = "status";
+    el.hidden = true; el.className = "status"; el.textContent = "";
     if (!state.demo && st && st.checked_at) {
-      el.hidden = false;
       if (st.ok === false && st.message) {
+        el.hidden = false;
         el.classList.add("bad");
         el.innerHTML = esc(s.failed(st.message)) + (st.run_url ? ` <a href="${esc(st.run_url)}">${esc(s.seeRun)}</a>` : "");
-      } else {
+      } else if (readsThisCourse()) {
+        el.hidden = false;
         el.textContent = s.checked(relTime(st.checked_at));
+      } else if (words.length) {
+        el.hidden = false;
+        const open = courseInfo(st.read);
+        const when = c.updated || state.data.updated;
+        el.innerHTML = esc((when ? s.updated(relTime(when)) + " " : "") +
+          s.otherOpen(langName(open ? open.learning : st.read.split("-")[0]), langName(c.learning))) + syncClause() + ".";
       }
     }
     $("#demo").hidden = !state.demo;
@@ -601,17 +746,17 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
 
   const SPEAKER = '<svg class="speaker" aria-hidden="true"><use href="#i-speaker"/></svg><svg class="bars" aria-hidden="true"><use href="#i-bars"/></svg>';
 
-  function entryHTML(w, idx) {
+  function entryHTML(w, idx, c) {
     const s = t();
     const covered = state.quiz && !revealed.has(w.text);
     const meaning = (w.translations || []).join(", ");
     return `<li class="entry" data-i="${idx}">` +
       `<button type="button" class="play" aria-label="${esc(s.play(w.text))}">${SPEAKER}</button>` +
-      `<span class="word" lang="${esc(course().learning)}">${esc(w.text)}</span>` +
+      `<span class="word" lang="${esc(c.learning)}">${esc(w.text)}</span>` +
       `<span class="pron"${w.ipa ? ` title="/${esc(w.ipa)}/"` : ""}>${esc(w.pron || "")}</span>` +
       `<span class="meaning${covered ? " covered" : ""}">` +
         `<button type="button" class="tape" aria-label="${esc(s.reveal(w.text))}"></button>` +
-        `<span class="text" lang="${esc(course().from)}">${esc(meaning)}</span>` +
+        `<span class="text" lang="${esc(c.from)}">${esc(meaning)}</span>` +
         (w.note ? `<span class="note">${esc(w.note)}</span>` : "") +
       `</span></li>`;
   }
@@ -625,9 +770,14 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
     renderHeader(words, first);
     renderLegend(words);
     const list = $("#list");
+    shown = [];
     if (!words.length) {
-      const msg = state.status && state.status.ok === false && state.status.message ? t().failed(state.status.message) : t().empty;
-      list.innerHTML = `<p class="message">${esc(msg)}</p>`;
+      const st = state.status;
+      let html;
+      if (st && st.ok === false && st.message) html = esc(t().failed(st.message));
+      else if (c && st && !readsThisCourse()) html = esc(t().emptyOther(langName(c.learning))) + syncClause() + ".";
+      else html = esc(t().empty);
+      list.innerHTML = `<p class="message">${html}</p>`;
       return;
     }
     const q = fold(state.q.trim());
@@ -636,27 +786,28 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
       list.innerHTML = `<p class="message">${esc(q ? t().noMatch(state.q.trim()) : t().noWeek)}</p>`;
       return;
     }
-    shown = [];
+    const nb = notebook(c.learning);
     let html = "";
-    for (const g of groups(filtered, first)) {
-      html += `<section class="group"><h2><span class="when">${esc(g.title)}</span><span class="count">${esc(t().count(g.words.length))}</span></h2><ol class="entries">`;
-      for (const w of g.words) { html += entryHTML(w, shown.length); shown.push(w); }
+    for (const g of groups(filtered, first, nb)) {
+      html += `<section class="group"><h2><span class="when" lang="${esc(c.learning)}">${esc(g.title)}</span><span class="count">${esc(t().count(g.words.length))}</span></h2><ol class="entries">`;
+      for (const w of g.words) { html += entryHTML(w, shown.length, c); shown.push(w); }
       html += "</ol></section>";
     }
     list.innerHTML = html;
   }
 
   function renderLegend(words) {
-    const s = t();
+    const c = course();
+    const items = LEGENDS[c && c.learning] || LEGENDS.other;
     const rows = [];
-    s.legend.forEach(([sym, text], i) => {
+    for (const item of items) {
       let best = null;
       for (const w of words) {
         if (!w.pron) continue;
-        if (LEGEND_TESTS[i](w.pron, w.ipa || "") && (!best || w.text.length < best.text.length)) best = w;
+        if (item.test(w.pron, w.ipa || "") && (!best || w.text.length < best.text.length)) best = w;
       }
-      if (best) rows.push(`<dt>${esc(sym)}</dt><dd>${esc(text)} <span class="eg">${esc(best.text)} → ${esc(best.pron)}</span></dd>`);
-    });
+      if (best) rows.push(`<dt>${esc(item.sym)}</dt><dd>${esc(item[lang])} <span class="eg">${esc(best.text)} → ${esc(best.pron)}</span></dd>`);
+    }
     $("#legendList").innerHTML = rows.join("");
     $("#legend").hidden = rows.length === 0;
   }
@@ -722,12 +873,25 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
     if (!w) return;
     if (e.target.closest(".tape")) {
       revealed.add(w.text);
-      const m = row.querySelector(".meaning");
-      m.classList.remove("covered");
+      row.querySelector(".meaning").classList.remove("covered");
       return;
     }
     if (e.target.closest(".play") || e.target.closest(".word") || e.target.closest(".pron")) play(w, row);
   });
+  $("#tabs").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-course]");
+    if (b) selectCourse(b.dataset.course);
+  });
+  $("#tabs").addEventListener("keydown", (e) => {
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    const keys = courseKeys();
+    const i = keys.indexOf(state.courseKey);
+    const next = keys[(i + (e.key === "ArrowRight" ? 1 : keys.length - 1)) % keys.length];
+    selectCourse(next);
+    const b = document.querySelector(`[data-course="${CSS.escape(next)}"]`);
+    if (b) b.focus();
+  });
+  window.addEventListener("hashchange", () => { const k = keyFromHash(); if (k) selectCourse(k); });
   let timer = null;
   $("#q").addEventListener("input", (e) => {
     clearTimeout(timer);
@@ -744,7 +908,6 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
   $("#quiz").addEventListener("click", () => { state.quiz = !state.quiz; revealed.clear(); store.set("quiz", state.quiz); render(); });
   $("#slow").addEventListener("click", () => { state.slow = !state.slow; store.set("slow", state.slow); applyChrome(); });
   $("#langToggle").addEventListener("click", () => { lang = lang === "es" ? "en" : "es"; store.set("lang", lang); render(); });
-  $("#course").addEventListener("change", (e) => { state.courseKey = e.target.value; revealed.clear(); render(); });
 
   load();
 })();

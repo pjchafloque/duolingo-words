@@ -1,11 +1,13 @@
 # Pulls your learned words from Duolingo and publishes the page.
-# Runs every 6 hours, when you press "Run workflow" in the Actions tab,
-# and whenever you change something in the repo (like data/overrides.json).
+# Runs every hour, when you press "Run workflow" in the Actions tab, and
+# whenever you change something in the repo (like data/overrides.json).
+# Duolingo only shares the word list of the course that's open in your app,
+# so each run reads that one course (French or Portuguese).
 name: Sync words
 
 on:
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -25,6 +27,7 @@ jobs:
     outputs:
       ok: ${{ steps.sync.outputs.ok }}
       message: ${{ steps.sync.outputs.message }}
+      read: ${{ steps.sync.outputs.read }}
     steps:
       - uses: actions/checkout@v7
 
@@ -71,6 +74,7 @@ jobs:
           SYNC_OK: ${{ needs.sync.outputs.ok }}
           SYNC_MESSAGE: ${{ needs.sync.outputs.message }}
           SYNC_RESULT: ${{ needs.sync.result }}
+          SYNC_READ: ${{ needs.sync.outputs.read }}
           REPO: ${{ github.repository }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |

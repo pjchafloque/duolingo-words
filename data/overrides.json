@@ -1,10 +1,23 @@
 {
- "_how": "Fix a pronunciation, a meaning or add a note here, under the course language (fr). A plain string sets the pronunciation. Saving this file on GitHub runs the sync, and the page updates a minute or two later. Keys that start with _ are ignored.",
+ "_how": "Fix a pronunciation, a meaning or add a note here, under the course language (fr for French, pt for Portuguese). A plain string sets the pronunciation. Saving this file on GitHub runs the sync, and the page updates a minute or two later. Keys that start with _ are ignored.",
  "_example": {
   "fr": {
    "bonjour": "bonshur",
-   "chat": {"pron": "sha", "translations": ["gato"], "note": "la t no suena"}
+   "chat": {
+    "pron": "sha",
+    "translations": [
+     "gato"
+    ],
+    "note": "la t no suena"
+   }
+  },
+  "pt": {
+   "obrigado": {
+    "pron": "obrigadu",
+    "note": "las mujeres dicen obrigada"
+   }
   }
  },
- "fr": {}
+ "fr": {},
+ "pt": {}
 }

@@ -189,7 +189,7 @@ def _spell_word(ipa_word: str) -> str:
         if not pending_nasal:
             return
         pending_nasal = False
-        if next_tok is not None and next_tok.kind == "C" and next_tok.ipa in ("n", "m", "ɲ"):
+        if next_tok is not None and next_tok.kind == "C" and next_tok.ipa in ("n", "m", "ɲ", "ŋ"):
             return  # "ennui": the real n already follows
         letter = "m" if next_tok is not None and next_tok.kind == "C" and next_tok.ipa[0] in "pb" else "n"
         out.append([letter, False, False])
@@ -203,6 +203,9 @@ def _spell_word(ipa_word: str) -> str:
             if nxt is not None and nxt.kind == "C" and (
                 nxt.ipa == tok.ipa or (len(nxt.ipa) == 2 and nxt.ipa[0] == tok.ipa)
             ):
+                continue
+            if tok.ipa == "ŋ" and idx > 0 and toks[idx - 1].nasal:
+                out.append(["n", False, False])  # nasal vowel + ŋ is still just "n"
                 continue
             for ch, is_vowel in _consonant(tok, nxt):
                 out.append([ch, is_vowel, False])
@@ -273,7 +276,10 @@ def _add_accent(out: list[list]) -> None:
     ends_soft = out[-1][1] or (last in ("n", "s") and len(out) > 1 and out[-2][1])
     default = len(nuclei) - 2 if ends_soft else len(nuclei) - 1
     if forced or stressed != default:
-        target = next((x for x in nuc if out[x][0] in STRONG), nuc[-1])
+        # The accent goes on a/e/o when the syllable has one; between two of
+        # i/u/ü it goes on the one that's stressed (Portuguese "Brasil" -> "brazíu").
+        stressed_letter = next((x for x in nuc if out[x][2]), nuc[-1])
+        target = next((x for x in nuc if out[x][0] in STRONG), stressed_letter)
         out[target][0] = ACUTE[out[target][0]]
 
 
@@ -294,17 +300,18 @@ def ipa_for(text: str, lang: str) -> str | None:
     voice = VOICES.get(lang)
     if not exe or not voice or not text.strip():
         return None
-    try:
-        result = subprocess.run(
-            [exe, "-q", "--ipa", "-v", voice],
-            input=text, capture_output=True, text=True, timeout=15,
-        )
-    except (OSError, subprocess.TimeoutExpired):
-        return None
-    if result.returncode != 0:
-        return None
-    ipa = " ".join(_LANG_TAG.sub(" ", result.stdout).split())
-    return ipa or None
+    for name in dict.fromkeys([voice, lang]):  # e.g. "pt-br", then plain "pt"
+        try:
+            result = subprocess.run(
+                [exe, "-q", "--ipa", "-v", name],
+                input=text, capture_output=True, text=True, timeout=15,
+            )
+        except (OSError, subprocess.TimeoutExpired):
+            return None
+        ipa = " ".join(_LANG_TAG.sub(" ", result.stdout).split())
+        if result.returncode == 0 and ipa:
+            return ipa
+    return None
 
 
 def pronounce(text: str, lang: str) -> tuple[str | None, str | None]:

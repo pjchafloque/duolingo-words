@@ -1,7 +1,7 @@
 {
  "version": 1,
- "current": "fr-es",
- "updated": "2026-11-11T23:11:41Z",
+ "current": "pt-es",
+ "updated": "2026-11-11T23:24:38Z",
  "courses": {
   "fr-es": {
    "learning": "fr",
@@ -252,6 +252,3930 @@
    "dropped": {},
    "duolingo_total": 18,
    "count": 18
+  },
+  "pt-es": {
+   "learning": "pt",
+   "from": "es",
+   "name": "Portuguese",
+   "words": [
+    {
+     "text": "matemática",
+     "translations": [
+      "matemática",
+      "matemáticas"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/775974030edfe929a94eb56efa2bb127",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 291,
+     "pron": "matemáchica",
+     "ipa": "mˌatemˈatʃikæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "um pouco",
+     "translations": [
+      "un poco"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/7515cb0bebee04d18120a74a40adf622",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 290,
+     "pron": "un poucu",
+     "ipa": "ũŋ pˈowkʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "química",
+     "translations": [
+      "química"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/671052cc68bbee2e02a613699fe7bcf3",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 289,
+     "pron": "química",
+     "ipa": "kˈimikæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "diretor",
+     "translations": [
+      "director"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3dc5ef61b464066293953d9207bbfac5",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 288,
+     "pron": "yiretor",
+     "ipa": "dʒˌiɾetˈor",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "biblioteca",
+     "translations": [
+      "biblioteca"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/91d3531f5cbbf855f49ae152e4828290",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 287,
+     "pron": "biblioteca",
+     "ipa": "bˌibliotˈɛkæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tarefa",
+     "translations": [
+      "quehacer",
+      "tarea",
+      "encomienda"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/fc601d64fb5f8a47706ad5e574e4f33a",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 286,
+     "pron": "tarefa",
+     "ipa": "tˌaɾˈɛfæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "em grupo",
+     "translations": [
+      "en grupo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/790d65ba3abe736d68afabd066312b6f",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 285,
+     "pron": "eing grupu",
+     "ipa": "ˈeɪŋ ɡrˈupʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "revisar",
+     "translations": [
+      "repasabas",
+      "verifiquemos",
+      "revisar",
+      "repasemos",
+      "repasé",
+      "corrigió"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/2efb31db8f29dadaa338e7855b54749a",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 284,
+     "pron": "jevizar",
+     "ipa": "xˌevizˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "fácil",
+     "translations": [
+      "fácil",
+      "sencillas"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c2064e76f830bce239e7015326cac1a8",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 283,
+     "pron": "fasiu",
+     "ipa": "fˈasiʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "geografia",
+     "translations": [
+      "geografía"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/b2bf5945a4d74963d94c25500f175203",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 282,
+     "pron": "yeografía",
+     "ipa": "ʒˌeoɡrafˈiæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "japonês",
+     "translations": [
+      "japonés"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0b0226ee576c7661ab6e946aeb78a147",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 281,
+     "pron": "yaponés",
+     "ipa": "ʒˌaponˈes",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "super",
+     "translations": [
+      "súper"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/b084edc41ebc76e4785ab82e25e5082e",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 280,
+     "pron": "súper",
+     "ipa": "sˈʊper",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "exercício",
+     "translations": [
+      "ejercicio"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/be8c3bd412e4d6f573407c913d1a43db",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 279,
+     "pron": "ezeresisiu",
+     "ipa": "ˌezeɾəsˈisjʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "difícil",
+     "translations": [
+      "embarazosa",
+      "embarazosas",
+      "desafiante",
+      "difícil",
+      "problemático"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/9db7dd033fa2af12b31878578b83f827",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 278,
+     "pron": "yifisiu",
+     "ipa": "dʒˌifˈisiʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "chinês",
+     "translations": [
+      "chino"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a2b94cca9cf76a782b9e1f99f8d2353f",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 277,
+     "pron": "shinés",
+     "ipa": "ʃinˈes",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "online",
+     "translations": [
+      "en línea"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6aaaf229fa2f989acd32c40929d6aaa6",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 276,
+     "pron": "onglaing",
+     "ipa": "oŋlˈaɪŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "russo",
+     "translations": [
+      "ruso"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/cecb169d5b3ef06ef3bbd351908e6bbe",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 275,
+     "pron": "jusu",
+     "ipa": "xˈusʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "literatura",
+     "translations": [
+      "literatura"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c8b26f2128179c63a70da85e023bb4a3",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 274,
+     "pron": "literatura",
+     "ipa": "lˌiteɾatˈuɾæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "aula",
+     "translations": [
+      "clase",
+      "aula"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/cd9595e680c15fee57e121a404b1e850",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 273,
+     "pron": "aula",
+     "ipa": "ˈaʊlæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "história",
+     "translations": [
+      "historia"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/de12362699d65d88528ac8d9461eece2",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 272,
+     "pron": "istoria",
+     "ipa": "ˌistˈɔɾjæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "isso mesmo",
+     "translations": [
+      "así es"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/78950829f6a913beb4b36beaf028a8e6",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 271,
+     "pron": "isu mezmu",
+     "ipa": "ˈisʊ mˈezmʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "trabalhar",
+     "translations": [
+      "trabajar"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/99122e916a80ae82f2080d7c95e20e37",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 270,
+     "pron": "trabaliar",
+     "ipa": "trˌabaljˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "escola",
+     "translations": [
+      "escuela"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/43dd0d282f730bdc3dc4a268efed6316",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 269,
+     "pron": "escola",
+     "ipa": "ˌeskˈɔlæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "professor",
+     "translations": [
+      "profesor"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/717ae9fc16ed30ff384fa83ba5b876a7",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 268,
+     "pron": "profesor",
+     "ipa": "prˌofesˈor",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "Rússia",
+     "translations": [
+      "Rusia"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/9ef999df08408c1e0eff350fcc0602bd",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 267,
+     "pron": "jusia",
+     "ipa": "xˈusjæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "quatro",
+     "translations": [
+      "cuatro"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a79d4e68427c344c99b0ce68e34d27aa",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 266,
+     "pron": "cuatru",
+     "ipa": "kwˈatrʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "árabe",
+     "translations": [
+      "árabe"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1f69202c0f0d99b5fc673833cc172c28",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 265,
+     "pron": "árabü",
+     "ipa": "ˈaɾæby",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "chato",
+     "translations": [
+      "aburrido"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/70e465204f5e2ec788ab3e20d5edb1c9",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 264,
+     "pron": "shatu",
+     "ipa": "ʃˈatʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "da",
+     "translations": [
+      "de la"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1c81f178b756df5f21905fe1078403e0",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 263,
+     "pron": "da",
+     "ipa": "dˈa",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "Espanha",
+     "translations": [
+      "España"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/87b36e7d53f1bf42d61e990183f7ee6e",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 262,
+     "pron": "españa",
+     "ipa": "ˌespˈɐ̃ɲæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "pessoa",
+     "translations": [
+      "persona",
+      "individual"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e303077825c1aba8b08894b85cb3d24f",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 261,
+     "pron": "pesoa",
+     "ipa": "pˌesˈoæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "podcast",
+     "translations": [
+      "pódcast",
+      "podcast",
+      "podcasts"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f69d0ea3ebf8877ec51f484a1431a45f",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 260,
+     "pron": "poyüquest",
+     "ipa": "pˌɔdʒykˈɛst",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "favorito",
+     "translations": [
+      "favorito"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5dfefb52e47c7343053cfeca32c3b5f2",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 259,
+     "pron": "favoritu",
+     "ipa": "fˌavoɾˈitʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "do",
+     "translations": [
+      "de"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d1f60b286b4bb139cf57f85d5ed6ae4b",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 258,
+     "pron": "du",
+     "ipa": "dˈʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "são",
+     "translations": [
+      "son",
+      "san"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/49c875a83cbdc4726b01392fc614c71a",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 257,
+     "pron": "sanun",
+     "ipa": "sˈɐ̃ʊ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "amanhã",
+     "translations": [
+      "mañana"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0f556e249d2bb0576797ee468fdd8ced",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 256,
+     "pron": "amañán",
+     "ipa": "ˌæmɐ̃ɲˈɐ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "curso",
+     "translations": [
+      "curso"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/8b2e7cb450d1a807fb10b97fb5dcfbcb",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 255,
+     "pron": "cúresu",
+     "ipa": "kˈuɾəsʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "interessante",
+     "translations": [
+      "interesante"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6ad28a4e661957127cfbe89606bd6db5",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 254,
+     "pron": "ingteresanchü",
+     "ipa": "ˌiŋteɾesˈɐ̃ŋtʃy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "começa",
+     "translations": [
+      "comienza",
+      "empiezas"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/9468f7e374370132ecbf710e6138e3ac",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 253,
+     "pron": "comesa",
+     "ipa": "kˌomˈɛsæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "ioga",
+     "translations": [
+      "yoga"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/24ec8e4182b5a3a9a8776cf0f5b7ab59",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 252,
+     "pron": "ioga",
+     "ipa": "ˌiˈɔɡæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "desculpa",
+     "translations": [
+      "disculpa"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/883ab922d16189884363f7f6c47aafe2",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 251,
+     "pron": "descuupa",
+     "ipa": "dˌeskˈuwpæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "mal",
+     "translations": [
+      "mal"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c76395a3463d21cb8c7c68a24c34a311",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 250,
+     "pron": "mau",
+     "ipa": "mˈaʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "ensinar",
+     "translations": [
+      "consiguiéramos",
+      "educar",
+      "enseñar",
+      "enseñarte",
+      "adiestrar"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/917b8e990f6f8fe95c9eb17c53c0656b",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 249,
+     "pron": "eingsinar",
+     "ipa": "ˌeɪŋsinˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "avô",
+     "translations": [
+      "abuelo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/b29207633880c7606937bcbd1eeae530",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 248,
+     "pron": "avó",
+     "ipa": "avˈo",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "hoje",
+     "translations": [
+      "hoy"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/dcd0f12397ef70ae6a46f38d3b1af727",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 247,
+     "pron": "oyü",
+     "ipa": "ˈoʒy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "vizinho",
+     "translations": [
+      "vecino"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/571e48b5d0bbcf0c74e632700b53711f",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 246,
+     "pron": "viziñu",
+     "ipa": "vˌizˈiɲʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "pescar",
+     "translations": [
+      "pescar"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f65b77b08772e6a635cea9ba1e84e892",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 245,
+     "pron": "pescar",
+     "ipa": "peskˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "desenhar",
+     "translations": [
+      "diseñó",
+      "dibujes",
+      "dibujar",
+      "diseñar",
+      "dibujara",
+      "diseñado"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/01f9be80128b81d1b9848c3057fd66eb",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 244,
+     "pron": "dezeñar",
+     "ipa": "dˌezeɲˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "avó",
+     "translations": [
+      "abuela"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5bd07c56f2beaea306d80877364f64d7",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 243,
+     "pron": "avó",
+     "ipa": "avˈɔ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sempre",
+     "translations": [
+      "siempre"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/da2e1e6f43e8e19fceee5cb9306b59fd",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 242,
+     "pron": "seimprü",
+     "ipa": "sˈeɪmpry",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "porque",
+     "translations": [
+      "porque"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/abe2506a920a30f079763ae42f8ab080",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 241,
+     "pron": "pórecü",
+     "ipa": "pˈoɾəky",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "atlético",
+     "translations": [
+      "atlético"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d59aabae5d3f18c2834e964b527d9888",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 240,
+     "pron": "atléchicu",
+     "ipa": "ˌatlˈɛtʃikʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "descansar",
+     "translations": [
+      "descansar",
+      "relajándome",
+      "descansaría",
+      "reposar"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/49b2a9ce5123cd1e8b6dd45c74fa3a7e",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 239,
+     "pron": "descansar",
+     "ipa": "dˌeskɐ̃ŋsˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "caminhar",
+     "translations": [
+      "caminar",
+      "caminaste"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/85cfe10abd4ee1355b958a815088692e",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 238,
+     "pron": "camiñar",
+     "ipa": "kˌæmiɲˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sinceramente",
+     "translations": [
+      "sinceramente"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1a39e30e037d4c79cd04907cdaac48c8",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 237,
+     "pron": "singserameingchü",
+     "ipa": "sˌiŋseɾæmˈeɪŋtʃy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "vôlei",
+     "translations": [
+      "voleibol"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a00ae077881240ce7a9626cf7f4f25ea",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 236,
+     "pron": "volei",
+     "ipa": "vˈoleɪ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "eles",
+     "translations": [
+      "ellos"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/439dde1643360c2ca4e0f614fd3beaae",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 235,
+     "pron": "elüs",
+     "ipa": "ˈelys",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "ah",
+     "translations": [
+      "ah"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e3007d2368d338693df792906af22bc5",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 234,
+     "pron": "a",
+     "ipa": "ˈa",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "preguiçoso",
+     "translations": [
+      "perezoso"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/92bfac88476f8cdde3b62b8435c79a83",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 233,
+     "pron": "preguisozu",
+     "ipa": "prˌeɡisˈozʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "treinador",
+     "translations": [
+      "entrenador",
+      "preparador"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0a0ab68b7591ea4c7121d586d5dea9cd",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 232,
+     "pron": "treinador",
+     "ipa": "trˌeɪnadˈor",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "elas",
+     "translations": [
+      "ellas"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5abab0eaf611f5ed4adc05a90cbd6f0d",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 231,
+     "pron": "elas",
+     "ipa": "ˈɛlæs",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "basquete",
+     "translations": [
+      "baloncesto"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6f480c31f64fe01ca19e6921add4f5ab",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 230,
+     "pron": "basquechü",
+     "ipa": "bˌaskˈɛtʃy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "já não",
+     "translations": [
+      "ya no"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ff9d0959eaac6abf8261ee37a7eef240",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 229,
+     "pron": "ya nanun",
+     "ipa": "ʒˈa nˈɐ̃ʊ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "esquiar",
+     "translations": [
+      "esquiar"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/926e4de5be8d1c4cbe54206b2f8f0c8d",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 228,
+     "pron": "esquiar",
+     "ipa": "ˌeskiˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "todos os dias",
+     "translations": [
+      "todos los días"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d5f34c22e369031f803f66163d0e7dd7",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 227,
+     "pron": "tóduz uz yías",
+     "ipa": "tˈodʊz ʊz dʒˈiæs",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tênis",
+     "translations": [
+      "tenis"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/8241198a4013de5fcb43d5efc3fcd3fc",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 226,
+     "pron": "tenis",
+     "ipa": "tˈenis",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "nadar",
+     "translations": [
+      "nadar"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/83f5a1e28cd8d9d1d7af1f17459234ce",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 225,
+     "pron": "nadar",
+     "ipa": "nadˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "time",
+     "translations": [
+      "equipo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/72c672d06f6301c7179e5680d41ef2f0",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 224,
+     "pron": "chimü",
+     "ipa": "tʃˈimy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "piscina",
+     "translations": [
+      "piscina"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/bff0c0b9d26c651b6baef46f23d47b73",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 223,
+     "pron": "pisina",
+     "ipa": "pˌisˈinæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "frequentemente",
+     "translations": [
+      "frecuentemente",
+      "menudo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0b58c9b9a6c0c8abae192b363973414e",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 222,
+     "pron": "frecueingtemeingchü",
+     "ipa": "frˌekweɪŋtemˈeɪŋtʃy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "futebol",
+     "translations": [
+      "fútbol"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c5423e93b746a00f47ab24988b90f1ae",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 221,
+     "pron": "futebol",
+     "ipa": "fˌutebˈɔl",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "ao ar livre",
+     "translations": [
+      "al aire libre"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/9e8ce5e420ff7c59b33b5fd564cbc51b",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 220,
+     "pron": "au ar livrü",
+     "ipa": "aʊ ˈar lˈivry",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "jogar",
+     "translations": [
+      "practicabas",
+      "lanzaras",
+      "botar",
+      "jugara",
+      "jugar (a)",
+      "jugaran"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d5e9a0e51f8cc22b3b1ede75a2c888ae",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 219,
+     "pron": "yogar",
+     "ipa": "ʒoɡˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "treinar",
+     "translations": [
+      "adiestrar",
+      "practicabas",
+      "ejercitar",
+      "entrenar",
+      "entrenen",
+      "ejercitarme",
+      "ejercitarnos",
+      "entrene",
+      "entrenaría",
+      "entrenada"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/7db3351bc1c6fc202acf2dfc3f9fc1e8",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 218,
+     "pron": "treinar",
+     "ipa": "treɪnˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "academia",
+     "translations": [
+      "gimnasio",
+      "academia"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/146ca08da76edf38bfc12f0070003453",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 217,
+     "pron": "academía",
+     "ipa": "ˌakademˈiæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "arroz",
+     "translations": [
+      "arroz"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/84eebd6ddb9c44a30621deef37e75a84",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 216,
+     "pron": "ajós",
+     "ipa": "axˈos",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "de tarde",
+     "translations": [
+      "por la tarde"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/b7a5fe8b902a5c018c439185a9ec4707",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 215,
+     "pron": "yü táreyü",
+     "ipa": "dʒy tˈaɾədʒy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "com frango",
+     "translations": [
+      "con pollo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/483266876ced73d6b853f679a142d943",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 214,
+     "pron": "cong frangu",
+     "ipa": "koŋ frˈɐ̃ŋɡʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sopa",
+     "translations": [
+      "sopa"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/712b20c18a86536550b4eeb7ca36aeee",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 213,
+     "pron": "sopa",
+     "ipa": "sˈopæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "macarrão",
+     "translations": [
+      "macarrón",
+      "pasta",
+      "fideo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/2f5a21787c1802305c0d20a822519a40",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 212,
+     "pron": "macajanun",
+     "ipa": "mˌakaxˈɐ̃ʊ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "cozinhar",
+     "translations": [
+      "cocines",
+      "cocinar",
+      "cocinaría"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e7c09da0555544dea047eff2648edfff",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 211,
+     "pron": "coziñar",
+     "ipa": "kˌoziɲˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "nós",
+     "translations": [
+      "nosotros"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/93c87a441c908b14d82604f298607a5c",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 210,
+     "pron": "nos",
+     "ipa": "nˈɔs",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "somos",
+     "translations": [
+      "somos"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/b4fc75df4b0b8c10ae06b5639c7e0772",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 209,
+     "pron": "somus",
+     "ipa": "sˈomʊs",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "irmãos",
+     "translations": [
+      "hermano"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/27362ea711138f996663fd44d629a922",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 208,
+     "pron": "iremánuns",
+     "ipa": "iɾəmˈɐ̃ʊ̃s",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "pintar",
+     "translations": [
+      "pintar",
+      "pintaría",
+      "teñirme",
+      "retrató",
+      "retratar"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ca9c532739b032d58700be82051f2613",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 207,
+     "pron": "pingtar",
+     "ipa": "piŋtˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "de carro",
+     "translations": [
+      "en coche"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1ecb556207cea571f302eb84aad3979e",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 206,
+     "pron": "yü caju",
+     "ipa": "dʒy kˈaxʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "de trem",
+     "translations": [
+      "en tren"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/af0cb9a3a3d1d6f687c8b365767a34e9",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 205,
+     "pron": "yü treing",
+     "ipa": "dʒy trˈeɪŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "bem",
+     "translations": [
+      "bueno"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/303f36662e1b4b8b40834ff89f95c41d",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 204,
+     "pron": "being",
+     "ipa": "bˈeɪŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "viajar",
+     "translations": [
+      "viajar"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a8395443cab6ec44868407dbcb3fa251",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 203,
+     "pron": "viayar",
+     "ipa": "vˌiaʒˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "o que você faz",
+     "translations": [
+      "¿Qué haces?"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6403e6760038b97e9f28356d2fc57e26",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 202,
+     "pron": "u cü vose fas",
+     "ipa": "ʊ ky vosˌe fˈas",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "vocês",
+     "translations": [
+      "ustedes"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5e23ea09a41c0b8e75632ade9e397000",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 201,
+     "pron": "vosés",
+     "ipa": "vosˈes",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "escutar",
+     "translations": [
+      "escuchar",
+      "escuchara",
+      "escucharnos",
+      "escucharlas"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/49dfcd4a4978156b9fdc069b708cecd9",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 200,
+     "pron": "escutar",
+     "ipa": "ˌeskutˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "balada",
+     "translations": [
+      "discoteca"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f94d53f97902383222f40365f90cbbbf",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 199,
+     "pron": "balada",
+     "ipa": "bˌalˈadæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "é divertido",
+     "translations": [
+      "es divertido"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5338124383968b5118d290f32b904a5c",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 198,
+     "pron": "e yiverechidu",
+     "ipa": "ɛ dʒˌiveɾətʃˈidʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tempo livre",
+     "translations": [
+      "tiempo libre"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f656dc663cc8256a947e90bafd4953b3",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 197,
+     "pron": "teimpu livrü",
+     "ipa": "tˈeɪmpʊ lˈivry",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "samba",
+     "translations": [
+      "samba"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/cc7f989dedda12cb5505dd357dd14133",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 196,
+     "pron": "samba",
+     "ipa": "sˈɐ̃mbæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "dançar",
+     "translations": [
+      "bailábamos",
+      "bailaras",
+      "bailar",
+      "bailáramos"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3848a475362179c7d0797f04715a8b98",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 195,
+     "pron": "dansar",
+     "ipa": "dɐ̃ŋsˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "cantar",
+     "translations": [
+      "cantemos",
+      "cantar",
+      "cantara"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/70fcd57119b6537bbb5ef66c9c085031",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 194,
+     "pron": "cantar",
+     "ipa": "kɐ̃ŋtˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "parques",
+     "translations": [
+      "parques"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/972d3bbf538fc2d9224500bfe09bb7e9",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 193,
+     "pron": "párecüs",
+     "ipa": "pˈaɾəkys",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "supermercado",
+     "translations": [
+      "supermercado"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6e7fa573db1838cfdc801fab46d0cbea",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 192,
+     "pron": "superemerecadu",
+     "ipa": "sˌupeɾəmeɾəkˈadʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "jardim",
+     "translations": [
+      "jardín",
+      "parterres"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3233184e425848a301f5c9bbf906227f",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 191,
+     "pron": "yareying",
+     "ipa": "ʒaɾədʒˈiŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "rua",
+     "translations": [
+      "calle",
+      "calzada"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/9af0eafff00dacec68c8595b00a4fdfd",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 190,
+     "pron": "júa",
+     "ipa": "xˈuæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tranquilo",
+     "translations": [
+      "tranquilo",
+      "calme",
+      "pacífico"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/91104d0c776cde14fa95e12fc10047fb",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 189,
+     "pron": "trancuilu",
+     "ipa": "trˌɐ̃ŋkwˈilʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "restaurante",
+     "translations": [
+      "restaurante"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/4105e2a4c87b7bbb38c0a7ab1fc4d6d2",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 188,
+     "pron": "jestauranchü",
+     "ipa": "xˌestaʊɾˈɐ̃ŋtʃy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "cidade",
+     "translations": [
+      "ciudad"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e29cf06224f390e0fa4bbcc37ce074b6",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 187,
+     "pron": "sidayü",
+     "ipa": "sˌidˈadʒy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "garagem",
+     "translations": [
+      "garaje"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/45ad93b8438f1fab206da9347bc0d67b",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 186,
+     "pron": "garáyeing",
+     "ipa": "ɡˌaɾˈaʒeɪŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "grande",
+     "translations": [
+      "gran",
+      "grande"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/bc6db033709815fecda7be2295993a58",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 185,
+     "pron": "granyü",
+     "ipa": "ɡrˈɐ̃ŋdʒy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "varanda",
+     "translations": [
+      "balcón"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/25c528e0a0b48d156012142ae87b72ab",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 184,
+     "pron": "varanda",
+     "ipa": "vˌaɾˈɐ̃ŋdæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "bonito",
+     "translations": [
+      "bonito",
+      "guapo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/cfe9e3ad2268322f62109dc93c681d78",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 183,
+     "pron": "bonitu",
+     "ipa": "bˌonˈitʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "com",
+     "translations": [
+      "con"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/dc2e57bf5f31be6d007ad1f0b45b21a8",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 182,
+     "pron": "cong",
+     "ipa": "kˈoŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "casa",
+     "translations": [
+      "casa"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/4f0507fbb8d12fcbb33ba99ba80944f0",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 181,
+     "pron": "caza",
+     "ipa": "kˈazæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "gato",
+     "translations": [
+      "gato"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a6bef2c5d87d14311ca886003d421d80",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 180,
+     "pron": "gatu",
+     "ipa": "ɡˈatʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "família",
+     "translations": [
+      "familia"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f145d86653908575ec9fe0593d4f4b9c",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 179,
+     "pron": "familia",
+     "ipa": "fˌæmˈiljæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sozinho",
+     "translations": [
+      "solo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/21f872be251c5175ec975c15a2f592c8",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 178,
+     "pron": "soziñu",
+     "ipa": "sˌozˈiɲʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "cachorro",
+     "translations": [
+      "perro"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/bb49b261ac1ef0c6abc32a82f36de20b",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 177,
+     "pron": "cashoju",
+     "ipa": "kˌaʃˈoxʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "longe",
+     "translations": [
+      "lejos"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/39c8183a555535ec460217f0748a7267",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 176,
+     "pron": "longyü",
+     "ipa": "lˈoŋʒy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "pequeno",
+     "translations": [
+      "minúsculo",
+      "pequeño",
+      "minúsculos"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ef86fc2d06151f896532057436ceeb07",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 175,
+     "pron": "pequenu",
+     "ipa": "pˌekˈenʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "apartamento",
+     "translations": [
+      "apartamento"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/62b070b03eaabe454033f6c34d9700a7",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 174,
+     "pron": "aparetameingtu",
+     "ipa": "ˌapaɾətæmˈeɪŋtʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "morar",
+     "translations": [
+      "vivir",
+      "morar"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/979349f96c163289f9aaa29656599be3",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 173,
+     "pron": "morar",
+     "ipa": "moɾˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "bairro",
+     "translations": [
+      "barrio",
+      "vecindario"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/9d2af7bd6fd9991224ea0b3430511b19",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 172,
+     "pron": "baiju",
+     "ipa": "bˈaɪxʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "prédio",
+     "translations": [
+      "edificio"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/fa0c2ccb6ee39b517f6c09ef537e8db4",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 171,
+     "pron": "preyiu",
+     "ipa": "prˈɛdʒjʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "esse",
+     "translations": [
+      "ese"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/42a4ee03523b5a41df706ec479304100",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 170,
+     "pron": "esi",
+     "ipa": "ˈesi",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "mercados",
+     "translations": [
+      "mercado"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a082d4e55892cabb07c00254961374b7",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 169,
+     "pron": "merecadus",
+     "ipa": "mˌeɾəkˈadʊs",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "mangas",
+     "translations": [
+      "manga"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/279a316189004089b474a4f35e290ae6",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 168,
+     "pron": "mangas",
+     "ipa": "mˈɐ̃ŋɡæs",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "laranjas",
+     "translations": [
+      "naranja"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d07635303db53adcd48d3f85cacd8237",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 167,
+     "pron": "laranyas",
+     "ipa": "lˌaɾˈɐ̃ŋʒæs",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "duas",
+     "translations": [
+      "dos"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/679492dc6b805018c2b7836040383952",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 166,
+     "pron": "dúas",
+     "ipa": "dˈuæs",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "melancias",
+     "translations": [
+      "sandía"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/895af662b69e5ee9906aff1ee55cd262",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 165,
+     "pron": "melansías",
+     "ipa": "mˌelɐ̃ŋsˈiæs",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "manga",
+     "translations": [
+      "mango"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a58b1bcd50fe2a7c84c405504d53406c",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 164,
+     "pron": "manga",
+     "ipa": "mˈɐ̃ŋɡæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "três",
+     "translations": [
+      "tres"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/b9209c7ca732c06e09d1995150ab75af",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 163,
+     "pron": "tres",
+     "ipa": "trˈes",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "laranja",
+     "translations": [
+      "naranja"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/7fd21ec5c7c3b0f5e5fa9585f1502edf",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 162,
+     "pron": "laranya",
+     "ipa": "lˌaɾˈɐ̃ŋʒæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "quanto custam",
+     "translations": [
+      "cuánto cuestan"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ab013e899e15edda5f662bca704bf7bf",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 161,
+     "pron": "cuantu cústanun",
+     "ipa": "kwˈɐ̃ŋtʊ kˈustɐ̃ʊ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "precisa de",
+     "translations": [
+      "necesita"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d7ed91ffe22ca62931a6e7762e2a697c",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 160,
+     "pron": "presiza yü",
+     "ipa": "prˌesˈizæ dʒy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "dois",
+     "translations": [
+      "dos"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/dbd1970a001c1f9598b8a5a6fce1a408",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 159,
+     "pron": "dois",
+     "ipa": "dˈoɪs",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "mais",
+     "translations": [
+      "más"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1bc4d716b84da5f98468f2b62d958ae7",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 158,
+     "pron": "mais",
+     "ipa": "mˈaɪs",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "d'água",
+     "translations": [
+      "de agua"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3e51a443133f6fe14612662ffbc1b97a",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 157,
+     "pron": "dagua",
+     "ipa": "dˈaɡwæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "abacaxis",
+     "translations": [
+      "piña"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e68445c167b09104b6f5fb3a848a313a",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 156,
+     "pron": "abacashís",
+     "ipa": "ˌabakaʃˈis",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "pêssegos",
+     "translations": [
+      "melocotón"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3e10a86893257c9aca8bf4047e6f661b",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 155,
+     "pron": "pésegus",
+     "ipa": "pˈeseɡʊs",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "garrafa",
+     "translations": [
+      "botella",
+      "garrafa"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/336d9a68bc0b572d1acd92dfeb863473",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 154,
+     "pron": "gajafa",
+     "ipa": "ɡˌaxˈafæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "preciso de",
+     "translations": [
+      "necesito"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/00f7c4b5c6dc9bbff47f8d93b29a456f",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 153,
+     "pron": "presizu yü",
+     "ipa": "prˌesˈizʊ dʒy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "pêssego",
+     "translations": [
+      "durazno"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/10550745d398fbdd31372d8e854415f5",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 152,
+     "pron": "pésegu",
+     "ipa": "pˈeseɡʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "melancia",
+     "translations": [
+      "sandía"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/68b484b518401315cdcb64ddb43ae61c",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 151,
+     "pron": "melansía",
+     "ipa": "mˌelɐ̃ŋsˈiæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "abacaxi",
+     "translations": [
+      "piña"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0ff7a5201850014fe68df920d5aad221",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 150,
+     "pron": "abacashí",
+     "ipa": "ˌabakaʃˈi",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "quanto custa",
+     "translations": [
+      "cuánto cuesta"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/4693d2a6073dee5d3bde965715bfc4e6",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 149,
+     "pron": "cuantu custa",
+     "ipa": "kwˈɐ̃ŋtʊ kˈustæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "outubro",
+     "translations": [
+      "octubre"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e032cc508f2219b8a2a59f6eb40f9afc",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 148,
+     "pron": "outubru",
+     "ipa": "ˌowtˈubrʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tempo bom",
+     "translations": [
+      "buen tiempo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/fbc71010184f6f95f7a01a56c1be8bf3",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 147,
+     "pron": "teimpu bong",
+     "ipa": "tˈeɪmpʊ bˈoŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "dezembro",
+     "translations": [
+      "diciembre"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ff1bfcb714f7d7d85a6e79a9625ca698",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 146,
+     "pron": "dezeimbru",
+     "ipa": "dˌezˈeɪmbrʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "muito",
+     "translations": [
+      "mucho"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f2362959d91c37a6c35fa02f4395e4e3",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 145,
+     "pron": "muingtu",
+     "ipa": "mwˈiŋtʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "no inverno",
+     "translations": [
+      "en invierno"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5856b55fd4ea9f09782707f51d2ba379",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 144,
+     "pron": "nu ingvérenu",
+     "ipa": "nʊ ˌiŋvˈɛɾənʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sol",
+     "translations": [
+      "Sol"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/43906e1f0cb5dc30f6e05694d06f47b7",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 143,
+     "pron": "sol",
+     "ipa": "sˈɔl",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "lá",
+     "translations": [
+      "allí"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0a2452f7a6e5f1c7f080afe35c86b80a",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 142,
+     "pron": "la",
+     "ipa": "lˈa",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "no meu país",
+     "translations": [
+      "en mi país"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c8046e6e8a978fb0ad59e1231471f060",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 141,
+     "pron": "nu meu país",
+     "ipa": "nʊ meʊ paˈis",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "setembro",
+     "translations": [
+      "septiembre"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/43aea8c5a69cf500325a0b36c58ee445",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 140,
+     "pron": "seteimbru",
+     "ipa": "sˌetˈeɪmbrʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "não faz",
+     "translations": [
+      "no hace"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ece33123725caf1da986ae5594c83a5b",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 139,
+     "pron": "nanun fas",
+     "ipa": "nˌɐ̃ʊ̃ fˈas",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "na primavera",
+     "translations": [
+      "en la primavera"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/92a1cd552ca4d29b427b978b56a53723",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 138,
+     "pron": "na primavera",
+     "ipa": "na prˌimavˈɛɾæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "março",
+     "translations": [
+      "marzo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/2241bcf0e9fc3e1880b4bf1af2cf9c0e",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 137,
+     "pron": "máresu",
+     "ipa": "mˈaɾəsʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "no verão",
+     "translations": [
+      "en el verano"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f573023f74e30a5f3b9cc4ad7164b6df",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 136,
+     "pron": "nu veranun",
+     "ipa": "nʊ veɾˈɐ̃ʊ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "janeiro",
+     "translations": [
+      "enero"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/00de486220a182e87e4fdd699c1ced7d",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 135,
+     "pron": "yaneiru",
+     "ipa": "ʒˌænˈeɪɾʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "calor",
+     "translations": [
+      "calor"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/bbe698bcc14c6b0aa364fff710a1d40d",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 134,
+     "pron": "calor",
+     "ipa": "kalˈor",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "julho",
+     "translations": [
+      "julio"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/7a0251779568d7b283136e4c24030a93",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 133,
+     "pron": "yuliu",
+     "ipa": "ʒˈuljʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "maiô",
+     "translations": [
+      "traje de baño"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/178d71897bf0f0cfcf26442d8bdd6088",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 132,
+     "pron": "maio",
+     "ipa": "maɪˈo",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "em",
+     "translations": [
+      "en"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/09356a016ee105186deae8f68be4e24e",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 131,
+     "pron": "eing",
+     "ipa": "ˈeɪŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "no outono",
+     "translations": [
+      "en otoño"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/36d638c4a4dc68473a1b06b6138a2a9d",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 130,
+     "pron": "nu outonu",
+     "ipa": "nʊ ˌowtˈonʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "faz",
+     "translations": [
+      "hace",
+      "haces",
+      "cumple",
+      "cumples"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/b118f8362294f422c566b019195265cc",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 129,
+     "pron": "fas",
+     "ipa": "fˈas",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "frio",
+     "translations": [
+      "frío"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d96d372e535c8432d99f8657bdb070c7",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 128,
+     "pron": "friu",
+     "ipa": "frˈiʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sobretudo",
+     "translations": [
+      "sobre todo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/aa0fbca52461a51350b70ea599923770",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 127,
+     "pron": "sobretudu",
+     "ipa": "sobɾetˈudʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "estuda",
+     "translations": [
+      "estudia",
+      "estudias"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/9fb9cbd8b91701520db83b000db9606c",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 126,
+     "pron": "estuda",
+     "ipa": "ˌestˈudæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "música",
+     "translations": [
+      "música"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3bd109f729a844c3a4c72e92e4e8e87e",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 125,
+     "pron": "múzica",
+     "ipa": "mˈuzikæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "de noite",
+     "translations": [
+      "por la noche"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/8bd396bca1d31ca2232ae980de283bd2",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 124,
+     "pron": "yü noichü",
+     "ipa": "dʒy nˈoɪtʃy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "artes",
+     "translations": [
+      "arte"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3543d72723028df7c21a549c3baa0ef4",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 123,
+     "pron": "árechüs",
+     "ipa": "ˈaɾətʃys",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "em casa",
+     "translations": [
+      "en casa"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/09c8eb31716bd6b0f95afc4e44b71c34",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 122,
+     "pron": "eing caza",
+     "ipa": "ˈeɪŋ kˈazæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "italiano",
+     "translations": [
+      "italiano"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/14c3108b82dfbc10ec6c365be2320f92",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 121,
+     "pron": "italianu",
+     "ipa": "ˌitaliˈɐ̃nʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "fala",
+     "translations": [
+      "habla",
+      "conversas"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/69773422329256617c7f60cce2f01e17",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 120,
+     "pron": "fala",
+     "ipa": "fˈalæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "alemão",
+     "translations": [
+      "alemán"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/73d3a06fad19c564bb5dfbf6ee819d74",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 119,
+     "pron": "alemanun",
+     "ipa": "ˌalemˈɐ̃ʊ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "de manhã",
+     "translations": [
+      "por la mañana"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5213c34c00eb6f4f0e11bc7fa92b722c",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 118,
+     "pron": "yü mañán",
+     "ipa": "dʒy mɐ̃ɲˈɐ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "nossa",
+     "translations": [
+      "vaya"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/304c2ef2802bd50bfa9773679513f956",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 117,
+     "pron": "nosa",
+     "ipa": "nˈɔsæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "legal",
+     "translations": [
+      "genial"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d45d53092773ec9b89e6e5f9f76a9656",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 116,
+     "pron": "legáu",
+     "ipa": "leɡˈaʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "francês",
+     "translations": [
+      "francés"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/2ec65da2db777007362d9b7af5095826",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 115,
+     "pron": "fransés",
+     "ipa": "frɐ̃ŋsˈes",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "inglês",
+     "translations": [
+      "inglés"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0c60b96a9c5aaf7dc4b6119fcb67f436",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 114,
+     "pron": "ingglés",
+     "ipa": "iŋɡlˈes",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "muito bem",
+     "translations": [
+      "muy bien"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/cd6a11ede22f32fe5db1c136dc195074",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 113,
+     "pron": "muingtu being",
+     "ipa": "mwˈiŋtʊ bˈeɪŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "falar",
+     "translations": [
+      "hablar",
+      "converses"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d93b1a05c5b6b96bf19c5df18a4e3774",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 112,
+     "pron": "falar",
+     "ipa": "falˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "um pouco de",
+     "translations": [
+      "un poco de"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/11bd588a6ea7c4144180059040d78f60",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 111,
+     "pron": "un poucu yü",
+     "ipa": "ũŋ pˈowkʊ dʒy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "e você",
+     "translations": [
+      "¿y tú?"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/49811da04ce67dc185e86b9872d23b33",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 110,
+     "pron": "i vosé",
+     "ipa": "i vosˈe",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "espanhol",
+     "translations": [
+      "español"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/62628a0dd48f699b04fff3dc5682bda9",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 109,
+     "pron": "español",
+     "ipa": "ˌespɐ̃ɲˈɔl",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "na escola",
+     "translations": [
+      "en la escuela"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0dcfaaed9d44444b884e56598779ed8d",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 108,
+     "pron": "na escola",
+     "ipa": "na ˌeskˈɔlæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "português",
+     "translations": [
+      "portugués"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3e465b32d4a91781c8515b6a2c584aea",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 107,
+     "pron": "poretugués",
+     "ipa": "pˌoɾətuɡˈes",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "estudar",
+     "translations": [
+      "repasabas",
+      "estudiar",
+      "analizan"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/cf45d7ea858231baa83d5f5c7ad10eb2",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 106,
+     "pron": "estudar",
+     "ipa": "ˌestudˈar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "olha",
+     "translations": [
+      "mira"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/42fc208e14787dfa1a559418c8ef35e6",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 105,
+     "pron": "olia",
+     "ipa": "ˈɔljæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "não tem",
+     "translations": [
+      "hay"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/fa36d5326d1608c1105192e9bbe9335f",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 104,
+     "pron": "nanun teing",
+     "ipa": "nˈɐ̃ʊ̃ teɪŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "hotel",
+     "translations": [
+      "hotel"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/9ea0777ed293bbdb980674692a5e2606",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 103,
+     "pron": "otéu",
+     "ipa": "otˈɛʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "livraria",
+     "translations": [
+      "librería"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d8c18a562c6b7161a802c80117b9436d",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 102,
+     "pron": "livraría",
+     "ipa": "lˌivraɾˈiæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "estacionamento",
+     "translations": [
+      "plaza",
+      "estacionamiento"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/368e6b34e00acf77a3b94557635dd87c",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 101,
+     "pron": "estasionameingtu",
+     "ipa": "ˌestasˌionæmˈeɪŋtʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "na minha cidade",
+     "translations": [
+      "en mi ciudad"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c5e01207d4bd9594c1a53688420e2041",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 100,
+     "pron": "na miña sidayü",
+     "ipa": "na mˌiɲæ sˌidˈadʒy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "parque",
+     "translations": [
+      "parque"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1c7582f3329058a4c3439e46a3a9bab0",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 99,
+     "pron": "párecü",
+     "ipa": "pˈaɾəky",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "ei",
+     "translations": [
+      "oye"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c8e91d1ef806ecf8aee3dc6353acd4e0",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 98,
+     "pron": "ei",
+     "ipa": "ˈeɪ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "mercado",
+     "translations": [
+      "mercado"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/49cb09d778703f9468d780509105ae3a",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 97,
+     "pron": "merecadu",
+     "ipa": "mˌeɾəkˈadʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "perto daqui",
+     "translations": [
+      "cerca de aquí"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/800e467860a473ae82f8d92d9b8441a2",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 96,
+     "pron": "péretu daquí",
+     "ipa": "pˈɛɾətʊ dakˈi",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "museu",
+     "translations": [
+      "museo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3c38e7a9fc6ec01e3a8d89fdf95936bf",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 95,
+     "pron": "muzéu",
+     "ipa": "muzˈeʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "banco",
+     "translations": [
+      "banco",
+      "banca",
+      "bancas"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c68af54182b09701ce898a4ed420432b",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 94,
+     "pron": "bancu",
+     "ipa": "bˈɐ̃ŋkʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "teatro",
+     "translations": [
+      "teatro"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1dbe946f89a3757ce093221f82f3ddad",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 93,
+     "pron": "teatru",
+     "ipa": "tˌeˈatrʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tem",
+     "translations": [
+      "haber"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/866e1d94e98797cf5bbd761ea4d7e083",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 92,
+     "pron": "teing",
+     "ipa": "tˈeɪŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "loja",
+     "translations": [
+      "tienda"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/90722b431d083e5b615697b17c33989a",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 91,
+     "pron": "loya",
+     "ipa": "lˈɔʒæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "padaria",
+     "translations": [
+      "panadería"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/b266ec191e910fc15bd0308ee93bcc24",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 90,
+     "pron": "padaría",
+     "ipa": "pˌadaɾˈiæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "mochila",
+     "translations": [
+      "mochila",
+      "(sust. masc.) morral."
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/04da1fbc9d6c6e6497380f93ba2b4985",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 89,
+     "pron": "moshila",
+     "ipa": "mˌoʃˈilæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tablet",
+     "translations": [
+      "tableta",
+      "tablet"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c7812e05411b7941061ceda9003259f7",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 88,
+     "pron": "táblet",
+     "ipa": "tˈablet",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "livro",
+     "translations": [
+      "libro"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e161cbf1db87594fbf3c7245ff0d05ce",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 87,
+     "pron": "livru",
+     "ipa": "lˈivrʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "aff",
+     "translations": [
+      "Uf"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/78c2db5509e8d194b889f293a3550e92",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 86,
+     "pron": "af",
+     "ipa": "ˈaf",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "boné",
+     "translations": [
+      "sombrero",
+      "gorra"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0511700b461f6167e286a47dd71708b0",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 85,
+     "pron": "boné",
+     "ipa": "bonˈɛ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "carregador",
+     "translations": [
+      "cargador",
+      "cargas"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/95489665969ace14a0d2b3137b6db685",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 84,
+     "pron": "cajegador",
+     "ipa": "kˌaxeɡadˈor",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "relógio",
+     "translations": [
+      "reloj"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3d72eec2eb44839bd0e173d10e028e82",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 83,
+     "pron": "jeloyiu",
+     "ipa": "xˌelˈɔʒjʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "onde",
+     "translations": [
+      "dónde"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ea0959f9ee4de6c1ba5e2481be68902d",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 82,
+     "pron": "ongyü",
+     "ipa": "ˈoŋdʒy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "estou com",
+     "translations": [
+      "estoy con"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/2d2c0b3f24d1c24d9176da5e0679aeb4",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 81,
+     "pron": "estóu cong",
+     "ipa": "estˈow koŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "passaporte",
+     "translations": [
+      "pasaporte"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1cebaab94e02d8dbdbc5d7e2e8015fce",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 80,
+     "pron": "pasapórechü",
+     "ipa": "pˌasapˈɔɾətʃy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "suéter",
+     "translations": [
+      "suéteres",
+      "suéter",
+      "pulóver",
+      "jersey"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/941fa58e3490ac36af1a275448c6d127",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 79,
+     "pron": "suéter",
+     "ipa": "sˌuˈɛter",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "vestido",
+     "translations": [
+      "vestido"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/eaee5287fc07e3df50ef2b21063bb57f",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 78,
+     "pron": "veschidu",
+     "ipa": "vˌestʃˈidʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "calma",
+     "translations": [
+      "tranquila",
+      "pacífica",
+      "calmada",
+      "calme"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/2a714a95d78647d44eae28a56b96088c",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 77,
+     "pron": "cauma",
+     "ipa": "kˈaʊmæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "aqui",
+     "translations": [
+      "aquí"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/dc057fb656d15c9524f08a91fa8b90e4",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 76,
+     "pron": "aquí",
+     "ipa": "akˈi",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "está",
+     "translations": [
+      "está",
+      "estás"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5bcead05308f79847a776b4bd33d7891",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 75,
+     "pron": "está",
+     "ipa": "estˈa",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "mala",
+     "translations": [
+      "maleta"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f1118b18e63bde63638a29f568092724",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 74,
+     "pron": "mala",
+     "ipa": "mˈalæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "carteira",
+     "translations": [
+      "portafolio",
+      "billetera",
+      "pupitre",
+      "carné",
+      "monedero"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/dc0be4402dcfdbb1089d82a4c460bc9a",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 73,
+     "pron": "careteira",
+     "ipa": "kˌaɾətˈeɪɾæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "pai",
+     "translations": [
+      "padre"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5ba4f2216282f978f728693454ed0738",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 72,
+     "pron": "pai",
+     "ipa": "pˈaɪ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "séria",
+     "translations": [
+      "serio"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e8d7e66f2af4e95309f59e5adb8c5f12",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 71,
+     "pron": "seria",
+     "ipa": "sˈɛɾjæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sério",
+     "translations": [
+      "serio",
+      "quicio"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e9cf0127e6f6725fc8227d58b063dd15",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 70,
+     "pron": "seriu",
+     "ipa": "sˈɛɾjʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "mas",
+     "translations": [
+      "pero",
+      "sino"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/507c0d066a6f60ec8c1b7afbbdae7ed3",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 69,
+     "pron": "mas",
+     "ipa": "mˈas",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "a sua",
+     "translations": [
+      "su"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/40001385f02f92950635dd5ea4339836",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 68,
+     "pron": "a súa",
+     "ipa": "a sˈuæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "namorado",
+     "translations": [
+      "novio"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/7e9ec023c242f4119b7c083141e73588",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 67,
+     "pron": "namoradu",
+     "ipa": "nˌæmoɾˈadʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "engraçado",
+     "translations": [
+      "gracioso"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/de6597a79bbd7f48f223db3031340177",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 66,
+     "pron": "einggrasadu",
+     "ipa": "ˌeɪŋɡrasˈadʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "engraçada",
+     "translations": [
+      "divertido"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3896f8c6f247543a401bf0897a98c514",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 65,
+     "pron": "einggrasada",
+     "ipa": "ˌeɪŋɡrasˈadæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "namorada",
+     "translations": [
+      "novia"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3b9c85e116331ff442a805a9aba028dd",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 64,
+     "pron": "namorada",
+     "ipa": "nˌæmoɾˈadæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "o seu",
+     "translations": [
+      "su"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/212b849a2a1cbc9164c3d780bfab10ad",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 63,
+     "pron": "u seu",
+     "ipa": "ʊ sˈeʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "em geral",
+     "translations": [
+      "en general"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a7fa20671ea89a74ee3d2c35b46110de",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 62,
+     "pron": "eing yeráu",
+     "ipa": "ˈeɪŋ ʒeɾˈaʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tímida",
+     "translations": [
+      "tímido"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a1d1a11f08538e686fa24e36918865cd",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 61,
+     "pron": "chímida",
+     "ipa": "tʃˈimidæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "simpática",
+     "translations": [
+      "simpático"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0f4bf5c4d0c72102c2b99823a20554fa",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 60,
+     "pron": "simpáchica",
+     "ipa": "sˌimpˈatʃikæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "esposa",
+     "translations": [
+      "esposa",
+      "cónyuges"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5c266c3354d24186642162160332310e",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 59,
+     "pron": "espoza",
+     "ipa": "ˌespˈozæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "mãe",
+     "translations": [
+      "mamá",
+      "madre",
+      "ma",
+      "ma."
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/db32e2a95eab356d76ba04b370b88b7c",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 58,
+     "pron": "manü",
+     "ipa": "mˈɐ̃y",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "como eu",
+     "translations": [
+      "cómo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/2e901a18a3856bc1225d70c0ccb1bae0",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 57,
+     "pron": "comu eu",
+     "ipa": "kˌomʊ ˈeʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tímido",
+     "translations": [
+      "tímido",
+      "cohibido"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/28dd3b9361f201dd5a72950545701ca9",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 56,
+     "pron": "chímidu",
+     "ipa": "tʃˈimidʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "simpático",
+     "translations": [
+      "simpático"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/112808ae98d81ff6dba4df1a134f4505",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 55,
+     "pron": "simpáchicu",
+     "ipa": "sˌimpˈatʃikʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "esposo",
+     "translations": [
+      "marido",
+      "esposo",
+      "cónyuges"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c2646aa743a88a38e9b6abd5cf9db63b",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 54,
+     "pron": "espozu",
+     "ipa": "ˌespˈozʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "também",
+     "translations": [
+      "también"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e62a3100b6e9d7b4ca52bac3fe0ef419",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 53,
+     "pron": "tambeing",
+     "ipa": "tɐ̃mbˈeɪŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "a minha",
+     "translations": [
+      "mi"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/4b08e09bc8c9e7ca410090bf70d5f531",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 52,
+     "pron": "a miña",
+     "ipa": "a mˈiɲæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tia",
+     "translations": [
+      "tía"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3b039be3f01055be88f0d0a2aeae0140",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 51,
+     "pron": "chía",
+     "ipa": "tʃˈiæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "amiga",
+     "translations": [
+      "amiga",
+      "aliada"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/cf4a2156cdc6ef24499b964dfffb6de3",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 50,
+     "pron": "amiga",
+     "ipa": "ˌæmˈiɡæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "quer",
+     "translations": [
+      "quiere"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/8949afe9eb21e8c2868d1f2d454d19a9",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 49,
+     "pron": "quer",
+     "ipa": "kˈɛr",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "o meu",
+     "translations": [
+      "mi"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/91b12b60b13e9cd8bbec094d64fa90c8",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 48,
+     "pron": "u meu",
+     "ipa": "ʊ mˈeʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tio",
+     "translations": [
+      "tío"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d6be7f20f798d5623e182395deb992c3",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 47,
+     "pron": "chiu",
+     "ipa": "tʃˈiʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "amigo",
+     "translations": [
+      "amigo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/8e997edb3de5e00b035ca2e312d9c7e8",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 46,
+     "pron": "amigu",
+     "ipa": "ˌæmˈiɡʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "só",
+     "translations": [
+      "sólo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/8ac94c46824cd602c70b7c39dd0896d7",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 45,
+     "pron": "so",
+     "ipa": "sˈɔ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "uma",
+     "translations": [
+      "una"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/500895810bc0efacc6e07571e17853ec",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 44,
+     "pron": "uma",
+     "ipa": "ˈumæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "irmã",
+     "translations": [
+      "hermana"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a2ebead1395c1bd1d0a97f5bd58fc4db",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 43,
+     "pron": "iremán",
+     "ipa": "iɾəmˈɐ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "filha",
+     "translations": [
+      "hija"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3d647685590e51a77f352b3ee3406986",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 42,
+     "pron": "filia",
+     "ipa": "fˈiljæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tenho",
+     "translations": [
+      "tengo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6f5674a7ac71f9c5216327353c5514c7",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 41,
+     "pron": "teñu",
+     "ipa": "tˈeɲʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "filho",
+     "translations": [
+      "hijo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/b50d5dcf1bdf04b71d5d6176319d5aa7",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 40,
+     "pron": "filiu",
+     "ipa": "fˈiljʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "irmão",
+     "translations": [
+      "hermano"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a198288efc5c741747c78f9cc66c1b7f",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 39,
+     "pron": "iremanun",
+     "ipa": "iɾəmˈɐ̃ʊ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "a minha mãe",
+     "translations": [
+      "mi madre"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/dba9ce75eeaaa6a8ad7c82e8b0805ad1",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 38,
+     "pron": "a miña manü",
+     "ipa": "a mˌiɲæ mˈɐ̃y",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "não",
+     "translations": [
+      "no"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/7927f45e0f7ca07bd688b145f9e5c393",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 37,
+     "pron": "nanun",
+     "ipa": "nˈɐ̃ʊ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "é do",
+     "translations": [
+      "es de"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/96c8d88744a39bdd7511316573c354c5",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 36,
+     "pron": "e du",
+     "ipa": "ɛ dˈʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sim",
+     "translations": [
+      "sí"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/75754af3e99d469889000c0723c9a258",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 35,
+     "pron": "sing",
+     "ipa": "sˈiŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "né",
+     "translations": [
+      "¿verdad?"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6ad58c356aa81f2527ecbe07563f7454",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 34,
+     "pron": "ne",
+     "ipa": "nˈɛ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "você",
+     "translations": [
+      "tú"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/af7de35b26ac94b58b4bb8cb7becff85",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 33,
+     "pron": "vosé",
+     "ipa": "vosˈe",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "boa tarde",
+     "translations": [
+      "buenas tardes"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3507402a665cc29df89d13979497f9a5",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 32,
+     "pron": "boa táreyü",
+     "ipa": "bˈoæ tˈaɾədʒy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sou do",
+     "translations": [
+      "soy de"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/7fcbec60652f08df5d67ee5a70f32be0",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 31,
+     "pron": "sou du",
+     "ipa": "sow dˈʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "até logo",
+     "translations": [
+      "hasta luego"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/56a3a6defed993eaf3007d704fad0e2e",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 30,
+     "pron": "ate logu",
+     "ipa": "atˌɛ lˈɔɡʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tudo bem",
+     "translations": [
+      "¿todo bien?"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a9943bf9414c3f29ce88788adbe19e91",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 29,
+     "pron": "tudu being",
+     "ipa": "tˈudʊ bˈeɪŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "ela",
+     "translations": [
+      "ella"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/7936fb54529016a6fd09ae7ed2a29bdc",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 28,
+     "pron": "ela",
+     "ipa": "ˈɛlæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tudo",
+     "translations": [
+      "todo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6e919e7353b75bb59b0135292c7e38c6",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 27,
+     "pron": "tudu",
+     "ipa": "tˈudʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "ele",
+     "translations": [
+      "él"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/222e85ab502c7e9e4ed542a05861437d",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 26,
+     "pron": "elü",
+     "ipa": "ˈely",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "o",
+     "translations": [
+      "lo",
+      "(al)",
+      "el",
+      "tire"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d1154c3c72d42c79997e06ff6e929ffb",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 25,
+     "pron": "o",
+     "ipa": "ˈɔ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "muito prazer",
+     "translations": [
+      "mucho gusto"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c57fab811bf8bb8a4888ecf7a1260f4a",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 24,
+     "pron": "muingtu prazer",
+     "ipa": "mwˈiŋtʊ prazˈer",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "é",
+     "translations": [
+      "(usted) es",
+      "(tu) eres",
+      "(vos) sos",
+      "está"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/162e49f016923215e1f0c9735f0a095e",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 23,
+     "pron": "eagudu",
+     "ipa": "ˌɛaɡˈudʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "bom dia",
+     "translations": [
+      "buenos días"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f28e4bb8d07699921fdb6425bc03342a",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 22,
+     "pron": "bong yía",
+     "ipa": "bˈoŋ dʒˈiæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sou",
+     "translations": [
+      "soy"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/51fdfc50b4b1cf287c45b48397caaa19",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 21,
+     "pron": "sou",
+     "ipa": "sˈow",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "a",
+     "translations": [
+      "úsala",
+      "a",
+      "la",
+      "el",
+      "de"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/9ec42550f20523a2531d7c9950552d47",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 20,
+     "pron": "a",
+     "ipa": "ˈa",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "eu",
+     "translations": [
+      "yo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0a23a6cf4c228b6552a277396f75d618",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 19,
+     "pron": "eu",
+     "ipa": "ˈeʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "ótimo",
+     "translations": [
+      "excelente"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c3342c12d7f4ed6ec5228e5a3ac41d0a",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 18,
+     "pron": "óchimu",
+     "ipa": "ˈɔtʃimʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "com açúcar",
+     "translations": [
+      "con azúcar"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/b77c5fe9b9c8a1e2c5d9da606415bd45",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 17,
+     "pron": "cong asúcar",
+     "ipa": "koŋ ˌasˈukar",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "pão",
+     "translations": [
+      "pan"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/341dec6110e63757ebab3081cbc3675f",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 16,
+     "pron": "panun",
+     "ipa": "pˈɐ̃ʊ̃",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "e",
+     "translations": [
+      "y",
+      "e"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c2812702d1c1a7b12785c36c0a1280d6",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 15,
+     "pron": "e",
+     "ipa": "ˈɛ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tchau",
+     "translations": [
+      "adiós"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0c6d297637ec7aab155acac3edc7b737",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 14,
+     "pron": "chau",
+     "ipa": "tʃˈaʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sorvete",
+     "translations": [
+      "helado",
+      "paleta"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/2185faf6fad329d42b9ed1ea9480a959",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 13,
+     "pron": "sorevechü",
+     "ipa": "sˌoɾəvˈetʃy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "obrigado",
+     "translations": [
+      "gracias"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e93cc8e1190340dbbe5df58dfd5ed676",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 12,
+     "pron": "obrigadu",
+     "ipa": "ˌobriɡˈadʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "água",
+     "translations": [
+      "agua"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/54521544b4e3f1e15ada68ce0d93db93",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 11,
+     "pron": "agua",
+     "ipa": "ˈaɡwæ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "ou",
+     "translations": [
+      "(u)",
+      "o"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/47210ac2c177d9780d5903d591ba8c22",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 10,
+     "pron": "ou",
+     "ipa": "ˈow",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "com gelo",
+     "translations": [
+      "con hielo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3569a2315c9422200bf4d7fee55210bb",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 9,
+     "pron": "cong yelu",
+     "ipa": "koŋ ʒˈelʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sanduíche",
+     "translations": [
+      "emparedado",
+      "sándwich",
+      "tortas"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ad300a9e89fe97368ab6691d773606ea",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 8,
+     "pron": "sanduishü",
+     "ipa": "sˌɐ̃ŋduˈiʃy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "pastel",
+     "translations": [
+      "empanada"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/4bb14199e5fa23e463b16bec1fe9e565",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 7,
+     "pron": "pastéu",
+     "ipa": "pastˈɛʊ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "por favor",
+     "translations": [
+      "por favor"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a5566bc1742f509fdcf22859a4ed91f5",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 6,
+     "pron": "por favor",
+     "ipa": "por favˈor",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "com leite",
+     "translations": [
+      "con leche"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/7924456af8a7155a6fa0f21d3c4b4fbf",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 5,
+     "pron": "cong leichü",
+     "ipa": "koŋ lˈeɪtʃy",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "oi",
+     "translations": [
+      "hola"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/beac051c9fd980d30e5beab13a844c48",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 4,
+     "pron": "oi",
+     "ipa": "ˈoɪ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "um",
+     "translations": [
+      "uno",
+      "un",
+      "una",
+      "1"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/4d3c96ad65fadc9120ffcacaf2632484",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 3,
+     "pron": "un",
+     "ipa": "ˈũŋ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "chá",
+     "translations": [
+      "té"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0ad9ce452320deb382b00f78198d45cd",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 2,
+     "pron": "sha",
+     "ipa": "ʃˈa",
+     "pron_v": 1,
+     "pron_src": "auto"
+    },
+    {
+     "text": "café",
+     "translations": [
+      "café"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5100d840a42e25e8a61482d6177c48b6",
+     "added": "2026-11-11T23:24:38Z",
+     "seq": 1,
+     "pron": "café",
+     "ipa": "kafˈɛ",
+     "pron_v": 1,
+     "pron_src": "auto"
+    }
+   ],
+   "dropped": {},
+   "duolingo_total": 291,
+   "count": 291,
+   "updated": "2026-11-11T23:24:38Z"
   }
  },
  "imports": [],

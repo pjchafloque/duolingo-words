@@ -1,7 +1,7 @@
 {
  "version": 1,
  "current": "fr-es",
- "updated": "2026-11-11T22:35:48Z",
+ "updated": "2026-11-11T23:11:41Z",
  "courses": {
   "fr-es": {
    "learning": "fr",
@@ -254,5 +254,27 @@
    "count": 18
   }
  },
- "imports": []
+ "imports": [],
+ "known": [
+  {
+   "learning": "en",
+   "from": "es",
+   "name": "English"
+  },
+  {
+   "learning": "fr",
+   "from": "es",
+   "name": "French"
+  },
+  {
+   "learning": "pt",
+   "from": "es",
+   "name": "Portuguese"
+  },
+  {
+   "learning": "zh",
+   "from": "en",
+   "name": "Chinese"
+  }
+ ]
 }

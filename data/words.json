@@ -1,7 +1,7 @@
 {
  "version": 1,
  "current": "pt-es",
- "updated": "2026-11-11T23:24:38Z",
+ "updated": "2026-11-12T00:01:15Z",
  "courses": {
   "fr-es": {
    "learning": "fr",
@@ -18,7 +18,7 @@
      "seq": 18,
      "pron": "o revuar",
      "ipa": "o ʁəvwˈaʁ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -31,7 +31,7 @@
      "seq": 17,
      "pron": "parfé",
      "ipa": "paʁfˈɛ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -44,7 +44,7 @@
      "seq": 16,
      "pron": "u",
      "ipa": "ˈu",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -57,7 +57,7 @@
      "seq": 15,
      "pron": "mesiö́",
      "ipa": "məsjˈø",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -70,7 +70,7 @@
      "seq": 14,
      "pron": "non",
      "ipa": "nˈɔ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -86,7 +86,7 @@
      "seq": 13,
      "pron": "sanduich",
      "ipa": "sɑ̃dwˈitʃ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -99,7 +99,7 @@
      "seq": 12,
      "pron": "mersí",
      "ipa": "mɛʁsˈi",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -112,7 +112,7 @@
      "seq": 11,
      "pron": "e",
      "ipa": "ˈe",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -125,7 +125,7 @@
      "seq": 10,
      "pron": "ui",
      "ipa": "wˈi",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -139,7 +139,7 @@
      "seq": 9,
      "pron": "ye vudré",
      "ipa": "ʒə- vudʁˈɛ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -153,7 +153,7 @@
      "seq": 8,
      "pron": "ecler",
      "ipa": "eklˈɛʁ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -166,7 +166,7 @@
      "seq": 7,
      "pron": "cruasán",
      "ipa": "kʁwasˈɑ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -179,7 +179,7 @@
      "seq": 6,
      "pron": "sil vu ple",
      "ipa": "sil vu plˈɛ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -192,7 +192,7 @@
      "seq": 5,
      "pron": "bonyur",
      "ipa": "bɔ̃ʒˈuʁ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -206,7 +206,7 @@
      "seq": 4,
      "pron": "en",
      "ipa": "ˈœ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -219,7 +219,7 @@
      "seq": 3,
      "pron": "madam",
      "ipa": "madˈam",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -232,7 +232,7 @@
      "seq": 2,
      "pron": "café",
      "ipa": "kafˈe",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -245,13 +245,14 @@
      "seq": 1,
      "pron": "te",
      "ipa": "tˈe",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     }
    ],
    "dropped": {},
    "duolingo_total": 18,
-   "count": 18
+   "count": 18,
+   "updated": "2026-11-12T00:01:15Z"
   },
   "pt-es": {
    "learning": "pt",
@@ -269,7 +270,7 @@
      "seq": 291,
      "pron": "matemáchica",
      "ipa": "mˌatemˈatʃikæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -282,7 +283,7 @@
      "seq": 290,
      "pron": "un poucu",
      "ipa": "ũŋ pˈowkʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -295,7 +296,7 @@
      "seq": 289,
      "pron": "química",
      "ipa": "kˈimikæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -308,7 +309,7 @@
      "seq": 288,
      "pron": "yiretor",
      "ipa": "dʒˌiɾetˈor",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -321,7 +322,7 @@
      "seq": 287,
      "pron": "biblioteca",
      "ipa": "bˌibliotˈɛkæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -336,7 +337,7 @@
      "seq": 286,
      "pron": "tarefa",
      "ipa": "tˌaɾˈɛfæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -347,9 +348,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/790d65ba3abe736d68afabd066312b6f",
      "added": "2026-11-11T23:24:38Z",
      "seq": 285,
-     "pron": "eing grupu",
+     "pron": "ein grupu",
      "ipa": "ˈeɪŋ ɡrˈupʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -367,7 +368,7 @@
      "seq": 284,
      "pron": "jevizar",
      "ipa": "xˌevizˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -381,7 +382,7 @@
      "seq": 283,
      "pron": "fasiu",
      "ipa": "fˈasiʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -394,7 +395,7 @@
      "seq": 282,
      "pron": "yeografía",
      "ipa": "ʒˌeoɡrafˈiæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -407,7 +408,7 @@
      "seq": 281,
      "pron": "yaponés",
      "ipa": "ʒˌaponˈes",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -420,7 +421,7 @@
      "seq": 280,
      "pron": "súper",
      "ipa": "sˈʊper",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -431,9 +432,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/be8c3bd412e4d6f573407c913d1a43db",
      "added": "2026-11-11T23:24:38Z",
      "seq": 279,
-     "pron": "ezeresisiu",
+     "pron": "ezersisiu",
      "ipa": "ˌezeɾəsˈisjʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -450,7 +451,7 @@
      "seq": 278,
      "pron": "yifisiu",
      "ipa": "dʒˌifˈisiʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -463,7 +464,7 @@
      "seq": 277,
      "pron": "shinés",
      "ipa": "ʃinˈes",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -474,9 +475,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6aaaf229fa2f989acd32c40929d6aaa6",
      "added": "2026-11-11T23:24:38Z",
      "seq": 276,
-     "pron": "onglaing",
+     "pron": "onláin",
      "ipa": "oŋlˈaɪŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -489,7 +490,7 @@
      "seq": 275,
      "pron": "jusu",
      "ipa": "xˈusʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -502,7 +503,7 @@
      "seq": 274,
      "pron": "literatura",
      "ipa": "lˌiteɾatˈuɾæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -516,7 +517,7 @@
      "seq": 273,
      "pron": "aula",
      "ipa": "ˈaʊlæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -529,7 +530,7 @@
      "seq": 272,
      "pron": "istoria",
      "ipa": "ˌistˈɔɾjæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -542,7 +543,7 @@
      "seq": 271,
      "pron": "isu mezmu",
      "ipa": "ˈisʊ mˈezmʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -555,7 +556,7 @@
      "seq": 270,
      "pron": "trabaliar",
      "ipa": "trˌabaljˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -568,7 +569,7 @@
      "seq": 269,
      "pron": "escola",
      "ipa": "ˌeskˈɔlæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -581,7 +582,7 @@
      "seq": 268,
      "pron": "profesor",
      "ipa": "prˌofesˈor",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -594,7 +595,7 @@
      "seq": 267,
      "pron": "jusia",
      "ipa": "xˈusjæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -607,7 +608,7 @@
      "seq": 266,
      "pron": "cuatru",
      "ipa": "kwˈatrʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -618,9 +619,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1f69202c0f0d99b5fc673833cc172c28",
      "added": "2026-11-11T23:24:38Z",
      "seq": 265,
-     "pron": "árabü",
+     "pron": "árabi",
      "ipa": "ˈaɾæby",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -633,7 +634,7 @@
      "seq": 264,
      "pron": "shatu",
      "ipa": "ʃˈatʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -646,7 +647,7 @@
      "seq": 263,
      "pron": "da",
      "ipa": "dˈa",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -659,7 +660,7 @@
      "seq": 262,
      "pron": "españa",
      "ipa": "ˌespˈɐ̃ɲæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -673,7 +674,7 @@
      "seq": 261,
      "pron": "pesoa",
      "ipa": "pˌesˈoæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -686,9 +687,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f69d0ea3ebf8877ec51f484a1431a45f",
      "added": "2026-11-11T23:24:38Z",
      "seq": 260,
-     "pron": "poyüquest",
+     "pron": "poyiquest",
      "ipa": "pˌɔdʒykˈɛst",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -701,7 +702,7 @@
      "seq": 259,
      "pron": "favoritu",
      "ipa": "fˌavoɾˈitʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -714,7 +715,7 @@
      "seq": 258,
      "pron": "du",
      "ipa": "dˈʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -726,9 +727,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/49c875a83cbdc4726b01392fc614c71a",
      "added": "2026-11-11T23:24:38Z",
      "seq": 257,
-     "pron": "sanun",
+     "pron": "saun",
      "ipa": "sˈɐ̃ʊ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -741,7 +742,7 @@
      "seq": 256,
      "pron": "amañán",
      "ipa": "ˌæmɐ̃ɲˈɐ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -752,9 +753,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/8b2e7cb450d1a807fb10b97fb5dcfbcb",
      "added": "2026-11-11T23:24:38Z",
      "seq": 255,
-     "pron": "cúresu",
+     "pron": "cursu",
      "ipa": "kˈuɾəsʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -765,9 +766,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6ad28a4e661957127cfbe89606bd6db5",
      "added": "2026-11-11T23:24:38Z",
      "seq": 254,
-     "pron": "ingteresanchü",
+     "pron": "interesanchi",
      "ipa": "ˌiŋteɾesˈɐ̃ŋtʃy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -781,7 +782,7 @@
      "seq": 253,
      "pron": "comesa",
      "ipa": "kˌomˈɛsæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -794,7 +795,7 @@
      "seq": 252,
      "pron": "ioga",
      "ipa": "ˌiˈɔɡæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -805,9 +806,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/883ab922d16189884363f7f6c47aafe2",
      "added": "2026-11-11T23:24:38Z",
      "seq": 251,
-     "pron": "descuupa",
+     "pron": "descupa",
      "ipa": "dˌeskˈuwpæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -820,7 +821,7 @@
      "seq": 250,
      "pron": "mau",
      "ipa": "mˈaʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -835,9 +836,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/917b8e990f6f8fe95c9eb17c53c0656b",
      "added": "2026-11-11T23:24:38Z",
      "seq": 249,
-     "pron": "eingsinar",
+     "pron": "einsinar",
      "ipa": "ˌeɪŋsinˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -850,7 +851,7 @@
      "seq": 248,
      "pron": "avó",
      "ipa": "avˈo",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -861,9 +862,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/dcd0f12397ef70ae6a46f38d3b1af727",
      "added": "2026-11-11T23:24:38Z",
      "seq": 247,
-     "pron": "oyü",
+     "pron": "oyi",
      "ipa": "ˈoʒy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -876,7 +877,7 @@
      "seq": 246,
      "pron": "viziñu",
      "ipa": "vˌizˈiɲʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -889,7 +890,7 @@
      "seq": 245,
      "pron": "pescar",
      "ipa": "peskˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -907,7 +908,7 @@
      "seq": 244,
      "pron": "dezeñar",
      "ipa": "dˌezeɲˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -920,7 +921,7 @@
      "seq": 243,
      "pron": "avó",
      "ipa": "avˈɔ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -931,9 +932,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/da2e1e6f43e8e19fceee5cb9306b59fd",
      "added": "2026-11-11T23:24:38Z",
      "seq": 242,
-     "pron": "seimprü",
+     "pron": "seimpri",
      "ipa": "sˈeɪmpry",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -944,9 +945,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/abe2506a920a30f079763ae42f8ab080",
      "added": "2026-11-11T23:24:38Z",
      "seq": 241,
-     "pron": "pórecü",
+     "pron": "porqui",
      "ipa": "pˈoɾəky",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -959,7 +960,7 @@
      "seq": 240,
      "pron": "atléchicu",
      "ipa": "ˌatlˈɛtʃikʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -975,7 +976,7 @@
      "seq": 239,
      "pron": "descansar",
      "ipa": "dˌeskɐ̃ŋsˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -989,7 +990,7 @@
      "seq": 238,
      "pron": "camiñar",
      "ipa": "kˌæmiɲˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1000,9 +1001,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1a39e30e037d4c79cd04907cdaac48c8",
      "added": "2026-11-11T23:24:38Z",
      "seq": 237,
-     "pron": "singserameingchü",
+     "pron": "sinserameinchi",
      "ipa": "sˌiŋseɾæmˈeɪŋtʃy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1015,7 +1016,7 @@
      "seq": 236,
      "pron": "volei",
      "ipa": "vˈoleɪ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1026,9 +1027,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/439dde1643360c2ca4e0f614fd3beaae",
      "added": "2026-11-11T23:24:38Z",
      "seq": 235,
-     "pron": "elüs",
+     "pron": "elis",
      "ipa": "ˈelys",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1041,7 +1042,7 @@
      "seq": 234,
      "pron": "a",
      "ipa": "ˈa",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1054,7 +1055,7 @@
      "seq": 233,
      "pron": "preguisozu",
      "ipa": "prˌeɡisˈozʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1068,7 +1069,7 @@
      "seq": 232,
      "pron": "treinador",
      "ipa": "trˌeɪnadˈor",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1081,7 +1082,7 @@
      "seq": 231,
      "pron": "elas",
      "ipa": "ˈɛlæs",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1092,9 +1093,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6f480c31f64fe01ca19e6921add4f5ab",
      "added": "2026-11-11T23:24:38Z",
      "seq": 230,
-     "pron": "basquechü",
+     "pron": "basquechi",
      "ipa": "bˌaskˈɛtʃy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1105,9 +1106,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ff9d0959eaac6abf8261ee37a7eef240",
      "added": "2026-11-11T23:24:38Z",
      "seq": 229,
-     "pron": "ya nanun",
+     "pron": "ya naun",
      "ipa": "ʒˈa nˈɐ̃ʊ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1120,7 +1121,7 @@
      "seq": 228,
      "pron": "esquiar",
      "ipa": "ˌeskiˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1133,7 +1134,7 @@
      "seq": 227,
      "pron": "tóduz uz yías",
      "ipa": "tˈodʊz ʊz dʒˈiæs",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1146,7 +1147,7 @@
      "seq": 226,
      "pron": "tenis",
      "ipa": "tˈenis",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1159,7 +1160,7 @@
      "seq": 225,
      "pron": "nadar",
      "ipa": "nadˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1170,9 +1171,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/72c672d06f6301c7179e5680d41ef2f0",
      "added": "2026-11-11T23:24:38Z",
      "seq": 224,
-     "pron": "chimü",
+     "pron": "chimi",
      "ipa": "tʃˈimy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1185,7 +1186,7 @@
      "seq": 223,
      "pron": "pisina",
      "ipa": "pˌisˈinæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1197,9 +1198,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0b58c9b9a6c0c8abae192b363973414e",
      "added": "2026-11-11T23:24:38Z",
      "seq": 222,
-     "pron": "frecueingtemeingchü",
+     "pron": "frecueintemeinchi",
      "ipa": "frˌekweɪŋtemˈeɪŋtʃy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1212,7 +1213,7 @@
      "seq": 221,
      "pron": "futebol",
      "ipa": "fˌutebˈɔl",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1223,9 +1224,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/9e8ce5e420ff7c59b33b5fd564cbc51b",
      "added": "2026-11-11T23:24:38Z",
      "seq": 220,
-     "pron": "au ar livrü",
+     "pron": "au ar livri",
      "ipa": "aʊ ˈar lˈivry",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1243,7 +1244,7 @@
      "seq": 219,
      "pron": "yogar",
      "ipa": "ʒoɡˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1265,7 +1266,7 @@
      "seq": 218,
      "pron": "treinar",
      "ipa": "treɪnˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1279,7 +1280,7 @@
      "seq": 217,
      "pron": "academía",
      "ipa": "ˌakademˈiæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1292,7 +1293,7 @@
      "seq": 216,
      "pron": "ajós",
      "ipa": "axˈos",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1303,9 +1304,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/b7a5fe8b902a5c018c439185a9ec4707",
      "added": "2026-11-11T23:24:38Z",
      "seq": 215,
-     "pron": "yü táreyü",
+     "pron": "yi taryi",
      "ipa": "dʒy tˈaɾədʒy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1316,9 +1317,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/483266876ced73d6b853f679a142d943",
      "added": "2026-11-11T23:24:38Z",
      "seq": 214,
-     "pron": "cong frangu",
+     "pron": "con frangu",
      "ipa": "koŋ frˈɐ̃ŋɡʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1331,7 +1332,7 @@
      "seq": 213,
      "pron": "sopa",
      "ipa": "sˈopæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1344,9 +1345,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/2f5a21787c1802305c0d20a822519a40",
      "added": "2026-11-11T23:24:38Z",
      "seq": 212,
-     "pron": "macajanun",
+     "pron": "macajáun",
      "ipa": "mˌakaxˈɐ̃ʊ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1361,7 +1362,7 @@
      "seq": 211,
      "pron": "coziñar",
      "ipa": "kˌoziɲˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1374,7 +1375,7 @@
      "seq": 210,
      "pron": "nos",
      "ipa": "nˈɔs",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1387,7 +1388,7 @@
      "seq": 209,
      "pron": "somus",
      "ipa": "sˈomʊs",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1398,9 +1399,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/27362ea711138f996663fd44d629a922",
      "added": "2026-11-11T23:24:38Z",
      "seq": 208,
-     "pron": "iremánuns",
+     "pron": "irmauns",
      "ipa": "iɾəmˈɐ̃ʊ̃s",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1415,9 +1416,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ca9c532739b032d58700be82051f2613",
      "added": "2026-11-11T23:24:38Z",
      "seq": 207,
-     "pron": "pingtar",
+     "pron": "pintar",
      "ipa": "piŋtˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1428,9 +1429,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1ecb556207cea571f302eb84aad3979e",
      "added": "2026-11-11T23:24:38Z",
      "seq": 206,
-     "pron": "yü caju",
+     "pron": "yi caju",
      "ipa": "dʒy kˈaxʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1441,9 +1442,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/af0cb9a3a3d1d6f687c8b365767a34e9",
      "added": "2026-11-11T23:24:38Z",
      "seq": 205,
-     "pron": "yü treing",
+     "pron": "yi trein",
      "ipa": "dʒy trˈeɪŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1454,9 +1455,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/303f36662e1b4b8b40834ff89f95c41d",
      "added": "2026-11-11T23:24:38Z",
      "seq": 204,
-     "pron": "being",
+     "pron": "bein",
      "ipa": "bˈeɪŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1469,7 +1470,7 @@
      "seq": 203,
      "pron": "viayar",
      "ipa": "vˌiaʒˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1480,9 +1481,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6403e6760038b97e9f28356d2fc57e26",
      "added": "2026-11-11T23:24:38Z",
      "seq": 202,
-     "pron": "u cü vose fas",
+     "pron": "u qui vose fas",
      "ipa": "ʊ ky vosˌe fˈas",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1495,7 +1496,7 @@
      "seq": 201,
      "pron": "vosés",
      "ipa": "vosˈes",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1511,7 +1512,7 @@
      "seq": 200,
      "pron": "escutar",
      "ipa": "ˌeskutˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1524,7 +1525,7 @@
      "seq": 199,
      "pron": "balada",
      "ipa": "bˌalˈadæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1535,9 +1536,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5338124383968b5118d290f32b904a5c",
      "added": "2026-11-11T23:24:38Z",
      "seq": 198,
-     "pron": "e yiverechidu",
+     "pron": "e yiverchidu",
      "ipa": "ɛ dʒˌiveɾətʃˈidʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1548,9 +1549,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f656dc663cc8256a947e90bafd4953b3",
      "added": "2026-11-11T23:24:38Z",
      "seq": 197,
-     "pron": "teimpu livrü",
+     "pron": "teimpu livri",
      "ipa": "tˈeɪmpʊ lˈivry",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1563,7 +1564,7 @@
      "seq": 196,
      "pron": "samba",
      "ipa": "sˈɐ̃mbæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1579,7 +1580,7 @@
      "seq": 195,
      "pron": "dansar",
      "ipa": "dɐ̃ŋsˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1594,7 +1595,7 @@
      "seq": 194,
      "pron": "cantar",
      "ipa": "kɐ̃ŋtˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1605,9 +1606,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/972d3bbf538fc2d9224500bfe09bb7e9",
      "added": "2026-11-11T23:24:38Z",
      "seq": 193,
-     "pron": "párecüs",
+     "pron": "parquis",
      "ipa": "pˈaɾəkys",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1618,9 +1619,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/6e7fa573db1838cfdc801fab46d0cbea",
      "added": "2026-11-11T23:24:38Z",
      "seq": 192,
-     "pron": "superemerecadu",
+     "pron": "supermercadu",
      "ipa": "sˌupeɾəmeɾəkˈadʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1632,9 +1633,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3233184e425848a301f5c9bbf906227f",
      "added": "2026-11-11T23:24:38Z",
      "seq": 191,
-     "pron": "yareying",
+     "pron": "yaryín",
      "ipa": "ʒaɾədʒˈiŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1648,7 +1649,7 @@
      "seq": 190,
      "pron": "júa",
      "ipa": "xˈuæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1663,7 +1664,7 @@
      "seq": 189,
      "pron": "trancuilu",
      "ipa": "trˌɐ̃ŋkwˈilʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1674,9 +1675,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/4105e2a4c87b7bbb38c0a7ab1fc4d6d2",
      "added": "2026-11-11T23:24:38Z",
      "seq": 188,
-     "pron": "jestauranchü",
+     "pron": "jestauranchi",
      "ipa": "xˌestaʊɾˈɐ̃ŋtʃy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1687,9 +1688,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e29cf06224f390e0fa4bbcc37ce074b6",
      "added": "2026-11-11T23:24:38Z",
      "seq": 187,
-     "pron": "sidayü",
+     "pron": "sidayi",
      "ipa": "sˌidˈadʒy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1700,9 +1701,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/45ad93b8438f1fab206da9347bc0d67b",
      "added": "2026-11-11T23:24:38Z",
      "seq": 186,
-     "pron": "garáyeing",
+     "pron": "garayein",
      "ipa": "ɡˌaɾˈaʒeɪŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1714,9 +1715,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/bc6db033709815fecda7be2295993a58",
      "added": "2026-11-11T23:24:38Z",
      "seq": 185,
-     "pron": "granyü",
+     "pron": "granyi",
      "ipa": "ɡrˈɐ̃ŋdʒy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1729,7 +1730,7 @@
      "seq": 184,
      "pron": "varanda",
      "ipa": "vˌaɾˈɐ̃ŋdæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1743,7 +1744,7 @@
      "seq": 183,
      "pron": "bonitu",
      "ipa": "bˌonˈitʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1754,9 +1755,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/dc2e57bf5f31be6d007ad1f0b45b21a8",
      "added": "2026-11-11T23:24:38Z",
      "seq": 182,
-     "pron": "cong",
+     "pron": "con",
      "ipa": "kˈoŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1769,7 +1770,7 @@
      "seq": 181,
      "pron": "caza",
      "ipa": "kˈazæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1782,7 +1783,7 @@
      "seq": 180,
      "pron": "gatu",
      "ipa": "ɡˈatʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1795,7 +1796,7 @@
      "seq": 179,
      "pron": "familia",
      "ipa": "fˌæmˈiljæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1808,7 +1809,7 @@
      "seq": 178,
      "pron": "soziñu",
      "ipa": "sˌozˈiɲʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1821,7 +1822,7 @@
      "seq": 177,
      "pron": "cashoju",
      "ipa": "kˌaʃˈoxʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1832,9 +1833,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/39c8183a555535ec460217f0748a7267",
      "added": "2026-11-11T23:24:38Z",
      "seq": 176,
-     "pron": "longyü",
+     "pron": "lonyi",
      "ipa": "lˈoŋʒy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1849,7 +1850,7 @@
      "seq": 175,
      "pron": "pequenu",
      "ipa": "pˌekˈenʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1860,9 +1861,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/62b070b03eaabe454033f6c34d9700a7",
      "added": "2026-11-11T23:24:38Z",
      "seq": 174,
-     "pron": "aparetameingtu",
+     "pron": "apartameintu",
      "ipa": "ˌapaɾətæmˈeɪŋtʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1876,7 +1877,7 @@
      "seq": 173,
      "pron": "morar",
      "ipa": "moɾˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1890,7 +1891,7 @@
      "seq": 172,
      "pron": "baiju",
      "ipa": "bˈaɪxʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1903,7 +1904,7 @@
      "seq": 171,
      "pron": "preyiu",
      "ipa": "prˈɛdʒjʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1916,7 +1917,7 @@
      "seq": 170,
      "pron": "esi",
      "ipa": "ˈesi",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1927,9 +1928,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a082d4e55892cabb07c00254961374b7",
      "added": "2026-11-11T23:24:38Z",
      "seq": 169,
-     "pron": "merecadus",
+     "pron": "mercadus",
      "ipa": "mˌeɾəkˈadʊs",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1942,7 +1943,7 @@
      "seq": 168,
      "pron": "mangas",
      "ipa": "mˈɐ̃ŋɡæs",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1955,7 +1956,7 @@
      "seq": 167,
      "pron": "laranyas",
      "ipa": "lˌaɾˈɐ̃ŋʒæs",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1968,7 +1969,7 @@
      "seq": 166,
      "pron": "dúas",
      "ipa": "dˈuæs",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1981,7 +1982,7 @@
      "seq": 165,
      "pron": "melansías",
      "ipa": "mˌelɐ̃ŋsˈiæs",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -1994,7 +1995,7 @@
      "seq": 164,
      "pron": "manga",
      "ipa": "mˈɐ̃ŋɡæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2007,7 +2008,7 @@
      "seq": 163,
      "pron": "tres",
      "ipa": "trˈes",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2020,7 +2021,7 @@
      "seq": 162,
      "pron": "laranya",
      "ipa": "lˌaɾˈɐ̃ŋʒæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2031,9 +2032,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ab013e899e15edda5f662bca704bf7bf",
      "added": "2026-11-11T23:24:38Z",
      "seq": 161,
-     "pron": "cuantu cústanun",
+     "pron": "cuantu custaun",
      "ipa": "kwˈɐ̃ŋtʊ kˈustɐ̃ʊ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2044,9 +2045,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/d7ed91ffe22ca62931a6e7762e2a697c",
      "added": "2026-11-11T23:24:38Z",
      "seq": 160,
-     "pron": "presiza yü",
+     "pron": "presiza yi",
      "ipa": "prˌesˈizæ dʒy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2059,7 +2060,7 @@
      "seq": 159,
      "pron": "dois",
      "ipa": "dˈoɪs",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2072,7 +2073,7 @@
      "seq": 158,
      "pron": "mais",
      "ipa": "mˈaɪs",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2085,7 +2086,7 @@
      "seq": 157,
      "pron": "dagua",
      "ipa": "dˈaɡwæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2098,7 +2099,7 @@
      "seq": 156,
      "pron": "abacashís",
      "ipa": "ˌabakaʃˈis",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2111,7 +2112,7 @@
      "seq": 155,
      "pron": "pésegus",
      "ipa": "pˈeseɡʊs",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2125,7 +2126,7 @@
      "seq": 154,
      "pron": "gajafa",
      "ipa": "ɡˌaxˈafæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2136,9 +2137,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/00f7c4b5c6dc9bbff47f8d93b29a456f",
      "added": "2026-11-11T23:24:38Z",
      "seq": 153,
-     "pron": "presizu yü",
+     "pron": "presizu yi",
      "ipa": "prˌesˈizʊ dʒy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2151,7 +2152,7 @@
      "seq": 152,
      "pron": "pésegu",
      "ipa": "pˈeseɡʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2164,7 +2165,7 @@
      "seq": 151,
      "pron": "melansía",
      "ipa": "mˌelɐ̃ŋsˈiæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2177,7 +2178,7 @@
      "seq": 150,
      "pron": "abacashí",
      "ipa": "ˌabakaʃˈi",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2190,7 +2191,7 @@
      "seq": 149,
      "pron": "cuantu custa",
      "ipa": "kwˈɐ̃ŋtʊ kˈustæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2203,7 +2204,7 @@
      "seq": 148,
      "pron": "outubru",
      "ipa": "ˌowtˈubrʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2214,9 +2215,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/fbc71010184f6f95f7a01a56c1be8bf3",
      "added": "2026-11-11T23:24:38Z",
      "seq": 147,
-     "pron": "teimpu bong",
+     "pron": "teimpu bon",
      "ipa": "tˈeɪmpʊ bˈoŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2229,7 +2230,7 @@
      "seq": 146,
      "pron": "dezeimbru",
      "ipa": "dˌezˈeɪmbrʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2240,9 +2241,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f2362959d91c37a6c35fa02f4395e4e3",
      "added": "2026-11-11T23:24:38Z",
      "seq": 145,
-     "pron": "muingtu",
+     "pron": "muintu",
      "ipa": "mwˈiŋtʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2253,9 +2254,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5856b55fd4ea9f09782707f51d2ba379",
      "added": "2026-11-11T23:24:38Z",
      "seq": 144,
-     "pron": "nu ingvérenu",
+     "pron": "nu invernu",
      "ipa": "nʊ ˌiŋvˈɛɾənʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2268,7 +2269,7 @@
      "seq": 143,
      "pron": "sol",
      "ipa": "sˈɔl",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2281,7 +2282,7 @@
      "seq": 142,
      "pron": "la",
      "ipa": "lˈa",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2294,7 +2295,7 @@
      "seq": 141,
      "pron": "nu meu país",
      "ipa": "nʊ meʊ paˈis",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2307,7 +2308,7 @@
      "seq": 140,
      "pron": "seteimbru",
      "ipa": "sˌetˈeɪmbrʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2318,9 +2319,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ece33123725caf1da986ae5594c83a5b",
      "added": "2026-11-11T23:24:38Z",
      "seq": 139,
-     "pron": "nanun fas",
+     "pron": "naun fas",
      "ipa": "nˌɐ̃ʊ̃ fˈas",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2333,7 +2334,7 @@
      "seq": 138,
      "pron": "na primavera",
      "ipa": "na prˌimavˈɛɾæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2344,9 +2345,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/2241bcf0e9fc3e1880b4bf1af2cf9c0e",
      "added": "2026-11-11T23:24:38Z",
      "seq": 137,
-     "pron": "máresu",
+     "pron": "marsu",
      "ipa": "mˈaɾəsʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2357,9 +2358,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f573023f74e30a5f3b9cc4ad7164b6df",
      "added": "2026-11-11T23:24:38Z",
      "seq": 136,
-     "pron": "nu veranun",
+     "pron": "nu veráun",
      "ipa": "nʊ veɾˈɐ̃ʊ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2372,7 +2373,7 @@
      "seq": 135,
      "pron": "yaneiru",
      "ipa": "ʒˌænˈeɪɾʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2385,7 +2386,7 @@
      "seq": 134,
      "pron": "calor",
      "ipa": "kalˈor",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2398,7 +2399,7 @@
      "seq": 133,
      "pron": "yuliu",
      "ipa": "ʒˈuljʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2411,7 +2412,7 @@
      "seq": 132,
      "pron": "maio",
      "ipa": "maɪˈo",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2422,9 +2423,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/09356a016ee105186deae8f68be4e24e",
      "added": "2026-11-11T23:24:38Z",
      "seq": 131,
-     "pron": "eing",
+     "pron": "ein",
      "ipa": "ˈeɪŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2437,7 +2438,7 @@
      "seq": 130,
      "pron": "nu outonu",
      "ipa": "nʊ ˌowtˈonʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2453,7 +2454,7 @@
      "seq": 129,
      "pron": "fas",
      "ipa": "fˈas",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2466,7 +2467,7 @@
      "seq": 128,
      "pron": "friu",
      "ipa": "frˈiʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2479,7 +2480,7 @@
      "seq": 127,
      "pron": "sobretudu",
      "ipa": "sobɾetˈudʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2493,7 +2494,7 @@
      "seq": 126,
      "pron": "estuda",
      "ipa": "ˌestˈudæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2506,7 +2507,7 @@
      "seq": 125,
      "pron": "múzica",
      "ipa": "mˈuzikæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2517,9 +2518,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/8bd396bca1d31ca2232ae980de283bd2",
      "added": "2026-11-11T23:24:38Z",
      "seq": 124,
-     "pron": "yü noichü",
+     "pron": "yi noichi",
      "ipa": "dʒy nˈoɪtʃy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2530,9 +2531,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3543d72723028df7c21a549c3baa0ef4",
      "added": "2026-11-11T23:24:38Z",
      "seq": 123,
-     "pron": "árechüs",
+     "pron": "archis",
      "ipa": "ˈaɾətʃys",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2543,9 +2544,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/09c8eb31716bd6b0f95afc4e44b71c34",
      "added": "2026-11-11T23:24:38Z",
      "seq": 122,
-     "pron": "eing caza",
+     "pron": "ein caza",
      "ipa": "ˈeɪŋ kˈazæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2558,7 +2559,7 @@
      "seq": 121,
      "pron": "italianu",
      "ipa": "ˌitaliˈɐ̃nʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2572,7 +2573,7 @@
      "seq": 120,
      "pron": "fala",
      "ipa": "fˈalæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2583,9 +2584,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/73d3a06fad19c564bb5dfbf6ee819d74",
      "added": "2026-11-11T23:24:38Z",
      "seq": 119,
-     "pron": "alemanun",
+     "pron": "alemáun",
      "ipa": "ˌalemˈɐ̃ʊ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2596,9 +2597,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/5213c34c00eb6f4f0e11bc7fa92b722c",
      "added": "2026-11-11T23:24:38Z",
      "seq": 118,
-     "pron": "yü mañán",
+     "pron": "yi mañán",
      "ipa": "dʒy mɐ̃ɲˈɐ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2611,7 +2612,7 @@
      "seq": 117,
      "pron": "nosa",
      "ipa": "nˈɔsæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2624,7 +2625,7 @@
      "seq": 116,
      "pron": "legáu",
      "ipa": "leɡˈaʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2637,7 +2638,7 @@
      "seq": 115,
      "pron": "fransés",
      "ipa": "frɐ̃ŋsˈes",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2648,9 +2649,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/0c60b96a9c5aaf7dc4b6119fcb67f436",
      "added": "2026-11-11T23:24:38Z",
      "seq": 114,
-     "pron": "ingglés",
+     "pron": "inglés",
      "ipa": "iŋɡlˈes",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2661,9 +2662,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/cd6a11ede22f32fe5db1c136dc195074",
      "added": "2026-11-11T23:24:38Z",
      "seq": 113,
-     "pron": "muingtu being",
+     "pron": "muintu bein",
      "ipa": "mwˈiŋtʊ bˈeɪŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2677,7 +2678,7 @@
      "seq": 112,
      "pron": "falar",
      "ipa": "falˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2688,9 +2689,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/11bd588a6ea7c4144180059040d78f60",
      "added": "2026-11-11T23:24:38Z",
      "seq": 111,
-     "pron": "un poucu yü",
+     "pron": "un poucu yi",
      "ipa": "ũŋ pˈowkʊ dʒy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2703,7 +2704,7 @@
      "seq": 110,
      "pron": "i vosé",
      "ipa": "i vosˈe",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2716,7 +2717,7 @@
      "seq": 109,
      "pron": "español",
      "ipa": "ˌespɐ̃ɲˈɔl",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2729,7 +2730,7 @@
      "seq": 108,
      "pron": "na escola",
      "ipa": "na ˌeskˈɔlæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2740,9 +2741,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3e465b32d4a91781c8515b6a2c584aea",
      "added": "2026-11-11T23:24:38Z",
      "seq": 107,
-     "pron": "poretugués",
+     "pron": "portugués",
      "ipa": "pˌoɾətuɡˈes",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2757,7 +2758,7 @@
      "seq": 106,
      "pron": "estudar",
      "ipa": "ˌestudˈar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2770,7 +2771,7 @@
      "seq": 105,
      "pron": "olia",
      "ipa": "ˈɔljæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2781,9 +2782,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/fa36d5326d1608c1105192e9bbe9335f",
      "added": "2026-11-11T23:24:38Z",
      "seq": 104,
-     "pron": "nanun teing",
+     "pron": "naun tein",
      "ipa": "nˈɐ̃ʊ̃ teɪŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2796,7 +2797,7 @@
      "seq": 103,
      "pron": "otéu",
      "ipa": "otˈɛʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2809,7 +2810,7 @@
      "seq": 102,
      "pron": "livraría",
      "ipa": "lˌivraɾˈiæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2821,9 +2822,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/368e6b34e00acf77a3b94557635dd87c",
      "added": "2026-11-11T23:24:38Z",
      "seq": 101,
-     "pron": "estasionameingtu",
+     "pron": "estasionameintu",
      "ipa": "ˌestasˌionæmˈeɪŋtʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2834,9 +2835,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c5e01207d4bd9594c1a53688420e2041",
      "added": "2026-11-11T23:24:38Z",
      "seq": 100,
-     "pron": "na miña sidayü",
+     "pron": "na miña sidayi",
      "ipa": "na mˌiɲæ sˌidˈadʒy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2847,9 +2848,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1c7582f3329058a4c3439e46a3a9bab0",
      "added": "2026-11-11T23:24:38Z",
      "seq": 99,
-     "pron": "párecü",
+     "pron": "parqui",
      "ipa": "pˈaɾəky",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2862,7 +2863,7 @@
      "seq": 98,
      "pron": "ei",
      "ipa": "ˈeɪ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2873,9 +2874,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/49cb09d778703f9468d780509105ae3a",
      "added": "2026-11-11T23:24:38Z",
      "seq": 97,
-     "pron": "merecadu",
+     "pron": "mercadu",
      "ipa": "mˌeɾəkˈadʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2886,9 +2887,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/800e467860a473ae82f8d92d9b8441a2",
      "added": "2026-11-11T23:24:38Z",
      "seq": 96,
-     "pron": "péretu daquí",
+     "pron": "pertu daquí",
      "ipa": "pˈɛɾətʊ dakˈi",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2901,7 +2902,7 @@
      "seq": 95,
      "pron": "muzéu",
      "ipa": "muzˈeʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2916,7 +2917,7 @@
      "seq": 94,
      "pron": "bancu",
      "ipa": "bˈɐ̃ŋkʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2929,7 +2930,7 @@
      "seq": 93,
      "pron": "teatru",
      "ipa": "tˌeˈatrʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2940,9 +2941,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/866e1d94e98797cf5bbd761ea4d7e083",
      "added": "2026-11-11T23:24:38Z",
      "seq": 92,
-     "pron": "teing",
+     "pron": "tein",
      "ipa": "tˈeɪŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2955,7 +2956,7 @@
      "seq": 91,
      "pron": "loya",
      "ipa": "lˈɔʒæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2968,7 +2969,7 @@
      "seq": 90,
      "pron": "padaría",
      "ipa": "pˌadaɾˈiæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2982,7 +2983,7 @@
      "seq": 89,
      "pron": "moshila",
      "ipa": "mˌoʃˈilæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -2996,7 +2997,7 @@
      "seq": 88,
      "pron": "táblet",
      "ipa": "tˈablet",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3009,7 +3010,7 @@
      "seq": 87,
      "pron": "livru",
      "ipa": "lˈivrʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3022,7 +3023,7 @@
      "seq": 86,
      "pron": "af",
      "ipa": "ˈaf",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3036,7 +3037,7 @@
      "seq": 85,
      "pron": "boné",
      "ipa": "bonˈɛ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3050,7 +3051,7 @@
      "seq": 84,
      "pron": "cajegador",
      "ipa": "kˌaxeɡadˈor",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3063,7 +3064,7 @@
      "seq": 83,
      "pron": "jeloyiu",
      "ipa": "xˌelˈɔʒjʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3074,9 +3075,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ea0959f9ee4de6c1ba5e2481be68902d",
      "added": "2026-11-11T23:24:38Z",
      "seq": 82,
-     "pron": "ongyü",
+     "pron": "onyi",
      "ipa": "ˈoŋdʒy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3087,9 +3088,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/2d2c0b3f24d1c24d9176da5e0679aeb4",
      "added": "2026-11-11T23:24:38Z",
      "seq": 81,
-     "pron": "estóu cong",
+     "pron": "estóu con",
      "ipa": "estˈow koŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3100,9 +3101,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/1cebaab94e02d8dbdbc5d7e2e8015fce",
      "added": "2026-11-11T23:24:38Z",
      "seq": 80,
-     "pron": "pasapórechü",
+     "pron": "pasaporchi",
      "ipa": "pˌasapˈɔɾətʃy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3118,7 +3119,7 @@
      "seq": 79,
      "pron": "suéter",
      "ipa": "sˌuˈɛter",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3131,7 +3132,7 @@
      "seq": 78,
      "pron": "veschidu",
      "ipa": "vˌestʃˈidʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3147,7 +3148,7 @@
      "seq": 77,
      "pron": "cauma",
      "ipa": "kˈaʊmæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3160,7 +3161,7 @@
      "seq": 76,
      "pron": "aquí",
      "ipa": "akˈi",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3174,7 +3175,7 @@
      "seq": 75,
      "pron": "está",
      "ipa": "estˈa",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3187,7 +3188,7 @@
      "seq": 74,
      "pron": "mala",
      "ipa": "mˈalæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3202,9 +3203,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/dc0be4402dcfdbb1089d82a4c460bc9a",
      "added": "2026-11-11T23:24:38Z",
      "seq": 73,
-     "pron": "careteira",
+     "pron": "carteira",
      "ipa": "kˌaɾətˈeɪɾæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3217,7 +3218,7 @@
      "seq": 72,
      "pron": "pai",
      "ipa": "pˈaɪ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3230,7 +3231,7 @@
      "seq": 71,
      "pron": "seria",
      "ipa": "sˈɛɾjæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3244,7 +3245,7 @@
      "seq": 70,
      "pron": "seriu",
      "ipa": "sˈɛɾjʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3258,7 +3259,7 @@
      "seq": 69,
      "pron": "mas",
      "ipa": "mˈas",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3271,7 +3272,7 @@
      "seq": 68,
      "pron": "a súa",
      "ipa": "a sˈuæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3284,7 +3285,7 @@
      "seq": 67,
      "pron": "namoradu",
      "ipa": "nˌæmoɾˈadʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3295,9 +3296,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/de6597a79bbd7f48f223db3031340177",
      "added": "2026-11-11T23:24:38Z",
      "seq": 66,
-     "pron": "einggrasadu",
+     "pron": "eingrasadu",
      "ipa": "ˌeɪŋɡrasˈadʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3308,9 +3309,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3896f8c6f247543a401bf0897a98c514",
      "added": "2026-11-11T23:24:38Z",
      "seq": 65,
-     "pron": "einggrasada",
+     "pron": "eingrasada",
      "ipa": "ˌeɪŋɡrasˈadæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3323,7 +3324,7 @@
      "seq": 64,
      "pron": "namorada",
      "ipa": "nˌæmoɾˈadæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3336,7 +3337,7 @@
      "seq": 63,
      "pron": "u seu",
      "ipa": "ʊ sˈeʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3347,9 +3348,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a7fa20671ea89a74ee3d2c35b46110de",
      "added": "2026-11-11T23:24:38Z",
      "seq": 62,
-     "pron": "eing yeráu",
+     "pron": "ein yeráu",
      "ipa": "ˈeɪŋ ʒeɾˈaʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3362,7 +3363,7 @@
      "seq": 61,
      "pron": "chímida",
      "ipa": "tʃˈimidæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3375,7 +3376,7 @@
      "seq": 60,
      "pron": "simpáchica",
      "ipa": "sˌimpˈatʃikæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3389,7 +3390,7 @@
      "seq": 59,
      "pron": "espoza",
      "ipa": "ˌespˈozæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3403,9 +3404,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/db32e2a95eab356d76ba04b370b88b7c",
      "added": "2026-11-11T23:24:38Z",
      "seq": 58,
-     "pron": "manü",
+     "pron": "main",
      "ipa": "mˈɐ̃y",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3418,7 +3419,7 @@
      "seq": 57,
      "pron": "comu eu",
      "ipa": "kˌomʊ ˈeʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3432,7 +3433,7 @@
      "seq": 56,
      "pron": "chímidu",
      "ipa": "tʃˈimidʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3445,7 +3446,7 @@
      "seq": 55,
      "pron": "simpáchicu",
      "ipa": "sˌimpˈatʃikʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3460,7 +3461,7 @@
      "seq": 54,
      "pron": "espozu",
      "ipa": "ˌespˈozʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3471,9 +3472,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/e62a3100b6e9d7b4ca52bac3fe0ef419",
      "added": "2026-11-11T23:24:38Z",
      "seq": 53,
-     "pron": "tambeing",
+     "pron": "tambéin",
      "ipa": "tɐ̃mbˈeɪŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3486,7 +3487,7 @@
      "seq": 52,
      "pron": "a miña",
      "ipa": "a mˈiɲæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3499,7 +3500,7 @@
      "seq": 51,
      "pron": "chía",
      "ipa": "tʃˈiæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3513,7 +3514,7 @@
      "seq": 50,
      "pron": "amiga",
      "ipa": "ˌæmˈiɡæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3526,7 +3527,7 @@
      "seq": 49,
      "pron": "quer",
      "ipa": "kˈɛr",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3539,7 +3540,7 @@
      "seq": 48,
      "pron": "u meu",
      "ipa": "ʊ mˈeʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3552,7 +3553,7 @@
      "seq": 47,
      "pron": "chiu",
      "ipa": "tʃˈiʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3565,7 +3566,7 @@
      "seq": 46,
      "pron": "amigu",
      "ipa": "ˌæmˈiɡʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3578,7 +3579,7 @@
      "seq": 45,
      "pron": "so",
      "ipa": "sˈɔ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3591,7 +3592,7 @@
      "seq": 44,
      "pron": "uma",
      "ipa": "ˈumæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3602,9 +3603,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a2ebead1395c1bd1d0a97f5bd58fc4db",
      "added": "2026-11-11T23:24:38Z",
      "seq": 43,
-     "pron": "iremán",
+     "pron": "irmán",
      "ipa": "iɾəmˈɐ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3617,7 +3618,7 @@
      "seq": 42,
      "pron": "filia",
      "ipa": "fˈiljæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3630,7 +3631,7 @@
      "seq": 41,
      "pron": "teñu",
      "ipa": "tˈeɲʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3643,7 +3644,7 @@
      "seq": 40,
      "pron": "filiu",
      "ipa": "fˈiljʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3654,9 +3655,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a198288efc5c741747c78f9cc66c1b7f",
      "added": "2026-11-11T23:24:38Z",
      "seq": 39,
-     "pron": "iremanun",
+     "pron": "irmáun",
      "ipa": "iɾəmˈɐ̃ʊ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3667,9 +3668,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/dba9ce75eeaaa6a8ad7c82e8b0805ad1",
      "added": "2026-11-11T23:24:38Z",
      "seq": 38,
-     "pron": "a miña manü",
+     "pron": "a miña main",
      "ipa": "a mˌiɲæ mˈɐ̃y",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3680,9 +3681,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/7927f45e0f7ca07bd688b145f9e5c393",
      "added": "2026-11-11T23:24:38Z",
      "seq": 37,
-     "pron": "nanun",
+     "pron": "naun",
      "ipa": "nˈɐ̃ʊ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3695,7 +3696,7 @@
      "seq": 36,
      "pron": "e du",
      "ipa": "ɛ dˈʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3706,9 +3707,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/75754af3e99d469889000c0723c9a258",
      "added": "2026-11-11T23:24:38Z",
      "seq": 35,
-     "pron": "sing",
+     "pron": "sin",
      "ipa": "sˈiŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3721,7 +3722,7 @@
      "seq": 34,
      "pron": "ne",
      "ipa": "nˈɛ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3734,7 +3735,7 @@
      "seq": 33,
      "pron": "vosé",
      "ipa": "vosˈe",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3745,9 +3746,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3507402a665cc29df89d13979497f9a5",
      "added": "2026-11-11T23:24:38Z",
      "seq": 32,
-     "pron": "boa táreyü",
+     "pron": "boa taryi",
      "ipa": "bˈoæ tˈaɾədʒy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3760,7 +3761,7 @@
      "seq": 31,
      "pron": "sou du",
      "ipa": "sow dˈʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3773,7 +3774,7 @@
      "seq": 30,
      "pron": "ate logu",
      "ipa": "atˌɛ lˈɔɡʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3784,9 +3785,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/a9943bf9414c3f29ce88788adbe19e91",
      "added": "2026-11-11T23:24:38Z",
      "seq": 29,
-     "pron": "tudu being",
+     "pron": "tudu bein",
      "ipa": "tˈudʊ bˈeɪŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3799,7 +3800,7 @@
      "seq": 28,
      "pron": "ela",
      "ipa": "ˈɛlæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3812,7 +3813,7 @@
      "seq": 27,
      "pron": "tudu",
      "ipa": "tˈudʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3823,9 +3824,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/222e85ab502c7e9e4ed542a05861437d",
      "added": "2026-11-11T23:24:38Z",
      "seq": 26,
-     "pron": "elü",
+     "pron": "eli",
      "ipa": "ˈely",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3841,7 +3842,7 @@
      "seq": 25,
      "pron": "o",
      "ipa": "ˈɔ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3852,9 +3853,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/c57fab811bf8bb8a4888ecf7a1260f4a",
      "added": "2026-11-11T23:24:38Z",
      "seq": 24,
-     "pron": "muingtu prazer",
+     "pron": "muintu prazer",
      "ipa": "mwˈiŋtʊ prazˈer",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3870,7 +3871,7 @@
      "seq": 23,
      "pron": "eagudu",
      "ipa": "ˌɛaɡˈudʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3881,9 +3882,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/f28e4bb8d07699921fdb6425bc03342a",
      "added": "2026-11-11T23:24:38Z",
      "seq": 22,
-     "pron": "bong yía",
+     "pron": "bon yía",
      "ipa": "bˈoŋ dʒˈiæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3896,7 +3897,7 @@
      "seq": 21,
      "pron": "sou",
      "ipa": "sˈow",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3913,7 +3914,7 @@
      "seq": 20,
      "pron": "a",
      "ipa": "ˈa",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3926,7 +3927,7 @@
      "seq": 19,
      "pron": "eu",
      "ipa": "ˈeʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3939,7 +3940,7 @@
      "seq": 18,
      "pron": "óchimu",
      "ipa": "ˈɔtʃimʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3950,9 +3951,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/b77c5fe9b9c8a1e2c5d9da606415bd45",
      "added": "2026-11-11T23:24:38Z",
      "seq": 17,
-     "pron": "cong asúcar",
+     "pron": "con asúcar",
      "ipa": "koŋ ˌasˈukar",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3963,9 +3964,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/341dec6110e63757ebab3081cbc3675f",
      "added": "2026-11-11T23:24:38Z",
      "seq": 16,
-     "pron": "panun",
+     "pron": "paun",
      "ipa": "pˈɐ̃ʊ̃",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3979,7 +3980,7 @@
      "seq": 15,
      "pron": "e",
      "ipa": "ˈɛ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -3992,7 +3993,7 @@
      "seq": 14,
      "pron": "chau",
      "ipa": "tʃˈaʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4004,9 +4005,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/2185faf6fad329d42b9ed1ea9480a959",
      "added": "2026-11-11T23:24:38Z",
      "seq": 13,
-     "pron": "sorevechü",
+     "pron": "sorvechi",
      "ipa": "sˌoɾəvˈetʃy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4019,7 +4020,7 @@
      "seq": 12,
      "pron": "obrigadu",
      "ipa": "ˌobriɡˈadʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4032,7 +4033,7 @@
      "seq": 11,
      "pron": "agua",
      "ipa": "ˈaɡwæ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4046,7 +4047,7 @@
      "seq": 10,
      "pron": "ou",
      "ipa": "ˈow",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4057,9 +4058,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/3569a2315c9422200bf4d7fee55210bb",
      "added": "2026-11-11T23:24:38Z",
      "seq": 9,
-     "pron": "cong yelu",
+     "pron": "con yelu",
      "ipa": "koŋ ʒˈelʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4072,9 +4073,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/ad300a9e89fe97368ab6691d773606ea",
      "added": "2026-11-11T23:24:38Z",
      "seq": 8,
-     "pron": "sanduishü",
+     "pron": "sanduishi",
      "ipa": "sˌɐ̃ŋduˈiʃy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4087,7 +4088,7 @@
      "seq": 7,
      "pron": "pastéu",
      "ipa": "pastˈɛʊ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4100,7 +4101,7 @@
      "seq": 6,
      "pron": "por favor",
      "ipa": "por favˈor",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4111,9 +4112,9 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beapt/7924456af8a7155a6fa0f21d3c4b4fbf",
      "added": "2026-11-11T23:24:38Z",
      "seq": 5,
-     "pron": "cong leichü",
+     "pron": "con leichi",
      "ipa": "koŋ lˈeɪtʃy",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4126,7 +4127,7 @@
      "seq": 4,
      "pron": "oi",
      "ipa": "ˈoɪ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4142,7 +4143,7 @@
      "seq": 3,
      "pron": "un",
      "ipa": "ˈũŋ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4155,7 +4156,7 @@
      "seq": 2,
      "pron": "sha",
      "ipa": "ʃˈa",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     },
     {
@@ -4168,14 +4169,14 @@
      "seq": 1,
      "pron": "café",
      "ipa": "kafˈɛ",
-     "pron_v": 1,
+     "pron_v": 2,
      "pron_src": "auto"
     }
    ],
    "dropped": {},
    "duolingo_total": 291,
    "count": 291,
-   "updated": "2026-11-11T23:24:38Z"
+   "updated": "2026-11-12T00:01:15Z"
   }
  },
  "imports": [],

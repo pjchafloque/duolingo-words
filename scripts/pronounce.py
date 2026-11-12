@@ -24,7 +24,7 @@ import shutil
 import subprocess
 import unicodedata
 
-VERSION = 1
+VERSION = 2
 
 # Duolingo course code -> the eSpeak NG voice that reads that language.
 VOICES = {
@@ -49,6 +49,11 @@ VOWELS = {
     "y": "ü", "ʏ": "ü",
     "ø": "ö", "œ": "ö", "ɶ": "ö",
 }
+
+# How eSpeak writes some sounds differs by language. For Brazilian Portuguese
+# it writes the unstressed final e ("leite") as y and adds a tiny vowel after
+# r ("jardim" -> ʒaɾədʒˈiŋ), so those two read differently there ("" = skip).
+LANG_VOWELS = {"pt": {"y": "i", "ə": ""}}
 
 # Nasal vowels (French "bon", "an", "vin") are written as the vowel plus n,
 # or m before p and b, the way Spanish writes "campo". These vowels get a
@@ -149,22 +154,22 @@ def _tokens(word: str) -> list[_Tok]:
     return toks
 
 
-def _letters_of(tok: _Tok | None) -> str:
+def _letters_of(tok: _Tok | None, vowels: dict | None = None) -> str:
     """The first Spanish letter a token will be written with (for lookahead)."""
     if tok is None:
         return ""
     if tok.kind == "V":
         if tok.nasal and tok.ipa in NASAL_VOWELS:
             return NASAL_VOWELS[tok.ipa]
-        return VOWELS[tok.ipa]
+        return (vowels or {}).get(tok.ipa, VOWELS[tok.ipa])
     if tok.kind == "G":
         return GLIDES.get(tok.ipa, VOWELS.get(tok.ipa, ""))
     return AFFRICATES.get(tok.ipa) or CONSONANTS.get(tok.ipa, "")
 
 
-def _consonant(tok: _Tok, nxt: _Tok | None) -> list[tuple[str, bool]]:
+def _consonant(tok: _Tok, nxt: _Tok | None, vowels: dict | None = None) -> list[tuple[str, bool]]:
     sym = tok.ipa
-    front = _letters_of(nxt)[:1] in ("e", "i")
+    front = _letters_of(nxt, vowels)[:1] in ("e", "i")
     if sym in ("k", "q", "c"):
         spelled = "qu" if front else "c"
     elif sym in ("g", "ɡ"):
@@ -179,8 +184,17 @@ def _consonant(tok: _Tok, nxt: _Tok | None) -> list[tuple[str, bool]]:
     return [(ch, False) for ch in spelled]
 
 
-def _spell_word(ipa_word: str) -> str:
-    toks = _tokens(ipa_word)
+def _spell_word(ipa_word: str, lang: str | None = None) -> str:
+    vowels = LANG_VOWELS.get(lang or "", {})
+    toks = []
+    carry = False
+    for tok in _tokens(ipa_word):
+        if tok.kind == "V" and vowels.get(tok.ipa) == "":
+            carry = carry or tok.stress  # skipped vowel: hand any stress to the next one
+            continue
+        if carry and tok.kind == "V":
+            tok.stress, carry = True, False
+        toks.append(tok)
     out: list[list] = []  # [letter, is_vowel, is_stressed]
     pending_nasal = False
 
@@ -188,6 +202,9 @@ def _spell_word(ipa_word: str) -> str:
         nonlocal pending_nasal
         if not pending_nasal:
             return
+        if (next_tok is not None and next_tok.kind == "V" and not next_tok.stress
+                and (next_tok.nasal or _letters_of(next_tok, vowels) in ("i", "u"))):
+            return  # a nasal diphthong ("não" -> naun, "mãe" -> main): the n goes after both vowels
         pending_nasal = False
         if next_tok is not None and next_tok.kind == "C" and next_tok.ipa in ("n", "m", "ɲ", "ŋ"):
             return  # "ennui": the real n already follows
@@ -204,13 +221,18 @@ def _spell_word(ipa_word: str) -> str:
                 nxt.ipa == tok.ipa or (len(nxt.ipa) == 2 and nxt.ipa[0] == tok.ipa)
             ):
                 continue
-            if tok.ipa == "ŋ" and idx > 0 and toks[idx - 1].nasal:
-                out.append(["n", False, False])  # nasal vowel + ŋ is still just "n"
+            if tok.ipa == "ŋ" and (nxt is None or nxt.kind != "V"):
+                # Closing a syllable, ŋ is how eSpeak marks a nasal vowel in Portuguese
+                # ("bem" -> bein, "com" -> con); Spanish writes it n, or m before p/b.
+                if not (out and out[-1][0] in ("n", "m")):
+                    out.append(["m" if nxt is not None and nxt.ipa[:1] in "pb" else "n", False, False])
                 continue
-            for ch, is_vowel in _consonant(tok, nxt):
+            for ch, is_vowel in _consonant(tok, nxt, vowels):
                 out.append([ch, is_vowel, False])
         elif tok.kind == "G":
             letter = GLIDES.get(tok.ipa) or VOWELS.get(tok.ipa, "")
+            if tok.ipa == "w" and out and out[-1][0] == "u":
+                continue
             if tok.ipa == "j":
                 # Spanish writes this sound as "y" after an i ("fille" -> "fiy"),
                 # between vowels ("voyage" -> "vuayash"), at the start of a word
@@ -223,7 +245,8 @@ def _spell_word(ipa_word: str) -> str:
             if letter:
                 out.append([letter, letter in STRONG or letter in WEAK, False])
         else:
-            letter = NASAL_VOWELS.get(tok.ipa, VOWELS[tok.ipa]) if tok.nasal else VOWELS[tok.ipa]
+            plain = vowels.get(tok.ipa, VOWELS[tok.ipa])
+            letter = NASAL_VOWELS.get(tok.ipa, plain) if tok.nasal else plain
             out.append([letter, True, tok.stress])
             if tok.nasal:
                 pending_nasal = True
@@ -283,11 +306,11 @@ def _add_accent(out: list[list]) -> None:
         out[target][0] = ACUTE[out[target][0]]
 
 
-def to_spanish(ipa: str) -> str:
+def to_spanish(ipa: str, lang: str | None = None) -> str:
     """Turn eSpeak IPA (one word or a phrase) into Spanish-letter spelling."""
     ipa = _LANG_TAG.sub(" ", ipa or "")
     words = [w for w in _SPLIT.split(ipa.strip()) if w]
-    return " ".join(spelled for spelled in (_spell_word(w) for w in words) if spelled)
+    return " ".join(spelled for spelled in (_spell_word(w, lang) for w in words) if spelled)
 
 
 def espeak_path() -> str | None:
@@ -319,5 +342,5 @@ def pronounce(text: str, lang: str) -> tuple[str | None, str | None]:
     ipa = ipa_for(text, lang)
     if not ipa:
         return None, None
-    spelled = to_spanish(ipa)
+    spelled = to_spanish(ipa, lang)
     return (spelled or None), ipa

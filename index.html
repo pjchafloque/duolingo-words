@@ -454,7 +454,8 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
   // ---- Pronunciation guide, per language. Each entry shows up only when one of
   // your words uses it, with that word as the example. p = pronunciation, i = IPA.
   const has = re => p => re.test(p);
-  const nasal = (p, i) => /̃/.test(i.normalize("NFD")) && /[aeiou][nm]/.test(p);
+  // eSpeak marks nasal vowels with a tilde (French) or a closing ŋ (Portuguese "bem" = bˈeɪŋ).
+  const nasal = (p, i) => (/\u0303/.test(i.normalize("NFD")) || /ŋ(?![aeiouyæɐəɛɔɪʊ])/.test(i)) && /[aeiou][nm]/.test(p);
   const accent = p => /[áéíóúǘ]|́/.test(p.normalize("NFC"));
   const SAME = {
     sh: { sym: "sh", test: has(/sh/), es: "Como en «show».", en: "As in “show”." },

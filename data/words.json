@@ -1,13 +1,123 @@
 {
  "version": 1,
  "current": "fr-es",
- "updated": "2026-11-12T20:12:34Z",
+ "updated": "2026-11-12T22:53:47Z",
  "courses": {
   "fr-es": {
    "learning": "fr",
    "from": "es",
    "name": "French",
    "words": [
+    {
+     "text": "viens de",
+     "translations": [
+      "vengo de",
+      "soy de"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/d19aa8e38056a067545efb2849550ec4",
+     "added": "2026-11-12T22:53:47Z",
+     "seq": 26,
+     "pron": "vien de",
+     "ipa": "vjˈɛ̃ də-",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "moi aussi",
+     "translations": [
+      "yo también"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/f8897aa9119f6bdb641f4969db64e5f7",
+     "added": "2026-11-12T22:53:47Z",
+     "seq": 25,
+     "pron": "mua osí",
+     "ipa": "mwˌa osˈi",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "je",
+     "translations": [
+      "yo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/c804a002a040e8ae8378dbec587c178a",
+     "added": "2026-11-12T22:53:47Z",
+     "seq": 24,
+     "pron": "ye",
+     "ipa": "ʒˈə-",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "et toi",
+     "translations": [
+      "y tú"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/5ba08a62aa137177a8496f041a0375fe",
+     "added": "2026-11-12T22:53:47Z",
+     "seq": 23,
+     "pron": "e tua",
+     "ipa": "e twˈa",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "je m'appelle",
+     "translations": [
+      "me llamo",
+      "soy llamado",
+      "mi nombre es",
+      "yo me llamo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/6b35dbe8fd0b62dc914a4356dfe33df2",
+     "added": "2026-11-12T22:53:47Z",
+     "seq": 22,
+     "pron": "ye mapel",
+     "ipa": "ʒə- mapˈɛl",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "bien",
+     "translations": [
+      "bien",
+      "mucho"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/314d0aa38e00540a5cfa9ab0c0206f8f",
+     "added": "2026-11-12T22:53:47Z",
+     "seq": 21,
+     "pron": "bien",
+     "ipa": "bjˈɛ̃",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "ça va",
+     "translations": [
+      "cómo estás"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/3ccf30aec5c3e6abd7e70dafa0a5ee33",
+     "added": "2026-11-12T22:53:47Z",
+     "seq": 20,
+     "pron": "sa va",
+     "ipa": "sa vˈa",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "enchanté",
+     "translations": [
+      "encantado",
+      "mucho gusto"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/4193bbdc9e14b5532ee3063a136c0270",
+     "added": "2026-11-12T22:53:47Z",
+     "seq": 19,
+     "pron": "anshanté",
+     "ipa": "ɑ̃ʃɑ̃tˈe",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
     {
      "text": "au revoir",
      "translations": [
@@ -250,9 +360,9 @@
     }
    ],
    "dropped": {},
-   "duolingo_total": 18,
-   "count": 18,
-   "updated": "2026-11-12T20:12:34Z"
+   "duolingo_total": 26,
+   "count": 26,
+   "updated": "2026-11-12T22:53:47Z"
   },
   "pt-es": {
    "learning": "pt",

@@ -27,7 +27,7 @@ Open the page in Safari, tap Share, then "Add to Home Screen". It gets the owl-a
 - `.github/workflows/sync.yml` runs `scripts/sync.py` every hour, and also whenever something in the repo changes.
 - `sync.py` asks Duolingo for the same list you see at duolingo.com/practice-hub/words. New words go into `data/words.json` with the date the sync first saw them. Words you already had when this started are grouped as "Jusqu'au …" (up to that date).
 - `scripts/pronounce.py` writes the pronunciations. eSpeak NG, a free speech program, gives the sounds, and a table turns them into Spanish spelling with Spanish accent rules: `bonjour` becomes "bonyur", `merci` becomes "mersí", `croissant` becomes "cruasán".
-- `index.html` is the page. The play button uses Duolingo's own recording of the word, or your browser's French voice when there isn't one. "Repaso" covers the meanings so you can quiz yourself, and "Lento" slows the audio down.
+- `index.html` is the page, including the class notebook (see below). The play button uses Duolingo's own recording of the word, or your browser's French voice when there isn't one. "Repaso" covers the meanings so you can quiz yourself, and "Lento" slows the audio down.
 
 Duolingo has no official API. This uses the same requests the Duolingo website makes, so it can stop working if Duolingo changes them. Duolingo's terms also say content shouldn't be downloaded or scraped, so strictly speaking this breaks them. It only reads your own list, a few times a day. The page is public, so anyone with the link can see your word list. The token is never on the page.
 
@@ -36,6 +36,19 @@ Duolingo has no official API. This uses the same requests the Duolingo website m
 Duolingo only shares the word list of the course that's open in your app, so each run reads that one course. To bring in new Portuguese words, open Portuguese on Duolingo and either wait for the next hourly run or press "Sincronizar ahora" on the page. That opens the workflow on GitHub, where you click "Run workflow". Switching courses never loses words: each notebook keeps everything it has seen, and new words show up with the date a run first found them.
 
 The Portuguese tab shows up as soon as a run reads your course list, even before its words arrive. `data/notebooks.json` decides which courses get a tab. Your account also has English and Chinese; add `"en"` or `"zh"` to its list to see them too. Each notebook has its own paper, school cursive and pronunciation guide. Linking to `…/duolingo-words/#pt` opens the Portuguese one directly.
+
+## The class notebook (Aula)
+
+The Portuguese notebook has two divider tabs under its title: "Duolingo" (the words above) and "Aula", what I learned in class (PORT 12200, Portuguese for Spanish Speakers, and Portuguese for the Profession). Aula is organized by topic, and every card says which class it came from:
+
+- Vocabulário: the class words by theme, with pronunciation and audio. A ✓ means the word is also in my Duolingo list, and those play Duolingo's recording.
+- Verbos: a card per tense (endings in red, when to use it, how Spanish differs) and "Buscar um verbo", which shows any class verb in every tense, with irregular forms in red.
+- Gramática, Cuidado! (false friends, nouns that change gender, sounds, typical mistakes), Negócios and Cultura (each class's opening question with a sample answer, plus culture notes).
+- Praticar: fill-in exercises and a random conjugation drill.
+
+The lesson menu in the toolbar shows everything from one class at once, and the search looks through all of Aula (a conjugated form like "fizemos" finds "fazer"). "Repaso" covers meanings and verb forms. Direct links: `…/duolingo-words/#aula`, `#aula/verbos`, `#aula/praticar`.
+
+Everything comes from `data/aula.json`, written by hand. To add a word, find its topic under `sections` → `vocabulario` and add a line like `["a praia", "la playa"]` (a third item is a note). Verbs go in `verbs` as `{"v": "falar", "es": "hablar", "lessons": ["d2"]}`. On each run, `scripts/aula.py` conjugates the verbs into `data/aula-verbos.json` and writes the pronunciations into `data/aula-pron.json` with the same eSpeak converter as the Duolingo words. Irregular verbs are listed in that script.
 
 ## Fixing a pronunciation
 

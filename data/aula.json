@@ -1,0 +1,1551 @@
+{
+ "_how": "Lo que aprendí en clase de portugués. La página lo muestra en la pestaña «Aula» del cuaderno de portugués. Para agregar una palabra, busca su tema en sections > vocabulario y añade una línea [\"palabra\", \"significado\"] o [\"palabra\", \"significado\", \"nota\"]. Los verbos van en verbs como {\"v\": \"falar\", \"es\": \"hablar\", \"lessons\": [\"d2\"]}. Al guardar en GitHub, la sincronización escribe sola la pronunciación y las conjugaciones. En los textos, *así* marca portugués (se puede tocar para oír) y _así_ pinta de rojo.",
+ "courses": [
+  {"id": "port", "name": "Portuguese for Spanish Speakers (PORT 12200)"},
+  {"id": "prof", "name": "Portuguese for the Profession"},
+  {"id": "extra", "name": "Fuera de las diapositivas"}
+ ],
+ "lessons": [
+  {"id": "d1", "course": "port", "name": "Dia 1", "q": "Oi! Qual é o seu nome? De onde você é?"},
+  {"id": "d2", "course": "port", "name": "Dia 2", "q": "O que você gosta de fazer no seu tempo livre?"},
+  {"id": "d3", "course": "port", "name": "Dia 3", "q": "O que você vai fazer no fim de semana?"},
+  {"id": "l4", "course": "port", "name": "Lição 4", "q": "Qual é o melhor lugar de Chicago para sair com amigos?"},
+  {"id": "l5", "course": "port", "name": "Lição 5", "q": "A que horas você se levanta todos os dias?"},
+  {"id": "l6", "course": "port", "name": "Lição 6", "q": "O que você sabe fazer?"},
+  {"id": "l7", "course": "port", "name": "Lição 7", "q": "Você já foi à Europa?"},
+  {"id": "l8", "course": "port", "name": "Lição 8", "q": "Você tem uma família grande?"},
+  {"id": "l9", "course": "port", "name": "Lição 9", "q": "Você é mais velho do que seu irmão ou sua irmã?"},
+  {"id": "l10", "course": "port", "name": "Lições 10 e 11", "q": "O que você vai ser quando se formar?"},
+  {"id": "l12", "course": "port", "name": "Lição 12", "q": "Como é a casa ou o bairro onde você mora?"},
+  {"id": "l13", "course": "port", "name": "Lição 13", "q": "Que curso você recomenda que seus colegas façam?"},
+  {"id": "l14", "course": "port", "name": "Lição 14", "q": "Que tarefas domésticas você gosta de fazer?"},
+  {"id": "l15", "course": "port", "name": "Lição 15", "q": "O que você quer comer?"},
+  {"id": "l16", "course": "port", "name": "Lição 16", "q": "O que fazíamos quando éramos mais jovens?"},
+  {"id": "l17", "course": "port", "name": "Lição 17", "q": "Que tipo de música você gosta de ouvir?"},
+  {"id": "l18", "course": "port", "name": "Lição 18", "q": "Quem matou o Dr. Pessoa?"},
+  {"id": "l19", "course": "port", "name": "Lição 19", "q": "Qual foi a melhor viagem da sua vida? Por quê?"},
+  {"id": "l20", "course": "port", "name": "Lição 20", "q": "Já aconteceu alguma coisa estranha com você numa viagem?"},
+  {"id": "l21", "course": "port", "name": "Lição 21", "q": "Qual é o melhor país para visitar? Por quê?"},
+  {"id": "rev1", "course": "port", "name": "Revisão: prova 1"},
+  {"id": "rev2", "course": "port", "name": "Revisão: exame final"},
+  {"id": "bn", "course": "prof", "name": "Bons Negócios: empresas"},
+  {"id": "pe", "course": "prof", "name": "Para hispanohablantes"},
+  {"id": "extra", "course": "extra", "name": "Extra"}
+ ],
+ "sections": [
+  {
+   "id": "vocabulario",
+   "name": "Vocabulário",
+   "intro": "Las palabras de clase, por tema. Toca una para oírla. Las que tienen ✓ ya están en tu lista de Duolingo.",
+   "items": [
+    {"id": "saudacoes", "title": "Saudações e apresentações", "lessons": ["d1"], "words": [
+     ["oi", "hola"],
+     ["tudo bem?", "¿todo bien?, ¿qué tal?", "también: tudo bom?"],
+     ["tudo bem, e você?", "todo bien, ¿y tú?"],
+     ["mais ou menos", "más o menos"],
+     ["como vai você?", "¿cómo estás?"],
+     ["qual é o seu nome?", "¿cómo te llamas?"],
+     ["meu nome é…", "me llamo…, mi nombre es…"],
+     ["como você se chama?", "¿cómo te llamas?"],
+     ["eu me chamo…", "me llamo…"],
+     ["muito prazer", "mucho gusto"],
+     ["igualmente", "igualmente"],
+     ["o prazer é meu", "el gusto es mío"],
+     ["de onde você é?", "¿de dónde eres?"],
+     ["eu sou do Brasil", "soy de Brasil", "de + o = do"],
+     ["eu sou de Chicago", "soy de Chicago"],
+     ["obrigado / obrigada", "gracias", "obrigado si eres hombre, obrigada si eres mujer"],
+     ["de nada", "de nada"],
+     ["tchau", "chau"],
+     ["até logo", "hasta luego"],
+     ["qual é o seu número de telefone?", "¿cuál es tu número de teléfono?"]
+    ]},
+    {"id": "numeros", "title": "Os números", "lessons": ["d1", "l6"], "note": "Um/uma y dois/duas cambian con el género: dois livros, duas casas.", "words": [
+     ["zero", "0 · cero"],
+     ["um / uma", "1 · uno, una"],
+     ["dois / duas", "2 · dos"],
+     ["três", "3 · tres"],
+     ["quatro", "4 · cuatro"],
+     ["cinco", "5 · cinco"],
+     ["seis", "6 · seis", "al dictar un teléfono se dice meia (media docena)"],
+     ["sete", "7 · siete"],
+     ["oito", "8 · ocho"],
+     ["nove", "9 · nueve"],
+     ["dez", "10 · diez"],
+     ["onze", "11 · once"],
+     ["doze", "12 · doce"],
+     ["treze", "13 · trece"],
+     ["catorze", "14 · catorce", "también: quatorze"],
+     ["quinze", "15 · quince"],
+     ["dezesseis", "16 · dieciséis"],
+     ["dezessete", "17 · diecisiete"],
+     ["dezoito", "18 · dieciocho"],
+     ["dezenove", "19 · diecinueve"],
+     ["vinte", "20 · veinte"],
+     ["vinte e um", "21 · veintiuno", "con «e»: vinte e dois, trinta e cinco"],
+     ["trinta", "30 · treinta"],
+     ["quarenta", "40 · cuarenta"],
+     ["cinquenta", "50 · cincuenta"],
+     ["sessenta", "60 · sesenta"],
+     ["setenta", "70 · setenta"],
+     ["oitenta", "80 · ochenta"],
+     ["noventa", "90 · noventa"],
+     ["noventa e nove", "99 · noventa y nueve"],
+     ["cem", "100 · cien"]
+    ]},
+    {"id": "andares", "title": "Os andares e os ordinais", "lessons": ["l12"], "note": "En Brasil el piso de la calle es o térreo. El primeiro andar ya está arriba.", "words": [
+     ["o térreo", "la planta baja"],
+     ["o subsolo", "el sótano"],
+     ["o andar", "el piso (de un edificio)"],
+     ["primeiro", "1.º · primero"],
+     ["segundo", "2.º · segundo"],
+     ["terceiro", "3.º · tercero"],
+     ["quarto", "4.º · cuarto"],
+     ["quinto", "5.º · quinto"],
+     ["sexto", "6.º · sexto"],
+     ["sétimo", "7.º · séptimo"],
+     ["oitavo", "8.º · octavo"],
+     ["nono", "9.º · noveno"],
+     ["décimo", "10.º · décimo"],
+     ["moro no terceiro andar", "vivo en el tercer piso"]
+    ]},
+    {"id": "dias", "title": "Os dias da semana", "lessons": ["d2", "d3"], "note": "Se cuentan desde el domingo: segunda-feira es el «segundo día». Muchas veces se dice solo segunda, terça…", "words": [
+     ["domingo", "domingo"],
+     ["segunda-feira", "lunes"],
+     ["terça-feira", "martes"],
+     ["quarta-feira", "miércoles"],
+     ["quinta-feira", "jueves"],
+     ["sexta-feira", "viernes"],
+     ["sábado", "sábado"],
+     ["o fim de semana", "el fin de semana"],
+     ["às segundas-feiras", "los lunes"],
+     ["hoje", "hoy"],
+     ["amanhã", "mañana", "a manhã es la mañana (parte del día)"],
+     ["ontem", "ayer"]
+    ]},
+    {"id": "meses", "title": "Os meses e as datas", "lessons": ["d2", "d3"], "note": "Los meses van en minúscula, como en español.", "words": [
+     ["janeiro", "enero"],
+     ["fevereiro", "febrero"],
+     ["março", "marzo"],
+     ["abril", "abril"],
+     ["maio", "mayo"],
+     ["junho", "junio"],
+     ["julho", "julio"],
+     ["agosto", "agosto"],
+     ["setembro", "septiembre"],
+     ["outubro", "octubre"],
+     ["novembro", "noviembre"],
+     ["dezembro", "diciembre"],
+     ["que dia é hoje?", "¿qué día es hoy?"],
+     ["hoje é quarta-feira, 11 de novembro", "hoy es miércoles 11 de noviembre"],
+     ["quando é o seu aniversário?", "¿cuándo es tu cumpleaños?"],
+     ["meu aniversário é dia 3 de maio", "mi cumpleaños es el 3 de mayo"],
+     ["o aniversário", "el cumpleaños", "también «aniversario»"],
+     ["o Natal", "la Navidad"],
+     ["o Dia dos Namorados", "el Día de los Enamorados", "en Brasil es el 12 de junio"],
+     ["o Dia da Independência", "el Día de la Independencia", "en Brasil, el 7 de septiembre"]
+    ]},
+    {"id": "interrogativas", "title": "Palavras interrogativas", "lessons": ["d2"], "words": [
+     ["quem?", "¿quién?, ¿quiénes?", "no tiene plural"],
+     ["o que?", "¿qué?"],
+     ["qual? / quais?", "¿cuál?, ¿cuáles?"],
+     ["quando?", "¿cuándo?"],
+     ["onde?", "¿dónde?"],
+     ["aonde?", "¿adónde?"],
+     ["de onde?", "¿de dónde?"],
+     ["como?", "¿cómo?"],
+     ["por que?", "¿por qué?", "al final de la frase es por quê; la respuesta, porque"],
+     ["quanto? / quanta?", "¿cuánto?, ¿cuánta?"],
+     ["quantos? / quantas?", "¿cuántos?, ¿cuántas?"]
+    ]},
+    {"id": "lazer", "title": "O tempo livre", "lessons": ["d2", "d3", "l16"], "words": [
+     ["o tempo livre", "el tiempo libre"],
+     ["andar de bicicleta", "montar en bicicleta"],
+     ["ir ao cinema", "ir al cine"],
+     ["passear no lago", "pasear por el lago"],
+     ["fazer um piquenique", "hacer un picnic"],
+     ["fazer exercícios", "hacer ejercicio"],
+     ["escutar música", "escuchar música"],
+     ["assistir a um filme", "ver una película", "assistir es ver (TV, cine), no «asistir»"],
+     ["assistir televisão", "ver televisión"],
+     ["ler", "leer"],
+     ["dançar salsa", "bailar salsa"],
+     ["jogar futebol", "jugar fútbol"],
+     ["sair com os amigos", "salir con los amigos"],
+     ["reunir-se com os amigos", "juntarse con los amigos"],
+     ["descansar", "descansar"],
+     ["viajar", "viajar"],
+     ["cozinhar", "cocinar"],
+     ["fazer um programa", "hacer un plan (para salir)", "Qual é o programa de hoje? = ¿Cuál es el plan de hoy?"],
+     ["divertido", "divertido"],
+     ["sozinho", "solo (sin compañía)"],
+     ["a praia", "la playa"]
+    ]},
+    {"id": "horas", "title": "As horas", "lessons": ["l5"], "note": "a + a = à, a + as = às: à uma, às duas.", "words": [
+     ["que horas são?", "¿qué hora es?"],
+     ["é uma hora", "es la una"],
+     ["são sete horas", "son las siete"],
+     ["são dez e meia", "son las diez y media"],
+     ["são nove e quarenta e cinco", "son las nueve y cuarenta y cinco"],
+     ["são quinze para as dez", "son quince para las diez"],
+     ["é meio-dia", "es mediodía"],
+     ["é meia-noite", "es medianoche"],
+     ["meio-dia e meia", "doce y media del día"],
+     ["a que horas…?", "¿a qué hora…?"],
+     ["à uma da tarde", "a la una de la tarde"],
+     ["às oito da manhã", "a las ocho de la mañana"],
+     ["às dez da noite", "a las diez de la noche"],
+     ["de manhã", "en la mañana"],
+     ["de tarde", "en la tarde"],
+     ["de noite", "en la noche"],
+     ["das duas às três", "de dos a tres"],
+     ["cedo", "temprano"],
+     ["tarde", "tarde"]
+    ]},
+    {"id": "rotina", "title": "A rotina", "lessons": ["l5", "l6"], "note": "Los verbos con -se van con me, se, nos: eu me levanto, ela se veste.", "words": [
+     ["acordar", "despertarse", "sin «se»: eu acordo"],
+     ["despertar-se", "despertarse"],
+     ["levantar-se", "levantarse"],
+     ["tomar banho", "bañarse, ducharse"],
+     ["escovar os dentes", "cepillarse los dientes"],
+     ["barbear-se", "afeitarse"],
+     ["depilar-se", "depilarse"],
+     ["vestir-se", "vestirse"],
+     ["maquiar-se", "maquillarse"],
+     ["pentear-se", "peinarse"],
+     ["tomar café da manhã", "tomar desayuno"],
+     ["almoçar", "almorzar"],
+     ["jantar", "cenar"],
+     ["deitar-se", "acostarse"],
+     ["dormir", "dormir"],
+     ["lavar-se", "lavarse"],
+     ["secar-se", "secarse"],
+     ["enxugar-se", "secarse (con toalla)"],
+     ["sentar-se", "sentarse"],
+     ["olhar-se no espelho", "mirarse en el espejo"],
+     ["depois", "después"],
+     ["rapidamente", "rápidamente"]
+    ]},
+    {"id": "quarto", "title": "Na sala de aula e no quarto", "lessons": ["l6"], "note": "tem = hay: No meu quarto tem uma cama.", "words": [
+     ["na sala de aula tem…", "en el salón de clase hay…"],
+     ["o computador", "la computadora", "masculino en portugués"],
+     ["a mesa", "la mesa"],
+     ["a cadeira", "la silla", "cadera se dice quadril"],
+     ["o despertador", "el despertador"],
+     ["a cama", "la cama"],
+     ["o livro", "el libro"],
+     ["o caderno", "el cuaderno"],
+     ["a caneta", "el lapicero"],
+     ["o lápis", "el lápiz"],
+     ["a borracha", "el borrador, la goma", "en español «borracha» es bêbada"],
+     ["a mochila", "la mochila"],
+     ["o quadro", "la pizarra"],
+     ["a janela", "la ventana"],
+     ["a porta", "la puerta"],
+     ["o celular", "el celular"]
+    ]},
+    {"id": "endereco", "title": "O endereço", "lessons": ["l6"], "words": [
+     ["qual é o seu endereço?", "¿cuál es tu dirección?"],
+     ["o endereço", "la dirección"],
+     ["a rua", "la calle"],
+     ["a avenida", "la avenida"],
+     ["o número", "el número"],
+     ["o prédio", "el edificio"],
+     ["o apartamento", "el departamento"],
+     ["o complemento", "el dato extra (piso, departamento)"],
+     ["Rua Augusta, 150, apartamento 32", "calle, número y departamento", "el número va después de la calle, con coma"]
+    ]},
+    {"id": "familia", "title": "A família", "lessons": ["l8", "rev1"], "words": [
+     ["a família", "la familia"],
+     ["os pais", "los padres", "pais son los padres; país es país"],
+     ["o pai", "el papá"],
+     ["a mãe", "la mamá"],
+     ["o irmão", "el hermano"],
+     ["a irmã", "la hermana"],
+     ["os avós", "los abuelos"],
+     ["o avô", "el abuelo", "avô, con ô cerrada"],
+     ["a avó", "la abuela", "avó, con ó abierta"],
+     ["o tio", "el tío"],
+     ["a tia", "la tía"],
+     ["o primo", "el primo"],
+     ["a prima", "la prima"],
+     ["o filho", "el hijo"],
+     ["a filha", "la hija"],
+     ["o sobrinho", "el sobrino"],
+     ["a sobrinha", "la sobrina"],
+     ["o cunhado", "el cuñado"],
+     ["a cunhada", "la cuñada"],
+     ["o marido", "el esposo"],
+     ["a esposa", "la esposa"],
+     ["o namorado", "el enamorado", "noivo es el novio comprometido"],
+     ["a namorada", "la enamorada"],
+     ["como é sua família?", "¿cómo es tu familia?"]
+    ]},
+    {"id": "descricoes", "title": "Como ele é? Descrições", "lessons": ["l8", "l9", "rev1"], "note": "Los adjetivos en -o hacen el femenino con -a: alto, alta. Jovem, forte, inteligente y responsável no cambian.", "words": [
+     ["alto", "alto"],
+     ["baixo", "bajo"],
+     ["magro", "delgado, flaco"],
+     ["gordo", "gordo"],
+     ["bonito", "bonito"],
+     ["feio", "feo"],
+     ["jovem", "joven"],
+     ["velho", "viejo"],
+     ["forte", "fuerte"],
+     ["fraco", "débil"],
+     ["atlético", "atlético"],
+     ["calvo / careca", "calvo, pelado"],
+     ["o cabelo", "el pelo"],
+     ["cabelo loiro", "pelo rubio"],
+     ["cabelo preto", "pelo negro", "preto es el color negro"],
+     ["cabelo castanho", "pelo castaño"],
+     ["cabelo ruivo", "pelo pelirrojo"],
+     ["cabelo grisalho", "pelo canoso"],
+     ["cabelo branco", "pelo blanco"],
+     ["os olhos azuis", "los ojos azules"],
+     ["os olhos castanhos", "los ojos marrones"],
+     ["os olhos verdes", "los ojos verdes"],
+     ["simpático", "simpático, amable"],
+     ["engraçado", "gracioso, chistoso"],
+     ["tímido", "tímido"],
+     ["organizado", "ordenado"],
+     ["responsável", "responsable"],
+     ["trabalhador", "trabajador"],
+     ["preguiçoso", "perezoso, flojo"],
+     ["nervoso", "nervioso"],
+     ["legal", "chévere, bacán", "muy brasileño: Que legal!"]
+    ]},
+    {"id": "profissoes", "title": "As profissões", "lessons": ["l10", "l12"], "words": [
+     ["o médico / a médica", "el médico / la médica"],
+     ["o enfermeiro / a enfermeira", "el enfermero / la enfermera"],
+     ["o dentista", "el dentista", "para una mujer: a dentista"],
+     ["o engenheiro / a engenheira", "el ingeniero / la ingeniera"],
+     ["o policial", "el policía", "para una mujer: a policial"],
+     ["o professor / a professora", "el profesor / la profesora"],
+     ["o advogado / a advogada", "el abogado / la abogada"],
+     ["o juiz / a juíza", "el juez / la jueza"],
+     ["o ator / a atriz", "el actor / la actriz"],
+     ["o arquiteto / a arquiteta", "el arquitecto / la arquitecta"],
+     ["o motorista", "el chofer", "para una mujer: a motorista"],
+     ["o secretário / a secretária", "el secretario / la secretaria"],
+     ["o cozinheiro / a cozinheira", "el cocinero / la cocinera"],
+     ["o jornalista", "el periodista", "o jornal es el periódico"],
+     ["qual é a sua profissão?", "¿cuál es tu profesión?"],
+     ["onde você trabalha?", "¿dónde trabajas?"],
+     ["o que você faz?", "¿a qué te dedicas?"],
+     ["eu dou aulas", "doy clases"],
+     ["cuidar dos pacientes", "cuidar a los pacientes"]
+    ]},
+    {"id": "casa", "title": "A casa", "lessons": ["l12"], "words": [
+     ["você mora numa casa ou num apartamento?", "¿vives en una casa o en un departamento?"],
+     ["a casa", "la casa"],
+     ["o apartamento", "el departamento"],
+     ["o quarto", "el cuarto, el dormitorio"],
+     ["a sala", "la sala"],
+     ["a sala de estar", "la sala (de estar)"],
+     ["a sala de jantar", "el comedor"],
+     ["a cozinha", "la cocina (el cuarto)"],
+     ["o banheiro", "el baño"],
+     ["a lavanderia", "la lavandería"],
+     ["o jardim", "el jardín"]
+    ]},
+    {"id": "sala", "title": "Na sala de estar", "lessons": ["l12"], "words": [
+     ["a poltrona", "el sillón"],
+     ["o sofá", "el sofá"],
+     ["a mesa de centro", "la mesa de centro"],
+     ["a televisão", "la televisión"],
+     ["o vaso", "el florero", "el vaso para beber es o copo"],
+     ["o tapete", "la alfombra"]
+    ]},
+    {"id": "cozinha", "title": "Na cozinha", "lessons": ["l12"], "words": [
+     ["o armário", "el armario, la alacena"],
+     ["a pia", "el lavadero", "en el baño, el lavatorio"],
+     ["o micro-ondas", "el microondas"],
+     ["o fogão", "la cocina (el aparato)", "a cozinha es el cuarto"],
+     ["a geladeira", "el refrigerador"]
+    ]},
+    {"id": "dormitorio", "title": "No quarto", "lessons": ["l12"], "words": [
+     ["a cama", "la cama"],
+     ["o criado-mudo", "la mesita de noche"],
+     ["o abajur", "la lámpara de mesa"],
+     ["o guarda-roupa", "el ropero, el clóset"],
+     ["a cômoda", "la cómoda"]
+    ]},
+    {"id": "banheiro", "title": "No banheiro", "lessons": ["l12"], "words": [
+     ["o vaso sanitário", "el inodoro", "también: a privada"],
+     ["a pia", "el lavatorio"],
+     ["o espelho", "el espejo"],
+     ["o chuveiro", "la ducha"],
+     ["a banheira", "la tina, la bañera"],
+     ["a toalha", "la toalla"]
+    ]},
+    {"id": "cidade", "title": "No bairro e na cidade", "lessons": ["l12", "l13"], "words": [
+     ["o bairro", "el barrio"],
+     ["o hospital", "el hospital"],
+     ["a farmácia", "la farmacia"],
+     ["o mercado", "el mercado"],
+     ["o supermercado", "el supermercado"],
+     ["a escola", "la escuela, el colegio"],
+     ["a loja", "la tienda"],
+     ["o restaurante", "el restaurante"],
+     ["o shopping", "el centro comercial"],
+     ["comprar remédios", "comprar medicinas"],
+     ["no meu bairro tem…, mas não tem…", "en mi barrio hay…, pero no hay…"],
+     ["perto", "cerca"],
+     ["longe", "lejos"]
+    ]},
+    {"id": "tarefas", "title": "As tarefas domésticas", "lessons": ["l14"], "words": [
+     ["as tarefas domésticas", "las tareas de la casa"],
+     ["limpar a casa", "limpiar la casa"],
+     ["lavar a louça", "lavar los platos", "a louça es la vajilla"],
+     ["lavar a roupa", "lavar la ropa"],
+     ["passar a roupa", "planchar la ropa"],
+     ["passar o aspirador de pó", "pasar la aspiradora"],
+     ["varrer o chão", "barrer el piso"],
+     ["tirar o lixo", "sacar la basura", "también: jogar o lixo fora"],
+     ["jogar fora", "botar a la basura"],
+     ["arrumar o quarto", "ordenar el cuarto"],
+     ["o colega de quarto", "el compañero de cuarto"],
+     ["o animal de estimação", "la mascota"],
+     ["eu odeio…", "odio…"],
+     ["uma vez por semana", "una vez por semana"]
+    ]},
+    {"id": "refeicoes", "title": "As refeições", "lessons": ["l15"], "words": [
+     ["o café da manhã", "el desayuno", "o café solo es el café"],
+     ["o almoço", "el almuerzo"],
+     ["o jantar", "la cena", "también: a janta"],
+     ["a sobremesa", "el postre", "no es la sobremesa del español"],
+     ["a festa", "la fiesta"],
+     ["o barzinho", "el bar pequeño, para conversar"],
+     ["tomar alguma coisa", "tomar algo"],
+     ["vegetariano", "vegetariano"],
+     ["saudável", "saludable"]
+    ]},
+    {"id": "cafe", "title": "No café da manhã", "lessons": ["l15"], "words": [
+     ["o café", "el café"],
+     ["o leite", "la leche", "masculino: o leite"],
+     ["o suco", "el jugo"],
+     ["o iogurte", "el yogur"],
+     ["os ovos mexidos", "los huevos revueltos"],
+     ["o pão", "el pan"],
+     ["a torrada", "la tostada"],
+     ["a manteiga", "la mantequilla"],
+     ["a geleia", "la mermelada"],
+     ["o queijo", "el queso"],
+     ["o presunto", "el jamón", "no es «presunto» (supuesto)"]
+    ]},
+    {"id": "almoco", "title": "No almoço e no jantar", "lessons": ["l13", "l15"], "words": [
+     ["o arroz", "el arroz"],
+     ["o feijão", "los frejoles"],
+     ["o macarrão", "los fideos, la pasta"],
+     ["a lasanha", "la lasaña"],
+     ["a salada", "la ensalada", "salado se dice salgado"],
+     ["a sopa", "la sopa"],
+     ["o sanduíche", "el sándwich"],
+     ["o bife", "el bistec"],
+     ["a batata frita", "las papas fritas"],
+     ["a feijoada", "la feijoada (frejoles negros con carne de cerdo)"]
+    ]},
+    {"id": "carnes", "title": "As carnes", "lessons": ["l15"], "words": [
+     ["a carne", "la carne"],
+     ["o frango", "el pollo"],
+     ["o peru", "el pavo", "o Peru es el país"],
+     ["o porco", "el cerdo"],
+     ["o leitão", "el lechón"],
+     ["o peixe", "el pescado"],
+     ["o camarão", "el camarón"],
+     ["a lagosta", "la langosta"],
+     ["a linguiça", "la longaniza, el chorizo"],
+     ["a salsicha", "la salchicha"]
+    ]},
+    {"id": "legumes", "title": "Legumes e verduras", "lessons": ["l15"], "words": [
+     ["a alface", "la lechuga"],
+     ["o espinafre", "la espinaca"],
+     ["o brócolis", "el brócoli"],
+     ["a cenoura", "la zanahoria"],
+     ["o tomate", "el tomate"],
+     ["a azeitona", "la aceituna"],
+     ["o pepino", "el pepino"],
+     ["o pimentão", "el pimiento"],
+     ["a pimenta", "el ají, la pimienta", "lo que pica"],
+     ["o legume", "la verdura", "masculino: o legume"]
+    ]},
+    {"id": "frutas", "title": "As frutas", "lessons": ["l15"], "words": [
+     ["a ameixa", "la ciruela"],
+     ["o mamão", "la papaya"],
+     ["o morango", "la fresa"],
+     ["a melancia", "la sandía"],
+     ["a pera", "la pera"],
+     ["o mirtilo", "el arándano"],
+     ["o pêssego", "el durazno"],
+     ["a uva", "la uva"],
+     ["o maracujá", "el maracuyá"]
+    ]},
+    {"id": "musica", "title": "A música", "lessons": ["l17"], "words": [
+     ["a música", "la música"],
+     ["o cantor / a cantora", "el cantante / la cantante"],
+     ["tocar um instrumento", "tocar un instrumento"],
+     ["o violão", "la guitarra (acústica)"],
+     ["o samba", "la samba", "masculino en portugués"],
+     ["o pagode", "el pagode (samba para reuniones)"],
+     ["o forró", "el forró"],
+     ["o frevo", "el frevo"],
+     ["o funk", "el funk carioca"],
+     ["o sertanejo", "el sertanejo (música del interior)"],
+     ["a bossa nova", "la bossa nova"],
+     ["a MPB", "la música popular brasileña"],
+     ["que tipo de música?", "¿qué tipo de música?"],
+     ["tipo", "tipo, como (muletilla)", "Era uma festa, tipo, enorme."],
+     ["assim", "así, este… (muletilla)"]
+    ]},
+    {"id": "viagens", "title": "Viagens e transporte", "lessons": ["l19", "l20", "l21", "rev2"], "words": [
+     ["a viagem", "el viaje", "femenino: a viagem"],
+     ["viajar", "viajar"],
+     ["as férias", "las vacaciones"],
+     ["a passagem", "el pasaje, el boleto"],
+     ["fazer as malas", "hacer las maletas"],
+     ["o passaporte", "el pasaporte"],
+     ["o aeroporto", "el aeropuerto"],
+     ["o hotel", "el hotel"],
+     ["a pé", "a pie"],
+     ["a cavalo", "a caballo"],
+     ["de ônibus", "en bus", "o ônibus es el bus"],
+     ["de carro", "en carro"],
+     ["de trem", "en tren"],
+     ["de avião", "en avión"],
+     ["de bicicleta", "en bicicleta"],
+     ["de metrô", "en metro"],
+     ["de navio", "en barco"],
+     ["de táxi", "en taxi"],
+     ["de skate", "en skate"],
+     ["de patins", "en patines"],
+     ["como você vem pro campus?", "¿cómo vienes al campus?", "pro = para o"],
+     ["o estado", "el estado"],
+     ["o país", "el país"],
+     ["estranho", "raro, extraño"]
+    ]},
+    {"id": "tempo", "title": "Quando? Palavras de tempo", "lessons": ["d3", "l7", "rev1"], "words": [
+     ["agora", "ahora"],
+     ["ontem", "ayer"],
+     ["ontem à noite", "anoche"],
+     ["a semana passada", "la semana pasada"],
+     ["o mês passado", "el mes pasado"],
+     ["o ano passado", "el año pasado"],
+     ["dois dias atrás", "hace dos días"],
+     ["há dois anos", "hace dos años"],
+     ["amanhã", "mañana"],
+     ["a semana que vem", "la próxima semana"],
+     ["no próximo mês", "el próximo mes"],
+     ["daqui a três dias", "dentro de tres días"],
+     ["hoje em dia", "hoy en día"],
+     ["quando eu era criança", "cuando era niño"],
+     ["sempre", "siempre"],
+     ["às vezes", "a veces"],
+     ["nunca", "nunca"],
+     ["já", "ya", "Você já foi…? = ¿Alguna vez fuiste…?"],
+     ["ainda não", "todavía no"],
+     ["enquanto", "mientras"],
+     ["de repente", "de repente"]
+    ]},
+    {"id": "expressoes", "title": "Expressões úteis", "lessons": ["l7", "l13", "l17", "l19", "l21", "pe"], "words": [
+     ["tomara que…", "ojalá que…", "con subjuntivo: Tomara que dê certo!"],
+     ["dá para…", "se puede…"],
+     ["não dá", "no se puede, no puedo"],
+     ["apesar de", "a pesar de"],
+     ["até que é bom", "no está nada mal"],
+     ["se virar", "arreglárselas"],
+     ["dar um jeito", "encontrar la manera"],
+     ["ter saudade de", "extrañar", "Tenho saudade da minha família."],
+     ["pra / pro", "para la / para el", "pra = para a, pro = para o"],
+     ["a gente", "nosotros (hablando)", "con el verbo como «él»: a gente vai"],
+     ["acho que sim", "creo que sí"],
+     ["acho que não", "creo que no"],
+     ["com certeza", "por supuesto"],
+     ["que legal!", "¡qué chévere!"],
+     ["puxa!", "¡caramba!"],
+     ["nossa!", "¡guau!, ¡Dios mío!"]
+    ]}
+   ]
+  },
+  {
+   "id": "verbos",
+   "name": "Verbos",
+   "intro": "Cada tiempo con sus terminaciones en rojo. En «Buscar um verbo» ves cualquier verbo de la clase en todos los tiempos.",
+   "items": [
+    {"id": "presente", "tense": "pres", "title": "Presente", "lessons": ["d2", "d3", "l4", "l5", "rev1"], "aka": "hablo, como, parto", "use": "Lo que haces normalmente, o lo que pasa ahora.", "blocks": [
+     {"conj": {"tense": "pres", "verbs": ["falar", "comer", "partir"]}},
+     {"p": "En Brasil casi no se usa «tú»: *você* va con el verbo de «él» (*você fala*) y *vocês* con el de «ellos» (*vocês falam*)."},
+     {"ex": [
+      ["Eu _estudo_ português na universidade.", "Estudio portugués en la universidad."],
+      ["Você _bebe_ café todos os dias?", "¿Tomas café todos los días?"],
+      ["Nós _abrimos_ a loja às nove.", "Abrimos la tienda a las nueve."]
+     ]},
+     {"ojo": "*Tu falas, tu comes* existen (en Portugal y en partes de Brasil), pero en clase usamos *você*."}
+    ]},
+    {"id": "presente-irregulares", "title": "Presente: os irregulares", "lessons": ["d2", "l4", "l5", "l6", "rev1"], "use": "Los que hay que aprender de memoria. En rojo, lo que no sigue la regla.", "blocks": [
+     {"forms": {"tense": "pres", "verbs": ["ser", "estar", "ter", "ir", "vir", "fazer", "dizer", "trazer", "pôr", "saber", "querer", "poder", "dar", "ler", "ver", "sair"]}},
+     {"h": "Solo cambia «eu»"},
+     {"forms": {"tense": "pres", "verbs": ["ouvir", "pedir", "perder", "conhecer", "dormir", "preferir", "sentir", "seguir", "cobrir"]}},
+     {"p": "La «e» del infinitivo se vuelve «i» en *eu*: *prefiro, sinto, minto, sigo, visto, sirvo, repito, sugiro, compito*. La «o» se vuelve «u»: *durmo, cubro, descubro, tusso*. Las otras personas son regulares."},
+     {"ojo": "Estos cambios del «eu» pasan a todo el presente do subjuntivo: *prefira, durma, peça, ouça, faça*."}
+    ]},
+    {"id": "futuro-ir", "tense": "ir", "title": "Futuro com ir", "lessons": ["d3", "l4", "rev1", "pe"], "aka": "voy a hablar", "use": "Planes, lo que vas a hacer. Es el futuro normal cuando hablas.", "blocks": [
+     {"conj": {"tense": "ir", "verbs": ["falar", "comer", "partir"]}},
+     {"ojo": "Sin «a»: *Vou estudar*, no «vou a estudar». Y para ir a un lugar basta *vou*: *Amanhã vou ao cinema*. («Vou ir» se oye en la calle, pero sobra.)"},
+     {"words": [
+      ["amanhã", "mañana"],
+      ["a semana que vem", "la próxima semana"],
+      ["no próximo ano", "el próximo año"],
+      ["daqui a dois dias", "dentro de dos días"]
+     ]},
+     {"ex": [
+      ["Eu _vou viajar_ para o Brasil no ano que vem.", "Voy a viajar a Brasil el próximo año."],
+      ["O que você _vai fazer_ no fim de semana?", "¿Qué vas a hacer el fin de semana?"],
+      ["Hoje nós _vamos jantar_ fora.", "Hoy vamos a cenar afuera."]
+     ]}
+    ]},
+    {"id": "preterito", "tense": "pret", "title": "Pretérito perfeito", "lessons": ["l7", "l16", "rev1", "pe"], "aka": "hablé, comí, partí", "use": "Una acción terminada en un momento del pasado.", "blocks": [
+     {"conj": {"tense": "pret", "verbs": ["comprar", "vender", "assistir"]}},
+     {"p": "Ojo con -er e -ir: en «ele» no terminan como en español. *Vendeu* (vendió), *assistiu* (asistió). Y en «nós» la forma es igual a la del presente: *compramos* puede ser hoy o ayer."},
+     {"p": "En «eu» cambian de letra para no cambiar el sonido: -car da -quei (*ficar, fiquei*), -gar da -guei (*jogar, joguei*), -çar da -cei (*dançar, dancei*)."},
+     {"h": "Irregulares"},
+     {"forms": {"tense": "pret", "verbs": ["ser", "ir", "ter", "estar", "fazer", "querer", "dar", "poder", "saber", "pôr", "trazer", "dizer", "vir", "ver"]}},
+     {"ojo": "*Ser* e *ir* son iguales en el pretérito, como en español: *fui, foi, fomos, foram*."},
+     {"words": [
+      ["ontem", "ayer"],
+      ["ontem à noite", "anoche"],
+      ["a semana passada", "la semana pasada"],
+      ["o ano passado", "el año pasado"],
+      ["há dois dias", "hace dos días"],
+      ["no último mês", "el último mes"]
+     ]},
+     {"ex": [
+      ["Ontem eu _comprei_ pão.", "Ayer compré pan."],
+      ["Você já _foi_ à Europa?", "¿Alguna vez fuiste a Europa?"],
+      ["Eu nunca _comi_ feijoada.", "Nunca comí feijoada."],
+      ["Eles _fizeram_ a tarefa juntos.", "Hicieron la tarea juntos."]
+     ]}
+    ]},
+    {"id": "imperfeito", "tense": "imp", "title": "Imperfeito", "lessons": ["l7", "l16", "rev1"], "aka": "hablaba, comía, partía", "use": "Cómo eran las cosas, lo que hacías siempre, lo que estaba pasando.", "blocks": [
+     {"conj": {"tense": "imp", "verbs": ["nadar", "comer", "dormir"]}},
+     {"p": "Solo hay cuatro irregulares:"},
+     {"forms": {"tense": "imp", "verbs": ["ser", "ter", "pôr", "vir"]}},
+     {"rules": [
+      ["hábito", "Lo que hacías siempre.", "Eu _andava_ de bicicleta todo dia.", "Montaba bicicleta todos los días."],
+      ["en progreso", "Lo que estaba pasando.", "Ela _estudava_ quando eu cheguei.", "Ella estudiaba cuando llegué."],
+      ["descripción", "Cómo era algo o alguien.", "A casa _era_ grande e _tinha_ um jardim.", "La casa era grande y tenía un jardín."],
+      ["la hora", "Qué hora era.", "_Eram_ onze da noite.", "Eran las once de la noche."],
+      ["la edad", "Cuántos años tenía alguien.", "Eu _tinha_ doze anos.", "Tenía doce años."]
+     ]},
+     {"ojo": "«Nós» lleva tilde: *falávamos, comíamos, dormíamos*."}
+    ]},
+    {"id": "preterito-ou-imperfeito", "title": "Pretérito ou imperfeito?", "lessons": ["l16", "l18", "rev2"], "use": "El pretérito cuenta lo que pasó; el imperfeito pinta el fondo.", "blocks": [
+     {"timeline": {"bg": "Eu dormia", "ev": "quando o telefone tocou.", "es": "Dormía cuando sonó el teléfono."}},
+     {"p": "La buena noticia: el español reparte estos dos tiempos casi igual. Si en español dirías «-aba» o «-ía», en portugués va imperfeito; si dirías «-é» u «-ó», va pretérito."},
+     {"h": "Pretérito"},
+     {"rules": [
+      ["un momento", "Algo que pasó en un momento concreto.", "Ela _nasceu_ em 2001.", "Nació en 2001."],
+      ["tiempo cerrado", "Algo que duró, pero ya terminó.", "_Morei_ no Rio por cinco anos.", "Viví cinco años en Río."],
+      ["una serie", "Varias acciones, una tras otra.", "Ontem _saí_, _jantei_ e _voltei_ cedo.", "Ayer salí, cené y volví temprano."]
+     ]},
+     {"h": "Imperfeito"},
+     {"rules": [
+      ["interrumpida", "Algo en progreso cuando pasó otra cosa.", "Eu _tomava_ banho quando a luz acabou.", "Me estaba duchando cuando se fue la luz."],
+      ["al mismo tiempo", "Dos cosas que pasaban a la vez.", "Enquanto ele _cozinhava_, eu _lavava_ a louça.", "Mientras él cocinaba, yo lavaba los platos."],
+      ["repetida", "Algo que pasaba seguido.", "Todo verão a gente _ia_ à praia.", "Cada verano íbamos a la playa."],
+      ["el contexto", "Hora, clima, edad, cómo se sentía alguien.", "_Era_ uma noite fria e _chovia_ muito.", "Era una noche fría y llovía mucho."]
+     ]},
+     {"ex": [
+      ["Quando eu _tinha_ dez anos, _morava_ numa casa pequena. Um dia, meu pai _chegou_ com um cachorro.", "Cuando tenía diez años, vivía en una casa pequeña. Un día, mi papá llegó con un perro."]
+     ]}
+    ]},
+    {"id": "presente-do-subjuntivo", "tense": "sp", "title": "Presente do subjuntivo", "lessons": ["l13", "l14", "rev2", "pe"], "aka": "que hable, que coma, que parta", "use": "Deseos, consejos, necesidades y dudas: lo que todavía no es real.", "blocks": [
+     {"conj": {"tense": "sp", "verbs": ["falar", "comer", "partir"]}},
+     {"p": "Se arma desde «eu» del presente: quitas la -o y pones la vocal contraria. -ar pasa a -e; -er e -ir pasan a -a. Por eso *faço* da *faça*, *tenho* da *tenha* y *durmo* da *durma*."},
+     {"p": "Algunos cambian de letra para guardar el sonido: -car da -que (*fique*), -gar da -gue (*jogue*), -çar da -ce (*comece*), -cer da -ça (*conheça*), -ger da -ja (*proteja*)."},
+     {"h": "Irregulares"},
+     {"forms": {"tense": "sp", "verbs": ["ser", "estar", "ir", "dar", "querer", "saber", "fazer", "ter", "dizer", "poder", "vir", "ver"]}},
+     {"rules": [
+      ["necesidad, consejo", "*É importante que, é preciso que, é recomendável que, é necessário que, é fundamental que, recomendo que, sugiro que*", "É preciso que você _tenha_ um passaporte.", "Hace falta que tengas pasaporte."],
+      ["deseo", "*Espero que, quero que, desejo que, tomara que*", "Tomara que _faça_ sol amanhã!", "¡Ojalá haga sol mañana!"],
+      ["duda", "*Duvido que, talvez*", "Talvez ela _venha_ hoje.", "Quizás venga hoy."],
+      ["aunque", "*Embora*", "Embora _seja_ caro, o restaurante é ótimo.", "Aunque es caro, el restaurante es buenísimo."]
+     ]},
+     {"quote": {"pt": "Não permita Deus que eu morra,\nSem que eu volte para lá;", "es": "Que Dios no permita que me muera sin que vuelva allá.", "by": "Gonçalves Dias, «Canção do exílio» (1843), el poema de la Lição 13"}},
+     {"ojo": "*Talvez* y *embora* siempre llevan subjuntivo en portugués. En español «aunque» y «tal vez» a veces no."}
+    ]},
+    {"id": "futuro-do-subjuntivo", "tense": "sf", "title": "Futuro do subjuntivo", "lessons": ["l10", "rev2", "pe"], "aka": "cuando vaya, si tengo", "use": "Lo que puede pasar más adelante, después de *quando, se, assim que, logo que, depois que, sempre que, enquanto*.", "blocks": [
+     {"p": "En el español de hoy ya no se usa. Donde el español dice «cuando vaya», el portugués dice *quando for*."},
+     {"p": "Se arma desde «eles» del pretérito: cambias -ram por -r. *Fizeram* da *fizer*, *tiveram* da *tiver*, *foram* da *for*."},
+     {"conj": {"tense": "sf", "verbs": ["falar", "comer", "partir"]}},
+     {"forms": {"tense": "sf", "verbs": ["ser", "ir", "ter", "estar", "fazer", "poder", "querer", "saber", "vir", "ver", "dizer", "trazer"]}},
+     {"ex": [
+      ["Quando eu _for_ a Salvador, vou comer acarajé.", "Cuando vaya a Salvador, voy a comer acarajé."],
+      ["Se você _tiver_ tempo, me liga.", "Si tienes tiempo, llámame."],
+      ["Assim que eu _terminar_, eu te aviso.", "Apenas termine, te aviso."],
+      ["Pode me ligar sempre que _quiser_.", "Puedes llamarme cuando quieras."],
+      ["Se Deus _quiser_!", "¡Si Dios quiere!"]
+     ]},
+     {"ojo": "Cuidado con *vir* (venir) y *ver*: *quando ele vier* es «cuando él venga», y *quando eu vir o professor* es «cuando vea al profesor»."}
+    ]},
+    {"id": "infinitivo-pessoal", "tense": "ip", "title": "Infinitivo pessoal", "lessons": ["pe"], "aka": "un infinitivo con persona", "use": "Un infinitivo que se conjuga. No existe en español.", "blocks": [
+     {"conj": {"tense": "ip", "verbs": ["falar", "comer", "partir"]}},
+     {"p": "Va donde el español pondría «que + subjuntivo», sobre todo después de *para, até, antes de, depois de, é melhor, é preciso, é difícil*."},
+     {"ex": [
+      ["É melhor vocês _chegarem_ cedo.", "Es mejor que lleguen temprano."],
+      ["Pedi para eles não _fazerem_ barulho.", "Les pedí que no hicieran ruido."],
+      ["É difícil _acharmos_ tempo para estudar.", "Es difícil que encontremos tiempo para estudiar."],
+      ["Antes de _sairmos_, vamos jantar.", "Antes de salir, vamos a cenar."]
+     ]},
+     {"ojo": "En los verbos regulares se parece al futuro do subjuntivo, pero en los irregulares no: *para fazermos* (infinitivo pessoal), *quando fizermos* (futuro do subjuntivo)."}
+    ]},
+    {"id": "gerundio", "title": "Gerúndio", "lessons": ["l15", "l16"], "aka": "hablando, comiendo", "use": "Lo que está pasando en este momento.", "blocks": [
+     {"table": {"head": ["infinitivo", "gerúndio"], "rows": [["falar", "falando"], ["comer", "comendo"], ["partir", "partindo"], ["pôr", "pondo"]], "pt": [0, 1]}},
+     {"ex": [
+      ["Estou _estudando_ agora.", "Estoy estudiando ahora."],
+      ["Ontem às cinco eu _estava estudando_.", "Ayer a las cinco estaba estudiando."],
+      ["Na festa, a gente _ficou conversando_ até tarde.", "En la fiesta nos quedamos conversando hasta tarde."]
+     ]},
+     {"ojo": "*Ficar* + gerundio es quedarse haciendo algo, pasar el rato: *ficar conversando*. En Portugal dicen *estou a falar*; en Brasil, *estou falando*."}
+    ]},
+    {"id": "participio", "title": "Particípio e «tinha + particípio»", "lessons": ["pe"], "aka": "había hablado", "use": "Para algo que ya había pasado antes de otra cosa.", "blocks": [
+     {"p": "El participio regular termina en -ado (-ar) o -ido (-er, -ir). Irregulares de la clase: *fazer, feito; dizer, dito; ver, visto; escrever, escrito; abrir, aberto; pôr, posto; vir, vindo*."},
+     {"ex": [
+      ["Quando cheguei, o filme já _tinha começado_.", "Cuando llegué, la película ya había empezado."],
+      ["Eu nunca _tinha visto_ o mar.", "Nunca había visto el mar."],
+      ["Ela já _tinha feito_ a tarefa.", "Ella ya había hecho la tarea."]
+     ]},
+     {"ojo": "Hablando se usa *ter* (*tinha falado*); *haver* (*havia falado*) suena más escrito. Y tres participios engañan: *traído* es «traicionado», *pago* es «pagado» y *gasto* es «gastado»."}
+    ]},
+    {"id": "futuro-do-presente", "tense": "fut", "title": "Futuro do presente", "lessons": ["rev2", "pe"], "aka": "hablaré, comeré", "use": "El futuro de una sola palabra. Se lee en noticias y textos; hablando, Brasil prefiere *vou + infinitivo*.", "blocks": [
+     {"conj": {"tense": "fut", "verbs": ["falar", "comer", "partir"]}},
+     {"p": "Solo tres irregulares: *fazer, farei; dizer, direi; trazer, trarei*."},
+     {"ex": [
+      ["Quando eu me formar, _serei_ engenheiro.", "Cuando me gradúe, seré ingeniero."],
+      ["Se chover, _ficaremos_ em casa.", "Si llueve, nos quedaremos en casa."]
+     ]}
+    ]},
+    {"id": "verbos-reflexivos", "title": "Verbos reflexivos", "lessons": ["l5", "l6"], "aka": "me levanto, se viste", "use": "Cuando la persona se hace algo a sí misma.", "blocks": [
+     {"table": {"head": ["", "", "exemplo"], "rows": [["eu", "me", "Eu me levanto às sete."], ["você, ele, ela", "se", "Ela se veste rápido."], ["nós", "nos", "Nós nos sentamos aqui."], ["vocês, eles, elas", "se", "Eles se deitam tarde."]], "pt": [0, 1, 2]}},
+     {"p": "En Brasil el pronombre va antes del verbo: *eu me chamo, ele se levanta*. En el diccionario aparece después: *levantar-se*."},
+     {"words": [
+      ["levantar-se", "levantarse"],
+      ["vestir-se", "vestirse"],
+      ["pentear-se", "peinarse"],
+      ["deitar-se", "acostarse"],
+      ["sentar-se", "sentarse"],
+      ["chamar-se", "llamarse"],
+      ["sentir-se", "sentirse"],
+      ["divertir-se", "divertirse"],
+      ["mudar-se", "mudarse"],
+      ["formar-se", "graduarse"]
+     ]},
+     {"ojo": "Algunos que en español llevan «se» aquí no: *acordar* (despertarse), *tomar banho* (bañarse). Y «irse» es *ir embora*: *Vou embora*."}
+    ]}
+   ]
+  },
+  {
+   "id": "gramatica",
+   "name": "Gramática",
+   "intro": "Las reglas que más se repitieron en las diapositivas, con ejemplos para oír.",
+   "items": [
+    {"id": "artigos", "title": "Artigos e contrações", "lessons": ["d1", "d2", "l4", "l5", "pe"], "use": "o, a, os, as (el, la, los, las) y um, uma, uns, umas (un, una, unos, unas).", "blocks": [
+     {"p": "Casi siempre se pegan a la preposición que va antes. Por eso dices *do Brasil*, *no hospital*, *ao cinema*:"},
+     {"table": {"head": ["", "o", "a", "os", "as"], "rows": [["de", "do", "da", "dos", "das"], ["em", "no", "na", "nos", "nas"], ["a", "ao", "à", "aos", "às"], ["por", "pelo", "pela", "pelos", "pelas"]], "pt": [0, 1, 2, 3, 4]}},
+     {"ex": [
+      ["Eu sou _do_ Brasil.", "Soy de Brasil."],
+      ["Ela mora _na_ Rua Augusta.", "Vive en la calle Augusta."],
+      ["Vamos _ao_ cinema?", "¿Vamos al cine?"],
+      ["A aula é _às_ duas.", "La clase es a las dos."],
+      ["Passei _pelo_ parque.", "Pasé por el parque."]
+     ]},
+     {"p": "Con *um* y *uma* también: *em + um = num*, *em + uma = numa*. *Moro numa casa.*"},
+     {"ojo": "No existe «lo». «Lo bueno es…» se dice *O bom é…*"}
+    ]},
+    {"id": "ser-estar-ficar", "title": "Ser, estar e ficar", "lessons": ["d1", "d2", "pe"], "use": "Ser y estar funcionan casi como en español.", "blocks": [
+     {"forms": {"tense": "pres", "verbs": ["ser", "estar", "ficar"]}},
+     {"ex": [
+      ["Ela _é_ inteligente.", "Ella es inteligente."],
+      ["Hoje eu _estou_ cansado.", "Hoy estoy cansado."],
+      ["A prova _é_ às três.", "El examen es a las tres."],
+      ["A sopa _está_ ótima!", "¡La sopa está riquísima!"]
+     ]},
+     {"p": "La diferencia: para decir dónde queda un lugar se usa *ficar* o *ser*, no *estar*. *Estar* es para cosas o personas que se mueven."},
+     {"ex": [
+      ["Onde _fica_ a biblioteca?", "¿Dónde queda la biblioteca?"],
+      ["O hotel _é_ perto daqui.", "El hotel está cerca de aquí."],
+      ["Onde _está_ o meu celular?", "¿Dónde está mi celular?"]
+     ]},
+     {"ojo": "*Ficar* también es «ponerse» o «quedarse»: *Fiquei feliz* (me puse feliz), *Fiquei em casa* (me quedé en casa)."}
+    ]},
+    {"id": "tem-ha", "title": "Tem = hay", "lessons": ["l6", "l12", "rev1"], "use": "En Brasil, *tem* significa «hay». *Há* también existe, pero suena más formal o escrito.", "blocks": [
+     {"ex": [
+      ["_Tem_ onze pessoas na sala.", "Hay once personas en la sala."],
+      ["No meu quarto _tem_ uma cama e uma mesa.", "En mi cuarto hay una cama y una mesa."],
+      ["_Tem_ muitos restaurantes no bairro?", "¿Hay muchos restaurantes en el barrio?"],
+      ["Hoje não _tem_ pão.", "Hoy no hay pan."]
+     ]},
+     {"ojo": "En pasado, *tinha* (había): *Tinha muita gente na festa.*"}
+    ]},
+    {"id": "gostar-de", "title": "Gostar de", "lessons": ["d2", "pe"], "use": "Al revés del español: la persona es el sujeto, y después va *de*.", "blocks": [
+     {"vs": [
+      ["Me gusta el café.", "Eu gosto de café.", ""],
+      ["Me gustan las clases de portugués.", "Eu gosto das aulas de português.", "de + as = das"],
+      ["A ellos les gusta bailar.", "Eles gostam de dançar.", ""]
+     ], "es": true},
+     {"ex": [
+      ["Do que você _gosta_?", "¿Qué te gusta?"],
+      ["_Gosto_ muito de cozinhar.", "Me gusta mucho cocinar."],
+      ["Não _gosto_ de trabalhar aos domingos.", "No me gusta trabajar los domingos."]
+     ]},
+     {"ojo": "*de + o = do*, *de + a = da*: *Gosto do Brasil, gosto da praia.*"}
+    ]},
+    {"id": "voce-a-gente", "title": "Você e a gente", "lessons": ["d1", "l9", "extra"], "use": "*Você* es el «tú» normal en Brasil, pero el verbo va como con «usted». *A gente* es «nosotros» al hablar, y también lleva el verbo de «él».", "blocks": [
+     {"ex": [
+      ["_Você fala_ espanhol?", "¿Hablas español?"],
+      ["_A gente vai_ ao cinema amanhã.", "Mañana vamos al cine."],
+      ["_Vocês são_ de onde?", "¿De dónde son ustedes?"]
+     ]},
+     {"ojo": "*O senhor* y *a senhora* son el «usted» respetuoso, para gente mayor o un cliente: *O senhor quer um café?*"}
+    ]},
+    {"id": "possessivos", "title": "Os possessivos", "lessons": ["d1", "d2", "l8"], "use": "*Meu, minha, seu, sua, nosso, nossa* concuerdan con la cosa, como en español.", "blocks": [
+     {"table": {"head": ["", "português", "español"], "rows": [["eu", "meu, minha, meus, minhas", "mi, mis"], ["você", "seu, sua, seus, suas", "tu, tus"], ["ele", "dele", "su (de él)"], ["ela", "dela", "su (de ella)"], ["nós", "nosso, nossa, nossos, nossas", "nuestro, nuestra"], ["vocês", "de vocês", "su (de ustedes)"], ["eles, elas", "deles, delas", "su (de ellos, de ellas)"]], "pt": [0, 1]}},
+     {"p": "En Brasil *seu* casi siempre quiere decir «tu» (de você). Para «su» de él o de ella se usa *dele* y *dela*, después de la cosa."},
+     {"ex": [
+      ["Qual é o _seu_ nome?", "¿Cómo te llamas?"],
+      ["O nome _dela_ é Juliana.", "Ella se llama Juliana."],
+      ["A casa _deles_ é grande.", "Su casa (de ellos) es grande."],
+      ["_Minha_ irmã é mais velha do que eu.", "Mi hermana es mayor que yo."]
+     ]}
+    ]},
+    {"id": "demonstrativos", "title": "Os demonstrativos", "lessons": ["d3", "pe"], "use": "Como en español, con dos detalles: el masculino plural termina en -es, y hay formas neutras que no cambian.", "blocks": [
+     {"table": {"head": ["", "cerca de mí", "cerca de ti", "lejos"], "rows": [["masculino", "este", "esse", "aquele"], ["femenino", "esta", "essa", "aquela"], ["masc. plural", "estes", "esses", "aqueles"], ["fem. plural", "estas", "essas", "aquelas"], ["neutro", "isto", "isso", "aquilo"]], "pt": [1, 2, 3]}},
+     {"p": "Hablando, en Brasil *esse* reemplaza casi siempre a *este*. Y se pegan a las preposiciones: *desse, nesse, naquele*."},
+     {"ex": [
+      ["_Isso_ é muito bom!", "¡Eso está muy bueno!"],
+      ["Ou _isto_ ou _aquilo_.", "O esto o aquello (el poema de Cecília Meireles)."],
+      ["_Nesse_ fim de semana vou descansar.", "Este fin de semana voy a descansar."]
+     ]}
+    ]},
+    {"id": "pronomes", "title": "Pronomes: me, te, o, a, lhe", "lessons": ["bn", "pe"], "use": "Para no repetir a una persona o una cosa.", "blocks": [
+     {"table": {"head": ["", "directo", "indirecto"], "rows": [["eu", "me", "me"], ["você", "o, a, te", "lhe, te"], ["ele, ela", "o, a", "lhe"], ["nós", "nos", "nos"], ["vocês, eles, elas", "os, as", "lhes"]], "pt": [0, 1, 2]}},
+     {"p": "*O, a, os, as* son «lo, la, los, las»; *lhe, lhes* son «le, les». En Brasil el pronombre va antes del verbo (*Ele me ligou*), y si hay dos verbos va en medio (*Vou te ligar amanhã*)."},
+     {"p": "*O* y *a* suenan formales: son los del libro y de los correos de trabajo. Hablando, mucha gente dice *eu vi ele*. Después de un infinitivo se vuelven -lo, -la: *Vou entrevistá-la amanhã*."},
+     {"ex": [
+      ["O diretor? Eu _o_ admiro muito.", "¿El director? Lo admiro mucho."],
+      ["Conheço a gerente. Eu _a_ conheço há dois anos.", "Conozco a la gerente. La conozco hace dos años."],
+      ["Vou _lhe_ mandar o relatório.", "Le voy a mandar el informe."],
+      ["Ninguém _me_ disse nada.", "Nadie me dijo nada."]
+     ]}
+    ]},
+    {"id": "comparacoes", "title": "Comparações", "lessons": ["l9", "l21", "rev1", "pe"], "use": "*mais … (do) que*, *menos … (do) que*, *tão … quanto*.", "blocks": [
+     {"ex": [
+      ["Minha irmã é _mais_ alta _do que_ eu.", "Mi hermana es más alta que yo."],
+      ["Eu tenho _menos_ tempo _do que_ você.", "Tengo menos tiempo que tú."],
+      ["O Pedro é _tão_ simpático _quanto_ o irmão.", "Pedro es tan simpático como su hermano."],
+      ["Ela tem _tantas_ aulas _quanto_ eu.", "Ella tiene tantas clases como yo."],
+      ["A turma tem _mais de_ vinte alunos.", "La clase tiene más de veinte alumnos."]
+     ]},
+     {"p": "El *do* es opcional (*mais alto que* también vale). *Tanto, tanta, tantos, tantas* van con sustantivo y concuerdan. Antes de un número va *mais de, menos de*."},
+     {"h": "Cuidado"},
+     {"table": {"head": ["adjetivo", "comparativo", ""], "rows": [["bom", "melhor", "mejor"], ["ruim, mau", "pior", "peor"], ["grande", "maior", "más grande"], ["pequeno", "menor", "más pequeño"]], "pt": [0, 1]}},
+     {"ojo": "Nunca «mais bom». Y *maior*, *menor* son solo de tamaño: la edad es *mais velho* (mayor) y *mais novo* (menor). *Meu irmão mais velho tem 30 anos.*"}
+    ]},
+    {"id": "superlativo", "title": "Superlativo", "lessons": ["l21", "pe"], "use": "artículo + sustantivo + mais/menos + adjetivo + de.", "blocks": [
+     {"ex": [
+      ["O Brasil é _o maior_ país da América do Sul.", "Brasil es el país más grande de Sudamérica."],
+      ["Essa é _a melhor_ pizza da cidade.", "Esta es la mejor pizza de la ciudad."],
+      ["O Lucas é o aluno _mais alto_ da turma.", "Lucas es el alumno más alto de la clase."],
+      ["Qual é o filme _mais divertido_ do ano?", "¿Cuál es la película más divertida del año?"]
+     ]},
+     {"p": "Para «muy, muy» se usa -íssimo: *lindo, lindíssimo; caro, caríssimo*."}
+    ]},
+    {"id": "por-para", "title": "Por × para", "lessons": ["l20", "rev2"], "use": "Casi como en español, con los mismos usos.", "blocks": [
+     {"h": "Para"},
+     {"rules": [
+      ["destino", "A dónde.", "Vou _para_ casa.", "Me voy a mi casa."],
+      ["objetivo", "Para qué.", "Estudo português _para_ viajar ao Brasil.", "Estudio portugués para viajar a Brasil."],
+      ["opinión", "Según quién.", "_Para_ mim, esse filme é o melhor.", "Para mí, esa película es la mejor."],
+      ["fecha límite", "Para cuándo.", "O trabalho é _para_ sexta.", "El trabajo es para el viernes."],
+      ["destinatario", "Para quién.", "Fiz um bolo _para_ o meu pai.", "Hice una torta para mi papá."]
+     ]},
+     {"h": "Por"},
+     {"rules": [
+      ["duración", "Cuánto tiempo.", "Morei lá _por_ dois anos.", "Viví ahí dos años."],
+      ["camino", "Por dónde.", "Passamos _pela_ ponte.", "Pasamos por el puente."],
+      ["cambio, precio", "A cambio de qué.", "Paguei cinquenta reais _pela_ camisa.", "Pagué cincuenta reales por la camisa."],
+      ["causa", "Por qué.", "Obrigado _por_ tudo!", "¡Gracias por todo!"],
+      ["hora aproximada", "Más o menos cuándo.", "A gente se vê lá _pelas_ oito.", "Nos vemos como a las ocho."]
+     ]},
+     {"p": "*por + o, a, os, as = pelo, pela, pelos, pelas*."},
+     {"ojo": "Hablando, *para* se acorta: *pra* (para a) y *pro* (para o). *Vou pro centro.*"}
+    ]},
+    {"id": "tudo-todo", "title": "Tudo × todo", "lessons": ["l17", "rev2", "pe"], "use": "*Tudo* (todo, todas las cosas) va solo y nunca cambia. *Todo, toda, todos, todas* van con un sustantivo y concuerdan con él.", "blocks": [
+     {"ex": [
+      ["_Tudo_ bem?", "¿Todo bien?"],
+      ["Eu já comi _tudo_.", "Ya me comí todo."],
+      ["_Todos_ os alunos chegaram.", "Todos los alumnos llegaron."],
+      ["Passei a manhã _toda_ estudando.", "Pasé toda la mañana estudiando."],
+      ["Gosto de _todos_ os tipos de música.", "Me gustan todos los tipos de música."]
+     ]},
+     {"ojo": "*Todo dia* es «cada día»; *o dia todo* es «el día entero»."}
+    ]},
+    {"id": "conjuncoes", "title": "Conjunções", "lessons": ["l10", "l19", "pe"], "use": "Para sumar ideas, contrastarlas o decir «aunque».", "blocks": [
+     {"h": "Sumar"},
+     {"p": "*e, nem* (y no), *não só… mas também, além de, bem como*."},
+     {"ex": [
+      ["Ela _não só_ canta _mas também_ toca piano.", "No solo canta, también toca piano."],
+      ["Ele toca violão, _além de_ cantar.", "Toca guitarra, además de cantar."],
+      ["Não comi _nem_ bebi nada.", "No comí ni bebí nada."]
+     ]},
+     {"h": "Contrastar"},
+     {"p": "*mas, porém, contudo, todavia, no entanto, entretanto*. *Mas* es la de todos los días; las otras suenan más escritas."},
+     {"ex": [
+      ["Ela estuda muito, _mas_ dorme pouco.", "Estudia mucho, pero duerme poco."],
+      ["Tentei ligar, _porém_ ninguém atendeu.", "Intenté llamar, pero nadie contestó."]
+     ]},
+     {"h": "Aunque"},
+     {"ex": [
+      ["Fui à praia _apesar da_ chuva.", "Fui a la playa a pesar de la lluvia."],
+      ["_Embora_ seja caro, vale a pena.", "Aunque es caro, vale la pena."]
+     ]}
+    ]},
+    {"id": "da-para", "title": "Dá para e até que", "lessons": ["l19"], "use": "Dos expresiones muy de conversación.", "blocks": [
+     {"p": "*Dá para* (o *dá pra*) + infinitivo es «se puede», «alcanza para». *Não dá* es «no se puede»."},
+     {"ex": [
+      ["_Dá para_ você me ajudar amanhã?", "¿Puedes ayudarme mañana?"],
+      ["_Não dá_, tenho aula o dia todo.", "No puedo, tengo clases todo el día."],
+      ["Com vinte dólares _dá para_ comprar uma pizza.", "Con veinte dólares alcanza para una pizza."]
+     ]},
+     {"p": "*Até que é* + adjetivo marca una sorpresa: «no está nada mal»."},
+     {"ex": [
+      ["O filme _até que é_ bom.", "La película no está nada mal."]
+     ]}
+    ]},
+    {"id": "verbos-infinitivo", "title": "Verbos + infinitivo", "lessons": ["d2", "d3", "l6", "bn"], "use": "Verbos que llevan otro verbo detrás.", "blocks": [
+     {"rules": [
+      ["gostar de", "Gusto.", "_Gosto de_ dançar.", "Me gusta bailar."],
+      ["ter que", "Obligación.", "_Tenho que_ estudar.", "Tengo que estudiar."],
+      ["saber", "Saber hacer algo.", "Eu _sei_ nadar.", "Sé nadar."],
+      ["poder", "Permiso o posibilidad.", "Você _pode_ me ajudar?", "¿Me puedes ayudar?"],
+      ["querer", "Ganas.", "_Quero_ sair com meus amigos.", "Quiero salir con mis amigos."],
+      ["precisar", "Necesidad.", "_Preciso_ dormir mais.", "Necesito dormir más."],
+      ["costumar", "Soler.", "Eu _costumo_ almoçar ao meio-dia.", "Suelo almorzar al mediodía."],
+      ["ir", "Futuro.", "_Vou_ viajar amanhã.", "Mañana voy a viajar."]
+     ]},
+     {"ojo": "*Saber* es saber hacer algo (*sei cozinhar*); *conhecer* es conocer gente o lugares (*conheço o Rio*)."}
+    ]},
+    {"id": "se-impessoal", "title": "Se impessoal", "lessons": ["pe"], "use": "Como el «se habla» del español: dice que alguien lo hace, sin decir quién.", "blocks": [
+     {"ex": [
+      ["_Fala-se_ português no Brasil.", "Se habla portugués en Brasil."],
+      ["_Vendem-se_ casas.", "Se venden casas."],
+      ["_Aluga-se_ apartamento.", "Se alquila departamento."]
+     ]},
+     {"p": "Hablando es más común poner el *se* antes o usar *a gente*: *Aqui se fala português. Aqui a gente fala português.*"}
+    ]},
+    {"id": "diminutivos", "title": "Diminutivos", "lessons": ["l15", "pe"], "use": "-inho, -inha (o -zinho, -zinha) es el -ito del español, y en Brasil se usa todo el tiempo, también para sonar amable.", "blocks": [
+     {"words": [
+      ["cafezinho", "cafecito"],
+      ["casinha", "casita"],
+      ["agorinha", "ahorita"],
+      ["avozinha", "abuelita"],
+      ["beijinho", "besito"],
+      ["pertinho", "cerquita"],
+      ["barzinho", "barcito"],
+      ["pouquinho", "poquito"]
+     ]}
+    ]}
+   ]
+  },
+  {
+   "id": "cuidado",
+   "name": "Cuidado!",
+   "intro": "Lo que confunde a los hispanohablantes: falsos amigos, géneros cruzados, sonidos nuevos y errores típicos.",
+   "items": [
+    {"id": "falsos-amigos", "title": "Falsos amigos", "lessons": ["pe"], "words": [
+     ["o apelido", "el apodo", "apellido se dice sobrenome"],
+     ["o sobrenome", "el apellido", "no es el sobrenombre"],
+     ["a borracha", "el borrador, la goma; el caucho", "borracha en español es bêbada"],
+     ["a cadeira", "la silla", "cadera se dice quadril"],
+     ["a cena", "la escena", "la cena es o jantar"],
+     ["embaraçado", "avergonzado", "embarazada se dice grávida"],
+     ["esquisito", "raro, extraño", "exquisito se dice delicioso"],
+     ["o escritório", "la oficina", "el escritorio (mueble) es a escrivaninha"],
+     ["a firma", "la empresa", "la firma en un papel es a assinatura"],
+     ["largo", "ancho", "largo se dice comprido"],
+     ["o ninho", "el nido", "niño se dice menino"],
+     ["a oficina", "el taller (mecánico)", "la oficina es o escritório"],
+     ["o polvo", "el pulpo", "el polvo es o pó"],
+     ["a salsa", "el perejil", "la salsa (de comer) es o molho"],
+     ["a salada", "la ensalada", "salado se dice salgado"],
+     ["o talher", "el cubierto", "el taller es a oficina"],
+     ["o vaso", "el florero, la maceta", "el vaso para beber es o copo"]
+    ]},
+    {"id": "falsos-amigos-verbos", "title": "Falsos amigos: verbos", "lessons": ["pe"], "words": [
+     ["acordar", "despertarse", "acordarse se dice lembrar-se"],
+     ["borrar", "manchar", "borrar se dice apagar"],
+     ["botar", "poner", "botar a la basura es jogar fora"],
+     ["brincar", "jugar (como los niños)", "brincar (saltar) se dice pular"],
+     ["colar", "pegar con goma", "colar (filtrar) se dice coar"],
+     ["contestar", "cuestionar, rebatir", "contestar se dice responder"],
+     ["fechar", "cerrar", "fechar (poner fecha) se dice datar"],
+     ["firmar", "afirmar, establecer", "firmar un papel es assinar"],
+     ["latir", "ladrar", "latir (el corazón) se dice bater"],
+     ["pegar", "agarrar, tomar", "pegar o ônibus = tomar el bus; golpear es bater"],
+     ["reparar", "notar, fijarse", "reparar (arreglar) se dice consertar"],
+     ["tirar", "sacar, quitar", "tirar a la basura es jogar fora; tirar uma foto = tomar una foto"],
+     ["trair", "traicionar", "traer se dice trazer"]
+    ]},
+    {"id": "mais-falsos-amigos", "title": "Más falsos amigos de la clase", "lessons": ["d3", "l10", "l15", "bn", "extra"], "words": [
+     ["assistir", "ver (TV, cine)", "asistir (ir a algo) es comparecer"],
+     ["tentar", "intentar", "casi siempre es «intentar»: Tentei chegar cedo."],
+     ["procurar", "buscar", "procurar (intentar) se dice tentar"],
+     ["o presunto", "el jamón", "presunto (supuesto) se dice suposto"],
+     ["a sobremesa", "el postre", "la sobremesa del español es a conversa depois do almoço"],
+     ["o copo", "el vaso", "copo de nieve se dice floco de neve"],
+     ["a taça", "la copa", "taza se dice xícara"],
+     ["o rato", "el ratón", "un rato es um tempinho"],
+     ["engraçado", "gracioso, chistoso", "no es «engrasado»"],
+     ["a receita", "la receta; los ingresos", "en una empresa, a receita son los ingresos"]
+    ]},
+    {"id": "femininos", "title": "Femenino en portugués, masculino en español", "lessons": ["pe"], "note": "Las palabras en -agem son femeninas: a viagem, a mensagem, a garagem.", "words": [
+     ["a árvore", "el árbol"],
+     ["a cor", "el color"],
+     ["a dor", "el dolor"],
+     ["a equipe", "el equipo"],
+     ["a origem", "el origen"],
+     ["a ponte", "el puente"],
+     ["a análise", "el análisis"],
+     ["a desordem", "el desorden"],
+     ["a estreia", "el estreno"],
+     ["a macieira", "el manzano"],
+     ["a oliveira", "el olivo"],
+     ["a pétala", "el pétalo"],
+     ["a viagem", "el viaje"],
+     ["a mensagem", "el mensaje"]
+    ]},
+    {"id": "masculinos", "title": "Masculino en portugués, femenino en español", "lessons": ["pe"], "words": [
+     ["o leite", "la leche"],
+     ["o mel", "la miel"],
+     ["o sal", "la sal"],
+     ["o sangue", "la sangre"],
+     ["o nariz", "la nariz"],
+     ["o joelho", "la rodilla"],
+     ["o costume", "la costumbre"],
+     ["o computador", "la computadora"],
+     ["o creme", "la crema"],
+     ["o ensino", "la enseñanza"],
+     ["o gravador", "la grabadora"],
+     ["o legume", "la verdura, la legumbre"],
+     ["o paradoxo", "la paradoja"],
+     ["o protesto", "la protesta"],
+     ["o riso", "la risa"]
+    ]},
+    {"id": "genero-sentido", "title": "Cambian de sentido con el género", "lessons": ["pe"], "words": [
+     ["o banco", "el banco"],
+     ["a vírgula", "la coma (,)", "o coma es el coma (estado)"],
+     ["o cometa", "el cometa (astro)"],
+     ["o papagaio", "la cometa (juguete); el loro", "también: a pipa"],
+     ["a testa", "la frente", "a frente es el frente, la parte de adelante"],
+     ["a margem", "el margen, la orilla", "siempre femenino"],
+     ["o guia", "el guía; la guía (libro)", "una mujer guía es a guia"],
+     ["o trompete", "la trompeta"],
+     ["o trompetista", "el trompetista"]
+    ]},
+    {"id": "sons", "title": "Sonidos que el español no tiene", "lessons": ["pe", "extra"], "use": "Toca las palabras para oír cada sonido.", "blocks": [
+     {"sounds": [
+      ["ão, am", "Una «a» nasal que termina en «u», como «aun» por la nariz. Es el -an y el -ón del español.", ["pão", "não", "coração", "falam"]],
+      ["ões", "Como «oins», nasal. Es el -ones del español.", ["lições", "limões", "opiniões"]],
+      ["v", "Los dientes de arriba sobre el labio de abajo. La b y la v suenan distinto.", ["vaca", "vamos", "livro", "bebida"]],
+      ["r, rr", "Al inicio de palabra y con rr suena como una «j» suave.", ["rato", "Rio", "carro", "correr"]],
+      ["j, g", "La j, y la g antes de e o i, suenan como la «ll» argentina de «yo».", ["janeiro", "hoje", "gente", "geladeira"]],
+      ["s, z", "La s entre vocales y la z zumban como una abeja.", ["casa", "mesa", "zero", "doze"]],
+      ["ç", "Suena como s. Nunca va al inicio de la palabra.", ["almoço", "começar", "março"]],
+      ["lh, nh", "lh es como una «li» muy rápida; nh es la ñ.", ["filho", "trabalho", "vinho", "amanhã"]],
+      ["ti, di", "En Brasil, t + i suena «chi» y d + i suena «yi».", ["tia", "noite", "dia", "cidade"]],
+      ["-o, -e, -l", "Al final de palabra la o suena casi u, la e casi i y la l casi u.", ["obrigado", "leite", "Brasil", "papel"]]
+     ]}
+    ]},
+    {"id": "patrones", "title": "Del español al portugués", "lessons": ["pe", "extra"], "use": "Cambios que se repiten. Con ellos puedes adivinar muchas palabras.", "blocks": [
+     {"patterns": [
+      ["-ción, -ção", "El plural es -ções.", [["canción", "canção"], ["lección", "lição"], ["condición", "condição"], ["educación", "educação"]]],
+      ["-dad, -dade", "", [["ciudad", "cidade"], ["verdad", "verdade"], ["universidad", "universidade"], ["oportunidad", "oportunidade"]]],
+      ["-ble, -vel", "", [["posible", "possível"], ["responsable", "responsável"], ["recomendable", "recomendável"], ["imposible", "impossível"]]],
+      ["h, f", "Muchas palabras con h muda en español empiezan con f.", [["hablar", "falar"], ["hacer", "fazer"], ["hijo", "filho"], ["hambre", "fome"], ["hoja", "folha"], ["horno", "forno"]]],
+      ["ll, ch", "", [["llamar", "chamar"], ["llegar", "chegar"], ["lluvia", "chuva"], ["llave", "chave"]]],
+      ["j, lh", "", [["ojo", "olho"], ["trabajo", "trabalho"], ["mujer", "mulher"], ["hijo", "filho"]]],
+      ["ñ, nh", "Ojo: año es ano.", [["señor", "senhor"], ["baño", "banho"], ["mañana", "manhã"]]],
+      ["ie, ue", "Las vocales dobles del español se quedan simples.", [["tiempo", "tempo"], ["fiesta", "festa"], ["puerta", "porta"], ["nueve", "nove"]]],
+      ["-ero, -eiro", "", [["primero", "primeiro"], ["enfermero", "enfermeiro"], ["dinero", "dinheiro"]]],
+      ["-ito, -inho", "El diminutivo.", [["cafecito", "cafezinho"], ["casita", "casinha"], ["ahorita", "agorinha"]]]
+     ]}
+    ]},
+    {"id": "erros", "title": "Errores típicos de hispanohablantes", "lessons": ["pe", "d2", "d3", "l9", "l17", "rev1"], "use": "A la izquierda lo que sale por el español; a la derecha, cómo se dice.", "blocks": [
+     {"vs": [
+      ["Me gosta o café.", "Eu gosto de café.", "*Gostar* va con *de*, y quien gusta es el sujeto."],
+      ["Vou a estudar.", "Vou estudar.", "Sin «a» entre *ir* y el infinitivo."],
+      ["Me vou.", "Vou embora.", "«Irse» es *ir embora*."],
+      ["Meu irmão maior tem 30 anos.", "Meu irmão mais velho tem 30 anos.", "*Maior* es de tamaño; la edad es *mais velho*, *mais novo*."],
+      ["Quando vá ao Brasil…", "Quando eu for ao Brasil…", "Después de *quando* y *se* va el futuro do subjuntivo."],
+      ["Talvez ela vem.", "Talvez ela venha.", "*Talvez* y *embora* siempre con subjuntivo."],
+      ["Todo está bem.", "Tudo está bem.", "«Todo» solo, sin sustantivo, es *tudo*."],
+      ["Lo bom é descansar.", "O bom é descansar.", "No hay «lo»: se usa *o*."],
+      ["Ele comió.", "Ele comeu.", "-er e -ir no terminan en -ió: *comeu, partiu*."],
+      ["Hay onze pessoas.", "Tem onze pessoas.", "«Hay» es *tem* (o *há*, más formal)."],
+      ["As médicas com quienes falei.", "As médicas com quem falei.", "*Quem* no tiene plural."],
+      ["O leite está fria.", "O leite está frio.", "*Leite* es masculino; *viagem* es femenino."]
+     ]}
+    ]}
+   ]
+  },
+  {
+   "id": "negocios",
+   "name": "Negócios",
+   "intro": "La unidad de empresas de Bons Negócios, de Portuguese for the Profession.",
+   "items": [
+    {"id": "na-empresa", "title": "Na empresa", "lessons": ["bn"], "words": [
+     ["a empresa", "la empresa"],
+     ["o chefe / a chefe", "el jefe / la jefa"],
+     ["o gerente / a gerente", "el gerente / la gerente"],
+     ["o gerente comercial", "el gerente comercial"],
+     ["o diretor / a diretora", "el director / la directora"],
+     ["o funcionário / a funcionária", "el empleado / la empleada", "no solo del Estado: cualquier empleado"],
+     ["o colega de trabalho", "el compañero de trabajo"],
+     ["o candidato / a candidata", "el candidato / la candidata"],
+     ["o cliente", "el cliente"],
+     ["o fornecedor", "el proveedor"],
+     ["o consumidor", "el consumidor", "plural: consumidores"],
+     ["o colaborador", "el colaborador"],
+     ["a franquia", "la franquicia"],
+     ["o franqueado", "el franquiciado"],
+     ["a equipe", "el equipo", "femenino: a equipe"],
+     ["o salário", "el sueldo"],
+     ["a filial", "la sucursal"]
+    ]},
+    {"id": "verbos-trabalho", "title": "Verbos do trabalho", "lessons": ["bn"], "words": [
+     ["procurar", "buscar", "no es «procurar»"],
+     ["admirar", "admirar"],
+     ["tomar decisões", "tomar decisiones"],
+     ["entrevistar", "entrevistar"],
+     ["contratar", "contratar"],
+     ["atuar", "trabajar en un área", "A empresa atua em TI."],
+     ["desenvolver", "desarrollar"],
+     ["cadastrar-se", "registrarse"],
+     ["enviar o currículo", "enviar el currículum"],
+     ["fazer login", "iniciar sesión"],
+     ["concordar", "estar de acuerdo"],
+     ["discordar", "no estar de acuerdo"],
+     ["costumar", "soler", "O trabalho costuma ser… = El trabajo suele ser…"]
+    ]},
+    {"id": "concordar", "title": "Concordar e discordar", "lessons": ["bn"], "use": "En Brasil casi nunca se contesta solo «sí» o «no»: se repite el verbo de la pregunta.", "blocks": [
+     {"rules": [
+      ["concordar", "*Acho que sim. É, sim. São, sim. Eu também acho. Concordo.*", "As pequenas empresas são importantes? _São, sim._", "¿Las empresas pequeñas son importantes? Sí, lo son."],
+      ["discordar", "*Acho que não. Não é, não. Não são, não. Não acho, não. Discordo.*", "O chefe faz todo o trabalho? _Não faz, não!_", "¿El jefe hace todo el trabajo? ¡No, para nada!"]
+     ]},
+     {"words": [
+      ["acho que sim", "creo que sí"],
+      ["é, sim", "sí, lo es"],
+      ["eu também acho", "yo también lo creo"],
+      ["concordo", "estoy de acuerdo"],
+      ["acho que não", "creo que no"],
+      ["não é, não", "no, no lo es"],
+      ["não acho, não", "no lo creo"],
+      ["discordo", "no estoy de acuerdo"]
+     ]}
+    ]},
+    {"id": "grande-pequena", "title": "Empresa grande ou pequena?", "lessons": ["bn"], "use": "Para comparar y opinar sobre empresas.", "blocks": [
+     {"ex": [
+      ["Numa grande empresa, o trabalho _costuma ser_ mais dividido.", "En una empresa grande, el trabajo suele estar más dividido."],
+      ["Numa pequena empresa, cada pessoa _atua_ em várias áreas.", "En una empresa pequeña, cada persona trabaja en varias áreas."],
+      ["Nas pequenas empresas, as decisões são _mais rápidas_.", "En las empresas pequeñas, las decisiones son más rápidas."],
+      ["Uma boa empresa _ouve_ os funcionários.", "Una buena empresa escucha a sus empleados."]
+     ]},
+     {"ojo": "*Costumar* + infinitivo es «soler»: *Eu costumo chegar às nove.*"}
+    ]},
+    {"id": "site", "title": "Num site de empresa", "lessons": ["bn"], "use": "Lo que dicen los botones de una web brasileña (la página de O Boticário del libro).", "words": [
+     ["cadastre-se", "regístrate"],
+     ["faça seu login", "inicia sesión"],
+     ["minhas compras", "mis compras"],
+     ["a busca", "la búsqueda"],
+     ["envie seu currículo", "envía tu currículum"],
+     ["seja um franqueado", "abre una franquicia"],
+     ["localize uma loja", "encuentra una tienda"],
+     ["a sustentabilidade", "la sostenibilidad"],
+     ["em que acreditamos", "en qué creemos"],
+     ["a sala de imprensa", "la sala de prensa"],
+     ["o relatório anual", "el informe anual"],
+     ["o contato", "el contacto"],
+     ["visualizar", "ver"]
+    ]},
+    {"id": "multinacionais", "title": "Multinacionais brasileiras", "lessons": ["bn"], "use": "Muchas empresas brasileñas tienen filiales fuera del país. El BNDES, el banco de desarrollo del gobierno, apoya esa expansión.", "blocks": [
+     {"table": {"head": ["empresa", "área", ""], "rows": [["Havaianas", "calçados", "sandalias"], ["Natura", "cosméticos", "cosméticos"], ["Embraer", "aviação", "aviones"], ["JBS", "processamento de carnes", "carnes"], ["Gerdau", "siderurgia", "acero"], ["Metalfrio", "refrigeradores", "refrigeradores"], ["Stefanini", "TI", "tecnología"]], "pt": [1]}},
+     {"words": [
+      ["a filial", "la sucursal, la filial"],
+      ["o mercado estrangeiro", "el mercado extranjero"],
+      ["a receita", "los ingresos", "también la receta"],
+      ["a siderurgia", "la industria del acero"],
+      ["a construção civil", "la construcción"],
+      ["TI", "TI, tecnología de la información"],
+      ["os países emergentes", "los países emergentes"]
+     ]},
+     {"ex": [
+      ["A Embraer _atua_ na aviação.", "Embraer trabaja en aviación."],
+      ["A Natura _tem_ filiais em vários países.", "Natura tiene filiales en varios países."]
+     ]}
+    ]}
+   ]
+  },
+  {
+   "id": "cultura",
+   "name": "Cultura",
+   "intro": "Las preguntas con que empezaba cada clase, para practicar hablando, y notas sobre lo que vimos de Brasil.",
+   "items": [
+    {"id": "conversa", "title": "Perguntas da aula", "lessons": [], "use": "Contesta en voz alta y después mira un ejemplo.", "prompts": [
+     {"lesson": "d1", "q": "Oi! Qual é o seu nome? De onde você é?", "a": "Oi! Meu nome é Ana e eu sou do Chile. Muito prazer!", "es": "¡Hola! Me llamo Ana y soy de Chile. ¡Mucho gusto!", "uses": "ser de, saludos"},
+     {"lesson": "d2", "q": "O que você gosta de fazer no seu tempo livre?", "a": "Eu gosto de correr, de cozinhar e de assistir a séries.", "es": "Me gusta correr, cocinar y ver series.", "uses": "gostar de + infinitivo"},
+     {"lesson": "d3", "q": "O que você vai fazer no fim de semana?", "a": "Vou descansar, vou ao cinema e vou jantar com uns amigos.", "es": "Voy a descansar, voy a ir al cine y voy a cenar con unos amigos.", "uses": "futuro com ir"},
+     {"lesson": "l4", "q": "Qual é o melhor lugar de Chicago para sair com amigos?", "a": "Para mim, é a beira do lago no verão. A gente faz piquenique e anda de bicicleta.", "es": "Para mí, la orilla del lago en verano. Hacemos picnic y montamos bicicleta.", "uses": "presente, a gente"},
+     {"lesson": "l5", "q": "A que horas você se levanta todos os dias?", "a": "Eu me levanto às sete e meia, tomo banho e tomo café da manhã às oito.", "es": "Me levanto a las siete y media, me ducho y desayuno a las ocho.", "uses": "reflexivos, las horas"},
+     {"lesson": "l6", "q": "O que você sabe fazer?", "a": "Eu sei cozinhar e sei falar três línguas, mas não sei nadar.", "es": "Sé cocinar y hablar tres idiomas, pero no sé nadar.", "uses": "saber + infinitivo"},
+     {"lesson": "l7", "q": "Você já foi à Europa?", "a": "Já fui, sim. Fui à Espanha há dois anos e visitei Madri.", "es": "Sí, ya fui. Fui a España hace dos años y visité Madrid.", "uses": "pretérito, já"},
+     {"lesson": "l8", "q": "Você tem uma família grande?", "a": "Tenho, sim. Tenho dois irmãos, cinco tios e muitos primos.", "es": "Sí. Tengo dos hermanos, cinco tíos y muchos primos.", "uses": "la familia, responder repitiendo el verbo"},
+     {"lesson": "l9", "q": "Você é mais velho do que seu irmão ou sua irmã?", "a": "Sou, sim. Sou três anos mais velho do que a minha irmã.", "es": "Sí. Soy tres años mayor que mi hermana.", "uses": "comparações"},
+     {"lesson": "l10", "q": "O que você vai ser quando se formar?", "a": "Quando eu me formar, vou trabalhar numa empresa internacional.", "es": "Cuando me gradúe, voy a trabajar en una empresa internacional.", "uses": "futuro do subjuntivo"},
+     {"lesson": "l12", "q": "Como é a casa ou o bairro onde você mora?", "a": "Moro num apartamento pequeno no terceiro andar. No meu bairro tem uma farmácia e muitos restaurantes, mas não tem supermercado.", "es": "Vivo en un departamento pequeño en el tercer piso. En mi barrio hay una farmacia y muchos restaurantes, pero no hay supermercado.", "uses": "tem = hay, la casa"},
+     {"lesson": "l13", "q": "Que curso você recomenda que seus colegas façam?", "a": "Recomendo que vocês façam um curso de português, é claro!", "es": "Les recomiendo que tomen un curso de portugués, ¡claro!", "uses": "presente do subjuntivo"},
+     {"lesson": "l14", "q": "Que tarefas domésticas você gosta de fazer?", "a": "Eu gosto de cozinhar, mas odeio lavar a louça e passar a roupa.", "es": "Me gusta cocinar, pero odio lavar los platos y planchar.", "uses": "tarefas domésticas"},
+     {"lesson": "l15", "q": "O que você quer comer?", "a": "Quero arroz, feijão, um bife e uma salada. E de sobremesa, pudim!", "es": "Quiero arroz, frejoles, un bistec y una ensalada. ¡Y de postre, flan!", "uses": "a comida"},
+     {"lesson": "l16", "q": "O que vocês faziam quando eram mais jovens?", "a": "Quando éramos crianças, a gente jogava futebol na rua e assistia a desenhos.", "es": "Cuando éramos niños, jugábamos fútbol en la calle y veíamos dibujos animados.", "uses": "imperfeito"},
+     {"lesson": "l17", "q": "Que tipo de música você gosta de ouvir?", "a": "Gosto de todo tipo de música, mas ouço MPB e bossa nova quase todo dia.", "es": "Me gusta todo tipo de música, pero escucho MPB y bossa nova casi todos los días.", "uses": "todo, ouvir"},
+     {"lesson": "l18", "q": "Quem matou o Dr. Pessoa?", "a": "Acho que foi a Dona Rosa. Ela disse que estava em casa às dez, mas ninguém a viu.", "es": "Creo que fue doña Rosa. Dijo que estaba en casa a las diez, pero nadie la vio.", "uses": "pretérito e imperfeito"},
+     {"lesson": "l19", "q": "Qual foi a melhor viagem da sua vida? Por quê?", "a": "Foi uma viagem à praia com meus amigos. Apesar da chuva, a gente se divertiu muito.", "es": "Fue un viaje a la playa con mis amigos. A pesar de la lluvia, nos divertimos mucho.", "uses": "pretérito, apesar de"},
+     {"lesson": "l20", "q": "Já aconteceu alguma coisa estranha com você numa viagem?", "a": "Já! Uma vez perdi o passaporte no aeroporto, mas um funcionário o encontrou.", "es": "¡Sí! Una vez perdí el pasaporte en el aeropuerto, pero un empleado lo encontró.", "uses": "pretérito, pronomes"},
+     {"lesson": "l21", "q": "Qual é o melhor país para visitar? Por quê?", "a": "Para mim, é o Brasil, porque tem as praias mais bonitas e a comida é ótima.", "es": "Para mí, Brasil, porque tiene las playas más bonitas y la comida es buenísima.", "uses": "superlativo"},
+     {"lesson": "bn", "q": "Você prefere trabalhar numa empresa grande ou pequena?", "a": "Prefiro uma empresa pequena, porque as decisões são mais rápidas e a gente aprende de tudo.", "es": "Prefiero una empresa pequeña, porque las decisiones son más rápidas y aprendes de todo.", "uses": "comparações, negócios"}
+    ]},
+    {"id": "musica-regioes", "title": "A música brasileira por região", "lessons": ["l17"], "use": "Los ritmos que vimos en la Lição 17, cada uno con su lugar.", "blocks": [
+     {"rules": [
+      ["frevo", "Pernambuco (Recife y Olinda). Rapidísimo, de carnaval, se baila con sombrillitas de colores.", "", ""],
+      ["forró", "El Nordeste. Se baila en pareja, con acordeón (*sanfona*), *zabumba* (un tambor) y triángulo.", "", ""],
+      ["funk carioca", "Rio de Janeiro. Nació en los bailes de las favelas.", "", ""],
+      ["sertanejo", "El Centro-Oeste y el interior. Hoy es de lo más escuchado en Brasil.", "", ""],
+      ["bossa nova", "Rio, fines de los años 50: João Gilberto, Tom Jobim, Vinicius de Moraes.", "", ""],
+      ["MPB", "*Música Popular Brasileira*, desde los 60: Caetano Veloso, Gilberto Gil, Elis Regina.", "", ""],
+      ["samba", "Rio de Janeiro. El ritmo del carnaval y de las escolas de samba.", "", ""]
+     ]}
+    ]},
+    {"id": "iara", "title": "A lenda da Iara", "lessons": ["l13"], "use": "Una leyenda del folclore amazónico que leímos en la Lição 13.", "blocks": [
+     {"p": "Iara es una sirena (*sereia*) de los ríos de la Amazonía. Canta una melodía a la que nadie se resiste: los hombres que la oyen se tiran al río y desaparecen. Según una versión, era una guerrera indígena; sus hermanos, celosos, quisieron matarla, ella se defendió, y su padre, el *pajé* (chamán), la lanzó al río como castigo. Los peces la llevaron a la superficie y la volvieron sirena."},
+     {"words": [
+      ["a sereia", "la sirena"],
+      ["a lenda", "la leyenda"],
+      ["o rio", "el río"],
+      ["o pajé", "el chamán"],
+      ["o feitiço", "el hechizo"]
+     ]},
+     {"p": "La leyenda la sitúa en el *Encontro das Águas*, cerca de Manaus: ahí el río Negro, oscuro, y el Solimões, color arena, corren lado a lado varios kilómetros sin mezclarse."}
+    ]},
+    {"id": "brasilia", "title": "Brasília e o Plano Piloto", "lessons": ["l12"], "use": "La capital que vimos con los mapas de la Lição 12.", "blocks": [
+     {"p": "Brasília se inauguró en 1960. El plan de la ciudad es de Lúcio Costa y los edificios de Oscar Niemeyer. Visto desde arriba, el *Plano Piloto* parece un avión: tiene un *Eixo Monumental* (el cuerpo, con los ministerios) y dos alas, *Asa Sul* y *Asa Norte*, donde vive la gente en *superquadras*. Por eso las direcciones son siglas y números, como *SQS 308* (Superquadra Sul 308)."}
+    ]},
+    {"id": "novelas", "title": "As novelas", "lessons": ["l18"], "use": "Las telenovelas son parte de la vida diaria en Brasil.", "blocks": [
+     {"p": "La más vista es la «novela das nove» de TV Globo. *Avenida Brasil* (2012), de João Emanuel Carneiro, fue un fenómeno: el país entero hablaba de la villana. En la Lição 18 jugamos a resolver un crimen con sospechosos de novela."},
+     {"words": [
+      ["a novela", "la telenovela"],
+      ["o capítulo", "el episodio"],
+      ["o vilão / a vilã", "el villano / la villana"],
+      ["o suspeito", "el sospechoso"],
+      ["o álibi", "la coartada"],
+      ["o culpado", "el culpable"]
+     ]}
+    ]},
+    {"id": "saudade", "title": "Saudade", "lessons": ["l13"], "use": "La palabra más famosa del portugués.", "blocks": [
+     {"p": "*Saudade* es extrañar a alguien o algo, con un poco de nostalgia y de cariño. *Tenho saudade da minha família* es «extraño a mi familia». *Que saudade!* se dice al recordar algo lindo. El poema de la Lição 13, «Canção do exílio», lo escribió Gonçalves Dias en 1843, en Portugal, extrañando Brasil:"},
+     {"quote": {"pt": "Minha terra tem palmeiras,\nOnde canta o Sabiá;", "es": "Mi tierra tiene palmeras, donde canta el zorzal.", "by": "Gonçalves Dias, «Canção do exílio» (1843)"}}
+    ]},
+    {"id": "jeito", "title": "Se virar e dar um jeito", "lessons": ["l21"], "use": "Dos expresiones que explican mucho de Brasil.", "blocks": [
+     {"p": "*Se virar* es arreglárselas solo. *Dar um jeito* es encontrar la manera de resolver algo, improvisando si hace falta. De ahí viene el *jeitinho brasileiro*, esa forma creativa (a veces demasiado) de resolver problemas."},
+     {"ex": [
+      ["Não sei como, mas eu _me viro_.", "No sé cómo, pero me las arreglo."],
+      ["Fica tranquilo, a gente _dá um jeito_.", "Tranquilo, encontramos la manera."]
+     ]}
+    ]},
+    {"id": "lazer-brasileiros", "title": "O lazer dos brasileiros", "lessons": ["l16"], "use": "Una encuesta que vimos en la Lição 16 (Target Group Index).", "blocks": [
+     {"p": "Lo que más hacen los brasileños en su tiempo libre es escuchar música (59 %), juntarse con amigos (34 %) y leer libros (27 %). Después vienen ir al shopping, salir a caminar, la fotografía, los videojuegos, cocinar, salir a comer y salir a tomar algo."}
+    ]},
+    {"id": "fortaleza", "title": "A vida noturna em Fortaleza", "lessons": ["l4"], "use": "La ciudad de la Lição 4.", "blocks": [
+     {"p": "Fortaleza, capital de Ceará, en el Nordeste, es famosa por sus playas y por su vida nocturna: forró, bares frente al mar en la Praia de Iracema y fiesta hasta los lunes."}
+    ]},
+    {"id": "datas", "title": "Datas brasileiras", "lessons": ["d2"], "use": "Fechas que en Brasil caen distinto.", "blocks": [
+     {"p": "El *Dia dos Namorados* es el 12 de junio, no el 14 de febrero (es la víspera de San Antonio, el santo casamentero). El *Dia da Independência* es el 7 de septiembre de 1822. Y en el Carnaval, entre febrero y marzo, el país se detiene varios días."}
+    ]},
+    {"id": "poemas", "title": "Os poemas da aula", "lessons": ["d3", "l8", "l12", "l13"], "use": "Los poemas que leímos en clase, para buscarlos completos.", "blocks": [
+     {"rules": [
+      ["Dia 3", "«Ou isto ou aquilo», de Cecília Meireles (1964): un niño que no puede elegir y quiere estar en dos lugares a la vez.", "", ""],
+      ["Lição 8", "«Porquinho-da-Índia», de Manuel Bandeira (1930): un niño y su cuy, que fue su «primera novia».", "", ""],
+      ["Lição 12", "«A casa», de Vinicius de Moraes: una canción infantil sobre una casa imposible.", "", ""],
+      ["Lição 13", "«Canção do exílio», de Gonçalves Dias (1843): la saudade de Brasil.", "", ""]
+     ]}
+    ]}
+   ]
+  },
+  {
+   "id": "praticar",
+   "name": "Praticar",
+   "intro": "Ejercicios para escribir o elegir la respuesta. Pulsa Enter para comprobar.",
+   "items": [
+    {"id": "conjugar", "title": "Conjugar", "lessons": [], "drill": true, "use": "Un verbo, un tiempo y una persona al azar. Escribe la forma y pulsa Enter."},
+    {"id": "ex-presente", "title": "Presente", "lessons": ["d2", "l4", "l6", "rev1"], "kind": "type", "use": "Escribe el verbo en presente.", "items": [
+     ["Eu ___ na biblioteca todas as tardes.", "estudar", "estudo"],
+     ["Nós ___ no refeitório todos os dias.", "almoçar", "almoçamos"],
+     ["Você ___ café de manhã?", "beber", "bebe"],
+     ["Eles ___ a porta da sala.", "abrir", "abrem"],
+     ["Eu ___ oito horas por noite.", "dormir", "durmo", "cambia en «eu»: o → u"],
+     ["Eu sempre ___ a verdade.", "dizer", "digo"],
+     ["Eu ___ com meus amigos aos sábados.", "sair", "saio"],
+     ["Eu ___ música brasileira no metrô.", "ouvir", "ouço"],
+     ["Eu não ___ ir à festa hoje.", "poder", "posso"],
+     ["Vocês ___ cozinhar?", "saber", "sabem"]
+    ]},
+    {"id": "ex-preterito", "title": "Pretérito perfeito", "lessons": ["l7", "rev1"], "kind": "type", "use": "Escribe el verbo en pretérito perfeito.", "items": [
+     ["Ontem eu ___ videogame até tarde.", "jogar", "joguei", "-gar da -guei"],
+     ["Na semana passada, nós ___ a um filme brasileiro.", "assistir", "assistimos"],
+     ["Meu pai ___ um bolo delicioso.", "preparar", "preparou"],
+     ["Hoje eu ___ às seis da manhã.", "acordar", "acordei"],
+     ["Você ___ ao Brasil no ano passado?", "ir", "foi"],
+     ["Eles ___ muitas perguntas na aula.", "fazer", "fizeram"],
+     ["Eu não ___ tempo de estudar.", "ter", "tive"],
+     ["A Júlia ___ que vem amanhã.", "dizer", "disse"],
+     ["Nós ___ a notícia ontem à noite.", "saber", "soubemos"],
+     ["Eu ___ com meus pais no domingo.", "almoçar", "almocei", "-çar da -cei"]
+    ]},
+    {"id": "ex-imperfeito", "title": "Imperfeito", "lessons": ["l7", "l16"], "kind": "type", "use": "Escribe el verbo en imperfeito.", "items": [
+     ["Quando eu era criança, eu ___ na rua.", "brincar", "brincava"],
+     ["Nós ___ desenhos na TV todas as manhãs.", "assistir", "assistíamos"],
+     ["Meu avô ___ muitas histórias.", "contar", "contava"],
+     ["Antes, eu ___ muitos livros de aventura.", "ler", "lia"],
+     ["Ela ___ dez anos quando aprendeu a nadar.", "ter", "tinha"],
+     ["Vocês ___ muito felizes naquela casa.", "ser", "eram"],
+     ["___ dez da noite quando ele chegou.", "ser", "eram", "la hora en el pasado"],
+     ["Meus pais ___ à casa da minha avó todo domingo.", "ir", "iam"]
+    ]},
+    {"id": "ex-pret-imp", "title": "Pretérito ou imperfeito?", "lessons": ["l16", "rev2"], "kind": "choice", "use": "Elige la forma correcta.", "items": [
+     ["Quando eu era criança, eu ___ numa casa amarela.", ["morava", "morei"], 0, "un estado en el pasado, sin principio ni fin"],
+     ["Ontem a Ana ___ um e-mail para o professor.", ["escreveu", "escrevia"], 0, "una acción terminada, ayer"],
+     ["Nós ___ no parque quando ___ a nevar.", ["caminhávamos / começou", "caminhamos / começava"], 0, "la acción en curso y lo que la interrumpe"],
+     ["Minha avó me ___ no domingo.", ["ligou", "ligava"], 0, "una vez, en un momento concreto"],
+     ["Quando cheguei a Chicago, eu ___ 18 anos.", ["tinha", "tive"], 0, "la edad va en imperfeito"],
+     ["Às oito da noite, eu ___ no ônibus, voltando para casa.", ["estava", "estive"], 0, "algo en progreso a esa hora"],
+     ["___ uma noite fria e ___ muito.", ["Era / chovia", "Foi / choveu"], 0, "el contexto de una historia"],
+     ["De repente, alguém ___ à porta.", ["bateu", "batia"], 0, "de repente: algo que pasa una vez"],
+     ["Enquanto eu ___, meu irmão assistia TV.", ["estudava", "estudei"], 0, "dos cosas al mismo tiempo"],
+     ["Eles ___ em 2015 e ___ felizes para sempre.", ["se casaram / viveram", "se casavam / viviam"], 0, "una serie de hechos terminados"]
+    ]},
+    {"id": "ex-por-para", "title": "Por ou para?", "lessons": ["l20", "rev2"], "kind": "choice", "use": "Elige la preposición.", "items": [
+     ["Este presente é ___ você.", ["para", "por"], 0, "destinatario"],
+     ["Estudo português ___ falar com meus amigos brasileiros.", ["para", "por"], 0, "objetivo"],
+     ["Esperei ___ uma hora.", ["por", "para"], 0, "duración"],
+     ["Antes de ir ao lago, passamos ___ centro.", ["pelo", "para o"], 0, "camino: por dónde"],
+     ["Paguei trinta reais ___ esta camiseta.", ["por", "para"], 0, "precio"],
+     ["O relatório é ___ segunda-feira.", ["para", "por"], 0, "fecha límite"],
+     ["___ mim, o português é mais fácil que o francês.", ["Para", "Por"], 0, "opinión"],
+     ["Obrigado ___ tudo!", ["por", "para"], 0, "causa"],
+     ["Vou ___ casa agora.", ["para", "por"], 0, "destino"],
+     ["Ele chega lá ___ três da tarde.", ["pelas", "para as"], 0, "hora aproximada"]
+    ]},
+    {"id": "ex-subjuntivo", "title": "Presente do subjuntivo", "lessons": ["l13", "l14", "rev2"], "kind": "type", "use": "Escribe el verbo en presente do subjuntivo.", "items": [
+     ["É importante que você ___ a lição.", "fazer", "faça"],
+     ["Espero que vocês ___ boas férias.", "ter", "tenham"],
+     ["Tomara que ___ sol amanhã!", "fazer", "faça"],
+     ["Minha mãe quer que eu ___ mais cedo.", "voltar", "volte"],
+     ["É preciso que você ___ um passaporte para viajar.", "ter", "tenha"],
+     ["Talvez ela ___ à festa hoje.", "ir", "vá"],
+     ["Duvido que ele ___ a resposta.", "saber", "saiba"],
+     ["Recomendo que vocês ___ feijoada.", "comer", "comam"],
+     ["Quero que você ___ feliz.", "ser", "seja"],
+     ["Embora ___ caro, o restaurante é ótimo.", "ser", "seja", "embora siempre con subjuntivo"]
+    ]},
+    {"id": "ex-futuro-subjuntivo", "title": "Futuro do subjuntivo", "lessons": ["l10", "rev2"], "kind": "type", "use": "Escribe el verbo en futuro do subjuntivo.", "items": [
+     ["Quando eu ___ ao Brasil, vou comer pão de queijo.", "ir", "for"],
+     ["Se você ___ tempo amanhã, me liga.", "ter", "tiver"],
+     ["Assim que nós ___ o trabalho, vamos sair.", "terminar", "terminarmos"],
+     ["Quando vocês ___ em Chicago, me avisem.", "estar", "estiverem"],
+     ["Se eu ___, eu te ajudo.", "poder", "puder"],
+     ["Podem me ligar sempre que ___.", "querer", "quiserem"],
+     ["Depois que ela ___ a notícia, vai nos ligar.", "saber", "souber"],
+     ["Quando eles ___, vamos jantar.", "chegar", "chegarem"]
+    ]},
+    {"id": "ex-comparacoes", "title": "Comparações", "lessons": ["l9", "l21", "rev1"], "kind": "choice", "use": "Elige la forma correcta.", "items": [
+     ["Meu irmão é ___ alto do que eu.", ["mais", "tão"], 0, "desigualdad: mais … do que"],
+     ["A Maria é tão inteligente ___ a irmã.", ["quanto", "do que"], 0, "igualdad: tão … quanto"],
+     ["Este restaurante é ___ do que aquele.", ["melhor", "mais bom"], 0, "nunca «mais bom»"],
+     ["A casa da Ana é ___ do que a minha.", ["maior", "mais grande"], 0, "grande da maior"],
+     ["Meu avô é o ___ da família.", ["mais velho", "maior"], 0, "para la edad: mais velho"],
+     ["Ela tem ___ amigos quanto eu.", ["tantos", "tão"], 0, "con sustantivo: tanto, tantos"],
+     ["Há ___ cem alunos no curso.", ["mais de", "mais que"], 0, "antes de un número: mais de"],
+     ["O Brasil é o ___ país da América do Sul.", ["maior", "mais grande"], 0, "superlativo de grande"]
+    ]},
+    {"id": "ex-tudo-todo", "title": "Tudo ou todo?", "lessons": ["l17", "rev2"], "kind": "choice", "use": "Elige la palabra.", "items": [
+     ["___ está bem!", ["Tudo", "Todo"], 0, "solo, sin sustantivo: tudo"],
+     ["Estudei o dia ___.", ["todo", "tudo"], 0, "con sustantivo: todo"],
+     ["___ os alunos vieram à aula.", ["Todos", "Tudo"], 0, "concuerda con alunos"],
+     ["Ela comeu ___.", ["tudo", "toda"], 0, "todas las cosas: tudo"],
+     ["Gosto de ___ as frutas brasileiras.", ["todas", "tudo"], 0, "concuerda con frutas"]
+    ]},
+    {"id": "ex-reflexivos", "title": "Verbos reflexivos", "lessons": ["l5", "l6"], "kind": "choice", "use": "Elige el pronombre.", "items": [
+     ["Eu ___ levanto às sete.", ["me", "se", "nos"], 0, "eu: me"],
+     ["Ela ___ veste rapidamente.", ["se", "me", "nos"], 0, "ela: se"],
+     ["Nós ___ sentamos na primeira fila.", ["nos", "se", "me"], 0, "nós: nos"],
+     ["Vocês ___ deitam tarde?", ["se", "nos", "me"], 0, "vocês: se"],
+     ["Como você ___ chama?", ["se", "me", "te"], 0, "você: se"]
+    ]},
+    {"id": "ex-falsos-amigos", "title": "Falsos amigos", "lessons": ["pe", "extra"], "kind": "choice", "use": "¿Qué significa en portugués?", "items": [
+     ["o polvo", ["el pulpo", "el polvo"], 0, "el polvo es o pó"],
+     ["esquisito", ["raro", "delicioso"], 0, "delicioso se dice delicioso"],
+     ["a borracha", ["el borrador", "la borracha"], 0, "borracha en español es bêbada"],
+     ["o escritório", ["la oficina", "el escritorio"], 0, "el mueble es a escrivaninha"],
+     ["a oficina", ["el taller", "la oficina"], 0, "la oficina es o escritório"],
+     ["o apelido", ["el apodo", "el apellido"], 0, "el apellido es o sobrenome"],
+     ["largo", ["ancho", "largo"], 0, "largo se dice comprido"],
+     ["acordar", ["despertarse", "acordarse"], 0, "acordarse se dice lembrar-se"],
+     ["fechar", ["cerrar", "poner fecha"], 0, "poner fecha es datar"],
+     ["o presunto", ["el jamón", "el sospechoso"], 0, "lo del desayuno"],
+     ["o copo", ["el vaso", "el copo de nieve"], 0, "o vaso es el florero"],
+     ["a sobremesa", ["el postre", "la charla después de comer"], 0, "lo que comes al final"]
+    ]}
+   ]
+  }
+ ],
+ "verbs": [
+  {"v": "ser", "es": "ser", "lessons": ["d1", "d2", "l4", "l7", "rev1"]},
+  {"v": "estar", "es": "estar", "lessons": ["l7", "l13", "rev1"]},
+  {"v": "ter", "es": "tener", "lessons": ["d2", "l4", "l6", "l7", "rev1"], "note": "tem también es «hay»: Tem pão?"},
+  {"v": "ir", "es": "ir", "lessons": ["d2", "d3", "l4", "l7", "rev1"], "note": "para el futuro basta el presente: Amanhã vou ao cinema"},
+  {"v": "vir", "es": "venir", "lessons": ["l7", "l13", "l19"]},
+  {"v": "ver", "es": "ver", "lessons": ["l7", "l13", "rev1"]},
+  {"v": "fazer", "es": "hacer", "lessons": ["l6", "l7", "rev1"]},
+  {"v": "dizer", "es": "decir", "lessons": ["l6", "l7"]},
+  {"v": "trazer", "es": "traer", "lessons": ["l6", "l7"], "note": "trair es «traicionar»"},
+  {"v": "pôr", "es": "poner", "lessons": ["l6", "l7"]},
+  {"v": "saber", "es": "saber", "lessons": ["l6", "l7", "l13"]},
+  {"v": "querer", "es": "querer", "lessons": ["l6", "l7", "l13"]},
+  {"v": "poder", "es": "poder", "lessons": ["l6", "l7", "rev1"]},
+  {"v": "dar", "es": "dar", "lessons": ["l7", "l13", "rev2"]},
+  {"v": "ler", "es": "leer", "lessons": ["d2", "l7", "rev1"]},
+  {"v": "sair", "es": "salir", "lessons": ["l6", "l16", "rev2"]},
+  {"v": "ouvir", "es": "oír, escuchar", "lessons": ["l6", "l7", "l17"]},
+  {"v": "pedir", "es": "pedir", "lessons": ["l6"]},
+  {"v": "dormir", "es": "dormir", "lessons": ["l6", "l7", "rev1"]},
+  {"v": "preferir", "es": "preferir", "lessons": ["l6"]},
+  {"v": "mentir", "es": "mentir", "lessons": ["l6"]},
+  {"v": "sentir", "es": "sentir", "lessons": ["l6"]},
+  {"v": "sentir-se", "es": "sentirse", "lessons": ["rev1"]},
+  {"v": "vestir-se", "es": "vestirse", "lessons": ["l5", "l6"]},
+  {"v": "seguir", "es": "seguir", "lessons": ["l6"]},
+  {"v": "servir", "es": "servir", "lessons": ["l6"]},
+  {"v": "repetir", "es": "repetir", "lessons": ["l6"]},
+  {"v": "competir", "es": "competir", "lessons": ["l6"]},
+  {"v": "sugerir", "es": "sugerir", "lessons": ["l6", "l13"]},
+  {"v": "cobrir", "es": "cubrir", "lessons": ["l6"]},
+  {"v": "descobrir", "es": "descubrir", "lessons": ["l6"]},
+  {"v": "tossir", "es": "toser", "lessons": ["l6"]},
+  {"v": "perder", "es": "perder", "lessons": ["l6", "pe"]},
+  {"v": "conhecer", "es": "conocer", "lessons": ["l6", "l16", "l21"]},
+  {"v": "merecer", "es": "merecer", "lessons": ["l6"]},
+  {"v": "vencer", "es": "vencer, ganar", "lessons": ["l6"]},
+  {"v": "reagir", "es": "reaccionar", "lessons": ["l6"]},
+  {"v": "conseguir", "es": "conseguir, lograr", "lessons": ["l10", "pe"]},
+  {"v": "divertir-se", "es": "divertirse", "lessons": ["l19"]},
+  {"v": "construir", "es": "construir", "lessons": ["l16"]},
+  {"v": "destruir", "es": "destruir", "lessons": ["l16"]},
+  {"v": "falar", "es": "hablar", "lessons": ["d2", "l4", "l5", "l7"]},
+  {"v": "estudar", "es": "estudiar", "lessons": ["d2", "d3", "l7"]},
+  {"v": "comprar", "es": "comprar", "lessons": ["d2", "l7"]},
+  {"v": "trabalhar", "es": "trabajar", "lessons": ["d2", "d3", "l10"]},
+  {"v": "morar", "es": "vivir (en un lugar)", "lessons": ["d3", "l7", "l12"]},
+  {"v": "almoçar", "es": "almorzar", "lessons": ["d3", "l5", "l7", "pe"]},
+  {"v": "jantar", "es": "cenar", "lessons": ["l5", "l7"]},
+  {"v": "andar", "es": "andar; montar (andar de bicicleta)", "lessons": ["d2", "d3", "l7"]},
+  {"v": "dançar", "es": "bailar", "lessons": ["d2", "l7", "rev1"]},
+  {"v": "cozinhar", "es": "cocinar", "lessons": ["d2", "l12", "l14"]},
+  {"v": "escutar", "es": "escuchar", "lessons": ["d2", "l13"]},
+  {"v": "tomar", "es": "tomar", "lessons": ["d2", "l5", "l15"], "note": "tomar banho = bañarse"},
+  {"v": "lavar", "es": "lavar", "lessons": ["d3", "l14"]},
+  {"v": "usar", "es": "usar", "lessons": ["d3", "l13"]},
+  {"v": "caminhar", "es": "caminar", "lessons": ["d3", "l16"]},
+  {"v": "pensar", "es": "pensar", "lessons": ["l5"]},
+  {"v": "postar", "es": "publicar (en redes)", "lessons": ["l5"]},
+  {"v": "viajar", "es": "viajar", "lessons": ["d3", "l5", "l19"]},
+  {"v": "gostar", "es": "gustar", "lessons": ["d2", "l17", "pe"], "note": "siempre con «de»: Gosto de café."},
+  {"v": "visitar", "es": "visitar", "lessons": ["l13", "l19", "l21"]},
+  {"v": "terminar", "es": "terminar", "lessons": ["d3"]},
+  {"v": "praticar", "es": "practicar", "lessons": ["d3", "l7"]},
+  {"v": "ficar", "es": "quedarse; quedar; ponerse", "lessons": ["l7", "l15", "rev1"], "note": "Onde fica? = ¿Dónde queda? · Fiquei feliz = Me puse feliz."},
+  {"v": "jogar", "es": "jugar; tirar (jogar fora)", "lessons": ["d3", "l7", "l16"]},
+  {"v": "acordar", "es": "despertarse", "lessons": ["l5", "l7", "pe"], "note": "no es «acordarse» (lembrar-se)"},
+  {"v": "levantar-se", "es": "levantarse", "lessons": ["l5"]},
+  {"v": "escovar", "es": "cepillar", "lessons": ["l5", "l6"]},
+  {"v": "chegar", "es": "llegar", "lessons": ["l10", "l16", "l20"]},
+  {"v": "começar", "es": "empezar", "lessons": ["l13", "l16", "rev2"]},
+  {"v": "ligar", "es": "llamar (por teléfono); prender", "lessons": ["l16"]},
+  {"v": "conversar", "es": "conversar", "lessons": ["l7", "l15"]},
+  {"v": "preparar", "es": "preparar", "lessons": ["l7", "l10"]},
+  {"v": "nadar", "es": "nadar", "lessons": ["l7"]},
+  {"v": "brincar", "es": "jugar (como los niños)", "lessons": ["l7", "pe"], "note": "no es «brincar» (pular)"},
+  {"v": "cantar", "es": "cantar", "lessons": ["l7", "rev2"]},
+  {"v": "mudar-se", "es": "mudarse", "lessons": ["l16", "rev1"]},
+  {"v": "casar-se", "es": "casarse", "lessons": ["l16", "rev1"]},
+  {"v": "apaixonar-se", "es": "enamorarse", "lessons": ["rev1"]},
+  {"v": "passar", "es": "pasar; planchar (passar a roupa)", "lessons": ["l14", "l20"]},
+  {"v": "limpar", "es": "limpiar", "lessons": ["l14"]},
+  {"v": "tirar", "es": "sacar, quitar", "lessons": ["l7", "l14", "pe"], "note": "tirar uma foto = tomar una foto"},
+  {"v": "esperar", "es": "esperar", "lessons": ["l13", "l14", "rev1"]},
+  {"v": "pagar", "es": "pagar", "lessons": ["l20", "pe"]},
+  {"v": "ganhar", "es": "ganar; recibir de regalo", "lessons": ["l8"]},
+  {"v": "precisar", "es": "necesitar", "lessons": ["pe"]},
+  {"v": "chamar-se", "es": "llamarse", "lessons": ["d1"]},
+  {"v": "encontrar", "es": "encontrar", "lessons": ["l13", "rev2"]},
+  {"v": "descansar", "es": "descansar", "lessons": ["d3"]},
+  {"v": "recomendar", "es": "recomendar", "lessons": ["l13", "rev2"]},
+  {"v": "passear", "es": "pasear", "lessons": ["d2"]},
+  {"v": "deitar-se", "es": "acostarse", "lessons": ["l5"]},
+  {"v": "sentar-se", "es": "sentarse", "lessons": ["l5"]},
+  {"v": "pentear-se", "es": "peinarse", "lessons": ["l5"]},
+  {"v": "tocar", "es": "tocar (un instrumento)", "lessons": ["l17"]},
+  {"v": "voltar", "es": "volver, regresar", "lessons": ["l13", "l19"]},
+  {"v": "trocar", "es": "cambiar (una cosa por otra)", "lessons": ["l20"]},
+  {"v": "achar", "es": "creer, opinar; encontrar", "lessons": ["bn", "pe"], "note": "Acho que sim = Creo que sí."},
+  {"v": "tentar", "es": "intentar", "lessons": ["l10"]},
+  {"v": "procurar", "es": "buscar", "lessons": ["bn"], "note": "no es «procurar» (tentar)"},
+  {"v": "odiar", "es": "odiar", "lessons": ["l14"]},
+  {"v": "matar", "es": "matar", "lessons": ["l18"]},
+  {"v": "formar-se", "es": "graduarse", "lessons": ["l10"]},
+  {"v": "tornar-se", "es": "volverse, convertirse en", "lessons": ["l13", "l16"]},
+  {"v": "entrevistar", "es": "entrevistar", "lessons": ["l10", "bn"]},
+  {"v": "admirar", "es": "admirar", "lessons": ["bn"]},
+  {"v": "atuar", "es": "actuar; trabajar en un área", "lessons": ["l10", "bn"]},
+  {"v": "concordar", "es": "estar de acuerdo", "lessons": ["bn"]},
+  {"v": "enviar", "es": "enviar", "lessons": ["bn"]},
+  {"v": "comer", "es": "comer", "lessons": ["l4", "l7", "l15"]},
+  {"v": "beber", "es": "beber", "lessons": ["l4", "l7"]},
+  {"v": "escrever", "es": "escribir", "lessons": ["d2", "l4", "l16"]},
+  {"v": "aprender", "es": "aprender", "lessons": ["l4", "bn"]},
+  {"v": "vender", "es": "vender", "lessons": ["l7", "rev1"]},
+  {"v": "correr", "es": "correr", "lessons": ["l7"]},
+  {"v": "viver", "es": "vivir", "lessons": ["d3", "l5", "l16"]},
+  {"v": "varrer", "es": "barrer", "lessons": ["l14"]},
+  {"v": "receber", "es": "recibir", "lessons": ["l12", "l14", "bn"]},
+  {"v": "nascer", "es": "nacer", "lessons": ["l16"]},
+  {"v": "morrer", "es": "morir", "lessons": ["l13", "l20"]},
+  {"v": "desenvolver", "es": "desarrollar", "lessons": ["bn"]},
+  {"v": "acontecer", "es": "pasar, suceder", "lessons": ["l20", "rev1"]},
+  {"v": "partir", "es": "partir, irse", "lessons": ["l4"]},
+  {"v": "abrir", "es": "abrir", "lessons": ["l4", "pe"]},
+  {"v": "decidir", "es": "decidir", "lessons": ["l4", "rev1"]},
+  {"v": "assistir", "es": "ver (TV, películas)", "lessons": ["d3", "l4", "l7"], "note": "assistir a um filme = ver una película"},
+  {"v": "discutir", "es": "discutir", "lessons": ["l4"]},
+  {"v": "permitir", "es": "permitir", "lessons": ["l13"]},
+  {"v": "dirigir", "es": "manejar; dirigir", "lessons": ["l10"]},
+  {"v": "contar", "es": "contar", "lessons": ["l16"]},
+  {"v": "costumar", "es": "soler", "lessons": ["bn"]}
+ ]
+}

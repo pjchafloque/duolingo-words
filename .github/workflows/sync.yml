@@ -43,6 +43,13 @@ jobs:
           DUOLINGO_JWT: ${{ secrets.DUOLINGO_JWT }}
         run: python3 scripts/sync.py
 
+      # The "Aula" part of the Portuguese notebook: conjugates the class verbs
+      # and writes pronunciations for data/aula.json. It never stops the sync.
+      - name: Build the class notebook
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        run: python3 scripts/aula.py
+
       - name: Save changes
         if: ${{ !cancelled() }}
         run: |

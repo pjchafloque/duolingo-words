@@ -54,7 +54,7 @@ Everything comes from `data/aula.json`, written by hand. To add a word, find its
 
 ### From the page
 
-On a device where your GitHub token is saved, the toolbar has an "Editar" button. Turn it on, tap a blue pronunciation, type how the word sounds and press Enter. The page saves the fix to `data/overrides.json` as a commit, which runs the sync, and the public page shows it a minute or two later. Your own device shows it right away. Leave the box empty to get the automatic pronunciation back. It also works on the Aula vocabulary.
+On a device where your GitHub token is saved, the toolbar has an "Editar" button. Turn it on, tap a blue pronunciation, type how the word sounds and press Enter. The page saves the fix to `data/overrides.json` as a commit, which runs the sync, and the public page shows it a minute or two later. Your own device shows it right away. Leave the box empty to get the automatic pronunciation back. It also works on the Aula vocabulary. On a phone, tapping Done (or anywhere else) saves, and the × next to the box cancels.
 
 Only you can save. The page is static, so it has no way to check a password, but every save is a write to this repo, and GitHub only takes writes from you. The page makes them with a fine-grained GitHub token that only opens this repo. To set it up:
 

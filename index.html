@@ -328,7 +328,7 @@ body.editing .pron[data-key] {
 }
 body.editing .pron[data-key]:hover, body.editing .pron[data-key]:focus-visible { background: var(--pen-wash); }
 body.editing .pron[data-key]:empty::before { content: "+"; opacity: .6; }
-body.editing .pron.is-editing { text-decoration: none; background: none; }
+body.editing .pron[data-key].is-editing { text-decoration: none; background: none; }
 .pron.saving, .pron.pending { opacity: .5; }
 .pron-in {
   max-width: 100%;
@@ -343,6 +343,28 @@ body.editing .pron.is-editing { text-decoration: none; background: none; }
   font: italic 400 19px/30px var(--serif);
 }
 .pron-in:focus { outline: none; }
+.pron-x {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 0 8px;
+  padding: 0;
+  border: 1px solid var(--tape-edge);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font: 400 20px/27px var(--serif);
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+}
+/* Touch screens: a finger needs more room than the text itself, and there's
+   no Esc key, so the box gets a × to cancel. */
+@media (pointer: coarse) {
+  body.editing .pron[data-key] { position: relative; }
+  body.editing .pron[data-key]:not(.is-editing)::after { content: ""; position: absolute; inset: -7px -30px -7px -10px; }
+  .pron-in { max-width: calc(100% - 40px); }
+}
 .editbar { flex: 1 0 100%; margin: 0; color: var(--ink-soft); font: italic 400 16px/24px var(--serif); }
 .toast {
   position: fixed;
@@ -378,6 +400,7 @@ body.editing .pron.is-editing { text-decoration: none; background: none; }
 }
 .key::backdrop { background: rgba(19, 22, 40, .45); }
 .key h2 { margin: 0 0 8px; font: 300 24px/56px var(--script); }
+.key h2:focus { outline: none; }
 .key p, .key ol { margin: 0 0 12px; }
 .key ol { padding-left: 1.3em; }
 .key li { margin: 0 0 8px; }
@@ -817,6 +840,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       aulaAbout: "Las palabras y los temas salen de las diapositivas de PORT 12200 y de Portuguese for the Profession; las explicaciones y los ejemplos están escritos aparte. Para agregar o corregir algo, edita data/aula.json en GitHub.",
       edit: "Editar", editTitle: "Corregir cómo se lee una palabra",
       editHint: "Toca un texto azul para cambiarlo. Enter guarda y Esc cancela. Si lo dejas vacío, vuelve la pronunciación automática.",
+      editHintTouch: "Toca un texto azul para cambiarlo. Se guarda cuando tocas «Listo» o fuera del texto, y la × cancela. Si lo dejas vacío, vuelve la pronunciación automática.",
       editOne: w => `Cómo se lee «${w}»`,
       editLink: "Editar pronunciaciones", forgetKey: "Quitar el token de este dispositivo",
       forgetAsk: "¿Quitar tu token de GitHub de este dispositivo? Para volver a editar aquí tendrás que pegarlo otra vez.",
@@ -893,6 +917,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       aulaAbout: "Words and topics come from the PORT 12200 and Portuguese for the Profession slides; the explanations and examples were written separately. To add or fix something, edit data/aula.json on GitHub.",
       edit: "Edit", editTitle: "Fix how a word reads",
       editHint: "Tap a blue text to change it. Enter saves and Esc cancels. Leave it empty to get the automatic pronunciation back.",
+      editHintTouch: "Tap a blue text to change it. It saves when you tap Done or anywhere else, and × cancels. Leave it empty to get the automatic pronunciation back.",
       editOne: w => `How “${w}” reads`,
       editLink: "Edit pronunciations", forgetKey: "Remove the token from this device",
       forgetAsk: "Remove your GitHub token from this device? To edit here again you'll have to paste it again.",
@@ -1274,7 +1299,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     $("#edit").title = s.editTitle;
     $("#edit").setAttribute("aria-pressed", String(state.editing));
     $("#editbar").hidden = !state.editing;
-    $("#editbar").textContent = s.editHint;
+    $("#editbar").textContent = touchScreen() ? s.editHintTouch : s.editHint;
     $("#editLink").hidden = !canEdit;
     $("#editLink").textContent = edits.token ? s.forgetKey : s.editLink;
 
@@ -2493,7 +2518,10 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
   }
 
   // ---- Editing a blue text in place ----
-  function startEdit(span) {
+  const touchScreen = () => matchMedia("(pointer: coarse)").matches;
+  const openEditors = new WeakMap(); // span → its finish(save)
+  let lastClosed = { span: null, at: 0 }; // so the tap that closed a box doesn't reopen it
+  function startEdit(span, viaKeyboard) {
     if (span.querySelector("input")) return;
     const c = course();
     if (!c) return;
@@ -2515,26 +2543,47 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     span.textContent = "";
     span.classList.add("is-editing");
     span.append(input);
+    // Phones have no Esc key: a × next to the box cancels instead.
+    let cancelled = false;
+    if (touchScreen()) {
+      const x = document.createElement("button");
+      x.type = "button";
+      x.className = "pron-x";
+      x.textContent = "×";
+      x.setAttribute("aria-label", t().cancel);
+      // Keep the focus in the box (so the tap reaches the ×), and mark the
+      // cancel early in case the browser moves the focus anyway.
+      x.addEventListener("mousedown", (e) => e.preventDefault());
+      x.addEventListener("pointerdown", () => { cancelled = true; });
+      span.append(x);
+    }
     input.focus();
-    input.select();
+    input.setSelectionRange(0, input.value.length);
     let done = false;
-    const finish = (save) => {
+    const finish = (save, byTap) => {
       if (done) return;
       done = true;
+      openEditors.delete(span);
+      if (byTap) lastClosed = { span, at: Date.now() };
       const val = input.value.replace(/\s+/g, " ").trim().normalize("NFC");
       span.classList.remove("is-editing");
-      input.remove();
       span.textContent = old;
       if (!save || val === old) return;
       if (!val && !handFixed(code, key)) return; // it's already the automatic one
       queueFix(code, from, key, val || null);
     };
+    openEditors.set(span, finish);
+    // Only put the focus back on the blue text if you got here with the keyboard.
+    const back = () => { if (viaKeyboard) span.focus(); };
     input.addEventListener("input", fit);
+    input.addEventListener("focus", () => { cancelled = false; });
     input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") { e.preventDefault(); finish(true); span.focus(); }
-      else if (e.key === "Escape") { e.preventDefault(); finish(false); span.focus(); }
+      if (e.key === "Enter") { e.preventDefault(); finish(true); back(); }
+      else if (e.key === "Escape") { e.preventDefault(); finish(false); back(); }
     });
-    input.addEventListener("blur", () => finish(true));
+    // Tapping "Done" or anywhere else saves; the × cancels. Wait a moment so a
+    // tap on the × has been seen first.
+    input.addEventListener("blur", () => setTimeout(() => finish(!cancelled, true), 0));
   }
   // These run before the list's own handlers, so tapping a blue text edits it
   // instead of playing the word.
@@ -2543,13 +2592,15 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     const span = e.target.closest(".pron[data-key]");
     if (!span) return;
     e.stopPropagation();
-    startEdit(span);
+    if (e.target.closest(".pron-x")) { const finish = openEditors.get(span); if (finish) finish(false, true); return; }
+    if (lastClosed.span === span && Date.now() - lastClosed.at < 600) return;
+    startEdit(span, false);
   }, true);
   $("#list").addEventListener("keydown", (e) => {
     if (!state.editing || e.key !== "Enter" || !e.target.matches || !e.target.matches(".pron[data-key]")) return;
     e.preventDefault();
     e.stopPropagation();
-    startEdit(e.target);
+    startEdit(e.target, true);
   }, true);
 
   // ---- Turning it on and off ----
@@ -2575,7 +2626,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     const s = t();
     const d = $("#key");
     d.innerHTML = `<form method="dialog" id="keyForm">` +
-      `<h2 id="keyTitle">${esc(s.keyTitle)}</h2>` +
+      `<h2 id="keyTitle" tabindex="-1">${esc(s.keyTitle)}</h2>` +
       (reason ? `<p class="err">${esc(reason)}</p>` : "") +
       `<p>${esc(s.keyIntro)}</p>` +
       `<p class="small">${esc(s.keySafe)}</p>` +
@@ -2586,7 +2637,9 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       `<p class="btns"><button type="button" class="cancel" id="keyCancel">${esc(s.cancel)}</button>` +
       `<button type="submit" class="go" id="keyGo">${esc(s.keySave)}</button></p></form>`;
     if (!d.open) d.showModal();
-    $("#keyIn").focus();
+    // On a phone, focusing the box would pop the keyboard up over the steps.
+    if (touchScreen()) d.querySelector("h2").focus({ preventScroll: true });
+    else $("#keyIn").focus();
   }
   $("#key").addEventListener("click", (e) => {
     const d = $("#key");

@@ -1,7 +1,7 @@
 {
  "version": 1,
  "current": "fr-es",
- "updated": "2026-11-12T20:01:26Z",
+ "updated": "2026-11-12T20:12:34Z",
  "courses": {
   "fr-es": {
    "learning": "fr",
@@ -164,10 +164,10 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/aa532805daa49b544189280b9706f089",
      "added": "2026-11-11T22:35:48Z",
      "seq": 7,
-     "pron": "cruasán",
+     "pron": "quasan",
      "ipa": "kʁwasˈɑ̃",
      "pron_v": 2,
-     "pron_src": "auto"
+     "pron_src": "you"
     },
     {
      "text": "s'il vous plaît",
@@ -252,7 +252,7 @@
    "dropped": {},
    "duolingo_total": 18,
    "count": 18,
-   "updated": "2026-11-12T20:01:26Z"
+   "updated": "2026-11-12T20:12:34Z"
   },
   "pt-es": {
    "learning": "pt",

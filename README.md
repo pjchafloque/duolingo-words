@@ -29,7 +29,7 @@ Open the page in Safari, tap Share, then "Add to Home Screen". It gets the owl-a
 - `scripts/pronounce.py` writes the pronunciations. eSpeak NG, a free speech program, gives the sounds, and a table turns them into Spanish spelling with Spanish accent rules: `bonjour` becomes "bonyur", `merci` becomes "mersí", `croissant` becomes "cruasán".
 - `index.html` is the page, including the class notebook (see below). The play button uses Duolingo's own recording of the word, or your browser's French voice when there isn't one. "Repaso" covers the meanings so you can quiz yourself, and "Lento" slows the audio down.
 
-Duolingo has no official API. This uses the same requests the Duolingo website makes, so it can stop working if Duolingo changes them. Duolingo's terms also say content shouldn't be downloaded or scraped, so strictly speaking this breaks them. It only reads your own list, a few times a day. The page is public, so anyone with the link can see your word list. The token is never on the page.
+Duolingo has no official API. This uses the same requests the Duolingo website makes, so it can stop working if Duolingo changes them. Duolingo's terms also say content shouldn't be downloaded or scraped, so strictly speaking this breaks them. It only reads your own list, a few times a day. The page is public, so anyone with the link can see your word list. The Duolingo token is never on the page.
 
 ## French and Portuguese
 
@@ -51,6 +51,21 @@ The lesson menu in the toolbar shows everything from one class at once, and the 
 Everything comes from `data/aula.json`, written by hand. To add a word, find its topic under `sections` → `vocabulario` and add a line like `["a praia", "la playa"]` (a third item is a note). Verbs go in `verbs` as `{"v": "falar", "es": "hablar", "lessons": ["d2"]}`. On each run, `scripts/aula.py` conjugates the verbs into `data/aula-verbos.json` and writes the pronunciations into `data/aula-pron.json` with the same eSpeak converter as the Duolingo words. Irregular verbs are listed in that script.
 
 ## Fixing a pronunciation
+
+### From the page
+
+On a device where your GitHub token is saved, the toolbar has an "Editar" button. Turn it on, tap a blue pronunciation, type how the word sounds and press Enter. The page saves the fix to `data/overrides.json` as a commit, which runs the sync, and the public page shows it a minute or two later. Your own device shows it right away. Leave the box empty to get the automatic pronunciation back. It also works on the Aula vocabulary.
+
+Only you can save. The page is static, so it has no way to check a password, but every save is a write to this repo, and GitHub only takes writes from you. The page makes them with a fine-grained GitHub token that only opens this repo. To set it up:
+
+1. On the page, click "Editar pronunciaciones" at the bottom. The box that opens has a link to GitHub with the token's name and permission already filled in.
+2. On GitHub, under "Repository access", pick "Only select repositories" and choose duolingo-words. Check that Contents says "Read and write", generate the token and paste it into the box.
+
+Do this once on each device. On the iPhone, paste it inside the Home Screen app, because that app keeps its data apart from Safari (copying on the Mac and pasting on the iPhone works with Universal Clipboard). The token stays in that browser's storage and is only sent to api.github.com. Visitors don't have it, so they never see the Editar button, and GitHub would refuse a change from anyone else anyway.
+
+To stop editing on one device, click "Quitar el token de este dispositivo" at the bottom of the page. To turn it off everywhere, delete the token on GitHub (Settings → Developer settings → Personal access tokens). If GitHub stops accepting the token, the page asks for a new one.
+
+### By hand
 
 Edit `data/overrides.json` on GitHub (the pencil icon) and add the word under its course, `"fr"` or `"pt"`:
 

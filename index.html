@@ -318,6 +318,98 @@ footer button { padding: 0; border: 0; background: none; color: var(--pen); font
 
 [hidden] { display: none !important; }
 
+/* ---- Edit mode: fix a pronunciation from the page. The Editar button only
+   shows up in a browser where your GitHub token is saved. ---- */
+body.editing .pron[data-key] {
+  cursor: text;
+  border-radius: 3px;
+  text-decoration: underline dashed 1px;
+  text-underline-offset: 6px;
+}
+body.editing .pron[data-key]:hover, body.editing .pron[data-key]:focus-visible { background: var(--pen-wash); }
+body.editing .pron[data-key]:empty::before { content: "+"; opacity: .6; }
+body.editing .pron.is-editing { text-decoration: none; background: none; }
+.pron.saving, .pron.pending { opacity: .5; }
+.pron-in {
+  max-width: 100%;
+  height: 30px;
+  margin: 0 -4px;
+  padding: 0 4px;
+  border: 0;
+  border-bottom: 1.5px solid var(--pen);
+  border-radius: 3px 3px 0 0;
+  background: var(--pen-wash);
+  color: var(--pen);
+  font: italic 400 19px/30px var(--serif);
+}
+.pron-in:focus { outline: none; }
+.editbar { flex: 1 0 100%; margin: 0; color: var(--ink-soft); font: italic 400 16px/24px var(--serif); }
+.toast {
+  position: fixed;
+  z-index: 20;
+  left: 50%;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: min(36em, calc(100vw - 32px));
+  margin: 0;
+  padding: 10px 18px;
+  border: 1px solid var(--tape-edge);
+  border-left: 3px solid var(--pen);
+  border-radius: 4px;
+  background: var(--paper);
+  box-shadow: 0 1px 2px rgba(29, 33, 64, .14), 0 10px 24px rgba(29, 33, 64, .16);
+  color: var(--ink);
+  font: 400 16px/24px var(--serif);
+  cursor: pointer;
+}
+.toast.bad { border-left-color: var(--red-pen); }
+.toast.wait { border-left-color: var(--ink-soft); color: var(--ink-soft); font-style: italic; }
+.key {
+  width: min(560px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  padding: 16px 28px 20px;
+  border: 1px solid var(--tape-edge);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 2px 4px rgba(29, 33, 64, .12), 0 18px 40px rgba(29, 33, 64, .22);
+  font: 400 17px/26px var(--serif);
+}
+.key::backdrop { background: rgba(19, 22, 40, .45); }
+.key h2 { margin: 0 0 8px; font: 300 24px/56px var(--script); }
+.key p, .key ol { margin: 0 0 12px; }
+.key ol { padding-left: 1.3em; }
+.key li { margin: 0 0 8px; }
+.key input {
+  width: 100%;
+  height: 36px;
+  padding: 0 2px;
+  border: 0;
+  border-bottom: 1.5px solid var(--ink-soft);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: 400 16px/34px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.key input:focus { outline: none; border-bottom-color: var(--pen); }
+.key .small { color: var(--ink-soft); font-size: 15px; line-height: 22px; }
+.key .err { color: var(--red-pen); }
+.key .btns { display: flex; justify-content: flex-end; gap: 12px; margin: 16px 0 0; }
+.key .btns button { height: 36px; padding: 0 18px; border-radius: 18px; font: 400 17px/32px var(--serif); cursor: pointer; }
+.key .cancel { border: 0; background: none; color: var(--ink-soft); }
+.key .go { border: 1.5px solid var(--pen); background: var(--pen); color: var(--paper); }
+.key .go:disabled { opacity: .6; cursor: progress; }
+.key { overflow: auto; overscroll-behavior: contain; }
+@media (max-width: 479px) {
+  .key { padding: 8px 18px 14px; font-size: 16px; line-height: 23px; }
+  .key h2 { font-size: 21px; line-height: 44px; margin: 0 0 4px; }
+  .key p, .key ol { margin: 0 0 8px; }
+  .key li { margin: 0 0 4px; }
+  .key .small { font-size: 14px; line-height: 20px; }
+  .key .btns { margin-top: 10px; }
+}
+
 /* ---- Divider tabs inside the Portuguese notebook: Duolingo | Aula ---- */
 .views { display: flex; gap: 0 10px; height: 32px; margin: -32px 0 32px; }
 .view {
@@ -635,7 +727,9 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       <button type="button" class="toggle" id="week" aria-pressed="false">Esta semana</button>
       <button type="button" class="toggle" id="quiz" aria-pressed="false">Repaso</button>
       <button type="button" class="toggle" id="slow" aria-pressed="false">Lento</button>
+      <button type="button" class="toggle" id="edit" aria-pressed="false" hidden>Editar</button>
     </div>
+    <p class="editbar" id="editbar" hidden></p>
   </div>
 
   <main id="list"></main>
@@ -653,9 +747,13 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       <a href="#" id="syncLink" hidden>Sincronizar ahora</a>
       <a href="tools.html" id="toolsLink">Exportar a mano</a>
       <a href="#" id="repoLink" hidden>Código en GitHub</a>
+      <button type="button" id="editLink" hidden>Editar pronunciaciones</button>
     </p>
   </footer>
 </div>
+
+<dialog class="key" id="key" aria-labelledby="keyTitle"></dialog>
+<p class="toast" id="toast" role="status" aria-live="polite" hidden></p>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-speaker" viewBox="0 0 16 16"><path d="M2 6h2.6L8.5 2.8v10.4L4.6 10H2z" fill="currentColor"/><path d="M11 5.2c.9.8 1.4 1.7 1.4 2.8s-.5 2-1.4 2.8M12.9 3.3C14.3 4.6 15 6.2 15 8s-.7 3.4-2.1 4.7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
@@ -695,7 +793,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       noAudio: "Este navegador no puede leer palabras en voz alta.",
       legendTitle: "Cómo leer la pronunciación",
       legendIntro: "La pronunciación está escrita con letras del español. Estas son las que se leen distinto:",
-      about: "Las palabras vienen de tu lista de Duolingo y se actualizan solas cada hora. Si una pronunciación no te convence, corrígela en data/overrides.json.",
+      about: "Las palabras vienen de tu lista de Duolingo y se actualizan solas cada hora. Si una pronunciación no te convence, corrígela con «Editar pronunciaciones», aquí abajo, o en data/overrides.json.",
       tools: "Exportar a mano (plan B)", repo: "Código en GitHub", other: "English",
       loadError: "No se pudo leer data/words.json. Revisa que el archivo exista en el repositorio.",
       until: d => `Hasta el ${d}`,
@@ -717,6 +815,33 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       allVerbs: n => `Ver los ${num(n)} verbos`, redIrr: "En rojo, los irregulares.", seenIn: "Visto en",
       tlImp: "el fondo, lo que estaba pasando", tlPret: "lo que pasó",
       aulaAbout: "Las palabras y los temas salen de las diapositivas de PORT 12200 y de Portuguese for the Profession; las explicaciones y los ejemplos están escritos aparte. Para agregar o corregir algo, edita data/aula.json en GitHub.",
+      edit: "Editar", editTitle: "Corregir cómo se lee una palabra",
+      editHint: "Toca un texto azul para cambiarlo. Enter guarda y Esc cancela. Si lo dejas vacío, vuelve la pronunciación automática.",
+      editOne: w => `Cómo se lee «${w}»`,
+      editLink: "Editar pronunciaciones", forgetKey: "Quitar el token de este dispositivo",
+      forgetAsk: "¿Quitar tu token de GitHub de este dispositivo? Para volver a editar aquí tendrás que pegarlo otra vez.",
+      saving: w => w ? `Guardando «${w}»…` : "Guardando…",
+      saved: list => `Guardado: ${list}. Aquí ya lo ves, y la página pública se actualiza en uno o dos minutos.`,
+      auto: "la automática",
+      quote: w => `«${w}»`,
+      notSaved: (names, why) => `No se guardó ${names}. ${why}`,
+      errNet: "No hubo conexión con GitHub. Inténtalo otra vez.",
+      errPerm: "Tu token no puede escribir en duolingo-words. En GitHub, abre el token, dale acceso a duolingo-words y pon Contents en «Read and write». No hace falta crear otro.",
+      errBroken: "data/overrides.json tiene un error de formato. Arréglalo en GitHub y vuelve a intentarlo.",
+      errConflict: "El archivo cambió mientras guardabas. Inténtalo otra vez.",
+      errOther: code => `GitHub respondió con un error (${code}). Inténtalo en un rato.`,
+      keyTitle: "Editar pronunciaciones",
+      keyIntro: "Los cambios se guardan en tu repositorio de GitHub, donde solo tú puedes escribir. Para guardarlos desde aquí, la página necesita un token de GitHub: una llave que solo tú puedes crear y que solo abre duolingo-words.",
+      keySafe: "El token se queda en este navegador y solo se envía a GitHub. Quien entre a la página sin él no ve el botón Editar, y GitHub rechaza cualquier cambio que no lo traiga.",
+      keyStep1: (url, repo) => `<a href="${esc(url)}" target="_blank" rel="noopener">Crea el token en GitHub</a>. Ya viene con nombre y permiso. En «Repository access» elige «Only select repositories» y marca ${esc(repo)}, revisa que Contents diga «Read and write» y pulsa «Generate token».`,
+      keyStep2: "Copia el token (empieza con github_pat_) y pégalo aquí:",
+      keyLabel: "Token de GitHub",
+      keyNote: "Hazlo una vez en cada dispositivo. En el iPhone, pégalo dentro de la app de la pantalla de inicio, que guarda sus datos aparte de Safari.",
+      keySave: "Guardar", cancel: "Cancelar", keyChecking: "Comprobando…",
+      keyEmpty: "Pega el token primero.",
+      keyBad: "GitHub no reconoce ese token. Revisa que lo hayas copiado entero.",
+      keyExpired: "GitHub ya no acepta tu token (quizá lo borraste o venció). Crea uno nuevo y pégalo aquí.",
+      keyOk: "Listo. Toca un texto azul para corregirlo.",
     },
     en: {
       search: "Search",
@@ -744,7 +869,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       noAudio: "This browser can't read words aloud.",
       legendTitle: "How to read the pronunciation",
       legendIntro: "Pronunciations are written with Spanish letters. These are the ones that read differently:",
-      about: "Words come from your Duolingo list and update on their own every hour. If a pronunciation looks wrong, fix it in data/overrides.json.",
+      about: "Words come from your Duolingo list and update on their own every hour. If a pronunciation looks wrong, fix it with “Edit pronunciations” below, or in data/overrides.json.",
       tools: "Export by hand (plan B)", repo: "Code on GitHub", other: "Español",
       loadError: "Couldn't read data/words.json. Check that the file exists in the repository.",
       until: d => `Until ${d}`,
@@ -766,6 +891,33 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       allVerbs: n => `See all ${num(n)} verbs`, redIrr: "Irregular ones in red.", seenIn: "Seen in",
       tlImp: "the background, what was going on", tlPret: "what happened",
       aulaAbout: "Words and topics come from the PORT 12200 and Portuguese for the Profession slides; the explanations and examples were written separately. To add or fix something, edit data/aula.json on GitHub.",
+      edit: "Edit", editTitle: "Fix how a word reads",
+      editHint: "Tap a blue text to change it. Enter saves and Esc cancels. Leave it empty to get the automatic pronunciation back.",
+      editOne: w => `How “${w}” reads`,
+      editLink: "Edit pronunciations", forgetKey: "Remove the token from this device",
+      forgetAsk: "Remove your GitHub token from this device? To edit here again you'll have to paste it again.",
+      saving: w => w ? `Saving “${w}”…` : "Saving…",
+      saved: list => `Saved: ${list}. You already see it here, and the public page updates in a minute or two.`,
+      auto: "automatic",
+      quote: w => `“${w}”`,
+      notSaved: (names, why) => `${names} wasn't saved. ${why}`,
+      errNet: "Couldn't reach GitHub. Try again.",
+      errPerm: "Your token can't write to duolingo-words. On GitHub, open the token, give it access to duolingo-words and set Contents to “Read and write”. You don't need a new one.",
+      errBroken: "data/overrides.json has a formatting error. Fix it on GitHub and try again.",
+      errConflict: "The file changed while saving. Try again.",
+      errOther: code => `GitHub answered with an error (${code}). Try again in a bit.`,
+      keyTitle: "Edit pronunciations",
+      keyIntro: "Changes are saved to your GitHub repository, where only you can write. To save them from here, the page needs a GitHub token: a key that only you can create and that only opens duolingo-words.",
+      keySafe: "The token stays in this browser and is only ever sent to GitHub. Anyone who opens the page without it doesn't see the Edit button, and GitHub turns down any change that doesn't carry it.",
+      keyStep1: (url, repo) => `<a href="${esc(url)}" target="_blank" rel="noopener">Create the token on GitHub</a>. Its name and permission are already filled in. Under “Repository access” pick “Only select repositories” and check ${esc(repo)}, make sure Contents says “Read and write”, then press “Generate token”.`,
+      keyStep2: "Copy the token (it starts with github_pat_) and paste it here:",
+      keyLabel: "GitHub token",
+      keyNote: "Do this once on each device. On the iPhone, paste it inside the Home Screen app, which keeps its data apart from Safari.",
+      keySave: "Save", cancel: "Cancel", keyChecking: "Checking…",
+      keyEmpty: "Paste the token first.",
+      keyBad: "GitHub doesn't recognize that token. Check that you copied all of it.",
+      keyExpired: "GitHub no longer accepts your token (maybe you deleted it or it expired). Create a new one and paste it here.",
+      keyOk: "Done. Tap a blue text to fix it.",
     },
   };
 
@@ -861,6 +1013,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     q: "", sort: store.get("sort", "recent"), week: false,
     quiz: store.get("quiz", false), slow: store.get("slow", false),
     view: store.get("view", "duolingo"), // inside the Portuguese notebook: "duolingo" or "aula"
+    editing: false, // fixing pronunciations (only possible with your GitHub token)
   };
   const revealed = new Set();
 
@@ -983,6 +1136,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     if (!data) { showLoadError(); return; }
     data.courses = data.courses || {};
     state.data = data;
+    reconcilePending();
     state.courseKey = pickCourse();
     const c = course();
     lang = store.get("lang", c && c.from === "en" ? "en" : "es");
@@ -1111,6 +1265,19 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       $("#secs").setAttribute("aria-label", s.secsLabel);
       $("#lessonLabel").textContent = s.lessonLabel;
     }
+    // Editing: the button only exists where your token is saved.
+    const canEdit = !!repoName();
+    if (!canEdit || !edits.token) state.editing = false;
+    document.body.classList.toggle("editing", state.editing);
+    $("#edit").hidden = !(canEdit && edits.token);
+    $("#edit").textContent = s.edit;
+    $("#edit").title = s.editTitle;
+    $("#edit").setAttribute("aria-pressed", String(state.editing));
+    $("#editbar").hidden = !state.editing;
+    $("#editbar").textContent = s.editHint;
+    $("#editLink").hidden = !canEdit;
+    $("#editLink").textContent = edits.token ? s.forgetKey : s.editLink;
+
     $("#langToggle").textContent = s.other;
     $("#toolsLink").textContent = s.tools;
     $("#repoLink").textContent = s.repo;
@@ -1181,7 +1348,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     return `<li class="entry" data-i="${idx}">` +
       `<button type="button" class="play" aria-label="${esc(s.play(w.text))}">${SPEAKER}</button>` +
       `<span class="word" lang="${esc(c.learning)}">${esc(w.text)}</span>` +
-      `<span class="pron"${w.ipa ? ` title="/${esc(w.ipa)}/"` : ""}>${esc(w.pron || "")}</span>` +
+      `<span class="pron${pronExtra(c.learning, w.text)}"${pronAttrs(w.text)}${w.ipa ? ` title="/${esc(w.ipa)}/"` : ""}>${esc(pendingPron(c.learning, w.text) || w.pron || "")}</span>` +
       `<span class="meaning${covered ? " covered" : ""}">` +
         `<button type="button" class="tape" aria-label="${esc(s.reveal(w.text))}"></button>` +
         `<span class="text" lang="${esc(c.from)}">${esc(meaning)}</span>` +
@@ -1399,6 +1566,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       if (aula.lesson && !aula.lessons.has(aula.lesson)) aula.lesson = "";
       if (!aula.verbMap.has(aula.verb)) aula.verb = aula.verbMap.has("fazer") ? "fazer" : (aula.verbs[0] || {}).v;
       aula.status = "ready";
+      reconcilePending();
     }).catch(() => { aula.status = "error"; })
       .then(() => { if (inAula()) { syncHash(); render(); } });
   }
@@ -1431,6 +1599,8 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
   }
   function pronOf(text) {
     const p = aula.pron[text];
+    const mine = pendingPron("pt", text); // a fix you just saved that isn't published yet
+    if (mine) return { pron: mine, ipa: (p && p[1]) || "" };
     if (p && p[0]) return { pron: p[0], ipa: p[1] || "" };
     const w = duoMap().get(norm(text));
     return w && w.pron ? { pron: w.pron, ipa: w.ipa || "" } : { pron: "", ipa: "" };
@@ -1500,7 +1670,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     return `<li class="entry say" data-say="${esc(pt)}">` +
       `<button type="button" class="play" aria-label="${esc(s.play(speakable(pt)))}">${SPEAKER}</button>` +
       `<span class="word" lang="pt">${esc(pt)}${duo ? `<span class="duo" title="${esc(s.inDuo)}" aria-label="${esc(s.inDuo)}">✓</span>` : ""}</span>` +
-      `<span class="pron"${ipa ? ` title="/${esc(ipa)}/"` : ""}>${esc(pron)}</span>` +
+      `<span class="pron${pronExtra("pt", pt)}"${pronAttrs(pt)}${ipa ? ` title="/${esc(ipa)}/"` : ""}>${esc(pron)}</span>` +
       `<span class="meaning${covered ? " covered" : ""}">` +
         `<button type="button" class="tape" data-k="${esc(k)}" aria-label="${esc(s.reveal(speakable(pt)))}"></button>` +
         `<span class="text" lang="es">${esc(es)}</span>` +
@@ -2076,6 +2246,379 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     if (window.scrollY > top) window.scrollTo({ top });
   });
   $("#lesson").addEventListener("change", (e) => setLesson(e.target.value));
+
+  // ===== Fixing a pronunciation from the page =====
+  // The page is static, so it can't check a password. What it can do is write
+  // to data/overrides.json in your GitHub repo, and GitHub only lets you do
+  // that. The key is a fine-grained GitHub token that only opens this repo:
+  // it's kept in this browser (localStorage) and only ever sent to
+  // api.github.com. Without it there's no Editar button, and GitHub turns down
+  // any write that doesn't carry it. Each save is a commit, which runs the sync
+  // and republishes the page a minute or two later.
+  const FILE = "contents/data/overrides.json";
+  const PENDING_MS = 30 * 60 * 1000;
+  const loadPending = () => {
+    const p = store.get("pendingPron", {});
+    return p && typeof p === "object" && !Array.isArray(p) ? p : {};
+  };
+  const edits = {
+    token: store.get("ghToken", ""),
+    pending: loadPending(), // fixes saved on GitHub that the published page may not show yet
+    queue: new Map(), // waiting to be saved
+    busy: new Set(), // being saved right now
+  };
+  const editId = (code, key) => code + "\u0000" + key;
+  const savePending = () => store.set("pendingPron", edits.pending);
+
+  function repoName() {
+    if (state.status && state.status.repo) return state.status.repo;
+    const host = location.hostname.match(/^([\w-]+)\.github\.io$/i);
+    const first = location.pathname.split("/").filter(Boolean)[0];
+    return host && first && !/\.html?$/i.test(first) ? `${host[1]}/${first}` : "";
+  }
+  function tokenUrl() {
+    const repo = repoName().split("/")[1] || "duolingo-words";
+    const q = new URLSearchParams({
+      name: "Carnet: editar pronunciaciones",
+      description: `Lets the ${repo} page save pronunciation fixes to data/overrides.json.`,
+      expires_in: "none",
+      contents: "write",
+    });
+    return "https://github.com/settings/personal-access-tokens/new?" + q;
+  }
+
+  // ---- What a blue text shows while a fix is on its way ----
+  function pendingPron(code, key) {
+    const p = (edits.pending[code] || {})[key];
+    return p && p.pron ? p.pron : "";
+  }
+  function pronExtra(code, key) {
+    const id = editId(code, key);
+    if (edits.queue.has(id) || edits.busy.has(id)) return " saving";
+    const p = (edits.pending[code] || {})[key];
+    return p && !p.pron ? " pending" : ""; // going back to the automatic one
+  }
+  function pronAttrs(key) {
+    return ` data-key="${esc(key)}"` + (state.editing ? ` tabindex="0"` : "");
+  }
+  // What the published files say about a word.
+  function published(code, key) {
+    for (const c of Object.values((state.data && state.data.courses) || {})) {
+      if (c.learning !== code) continue;
+      for (const w of c.words || []) if (w.text === key) return { found: true, pron: w.pron || "", mine: w.pron_src === "you" };
+    }
+    const a = code === "pt" && aula.status === "ready" ? aula.pron[key] : null;
+    if (a) return { found: true, pron: a[0] || "", mine: a[2] === "you" };
+    return { found: false };
+  }
+  function handFixed(code, key) {
+    const p = (edits.pending[code] || {})[key];
+    return p ? !!p.pron : !!published(code, key).mine;
+  }
+  // Forget a pending fix once the published page has it (or after half an hour).
+  function reconcilePending() {
+    const now = Date.now();
+    let changed = false;
+    for (const [code, table] of Object.entries(edits.pending)) {
+      for (const [key, p] of Object.entries(table || {})) {
+        const id = editId(code, key);
+        if (edits.queue.has(id) || edits.busy.has(id)) continue;
+        if (!p || !(now - p.at < PENDING_MS)) { delete table[key]; changed = true; continue; }
+        const pub = published(code, key);
+        if (pub.found && (p.pron ? pub.pron === p.pron : !pub.mine)) { delete table[key]; changed = true; }
+      }
+      if (!table || !Object.keys(table).length) { delete edits.pending[code]; changed = true; }
+    }
+    if (changed) savePending();
+  }
+  function dropPending(code, key, at) {
+    const table = edits.pending[code];
+    if (!table || !table[key] || table[key].at !== at) return;
+    delete table[key];
+    if (!Object.keys(table).length) delete edits.pending[code];
+    savePending();
+  }
+  function shownPron(code, key) {
+    if (inAula()) return pronOf(key).pron;
+    const c = course();
+    const w = ((c && c.words) || []).find((x) => x.text === key);
+    return pendingPron(code, key) || (w && w.pron) || "";
+  }
+  function refreshPron(code, key) {
+    const c = course();
+    if (!c || c.learning !== code) return;
+    for (const el of document.querySelectorAll("#list .pron[data-key]")) {
+      if (el.dataset.key !== key || el.querySelector("input")) continue;
+      el.textContent = shownPron(code, key);
+      el.className = "pron" + pronExtra(code, key);
+    }
+  }
+
+  // ---- Messages ----
+  let toastTimer = null;
+  function toast(msg, kind) {
+    const el = $("#toast");
+    clearTimeout(toastTimer);
+    el.textContent = msg;
+    el.className = "toast" + (kind ? " " + kind : "");
+    el.hidden = false;
+    if (kind === "ok") toastTimer = setTimeout(() => { el.hidden = true; }, 8000);
+  }
+  $("#toast").addEventListener("click", () => { $("#toast").hidden = true; });
+
+  // ---- GitHub ----
+  function ghError(kind, status) { const e = new Error(kind); e.kind = kind; e.status = status; return e; }
+  async function gh(method, path, body, token = edits.token) {
+    let r;
+    try {
+      r = await fetch(`https://api.github.com/repos/${repoName()}/${path}`, {
+        method,
+        cache: "no-store",
+        headers: Object.assign({ Accept: "application/vnd.github+json", Authorization: `Bearer ${token}` },
+          body ? { "Content-Type": "application/json" } : {}),
+        body: body ? JSON.stringify(body) : undefined,
+      });
+    } catch { throw ghError("net", 0); }
+    const data = await r.json().catch(() => null);
+    if (r.ok) return data;
+    const msg = String((data && data.message) || "");
+    const kind = r.status === 401 ? "auth"
+      : r.status === 403 || r.status === 404 ? "perm"
+      : r.status === 409 || (r.status === 422 && /sha/i.test(msg)) ? "conflict"
+      : "other";
+    throw ghError(kind, r.status);
+  }
+  const toB64 = (s) => {
+    let bin = "";
+    for (const b of new TextEncoder().encode(s)) bin += String.fromCharCode(b);
+    return btoa(bin);
+  };
+  const fromB64 = (b) => new TextDecoder().decode(Uint8Array.from(atob(String(b).replace(/\s/g, "")), (ch) => ch.charCodeAt(0)));
+
+  // The same table the sync reads: "fr-es" if you made one, otherwise "fr".
+  function tableFor(json, code, from) {
+    const long = json[`${code}-${from}`];
+    if (long && typeof long === "object" && !Array.isArray(long) && Object.keys(long).length) return long;
+    if (!json[code] || typeof json[code] !== "object" || Array.isArray(json[code])) json[code] = {};
+    return json[code];
+  }
+  function applyFix(json, { code, from, key, pron }) {
+    const table = tableFor(json, code, from);
+    const cur = table[key];
+    const isObj = cur && typeof cur === "object" && !Array.isArray(cur); // keeps a note or meanings you set
+    if (pron) {
+      if (isObj) cur.pron = pron; else table[key] = pron;
+    } else if (isObj) {
+      delete cur.pron;
+      if (!Object.keys(cur).length) delete table[key];
+    } else {
+      delete table[key];
+    }
+  }
+  function commitMessage(items) {
+    const list = items.map((i) => i.pron ? `${i.key} → ${i.pron}` : `${i.key} (automatic again)`).join(", ");
+    return `Fix pronunciation${items.length > 1 ? "s" : ""}: ${list}\n\nSaved from the page.`;
+  }
+  async function writeFixes(items) {
+    for (let tries = 0; ; tries++) {
+      const file = await gh("GET", FILE);
+      let json;
+      try { json = JSON.parse(fromB64(file.content)); } catch { throw ghError("broken", 0); }
+      if (!json || typeof json !== "object" || Array.isArray(json)) throw ghError("broken", 0);
+      const before = JSON.stringify(json);
+      for (const it of items) applyFix(json, it);
+      if (JSON.stringify(json) === before) return; // nothing to change
+      try {
+        await gh("PUT", FILE, { message: commitMessage(items), content: toB64(JSON.stringify(json, null, 1) + "\n"), sha: file.sha });
+        return;
+      } catch (err) {
+        if (err.kind !== "conflict" || tries >= 2) throw err;
+      }
+    }
+  }
+  // Is this token good for this repo, and can it write? Reading the file
+  // checks the first part. For the second, the file goes back unchanged with a
+  // made-up version: GitHub checks permission first (403 for a read-only
+  // token) and then turns down the stale version (409), so nothing is saved.
+  async function checkToken(token) {
+    const file = await gh("GET", FILE, null, token);
+    try {
+      await gh("PUT", FILE, { message: "Check the edit token", content: String(file.content).replace(/\s/g, ""), sha: "0".repeat(40) }, token);
+    } catch (err) {
+      if (err.kind === "perm" || err.kind === "auth" || err.kind === "net") throw err;
+    }
+  }
+
+  // ---- Saving ----
+  function queueFix(code, from, key, pron) {
+    const at = Date.now();
+    (edits.pending[code] = edits.pending[code] || {})[key] = { pron, at };
+    savePending();
+    const id = editId(code, key);
+    edits.queue.set(id, { id, code, from, key, pron, at });
+    refreshPron(code, key);
+    flush();
+  }
+  async function flush() {
+    if (edits.busy.size || !edits.queue.size) return;
+    const items = [...edits.queue.values()];
+    edits.queue.clear();
+    for (const it of items) edits.busy.add(it.id);
+    toast(t().saving(items.length === 1 ? items[0].key : ""), "wait");
+    let err = null;
+    try { await writeFixes(items); } catch (e) { err = e; }
+    edits.busy.clear();
+    if (err) for (const it of items) dropPending(it.code, it.key, it.at);
+    for (const it of items) refreshPron(it.code, it.key);
+    if (err) { saveFailed(err, items); return; }
+    const s = t();
+    toast(s.saved(items.map((i) => `${i.key} → ${i.pron || s.auto}`).join(", ")), "ok");
+    if (edits.queue.size) flush();
+  }
+  function saveFailed(err, items) {
+    const s = t();
+    if (err.kind === "auth") {
+      // The token was deleted or expired: drop everything waiting and ask for a new one.
+      for (const it of edits.queue.values()) dropPending(it.code, it.key, it.at);
+      edits.queue.clear();
+      forgetToken();
+      render();
+      $("#toast").hidden = true;
+      openKey(s.keyExpired);
+      return;
+    }
+    const why = { net: s.errNet, perm: s.errPerm, broken: s.errBroken, conflict: s.errConflict }[err.kind] || s.errOther(err.status);
+    toast(s.notSaved(items.map((i) => s.quote(i.key)).join(", "), why), "bad");
+    if (edits.queue.size) flush();
+  }
+
+  // ---- Editing a blue text in place ----
+  function startEdit(span) {
+    if (span.querySelector("input")) return;
+    const c = course();
+    if (!c) return;
+    const code = c.learning, from = c.from, key = span.dataset.key;
+    const old = span.textContent;
+    const input = document.createElement("input");
+    input.type = "text";
+    input.className = "pron-in";
+    input.value = old;
+    input.lang = "es";
+    input.autocomplete = "off";
+    input.spellcheck = false;
+    input.setAttribute("autocapitalize", "off");
+    input.setAttribute("autocorrect", "off");
+    input.setAttribute("enterkeyhint", "done");
+    input.setAttribute("aria-label", t().editOne(key));
+    const fit = () => { input.size = Math.max(6, input.value.length + 2); };
+    fit();
+    span.textContent = "";
+    span.classList.add("is-editing");
+    span.append(input);
+    input.focus();
+    input.select();
+    let done = false;
+    const finish = (save) => {
+      if (done) return;
+      done = true;
+      const val = input.value.replace(/\s+/g, " ").trim().normalize("NFC");
+      span.classList.remove("is-editing");
+      input.remove();
+      span.textContent = old;
+      if (!save || val === old) return;
+      if (!val && !handFixed(code, key)) return; // it's already the automatic one
+      queueFix(code, from, key, val || null);
+    };
+    input.addEventListener("input", fit);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") { e.preventDefault(); finish(true); span.focus(); }
+      else if (e.key === "Escape") { e.preventDefault(); finish(false); span.focus(); }
+    });
+    input.addEventListener("blur", () => finish(true));
+  }
+  // These run before the list's own handlers, so tapping a blue text edits it
+  // instead of playing the word.
+  $("#list").addEventListener("click", (e) => {
+    if (!state.editing) return;
+    const span = e.target.closest(".pron[data-key]");
+    if (!span) return;
+    e.stopPropagation();
+    startEdit(span);
+  }, true);
+  $("#list").addEventListener("keydown", (e) => {
+    if (!state.editing || e.key !== "Enter" || !e.target.matches || !e.target.matches(".pron[data-key]")) return;
+    e.preventDefault();
+    e.stopPropagation();
+    startEdit(e.target);
+  }, true);
+
+  // ---- Turning it on and off ----
+  function setEditing(on) {
+    state.editing = !!on && !!edits.token;
+    render();
+  }
+  function forgetToken() {
+    edits.token = "";
+    state.editing = false;
+    try { localStorage.removeItem("carnet:ghToken"); } catch { /* private mode */ }
+  }
+  $("#edit").addEventListener("click", () => setEditing(!state.editing));
+  $("#editLink").addEventListener("click", () => {
+    if (!edits.token) { openKey(); return; }
+    if (!confirm(t().forgetAsk)) return;
+    forgetToken();
+    render();
+  });
+
+  // ---- The one-time setup: paste your token ----
+  function openKey(reason) {
+    const s = t();
+    const d = $("#key");
+    d.innerHTML = `<form method="dialog" id="keyForm">` +
+      `<h2 id="keyTitle">${esc(s.keyTitle)}</h2>` +
+      (reason ? `<p class="err">${esc(reason)}</p>` : "") +
+      `<p>${esc(s.keyIntro)}</p>` +
+      `<p class="small">${esc(s.keySafe)}</p>` +
+      `<ol><li>${s.keyStep1(tokenUrl(), repoName().split("/")[1] || "duolingo-words")}</li><li>${esc(s.keyStep2)}</li></ol>` +
+      `<label><span class="sr">${esc(s.keyLabel)}</span><input id="keyIn" type="password" autocomplete="off" spellcheck="false" autocapitalize="off" placeholder="github_pat_…"></label>` +
+      `<p class="err" id="keyErr" role="alert" hidden></p>` +
+      `<p class="small">${esc(s.keyNote)}</p>` +
+      `<p class="btns"><button type="button" class="cancel" id="keyCancel">${esc(s.cancel)}</button>` +
+      `<button type="submit" class="go" id="keyGo">${esc(s.keySave)}</button></p></form>`;
+    if (!d.open) d.showModal();
+    $("#keyIn").focus();
+  }
+  $("#key").addEventListener("click", (e) => {
+    const d = $("#key");
+    if (e.target.id === "keyCancel") { d.close(); return; }
+    if (e.target !== d) return;
+    const r = d.getBoundingClientRect(); // a click on the dark backdrop also closes it
+    if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) d.close();
+  });
+  $("#key").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const s = t();
+    const token = $("#keyIn").value.replace(/\s+/g, "");
+    const err = $("#keyErr"), go = $("#keyGo");
+    if (!token) { err.textContent = s.keyEmpty; err.hidden = false; return; }
+    go.disabled = true;
+    go.textContent = s.keyChecking;
+    err.hidden = true;
+    try {
+      await checkToken(token);
+      edits.token = token;
+      store.set("ghToken", token);
+      $("#key").close();
+      setEditing(true);
+      toast(s.keyOk, "ok");
+    } catch (x) {
+      err.textContent = x.kind === "auth" ? s.keyBad : x.kind === "perm" ? s.errPerm : x.kind === "net" ? s.errNet : s.errOther(x.status);
+      err.hidden = false;
+    } finally {
+      go.disabled = false;
+      go.textContent = s.keySave;
+    }
+  });
 
   load();
 })();

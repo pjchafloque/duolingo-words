@@ -1038,7 +1038,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     q: "", sort: store.get("sort", "recent"), week: false,
     quiz: store.get("quiz", false), slow: store.get("slow", false),
     view: store.get("view", "duolingo"), // inside the Portuguese notebook: "duolingo" or "aula"
-    editing: false, // fixing pronunciations (only possible with your GitHub token)
+    editing: store.get("editing", false) === true, // fixing pronunciations (only with your GitHub token); remembered per device
   };
   const revealed = new Set();
 
@@ -2606,11 +2606,13 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
   // ---- Turning it on and off ----
   function setEditing(on) {
     state.editing = !!on && !!edits.token;
+    store.set("editing", state.editing); // stays on (or off) next time on this device
     render();
   }
   function forgetToken() {
     edits.token = "";
     state.editing = false;
+    store.set("editing", false);
     try { localStorage.removeItem("carnet:ghToken"); } catch { /* private mode */ }
   }
   $("#edit").addEventListener("click", () => setEditing(!state.editing));

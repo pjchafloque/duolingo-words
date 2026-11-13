@@ -1,13 +1,16 @@
 # Pulls your learned words from Duolingo and publishes the page.
-# Runs every hour, when you press "Run workflow" in the Actions tab, and
+# Runs every 15 minutes, when you press "Run workflow" in the Actions tab, and
 # whenever you change something in the repo (like data/overrides.json).
+# GitHub often starts scheduled runs late when it's busy, so the real gap
+# between runs varies.
 # Duolingo only shares the word list of the course that's open in your app,
 # so each run reads that one course (French or Portuguese).
 name: Sync words
 
 on:
   schedule:
-    - cron: "17 * * * *"
+    # Every 15 minutes, kept off the top of the hour, when GitHub is busiest.
+    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
   push:
     branches: [main]

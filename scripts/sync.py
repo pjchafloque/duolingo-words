@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Pull the words you've learned on Duolingo into data/words.json.
 
-The GitHub Actions workflow runs this every few hours. Each run:
+The GitHub Actions workflow runs this every 15 minutes. Each run:
   1. reads your Duolingo login token from the DUOLINGO_JWT environment variable,
   2. asks Duolingo for the list you see at duolingo.com/practice-hub/words,
   3. merges it into data/words.json (a word's "added" date is the first sync

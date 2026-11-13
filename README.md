@@ -1,6 +1,6 @@
 # duolingo-words
 
-My language notebooks: every word I've learned on Duolingo, in French and Portuguese, with its meaning, how it sounds written with Spanish letters, and a button to hear it. Each course has its own tab, and the page updates itself every hour.
+My language notebooks: every word I've learned on Duolingo, in French and Portuguese, with its meaning, how it sounds written with Spanish letters, and a button to hear it. Each course has its own tab, and the page updates itself about every 15 minutes.
 
 Page: https://pjchafloque.github.io/duolingo-words/
 
@@ -24,16 +24,16 @@ Open the page in Safari, tap Share, then "Add to Home Screen". It gets the owl-a
 
 ## How it works
 
-- `.github/workflows/sync.yml` runs `scripts/sync.py` every hour, and also whenever something in the repo changes.
+- `.github/workflows/sync.yml` runs `scripts/sync.py` every 15 minutes, and also whenever something in the repo changes. GitHub often starts scheduled runs late when it's busy, so the real gap between runs varies.
 - `sync.py` asks Duolingo for the same list you see at duolingo.com/practice-hub/words. New words go into `data/words.json` with the date the sync first saw them. Words you already had when this started are grouped as "Jusqu'au …" (up to that date).
 - `scripts/pronounce.py` writes the pronunciations. eSpeak NG, a free speech program, gives the sounds, and a table turns them into Spanish spelling with Spanish accent rules: `bonjour` becomes "bonyur", `merci` becomes "mersí", `croissant` becomes "cruasán".
 - `index.html` is the page, including the class notebook (see below). The play button uses Duolingo's own recording of the word, or your browser's French voice when there isn't one. "Repaso" covers the meanings so you can quiz yourself, and "Lento" slows the audio down.
 
-Duolingo has no official API. This uses the same requests the Duolingo website makes, so it can stop working if Duolingo changes them. Duolingo's terms also say content shouldn't be downloaded or scraped, so strictly speaking this breaks them. It only reads your own list, a few times a day. The page is public, so anyone with the link can see your word list. The Duolingo token is never on the page.
+Duolingo has no official API. This uses the same requests the Duolingo website makes, so it can stop working if Duolingo changes them. Duolingo's terms also say content shouldn't be downloaded or scraped, so strictly speaking this breaks them. It only reads your own list, about every 15 minutes. The page is public, so anyone with the link can see your word list. The Duolingo token is never on the page.
 
 ## French and Portuguese
 
-Duolingo only shares the word list of the course that's open in your app, so each run reads that one course. To bring in new Portuguese words, open Portuguese on Duolingo and either wait for the next hourly run or press "Sincronizar ahora" on the page. That opens the workflow on GitHub, where you click "Run workflow". Switching courses never loses words: each notebook keeps everything it has seen, and new words show up with the date a run first found them.
+Duolingo only shares the word list of the course that's open in your app, so each run reads that one course. To bring in new Portuguese words, open Portuguese on Duolingo and either wait for the next run (about every 15 minutes) or press "Sincronizar ahora" on the page. That opens the workflow on GitHub, where you click "Run workflow". Switching courses never loses words: each notebook keeps everything it has seen, and new words show up with the date a run first found them.
 
 The Portuguese tab shows up as soon as a run reads your course list, even before its words arrive. `data/notebooks.json` decides which courses get a tab. Your account also has English and Chinese; add `"en"` or `"zh"` to its list to see them too. Each notebook has its own paper, school cursive and pronunciation guide. Linking to `…/duolingo-words/#pt` opens the Portuguese one directly.
 

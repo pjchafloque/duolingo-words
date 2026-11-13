@@ -1,13 +1,54 @@
 {
  "version": 1,
  "current": "fr-es",
- "updated": "2026-11-12T22:53:47Z",
+ "updated": "2026-11-13T06:05:25Z",
  "courses": {
   "fr-es": {
    "learning": "fr",
    "from": "es",
    "name": "French",
    "words": [
+    {
+     "text": "tu viens de",
+     "translations": [
+      "vienes de",
+      "tú eres de"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/a88fa56d8a96df8f96d17e62337eb6ae",
+     "added": "2026-11-13T06:05:25Z",
+     "seq": 29,
+     "pron": "tü vien de",
+     "ipa": "ty vjˈɛ̃ də-",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tu viens d'où",
+     "translations": [
+      "¿De dónde vienes?",
+      "¿De dónde eres?"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/80ae7e6b0ad421f09fc34310a7915c94",
+     "added": "2026-11-13T06:05:25Z",
+     "seq": 28,
+     "pron": "tü vien du",
+     "ipa": "ty vjˈɛ̃ dˈu",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "à bientôt",
+     "translations": [
+      "hasta pronto"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/fd30e335c009b0130ebcc5f113e71cb5",
+     "added": "2026-11-13T06:05:25Z",
+     "seq": 27,
+     "pron": "a bientó",
+     "ipa": "a bjɛ̃tˈoː",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
     {
      "text": "viens de",
      "translations": [
@@ -360,9 +401,9 @@
     }
    ],
    "dropped": {},
-   "duolingo_total": 26,
-   "count": 26,
-   "updated": "2026-11-12T22:53:47Z"
+   "duolingo_total": 29,
+   "count": 29,
+   "updated": "2026-11-13T06:05:25Z"
   },
   "pt-es": {
    "learning": "pt",

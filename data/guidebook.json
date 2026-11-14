@@ -1,0 +1,72 @@
+{
+ "fr-es": {
+  "units": [
+   {
+    "section": 0,
+    "unit": 0,
+    "title": "Pide en un café",
+    "url": "https://d1btvuu4dwu627.cloudfront.net/guidebook/compiled/fr/es/iOS/1/9078ec69f5289241503884b7cf8048cd4b7d53b1d8a611fd4642c61057be07f5df55333c4b80993fe7fde345ea320c3a129c74cf28959d5e83bf2d9db8f1973e/3.json",
+    "phrases": [
+     {
+      "fr": "Bonjour Madame, je voudrais un croissant.",
+      "es": "Hola señora, quisiera un croissant.",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/6be185b905925c9266ff1a893d5eaa6a"
+     },
+     {
+      "fr": "Un café, s'il vous plaît.",
+      "es": "Un café, por favor.",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/25f678b633357767a0972ba334eb6228"
+     },
+     {
+      "fr": "Oui, je voudrais un éclair, s'il vous plaît.",
+      "es": "Sí, quisiera un éclair, por favor.",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/8ae52a5b6ea8477216034e15745321ef"
+     },
+     {
+      "fr": "Bonjour Monsieur, je voudrais un thé.",
+      "es": "Hola señor, quisiera un té.",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/effa9c461cb0df01c0941a74913ed31a"
+     },
+     {
+      "fr": "Au revoir, Monsieur.",
+      "es": "Adiós, señor.",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/575472bf0953c99f3fc6356801db192c"
+     }
+    ]
+   },
+   {
+    "section": 0,
+    "unit": 1,
+    "title": "Saluda y preséntate",
+    "url": "https://d1btvuu4dwu627.cloudfront.net/guidebook/compiled/fr/es/iOS/1/77496212de8301e6eb172a776b2f61ff197bea2959d843a453ab1a484940d246f52ab6f9e6ad981a676fde56537b5e8563a889e257cca8b8f922b3901d1700b6/3.json",
+    "phrases": [
+     {
+      "fr": "Bonjour, je m'appelle Marie, et toi ?",
+      "es": "Hola, me llamo Marie, ¿y tú?",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/5f9cdfd89f9f236e4939927a0e141fb5"
+     },
+     {
+      "fr": "Enchanté, je m'appelle Léo.",
+      "es": "Mucho gusto, me llamo Léo.",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/dca308562edd846944365d097bbb5152"
+     },
+     {
+      "fr": "Je viens de Paris, et toi ?",
+      "es": "Yo soy de París, ¿y tú?",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/f7e04a261e48d06ee9a8991cc54697e8"
+     },
+     {
+      "fr": "Bonjour, ça va ?",
+      "es": "Hola, ¿cómo estás?",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/28e28f57f97cabe020bfd181858bd8fc"
+     },
+     {
+      "fr": "Au revoir, à bientôt !",
+      "es": "¡Adiós, hasta pronto!",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/eeb42e8bff453c57a6007e0fc9faeab3"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "version": 1,
+ "fr": {
+  "Bonjour, ça va ?": [
+   "bonyur, sa va"
+  ],
+  "Ça va bien, et toi ?": [
+   "sa va bien, e tua"
+  ],
+  "Au revoir, à bientôt !": [
+   "o revuar, a bientó"
+  ],
+  "Au revoir, Monsieur.": [
+   "o revuar, mesiö́"
+  ],
+  "Bonjour, je m'appelle Marie, et toi ?": [
+   "bonyur, ye mapel marí, e tua"
+  ],
+  "Enchanté, je m'appelle Léo.": [
+   "anshanté, ye mapel leó"
+  ],
+  "Tu viens d'où ?": [
+   "tü vien du"
+  ],
+  "Je viens de Paris, et toi ?": [
+   "ye vien de parí, e tua"
+  ],
+  "Moi aussi !": [
+   "mua osí"
+  ],
+  "Bonjour Madame, je voudrais un croissant.": [
+   "bonyur madam, ye vudré an quasan"
+  ],
+  "Un café, s'il vous plaît.": [
+   "an café, sil vu ple"
+  ],
+  "Bonjour Monsieur, je voudrais un thé.": [
+   "bonyur mesiö́, ye vudré an te"
+  ],
+  "Oui, je voudrais un éclair, s'il vous plaît.": [
+   "ui, ye vudré an necler, sil vu ple"
+  ],
+  "Un croissant et un café, s'il vous plaît.": [
+   "an quasan e an café, sil vu ple"
+  ],
+  "Un thé ou un café ?": [
+   "an te u an café"
+  ],
+  "Oui, merci.": [
+   "ui, mersí"
+  ],
+  "Non, merci.": [
+   "non, mersí"
+  ],
+  "Parfait, merci !": [
+   "parfé, mersí"
+  ],
+  "Merci, au revoir !": [
+   "mersí, o revuar"
+  ]
+ }
+}

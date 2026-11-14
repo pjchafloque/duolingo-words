@@ -53,6 +53,13 @@ jobs:
         continue-on-error: true
         run: python3 scripts/aula.py
 
+      # The "Frases importantes" part of the French notebook: reads each
+      # sentence with Spanish letters. It never stops the sync either.
+      - name: Read the important sentences
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        run: python3 scripts/frases.py
+
       - name: Save changes
         if: ${{ !cancelled() }}
         run: |

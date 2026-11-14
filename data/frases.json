@@ -1,0 +1,32 @@
+{
+ "_how": "Las frases importantes del cuaderno de francés (la pestaña «Frases importantes»), por situación, para el día a día. Cada frase tiene fr (en francés), es (qué significa), star (true si es esencial; sale con ★) y use (cuándo usarla). Las frases clave de la guía de cada unidad de Duolingo llegan solas a data/guidebook.json: si una ya está aquí, la página le pone el audio de Duolingo; si no, sale al final en «Nuevas de Duolingo» hasta que la pongas en un grupo. La pronunciación con letras del español se arma sola con las palabras de tu cuaderno.",
+ "fr": {
+  "groups": [
+   {"id": "saludos", "title": "Saludos y despedidas", "sentences": [
+    {"fr": "Bonjour, ça va ?", "es": "Hola, ¿cómo estás?", "star": true, "use": "Con amigos, compañeros o gente que ya conoces. A un desconocido, como en una tienda, basta con bonjour."},
+    {"fr": "Ça va bien, et toi ?", "es": "Estoy bien, ¿y tú?", "star": true, "use": "La respuesta de siempre a ça va. Et toi es de tú; a alguien a quien tratas de usted le dices et vous ?"},
+    {"fr": "Au revoir, à bientôt !", "es": "¡Adiós, hasta pronto!", "use": "Para despedirte de alguien que vas a volver a ver, como un compañero de clase."},
+    {"fr": "Au revoir, Monsieur.", "es": "Adiós, señor.", "use": "Para despedirte de un desconocido, por ejemplo al salir de una tienda. Con Monsieur o Madame suena más educado."}
+   ]},
+   {"id": "presentarse", "title": "Presentarse", "sentences": [
+    {"fr": "Bonjour, je m'appelle Marie, et toi ?", "es": "Hola, me llamo Marie, ¿y tú?", "star": true, "use": "Pon tu nombre en lugar de Marie. Et toi es de tú: va bien con otros estudiantes y con gente de tu edad."},
+    {"fr": "Enchanté, je m'appelle Léo.", "es": "Mucho gusto, me llamo Léo.", "use": "Al conocer a alguien. Una mujer escribe enchantée, pero suena igual."},
+    {"fr": "Tu viens d'où ?", "es": "¿De dónde eres?", "star": true, "use": "Como estudiante extranjero te lo van a preguntar mucho. Es la forma hablada, de tú."},
+    {"fr": "Je viens de Paris, et toi ?", "es": "Yo soy de París, ¿y tú?", "star": true, "use": "Pon tu ciudad en lugar de Paris y devuelve la pregunta con et toi."},
+    {"fr": "Moi aussi !", "es": "¡Yo también!", "use": "Para decir que a ti te pasa lo mismo que a la otra persona."}
+   ]},
+   {"id": "cafe", "title": "En el café", "sentences": [
+    {"fr": "Bonjour Madame, je voudrais un croissant.", "es": "Hola señora, quisiera un croissant.", "star": true, "use": "Saluda siempre antes de pedir: en Francia, pedir sin decir bonjour se ve maleducado. Je voudrais es la forma amable de decir «quiero»."},
+    {"fr": "Un café, s'il vous plaît.", "es": "Un café, por favor.", "star": true, "use": "La forma más corta de pedir. En Francia, un café es un espresso pequeño."},
+    {"fr": "Bonjour Monsieur, je voudrais un thé.", "es": "Hola señor, quisiera un té.", "use": "Con un hombre se dice Monsieur; con una mujer, Madame."},
+    {"fr": "Oui, je voudrais un éclair, s'il vous plaît.", "es": "Sí, quisiera un éclair, por favor.", "use": "S'il vous plaît es de usted, para quien te atiende. Con amigos se dice s'il te plaît."},
+    {"fr": "Un croissant et un café, s'il vous plaît.", "es": "Un croissant y un café, por favor.", "use": "Para pedir dos cosas a la vez, únelas con et."},
+    {"fr": "Un thé ou un café ?", "es": "¿Un té o un café?", "use": "Te lo puede preguntar quien atiende. Contesta con lo que quieras y s'il vous plaît."},
+    {"fr": "Oui, merci.", "es": "Sí, gracias.", "star": true, "use": "Para aceptar algo que te ofrecen. Un merci solo, como respuesta, muchas veces se entiende como «no, gracias»."},
+    {"fr": "Non, merci.", "es": "No, gracias.", "star": true, "use": "Para rechazar algo con educación."},
+    {"fr": "Parfait, merci !", "es": "¡Perfecto, gracias!", "use": "Para decir que todo está bien, por ejemplo cuando te traen el pedido."},
+    {"fr": "Merci, au revoir !", "es": "¡Gracias, adiós!", "star": true, "use": "Lo que se dice al salir de una tienda o de un café."}
+   ]}
+  ]
+ }
+}

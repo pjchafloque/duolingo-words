@@ -7,7 +7,10 @@ The GitHub Actions workflow runs this every 15 minutes. Each run:
   3. merges it into data/words.json (a word's "added" date is the first sync
      that saw it),
   4. writes a pronunciation with Spanish letters for each new word,
-  5. applies your fixes from data/overrides.json.
+  5. applies your fixes from data/overrides.json,
+  6. for a course with important sentences (data/frases.json), saves the key
+     phrases from the Guidebook of each unit you've done into
+     data/guidebook.json.
 
 It also merges export files dropped into data/import/ (made with the button on
 tools.html), which works even without a token.
@@ -42,6 +45,8 @@ DATA = ROOT / "data"
 WORDS_FILE = DATA / "words.json"
 OVERRIDES_FILE = DATA / "overrides.json"
 IMPORT_DIR = DATA / "import"
+FRASES_FILE = DATA / "frases.json"
+GUIDEBOOK_FILE = DATA / "guidebook.json"
 
 DUOLINGO = "https://www.duolingo.com"
 BASE_URL = os.environ.get("DUOLINGO_BASE_URL", DUOLINGO).rstrip("/")
@@ -219,7 +224,8 @@ def progressed_skills(course: dict) -> list[dict]:
     return skills
 
 
-def current_course(user_id: str, jwt: str) -> tuple[str, str, list[dict]]:
+def current_course(user_id: str, jwt: str) -> tuple[str, str, list[dict], dict]:
+    """The open course: (learning, from, progress for the word list, the course data)."""
     found = None
     problems = []
     for version in ("2017-06-30", "2023-05-23"):
@@ -238,8 +244,8 @@ def current_course(user_id: str, jwt: str) -> tuple[str, str, list[dict]]:
             continue
         skills = progressed_skills(course)
         if skills:
-            return learning, source, skills
-        found = found or (learning, source, skills)
+            return learning, source, skills, course
+        found = found or (learning, source, skills, course)
     if found:
         warn("Couldn't work out your progress from the course data, so asking Duolingo for words without it.")
         return found
@@ -315,6 +321,102 @@ def learned_words(user_id: str, learning: str, source: str, skills: list[dict], 
         start = nxt
         time.sleep(0.5)
     return words, total
+
+
+# --- Key phrases from each unit's Guidebook ---------------------------------
+#
+# Every unit on the path has a Guidebook whose first part, "Frases clave", lists
+# a few sentences with a translation and Duolingo's recording. The course data
+# gives its address, a public file that needs no token.
+
+def wants_key_phrases(learning: str) -> bool:
+    """Only a course with an important-sentences tab (data/frases.json) needs them."""
+    try:
+        frases = json.loads(FRASES_FILE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    return isinstance(frases, dict) and isinstance(frases.get(learning), dict)
+
+
+def done_units(course: dict) -> list[dict]:
+    """Units where at least one lesson is finished, with their Guidebook address."""
+    out = []
+    for si, section in enumerate(course.get("pathSectioned") or []):
+        for ui, unit in enumerate((section or {}).get("units") or []):
+            if not isinstance(unit, dict):
+                continue
+            # "unit_test" is the offer to jump ahead, not something you did.
+            states = [lv.get("state") for lv in unit.get("levels") or [] if isinstance(lv, dict)]
+            if not any(s not in (None, "locked", "active", "unit_test") for s in states):
+                continue
+            url = (unit.get("guidebook") or {}).get("url")
+            if isinstance(url, str) and url.startswith("https://"):
+                out.append({"section": si, "unit": ui, "title": nfc(unit.get("teachingObjective") or ""), "url": url})
+    return out
+
+
+def _styled(node) -> str:
+    if isinstance(node, dict) and isinstance(node.get("styledString"), dict):
+        return node["styledString"].get("text") or ""
+    return ""
+
+
+def _plain(text: str) -> str:
+    return " ".join(nfc(text.replace(" ", " ").replace(" ", " ")).split())
+
+
+def guidebook_phrases(url: str) -> list[dict]:
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
+    with urllib.request.urlopen(req, timeout=40) as resp:
+        book = json.loads(resp.read().decode("utf-8"))
+    found: list[tuple[int | None, dict]] = []
+    for el in (book or {}).get("elements") or []:
+        if not isinstance(el, dict) or el.get("type") != "dialogue":
+            continue
+        part = (el.get("meta") or {}).get("sectionIndex")
+        for ph in (el.get("element") or {}).get("phrases") or []:
+            if not isinstance(ph, dict):
+                continue
+            text, meaning = _plain(_styled(ph.get("text"))), _plain(_styled(ph.get("subtext")))
+            if not text:
+                continue
+            item = {"fr": text, "es": meaning}
+            if isinstance(ph.get("ttsURL"), str) and ph["ttsURL"].startswith("https://"):
+                item["audio"] = ph["ttsURL"]
+            found.append((part, item))
+    # The key phrases are the first part; later parts (tips) can have examples too.
+    key = [item for part, item in found if part in (0, None)]
+    return key or [item for _, item in found]
+
+
+def update_key_phrases(course: dict, learning: str, source: str) -> str | None:
+    """Save the key phrases of the units you've done. Returns a line for the log, if anything changed."""
+    if not wants_key_phrases(learning):
+        return None
+    store = load_json(GUIDEBOOK_FILE, {})
+    if not isinstance(store, dict):
+        store = {}
+    entry = store.setdefault(f"{learning}-{source}", {"units": []})
+    units = {(u.get("section"), u.get("unit")): u for u in entry.get("units") or [] if isinstance(u, dict)}
+    fetched = 0
+    for unit in done_units(course):
+        old = units.get((unit["section"], unit["unit"]))
+        if old and old.get("url") == unit["url"] and old.get("title") == unit["title"]:
+            continue  # the address changes when Duolingo edits the Guidebook
+        try:
+            phrases = guidebook_phrases(unit["url"])
+        except Exception as err:  # noqa: BLE001  one unit failing shouldn't stop the rest
+            warn(f"Couldn't read the Guidebook of unit {unit['unit'] + 1} ({err}).")
+            continue
+        units[(unit["section"], unit["unit"])] = {**unit, "phrases": phrases}
+        fetched += 1
+        time.sleep(0.3)
+    if not fetched:
+        return None
+    entry["units"] = sorted(units.values(), key=lambda u: (u["section"], u["unit"]))
+    total = sum(len(u.get("phrases") or []) for u in entry["units"])
+    GUIDEBOOK_FILE.write_text(json.dumps(store, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    return f"Key phrases: {total} from {len(entry['units'])} units (read {fetched} Guidebook{'s' if fetched != 1 else ''})."
 
 
 # --- Merging into data/words.json ------------------------------------------
@@ -553,7 +655,7 @@ def main() -> int:
     else:
         try:
             user_id = user_id_from(jwt)
-            learning, source, skills = current_course(user_id, jwt)
+            learning, source, skills, course = current_course(user_id, jwt)
             lexemes, total = learned_words(user_id, learning, source, skills, jwt)
             if not lexemes:
                 raise SyncError(
@@ -576,6 +678,12 @@ def main() -> int:
             if new:
                 line += ": " + ", ".join(new[:12]) + (", …" if len(new) > 12 else "")
             notes.insert(0, line)
+            try:
+                phrases_line = update_key_phrases(course, learning, source)
+                if phrases_line:
+                    notes.append(phrases_line)
+            except Exception as err:  # noqa: BLE001  the words matter more than the key phrases
+                warn(f"Couldn't update the key phrases ({err}).")
         except SyncError as err:
             error = str(err)
 

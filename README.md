@@ -50,6 +50,19 @@ The lesson menu in the toolbar shows everything from one class at once, and the 
 
 Everything comes from `data/aula.json`, written by hand. To add a word, find its topic under `sections` → `vocabulario` and add a line like `["a praia", "la playa"]` (a third item is a note). Verbs go in `verbs` as `{"v": "falar", "es": "hablar", "lessons": ["d2"]}`. On each run, `scripts/aula.py` conjugates the verbs into `data/aula-verbos.json` and writes the pronunciations into `data/aula-pron.json` with the same eSpeak converter as the Duolingo words. Irregular verbs are listed in that script.
 
+## Important sentences (Frases importantes)
+
+The French notebook has two divider tabs too: "Duolingo" (the words) and "Frases importantes", the sentences I need for everyday life abroad, grouped by situation (Saludos y despedidas, Presentarse, En el café). Each one has its meaning, how it reads with Spanish letters, a play button and a note on when to use it. A red ★ marks the essential ones, and "★ Esenciales" in the toolbar shows only those. With "Repaso" on, I pick whether to cover the Spanish or the French. Direct link: `…/duolingo-words/#frases`.
+
+The sentences come from two places:
+
+- Duolingo's key phrases. Each unit has a Guidebook whose first part, "Frases clave", lists a few sentences with a translation and a recording. Once a unit has a finished lesson, the sync saves its key phrases in `data/guidebook.json` (only for courses that have an entry in `data/frases.json`, so French for now). They play Duolingo's own recording, and a line under each one says which unit it's from.
+- Sentences written with my own words, which only use words already in my notebook. They play with the browser's French voice.
+
+`data/frases.json` decides the groups, the order, the stars and the notes, and the key phrases I already have are in it too. A key phrase from a new unit that isn't in any group yet shows up at the end under "Nuevas de Duolingo" until it's added to a group. To add a sentence, put a line like `{"fr": "Un sandwich, s'il vous plaît.", "es": "Un sándwich, por favor.", "star": true, "use": "Para pedir algo de comer."}` in a group's `sentences`.
+
+On each run, `scripts/frases.py` writes how each sentence reads into `data/frases-pron.json`. It builds the reading from the pronunciations of my own words, so a fix to a word carries over to every sentence that uses it, and it adds the liaison after words like "un" ("un éclair" reads "an necler"). Names and words that aren't in the notebook yet go through eSpeak NG. To fix a whole sentence, use Editar on its blue text, or add the sentence to `data/overrides.json` under "fr".
+
 ## Fixing a pronunciation
 
 ### From the page

@@ -277,8 +277,8 @@ a { color: var(--pen); text-decoration-thickness: 1px; text-underline-offset: 3p
 .bars rect:nth-child(3) { animation-delay: -.5s; }
 @keyframes bar { 0%, 100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
 
-/* Review mode: meanings under correction tape */
-.meaning.covered .tape {
+/* Review mode: meanings (or, for sentences, the French) under correction tape */
+.meaning.covered .tape, .orig.covered > .tape {
   display: inline-block;
   min-width: 7em;
   max-width: 100%;
@@ -291,8 +291,9 @@ a { color: var(--pen); text-decoration-thickness: 1px; text-underline-offset: 3p
   cursor: pointer;
   padding: 0;
 }
-.meaning.covered .text, .meaning.covered .note { display: none; }
-.meaning:not(.covered) .tape { display: none; }
+.meaning.covered .text, .meaning.covered .note, .meaning.covered .src { display: none; }
+.meaning:not(.covered) .tape, .orig:not(.covered) > .tape { display: none; }
+.orig.covered .word, .orig.covered .pron { display: none; }
 
 .message { margin: 32px 0 0; max-width: 60ch; color: var(--ink-soft); font-style: italic; }
 
@@ -433,7 +434,7 @@ body.editing .pron[data-key].is-editing { text-decoration: none; background: non
   .key .btns { margin-top: 10px; }
 }
 
-/* ---- Divider tabs inside the Portuguese notebook: Duolingo | Aula ---- */
+/* ---- Divider tabs: Duolingo | Aula (Portuguese), Duolingo | Frases importantes (French) ---- */
 .views { display: flex; gap: 0 10px; height: 32px; margin: -32px 0 32px; }
 .view {
   position: relative;
@@ -449,6 +450,7 @@ body.editing .pron[data-key].is-editing { text-decoration: none; background: non
 }
 .view[data-view="duolingo"] { --tab-bg: rgba(88, 204, 2, .13); }
 .view[data-view="aula"] { --tab-bg: rgba(255, 190, 0, .24); }
+.view[data-view="frases"] { --tab-bg: rgba(28, 176, 246, .15); }
 .view:hover { color: var(--ink); }
 .view[aria-selected="true"] { color: var(--ink); font-weight: 600; }
 .view[aria-selected="true"]::after {
@@ -458,6 +460,20 @@ body.editing .pron[data-key].is-editing { text-decoration: none; background: non
   height: 2px;
   background: var(--margin-red);
 }
+
+/* ---- Important sentences (Frases importantes), in the French notebook ---- */
+/* French and its reading on the left, Spanish and when to use it on the right, a blank line between sentences. */
+.entry.sent { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+.entry.sent + .entry.sent { margin-top: 32px; }
+.orig { display: block; }
+.entry.sent .word { display: inline; margin-right: 0; }
+.entry.sent .pron { display: block; }
+.entry.sent .orig.covered :is(.word, .pron) { display: none; }
+.star { margin-right: 8px; color: var(--red-pen); font: 400 19px/1 var(--serif); }
+.src { display: block; color: var(--ink-soft); font: italic 400 15px/32px var(--serif); }
+.seg .seg-label { color: var(--ink-soft); font: italic 400 16px/32px var(--serif); }
+body.view-frases .group { scroll-margin-top: 150px; }
+@media (max-width: 719px) { body.view-frases .group { scroll-margin-top: 16px; } }
 
 /* ---- Class notebook (Aula) ---- */
 .secs { display: flex; flex-wrap: wrap; gap: 0 20px; flex: 1 1 100%; }
@@ -748,7 +764,13 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
         <button type="button" data-sort="az" aria-pressed="false">A–Z</button>
       </div>
       <button type="button" class="toggle" id="week" aria-pressed="false">Esta semana</button>
+      <button type="button" class="toggle" id="stars" aria-pressed="false" hidden>★ Esenciales</button>
       <button type="button" class="toggle" id="quiz" aria-pressed="false">Repaso</button>
+      <div class="seg" role="group" id="coverGroup" hidden>
+        <span class="seg-label" id="coverLabel">Tapar</span>
+        <button type="button" data-cover="es" aria-pressed="true">español</button>
+        <button type="button" data-cover="fr" aria-pressed="false">francés</button>
+      </div>
       <button type="button" class="toggle" id="slow" aria-pressed="false">Lento</button>
       <button type="button" class="toggle" id="edit" aria-pressed="false" hidden>Editar</button>
     </div>
@@ -838,6 +860,18 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       allVerbs: n => `Ver los ${num(n)} verbos`, redIrr: "En rojo, los irregulares.", seenIn: "Visto en",
       tlImp: "el fondo, lo que estaba pasando", tlPret: "lo que pasó",
       aulaAbout: "Las palabras y los temas salen de las diapositivas de PORT 12200 y de Portuguese for the Profession; las explicaciones y los ejemplos están escritos aparte. Para agregar o corregir algo, edita data/aula.json en GitHub.",
+      frasesTab: "Frases importantes",
+      frasesSummary: (n, st, duo) => `${num(n)} frases para el día a día, ${num(st)} de ellas esenciales (★).` +
+        (duo ? ` ${num(duo)} vienen de la guía de tus unidades de Duolingo, con su audio.` : ""),
+      frasesSearch: "Buscar en las frases", frasesQuizTitle: "Tapa el español o el francés para repasar",
+      frasesAbout: "Las frases clave vienen de la guía de cada unidad de Duolingo; las demás usan solo palabras que ya aprendiste. Para agregar o cambiar una frase, edita data/frases.json en GitHub. Para corregir cómo se lee, usa «Editar pronunciaciones», aquí abajo.",
+      frasesLoading: "Abriendo las frases…", frasesError: "No se pudo leer data/frases.json.",
+      situations: "Situaciones", stars: "★ Esenciales", starsTitle: "Ver solo las frases esenciales",
+      essential: "Esencial", cover: "Tapar", revealSent: "Mostrar la frase",
+      sentCount: n => n === 1 ? "1 frase" : `${num(n)} frases`,
+      fromDuo: (sec, u) => `Frase clave de Duolingo · ${sec ? `sección ${sec + 1}, ` : ""}unidad ${u + 1}`,
+      newDuo: "Nuevas de Duolingo", newDuoIntro: "Frases clave de tus unidades más recientes. Todavía no tienen situación ni estrella.",
+      noMatchSent: q => `Ninguna frase coincide con «${q}».`, noSent: "No hay frases para mostrar.",
       edit: "Editar", editTitle: "Corregir cómo se lee una palabra",
       editHint: "Toca un texto azul para cambiarlo. Enter guarda y Esc cancela. Si lo dejas vacío, vuelve la pronunciación automática.",
       editHintTouch: "Toca un texto azul para cambiarlo. Se guarda cuando tocas «Listo» o fuera del texto, y la × cancela. Si lo dejas vacío, vuelve la pronunciación automática.",
@@ -915,6 +949,18 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       allVerbs: n => `See all ${num(n)} verbs`, redIrr: "Irregular ones in red.", seenIn: "Seen in",
       tlImp: "the background, what was going on", tlPret: "what happened",
       aulaAbout: "Words and topics come from the PORT 12200 and Portuguese for the Profession slides; the explanations and examples were written separately. To add or fix something, edit data/aula.json on GitHub.",
+      frasesTab: "Important sentences",
+      frasesSummary: (n, st, duo) => `${num(n)} sentences for everyday life, ${num(st)} of them essential (★).` +
+        (duo ? ` ${num(duo)} come from your Duolingo units' Guidebook, with Duolingo's audio.` : ""),
+      frasesSearch: "Search the sentences", frasesQuizTitle: "Cover the Spanish or the French to review",
+      frasesAbout: "Key phrases come from each Duolingo unit's Guidebook; the rest only use words you've already learned. To add or change a sentence, edit data/frases.json on GitHub. To fix how one reads, use “Edit pronunciations” below.",
+      frasesLoading: "Opening the sentences…", frasesError: "Couldn't read data/frases.json.",
+      situations: "Situations", stars: "★ Essentials", starsTitle: "Show only the essential sentences",
+      essential: "Essential", cover: "Cover", revealSent: "Show the sentence",
+      sentCount: n => n === 1 ? "1 sentence" : `${num(n)} sentences`,
+      fromDuo: (sec, u) => `Duolingo key phrase · ${sec ? `section ${sec + 1}, ` : ""}unit ${u + 1}`,
+      newDuo: "New from Duolingo", newDuoIntro: "Key phrases from your latest units. They don't have a situation or a star yet.",
+      noMatchSent: q => `No sentence matches “${q}”.`, noSent: "No sentences to show.",
       edit: "Edit", editTitle: "Fix how a word reads",
       editHint: "Tap a blue text to change it. Enter saves and Esc cancels. Leave it empty to get the automatic pronunciation back.",
       editHintTouch: "Tap a blue text to change it. It saves when you tap Done or anywhere else, and × cancels. Leave it empty to get the automatic pronunciation back.",
@@ -1037,10 +1083,24 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     show: null,
     q: "", sort: store.get("sort", "recent"), week: false,
     quiz: store.get("quiz", false), slow: store.get("slow", false),
-    view: store.get("view", "duolingo"), // inside the Portuguese notebook: "duolingo" or "aula"
+    // The part each notebook has open, like { pt: "aula", fr: "frases" } (see VIEWS).
+    views: (() => {
+      const v = store.get("views", null);
+      if (v && typeof v === "object" && !Array.isArray(v)) return v;
+      return { pt: store.get("view", "duolingo") === "aula" ? "aula" : "duolingo" }; // saved before French had parts
+    })(),
+    stars: store.get("stars", false), // only the essential sentences
+    cover: store.get("cover", "es"), // what Repaso covers in the sentences: "es" or "fr"
     editing: store.get("editing", false) === true, // fixing pronunciations (only with your GitHub token); remembered per device
   };
   const revealed = new Set();
+  // Notebooks with more than one part, under divider tabs. The first part is your Duolingo words.
+  const VIEWS = { pt: ["duolingo", "aula"], fr: ["duolingo", "frases"] };
+  function viewOf(c) {
+    const parts = c && VIEWS[c.learning];
+    const v = parts && state.views[c.learning];
+    return parts && parts.includes(v) ? v : "duolingo";
+  }
 
   // ---- Courses ----
   const keyOf = (c) => `${c.learning}-${c.from}`;
@@ -1075,27 +1135,33 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     const keys = courseKeys();
     return keys.find((k) => k === h) || keys.find((k) => k.split("-")[0] === h) || null;
   }
-  // "#aula" and "#aula/verbos" open the class notebook inside the Portuguese one.
+  // "#aula" and "#aula/verbos" open the class notebook inside the Portuguese one,
+  // and "#frases" the important sentences inside the French one.
   function routeHash() {
     const h = decodeURIComponent(location.hash.slice(1));
     const m = h.match(/^aula(?:\/([\w-]+))?$/);
     if (m) {
       const k = courseKeys().find((x) => x.split("-")[0] === "pt");
       if (k) {
-        state.view = "aula";
+        state.views.pt = "aula";
         if (m[1]) aula.sec = m[1];
         return k;
       }
     }
+    if (h === "frases") {
+      const k = courseKeys().find((x) => x.split("-")[0] === "fr");
+      if (k) { state.views.fr = "frases"; return k; }
+    }
     const k = keyFromHash();
-    if (k && k.split("-")[0] === "pt") state.view = "duolingo";
+    if (k && VIEWS[k.split("-")[0]]) state.views[k.split("-")[0]] = "duolingo";
     return k;
   }
   function currentHash() {
     const c = courseInfo(state.courseKey);
-    if (c && c.learning === "pt" && state.view === "aula") {
+    if (c && c.learning === "pt" && viewOf(c) === "aula") {
       return aula.sec && aula.sec !== "vocabulario" ? `aula/${aula.sec}` : "aula";
     }
+    if (c && c.learning === "fr" && viewOf(c) === "frases") return "frases";
     return hashFor(state.courseKey);
   }
   function syncHash() {
@@ -1118,10 +1184,11 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     render();
   }
   function selectView(view) {
-    if (view === state.view) return;
+    const c = course();
+    if (!c || !VIEWS[c.learning] || view === viewOf(c)) return;
     stopAudio();
-    state.view = view;
-    store.set("view", view);
+    state.views[c.learning] = view;
+    store.set("views", state.views);
     revealed.clear();
     state.q = "";
     $("#q").value = "";
@@ -1268,27 +1335,50 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     $("#legendIntro").textContent = s.legendIntro;
     $("#about").textContent = s.about;
 
-    // The Portuguese notebook has two parts: your Duolingo words and the class.
-    const pt = !!c && c.learning === "pt";
-    const onAula = pt && state.view === "aula";
+    // Two notebooks have a second part: the class (Portuguese) and the important sentences (French).
+    const parts = c ? VIEWS[c.learning] : null;
+    const part = viewOf(c);
+    const onAula = !!parts && part === "aula";
+    const onFrases = !!parts && part === "frases";
     const views = $("#views");
-    views.hidden = !pt;
-    if (pt) {
+    views.hidden = !parts;
+    if (parts) {
+      const label = { duolingo: "Duolingo", aula: "Aula", frases: s.frasesTab };
+      const hadFocus = views.contains(document.activeElement); // keep it when a part finishes loading
       views.setAttribute("aria-label", s.views);
-      views.innerHTML = ["duolingo", "aula"].map((v) =>
-        `<button type="button" role="tab" class="view" data-view="${v}" aria-selected="${state.view === v}" tabindex="${state.view === v ? 0 : -1}">${v === "duolingo" ? "Duolingo" : "Aula"}</button>`).join("");
+      views.innerHTML = parts.map((v) =>
+        `<button type="button" role="tab" class="view" data-view="${v}" aria-selected="${part === v}" tabindex="${part === v ? 0 : -1}">${esc(label[v] || v)}</button>`).join("");
+      if (hadFocus) views.querySelector('[aria-selected="true"]').focus();
     }
     document.body.classList.toggle("view-aula", onAula);
-    $("#sortGroup").hidden = onAula;
-    $("#week").hidden = onAula;
-    $("#secs").hidden = !onAula;
+    document.body.classList.toggle("view-frases", onFrases);
+    $("#sortGroup").hidden = onAula || onFrases;
+    $("#week").hidden = onAula || onFrases;
+    $("#secs").hidden = !(onAula || onFrases);
     $("#lessonWrap").hidden = !onAula;
+    $("#stars").hidden = !onFrases;
+    $("#coverGroup").hidden = !(onFrases && state.quiz);
     if (onAula) {
       $("#q").placeholder = s.aulaSearch;
       $("#quiz").title = s.aulaQuizTitle;
       $("#about").textContent = s.aulaAbout;
       $("#secs").setAttribute("aria-label", s.secsLabel);
       $("#lessonLabel").textContent = s.lessonLabel;
+    }
+    if (onFrases) {
+      $("#q").placeholder = s.frasesSearch;
+      $("#quiz").title = s.frasesQuizTitle;
+      $("#about").textContent = s.frasesAbout;
+      $("#secs").setAttribute("aria-label", s.situations);
+      $("#stars").textContent = s.stars;
+      $("#stars").title = s.starsTitle;
+      $("#stars").setAttribute("aria-pressed", String(state.stars));
+      $("#coverGroup").setAttribute("aria-label", s.cover);
+      $("#coverLabel").textContent = s.cover;
+      for (const b of document.querySelectorAll("[data-cover]")) {
+        b.textContent = langName(b.dataset.cover === "fr" ? c.learning : c.from);
+        b.setAttribute("aria-pressed", String(b.dataset.cover === state.cover));
+      }
     }
     // Editing: the button only exists where your token is saved.
     const canEdit = !!repoName();
@@ -1385,6 +1475,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
   function render() {
     applyChrome();
     if (inAula()) { renderAula(); return; }
+    if (inFrases()) { renderFrases(); return; }
     const c = course();
     const words = c ? c.words || [] : [];
     const first = firstBatch(words);
@@ -1489,6 +1580,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
   // ---- Events ----
   $("#list").addEventListener("click", (e) => {
     if (inAula()) { aulaClick(e); return; }
+    if (inFrases()) { frasesClick(e); return; }
     const row = e.target.closest(".entry");
     if (!row) return;
     const w = shown[Number(row.dataset.i)];
@@ -1514,12 +1606,13 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     if (b) b.focus();
   });
   window.addEventListener("hashchange", () => {
-    const before = state.view;
+    const before = JSON.stringify(state.views);
     const k = routeHash();
     if (!k) return;
+    const moved = JSON.stringify(state.views) !== before;
+    if (moved) store.set("views", state.views);
     if (k !== state.courseKey) selectCourse(k);
-    else if (state.view !== before) { store.set("view", state.view); render(); }
-    else if (inAula()) render();
+    else if (moved || inAula()) render();
   });
   $("#views").addEventListener("click", (e) => {
     const b = e.target.closest("[data-view]");
@@ -1527,8 +1620,11 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
   });
   $("#views").addEventListener("keydown", (e) => {
     if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
-    selectView(state.view === "aula" ? "duolingo" : "aula");
-    const b = document.querySelector(`[data-view="${state.view}"]`);
+    const parts = VIEWS[(course() || {}).learning];
+    if (!parts) return;
+    const i = parts.indexOf(viewOf(course()));
+    selectView(parts[(i + (e.key === "ArrowRight" ? 1 : parts.length - 1)) % parts.length]);
+    const b = document.querySelector(`[data-view="${viewOf(course())}"]`);
     if (b) b.focus();
   });
   let timer = null;
@@ -1546,6 +1642,10 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
   }
   $("#week").addEventListener("click", () => { state.week = !state.week; render(); });
   $("#quiz").addEventListener("click", () => { state.quiz = !state.quiz; revealed.clear(); store.set("quiz", state.quiz); render(); });
+  $("#stars").addEventListener("click", () => { state.stars = !state.stars; store.set("stars", state.stars); render(); });
+  for (const b of document.querySelectorAll("[data-cover]")) {
+    b.addEventListener("click", () => { state.cover = b.dataset.cover; store.set("cover", state.cover); revealed.clear(); render(); });
+  }
   $("#slow").addEventListener("click", () => { state.slow = !state.slow; store.set("slow", state.slow); applyChrome(); });
   $("#langToggle").addEventListener("click", () => { lang = lang === "es" ? "en" : "es"; store.set("lang", lang); render(); });
 
@@ -1567,7 +1667,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
   };
   function inAula() {
     const c = course();
-    return !!c && c.learning === "pt" && state.view === "aula";
+    return !!c && c.learning === "pt" && viewOf(c) === "aula";
   }
 
   function loadAula() {
@@ -2254,6 +2354,12 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     if (inAula() && e.target.id === "verbQ") lookupInput(e.target.value, true);
   });
   $("#secs").addEventListener("click", (e) => {
+    const g = e.target.closest("[data-group]");
+    if (g) { // a situation in the important sentences: jump to it
+      const el = document.getElementById("g-" + g.dataset.group);
+      if (el) el.scrollIntoView({ block: "start" });
+      return;
+    }
     const b = e.target.closest("[data-sec]");
     if (!b || aula.status !== "ready") return;
     const id = b.dataset.sec;
@@ -2271,6 +2377,143 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     if (window.scrollY > top) window.scrollTo({ top });
   });
   $("#lesson").addEventListener("change", (e) => setLesson(e.target.value));
+
+  // ===== Important sentences ("Frases importantes"), a second part of the French notebook =====
+  // data/frases.json is written by hand: sentences by situation, a star on the
+  // essential ones and a note on when to use each. data/guidebook.json has the key
+  // phrases the sync saves from each Duolingo unit's Guidebook, with Duolingo's
+  // recording, and data/frases-pron.json the readings scripts/frases.py puts
+  // together from your own words.
+  const frases = { status: "idle", groups: [], duo: new Map(), pron: {}, shown: [] };
+  function inFrases() {
+    const c = course();
+    return !!c && c.learning === "fr" && viewOf(c) === "frases";
+  }
+  // A sentence's key everywhere (data files, your fixes): plain spaces, straight apostrophes.
+  const sentKey = (s) => String(s ?? "").normalize("NFC").replace(/[   ]/g, " ").replace(/’/g, "'").replace(/\s+/g, " ").trim();
+  const sentMatch = (s) => sentKey(s).toLowerCase();
+  // French puts a space before ? and !; this one never breaks the line.
+  const frTypo = (s) => s.replace(/ ([?!:;»])/g, " $1").replace(/« /g, "« ");
+
+  function loadFrases() {
+    if (frases.status === "loading" || frases.status === "ready") return;
+    frases.status = "loading";
+    Promise.all([
+      getJSON("data/frases.json"),
+      getJSON("data/guidebook.json").catch(() => null),
+      getJSON("data/frases-pron.json").catch(() => null),
+    ]).then(([d, g, p]) => {
+      frases.groups = (((d && d.fr) || {}).groups || []).filter((x) => x && Array.isArray(x.sentences));
+      frases.duo = new Map();
+      for (const [key, entry] of Object.entries(g || {})) {
+        if (!key.startsWith("fr-") || !entry || !Array.isArray(entry.units)) continue;
+        for (const u of entry.units) for (const ph of u.phrases || []) {
+          if (ph && typeof ph.fr === "string" && !frases.duo.has(sentMatch(ph.fr))) {
+            frases.duo.set(sentMatch(ph.fr), { ...ph, section: u.section || 0, unit: u.unit || 0 });
+          }
+        }
+      }
+      frases.pron = (p && p.fr) || {};
+      frases.status = "ready";
+      reconcilePending();
+    }).catch(() => { frases.status = "error"; })
+      .then(() => { if (inFrases()) render(); });
+  }
+
+  // Your groups first, then key phrases from new units that aren't in a group yet.
+  function frasesGroups() {
+    const s = t();
+    const seen = new Set();
+    const out = frases.groups.map((g) => ({
+      id: g.id, title: g.title,
+      items: g.sentences.filter((x) => x && typeof x.fr === "string" && x.fr.trim()).map((x) => {
+        const k = sentMatch(x.fr);
+        seen.add(k);
+        const duo = frases.duo.get(k) || null;
+        return { fr: sentKey(x.fr), es: x.es || (duo && duo.es) || "", star: !!x.star, use: x.use || "", duo };
+      }),
+    }));
+    const fresh = [];
+    for (const [k, duo] of frases.duo) {
+      if (!seen.has(k)) fresh.push({ fr: sentKey(duo.fr), es: duo.es || "", star: false, use: "", duo });
+    }
+    if (fresh.length) out.push({ id: "nuevas", title: s.newDuo, intro: s.newDuoIntro, items: fresh });
+    return out.filter((g) => g.items.length);
+  }
+  function sentPron(text) {
+    const mine = pendingPron("fr", text); // a fix you just saved that isn't published yet
+    if (mine) return mine;
+    const p = frases.pron[text];
+    return p && p[0] ? p[0] : "";
+  }
+  function sentHTML(it, i, c) {
+    const s = t();
+    const k = it.fr;
+    const coverFr = state.quiz && state.cover === "fr" && !revealed.has("f:" + k);
+    const coverEs = state.quiz && state.cover !== "fr" && !revealed.has("e:" + k);
+    return `<li class="entry sent" data-i="${i}">` +
+      `<button type="button" class="play" aria-label="${esc(s.play(k))}">${SPEAKER}</button>` +
+      `<span class="orig${coverFr ? " covered" : ""}">` +
+        (it.star ? `<span class="star" title="${esc(s.essential)}" aria-label="${esc(s.essential)}">★</span>` : "") +
+        `<button type="button" class="tape" data-k="${esc("f:" + k)}" aria-label="${esc(s.revealSent)}"></button>` +
+        `<span class="word" lang="${esc(c.learning)}">${esc(frTypo(k))}</span>` +
+        `<span class="pron${pronExtra(c.learning, k)}"${pronAttrs(k)}>${esc(sentPron(k))}</span>` +
+      `</span>` +
+      `<span class="meaning${coverEs ? " covered" : ""}">` +
+        `<button type="button" class="tape" data-k="${esc("e:" + k)}" aria-label="${esc(s.reveal(k))}"></button>` +
+        `<span class="text" lang="${esc(c.from)}">${esc(it.es)}</span>` +
+        (it.use ? `<span class="note">${esc(frTypo(it.use))}</span>` : "") + // "et vous ?" keeps its ? on the line
+        (it.duo ? `<span class="src">${esc(s.fromDuo(it.duo.section, it.duo.unit))}</span>` : "") +
+      `</span></li>`;
+  }
+  function renderFrases() {
+    const s = t();
+    const c = course();
+    const list = $("#list");
+    $("#status").hidden = true;
+    $("#demo").hidden = true;
+    renderLegend(c.words || []);
+    if (frases.status !== "ready") {
+      if (frases.status === "idle") loadFrases();
+      $("#summary").textContent = " ";
+      $("#secs").innerHTML = "";
+      list.innerHTML = `<p class="message">${esc(frases.status === "error" ? s.frasesError : s.frasesLoading)}</p>`;
+      return;
+    }
+    const groups = frasesGroups();
+    const all = groups.flatMap((g) => g.items);
+    $("#summary").textContent = s.frasesSummary(all.length, all.filter((x) => x.star).length, all.filter((x) => x.duo).length);
+    const q = fold(state.q.trim());
+    const keep = (it) => (!state.stars || it.star) && (!q || [it.fr, it.es, it.use, sentPron(it.fr)].some((x) => fold(x).includes(q)));
+    frases.shown = [];
+    const present = new Set();
+    let html = "";
+    for (const g of groups) {
+      const items = g.items.filter(keep);
+      if (!items.length) continue;
+      present.add(g.id);
+      html += `<section class="group" id="g-${esc(g.id)}"><h2><span class="when">${esc(g.title)}</span><span class="count">${esc(s.sentCount(items.length))}</span></h2>` +
+        (g.intro ? `<p class="intro">${esc(g.intro)}</p>` : "") + `<ol class="entries">`;
+      for (const it of items) { html += sentHTML(it, frases.shown.length, c); frases.shown.push(it); }
+      html += `</ol></section>`;
+    }
+    $("#secs").innerHTML = groups.map((g) =>
+      `<button type="button" data-group="${esc(g.id)}"${present.has(g.id) ? "" : ' class="dim"'}>${esc(g.title)}</button>`).join("");
+    list.innerHTML = html || `<p class="message">${esc(q ? s.noMatchSent(state.q.trim()) : s.noSent)}</p>`;
+  }
+  // Duolingo's recording for its key phrases, the browser's French voice for the rest.
+  function frasesClick(e) {
+    const tape = e.target.closest(".tape");
+    if (tape) {
+      revealed.add(tape.dataset.k);
+      const box = tape.closest(".covered");
+      if (box) box.classList.remove("covered");
+      return;
+    }
+    const row = e.target.closest(".entry.sent");
+    const it = row && frases.shown[Number(row.dataset.i)];
+    if (it && e.target.closest(".play, .word, .pron")) play({ text: it.fr, audio: it.duo && it.duo.audio ? it.duo.audio : null }, row);
+  }
 
   // ===== Fixing a pronunciation from the page =====
   // The page is static, so it can't check a password. What it can do is write
@@ -2334,6 +2577,8 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     }
     const a = code === "pt" && aula.status === "ready" ? aula.pron[key] : null;
     if (a) return { found: true, pron: a[0] || "", mine: a[2] === "you" };
+    const f = code === "fr" && frases.status === "ready" ? frases.pron[key] : null;
+    if (f) return { found: true, pron: f[0] || "", mine: f[1] === "you" };
     return { found: false };
   }
   function handFixed(code, key) {
@@ -2365,6 +2610,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
   }
   function shownPron(code, key) {
     if (inAula()) return pronOf(key).pron;
+    if (inFrases()) return sentPron(key);
     const c = course();
     const w = ((c && c.words) || []).find((x) => x.text === key);
     return pendingPron(code, key) || (w && w.pron) || "";

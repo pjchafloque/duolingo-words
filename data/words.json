@@ -1,13 +1,274 @@
 {
  "version": 1,
  "current": "fr-es",
- "updated": "2026-11-13T06:05:25Z",
+ "updated": "2026-11-14T20:08:24Z",
  "courses": {
   "fr-es": {
    "learning": "fr",
    "from": "es",
    "name": "French",
    "words": [
+    {
+     "text": "il vient",
+     "translations": [
+      "viene"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/3b1a6c568f77279adc23f79f49874af2",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 48,
+     "pron": "il vien",
+     "ipa": "il vjˈɛ̃",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "il habite",
+     "translations": [
+      "habita",
+      "él habita"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/3da174c50fd0bf1f4955ce1080cd79ce",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 47,
+     "pron": "il abit",
+     "ipa": "il abˈit",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "neveu",
+     "translations": [
+      "sobrino"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/4b1b3cc5534736e9327df8f92eefbd75",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 46,
+     "pron": "nevö́",
+     "ipa": "nəvˈø",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "nièce",
+     "translations": [
+      "sobrina"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/993014c2576fa47c2b9a7156013136e4",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 45,
+     "pron": "nies",
+     "ipa": "njˈɛs",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "à",
+     "translations": [
+      "en",
+      "de",
+      "por",
+      "fregando",
+      "a",
+      "para",
+      "à",
+      "hasta"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/9c4d7cd715f4dcbfc3a23ec71760d71c",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 44,
+     "pron": "a",
+     "ipa": "ˈa",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "elle habite",
+     "translations": [
+      "ella vive"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/ff3ed86b66bb6b5ce930fcc6de6719bb",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 43,
+     "pron": "el abit",
+     "ipa": "ɛl abˈit",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "maintenant",
+     "translations": [
+      "ahora"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/bc0bf8dc9b5f8e68dc68d433a8c4a261",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 42,
+     "pron": "mentnán",
+     "ipa": "mɛ̃tnˈɑ̃",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "oncle",
+     "translations": [
+      "tío"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/d3e09dca7d71398e5ba45efe8e23a0f3",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 41,
+     "pron": "oncl",
+     "ipa": "ˈɔ̃kl",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tante",
+     "translations": [
+      "tía"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/d99bf9a055c1cbc8dc3d160ad186732f",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 40,
+     "pron": "tant",
+     "ipa": "tˈɑ̃t",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "de",
+     "translations": [
+      "de"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/5050ba0ba693819869b54d87402a191b",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 39,
+     "pron": "de",
+     "ipa": "dˈə-",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "une",
+     "translations": [
+      "alguna",
+      "una",
+      "une"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/c38234c4c9ae29e1192ef51151a56f25",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 38,
+     "pron": "ün",
+     "ipa": "ˈyn",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "elle vient",
+     "translations": [
+      "viene"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/4afcc48553d442e1294120d8d6dd484c",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 37,
+     "pron": "el vien",
+     "ipa": "ɛl vjˈɛ̃",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "j'ai",
+     "translations": [
+      "tengo",
+      "yo tengo",
+      "han"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/7ea7a12db3c992e30047090ff54aec46",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 36,
+     "pron": "ye",
+     "ipa": "ʒˈe",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "fille",
+     "translations": [
+      "hija"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/6a61288c40c6980f9ce08e018f06254b",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 35,
+     "pron": "fiy",
+     "ipa": "fˈij",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "sœur",
+     "translations": [
+      "hermana"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/8656c2e5c38d92b0f760167d632514c8",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 34,
+     "pron": "sör",
+     "ipa": "sˈœʁ",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "fils",
+     "translations": [
+      "hijo"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/ede05c4664f58cc1aeddd4a81e9e038e",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 33,
+     "pron": "fil",
+     "ipa": "fˈil",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "tu as",
+     "translations": [
+      "tú tienes"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/697552eada8e23b671282faac72e72bd",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 32,
+     "pron": "tü a",
+     "ipa": "ty ˈa",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "oh",
+     "translations": [
+      "ay",
+      "oh",
+      "uy"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/fafd3e072becaada0d15ff8bc2a0b719",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 31,
+     "pron": "o",
+     "ipa": "ˈɔ",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
+    {
+     "text": "frère",
+     "translations": [
+      "hermano"
+     ],
+     "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/8124dafa5f2bc1e3054981676420213e",
+     "added": "2026-11-14T20:08:24Z",
+     "seq": 30,
+     "pron": "frer",
+     "ipa": "fʁˈɛʁ",
+     "pron_v": 2,
+     "pron_src": "auto"
+    },
     {
      "text": "tu viens de",
      "translations": [
@@ -401,9 +662,9 @@
     }
    ],
    "dropped": {},
-   "duolingo_total": 29,
-   "count": 29,
-   "updated": "2026-11-13T06:05:25Z"
+   "duolingo_total": 48,
+   "count": 48,
+   "updated": "2026-11-14T20:08:24Z"
   },
   "pt-es": {
    "learning": "pt",

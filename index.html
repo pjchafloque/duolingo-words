@@ -468,8 +468,9 @@ body.editing .pron[data-key].is-editing { text-decoration: none; background: non
 .orig { display: block; }
 .entry.sent .word { display: inline; margin-right: 0; }
 .entry.sent .pron { display: block; }
-.entry.sent .orig.covered :is(.word, .pron) { display: none; }
+.entry.sent .orig.covered :is(.word, .pron, .fresh) { display: none; }
 .star { margin-right: 8px; color: var(--red-pen); font: 400 19px/1 var(--serif); }
+.fresh { margin-left: 10px; color: var(--red-pen); font: italic 400 15px/1 var(--serif); white-space: nowrap; }
 .src { display: block; color: var(--ink-soft); font: italic 400 15px/32px var(--serif); }
 .seg .seg-label { color: var(--ink-soft); font: italic 400 16px/32px var(--serif); }
 body.view-frases .group { scroll-margin-top: 150px; }
@@ -864,13 +865,15 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       frasesSummary: (n, st, duo) => `${num(n)} frases para el día a día, ${num(st)} de ellas esenciales (★).` +
         (duo ? ` ${num(duo)} vienen de la guía de tus unidades de Duolingo, con su audio.` : ""),
       frasesSearch: "Buscar en las frases", frasesQuizTitle: "Tapa el español o el francés para repasar",
-      frasesAbout: "Las frases clave vienen de la guía de cada unidad de Duolingo; las demás usan solo palabras que ya aprendiste. Para agregar o cambiar una frase, edita data/frases.json en GitHub. Para corregir cómo se lee, usa «Editar pronunciaciones», aquí abajo.",
+      frasesAbout: "Las frases clave llegan solas de la guía de cada unidad de Duolingo, en cuanto empiezas la unidad. Una vez al día, Claude revisa lo nuevo: pone esas frases en su situación, con nota y estrella, y escribe frases con las palabras que acabas de aprender, usando solo palabras de tu cuaderno. Para agregar o cambiar una frase, edita data/frases.json en GitHub. Para corregir cómo se lee, usa «Editar pronunciaciones», aquí abajo.",
       frasesLoading: "Abriendo las frases…", frasesError: "No se pudo leer data/frases.json.",
       situations: "Situaciones", stars: "★ Esenciales", starsTitle: "Ver solo las frases esenciales",
       essential: "Esencial", cover: "Tapar", revealSent: "Mostrar la frase",
       sentCount: n => n === 1 ? "1 frase" : `${num(n)} frases`,
       fromDuo: (sec, u) => `Frase clave de Duolingo · ${sec ? `sección ${sec + 1}, ` : ""}unidad ${u + 1}`,
-      newDuo: "Nuevas de Duolingo", newDuoIntro: "Frases clave de tus unidades más recientes. Todavía no tienen situación ni estrella.",
+      unitN: (sec, u) => `${sec ? `Sección ${sec + 1}, unidad` : "Unidad"} ${u + 1}`,
+      newDuoIntro: "Recién llegadas de esta unidad de Duolingo. En la revisión de cada día pasan a su situación, con nota y estrella.",
+      fresh: "nueva", freshTitle: "Agregada en los últimos 7 días",
       noMatchSent: q => `Ninguna frase coincide con «${q}».`, noSent: "No hay frases para mostrar.",
       edit: "Editar", editTitle: "Corregir cómo se lee una palabra",
       editHint: "Toca un texto azul para cambiarlo. Enter guarda y Esc cancela. Si lo dejas vacío, vuelve la pronunciación automática.",
@@ -953,13 +956,15 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       frasesSummary: (n, st, duo) => `${num(n)} sentences for everyday life, ${num(st)} of them essential (★).` +
         (duo ? ` ${num(duo)} come from your Duolingo units' Guidebook, with Duolingo's audio.` : ""),
       frasesSearch: "Search the sentences", frasesQuizTitle: "Cover the Spanish or the French to review",
-      frasesAbout: "Key phrases come from each Duolingo unit's Guidebook; the rest only use words you've already learned. To add or change a sentence, edit data/frases.json on GitHub. To fix how one reads, use “Edit pronunciations” below.",
+      frasesAbout: "Key phrases arrive on their own from each Duolingo unit's Guidebook as soon as you start the unit. Once a day, Claude goes over what's new: it puts those phrases in their situation, with a note and a star, and writes sentences with the words you just learned, using only words from your notebook. To add or change a sentence, edit data/frases.json on GitHub. To fix how one reads, use “Edit pronunciations” below.",
       frasesLoading: "Opening the sentences…", frasesError: "Couldn't read data/frases.json.",
       situations: "Situations", stars: "★ Essentials", starsTitle: "Show only the essential sentences",
       essential: "Essential", cover: "Cover", revealSent: "Show the sentence",
       sentCount: n => n === 1 ? "1 sentence" : `${num(n)} sentences`,
       fromDuo: (sec, u) => `Duolingo key phrase · ${sec ? `section ${sec + 1}, ` : ""}unit ${u + 1}`,
-      newDuo: "New from Duolingo", newDuoIntro: "Key phrases from your latest units. They don't have a situation or a star yet.",
+      unitN: (sec, u) => `${sec ? `Section ${sec + 1}, unit` : "Unit"} ${u + 1}`,
+      newDuoIntro: "Just arrived from this Duolingo unit. The daily review moves them into their situation, with a note and a star.",
+      fresh: "new", freshTitle: "Added in the last 7 days",
       noMatchSent: q => `No sentence matches “${q}”.`, noSent: "No sentences to show.",
       edit: "Edit", editTitle: "Fix how a word reads",
       editHint: "Tap a blue text to change it. Enter saves and Esc cancels. Leave it empty to get the automatic pronunciation back.",
@@ -2409,7 +2414,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
         if (!key.startsWith("fr-") || !entry || !Array.isArray(entry.units)) continue;
         for (const u of entry.units) for (const ph of u.phrases || []) {
           if (ph && typeof ph.fr === "string" && !frases.duo.has(sentMatch(ph.fr))) {
-            frases.duo.set(sentMatch(ph.fr), { ...ph, section: u.section || 0, unit: u.unit || 0 });
+            frases.duo.set(sentMatch(ph.fr), { ...ph, section: u.section || 0, unit: u.unit || 0, title: u.title || "" });
           }
         }
       }
@@ -2420,7 +2425,12 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       .then(() => { if (inFrases()) render(); });
   }
 
-  // Your groups first, then key phrases from new units that aren't in a group yet.
+  // A sentence added in the last 7 days ("added" in data/frases.json) gets a "nueva" mark.
+  const FRESH_MS = 7 * 24 * 60 * 60 * 1000;
+  const isFresh = (d) => typeof d === "string" && Date.now() - Date.parse(d) < FRESH_MS;
+
+  // Your groups first, then the key phrases of each new unit that the daily
+  // review hasn't put in a group yet, under that unit's name.
   function frasesGroups() {
     const s = t();
     const seen = new Set();
@@ -2430,14 +2440,17 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
         const k = sentMatch(x.fr);
         seen.add(k);
         const duo = frases.duo.get(k) || null;
-        return { fr: sentKey(x.fr), es: x.es || (duo && duo.es) || "", star: !!x.star, use: x.use || "", duo };
+        return { fr: sentKey(x.fr), es: x.es || (duo && duo.es) || "", star: !!x.star, use: x.use || "", duo, fresh: isFresh(x.added) };
       }),
     }));
-    const fresh = [];
+    const units = new Map();
     for (const [k, duo] of frases.duo) {
-      if (!seen.has(k)) fresh.push({ fr: sentKey(duo.fr), es: duo.es || "", star: false, use: "", duo });
+      if (seen.has(k)) continue;
+      const id = `unidad-${duo.section}-${duo.unit}`;
+      if (!units.has(id)) units.set(id, { id, title: duo.title || s.unitN(duo.section, duo.unit), intro: s.newDuoIntro, items: [] });
+      units.get(id).items.push({ fr: sentKey(duo.fr), es: duo.es || "", star: false, use: "", duo, fresh: true });
     }
-    if (fresh.length) out.push({ id: "nuevas", title: s.newDuo, intro: s.newDuoIntro, items: fresh });
+    out.push(...units.values());
     return out.filter((g) => g.items.length);
   }
   function sentPron(text) {
@@ -2457,6 +2470,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
         (it.star ? `<span class="star" title="${esc(s.essential)}" aria-label="${esc(s.essential)}">★</span>` : "") +
         `<button type="button" class="tape" data-k="${esc("f:" + k)}" aria-label="${esc(s.revealSent)}"></button>` +
         `<span class="word" lang="${esc(c.learning)}">${esc(frTypo(k))}</span>` +
+        (it.fresh ? `<span class="fresh" title="${esc(s.freshTitle)}">${esc(s.fresh)}</span>` : "") +
         `<span class="pron${pronExtra(c.learning, k)}"${pronAttrs(k)}>${esc(sentPron(k))}</span>` +
       `</span>` +
       `<span class="meaning${coverEs ? " covered" : ""}">` +

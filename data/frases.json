@@ -1,6 +1,7 @@
 {
- "_how": "Las frases importantes del cuaderno de francés (la pestaña «Frases importantes»), por situación, para el día a día. Cada frase tiene fr (en francés), es (qué significa), star (true si es esencial; sale con ★) y use (cuándo usarla). Las frases clave de la guía de cada unidad de Duolingo llegan solas a data/guidebook.json: si una ya está aquí, la página le pone el audio de Duolingo; si no, sale al final en «Nuevas de Duolingo» hasta que la pongas en un grupo. La pronunciación con letras del español se arma sola con las palabras de tu cuaderno.",
+ "_how": "Las frases importantes del cuaderno de francés (la pestaña «Frases importantes»), por situación, para el día a día. Cada frase tiene fr (en francés), es (qué significa), star (true si es esencial; sale con ★), use (cuándo usarla) y added (el día en que se agregó; la página le pone «nueva» durante 7 días). Las frases clave de la guía de cada unidad de Duolingo llegan solas a data/guidebook.json en cuanto empiezas la unidad: si una ya está aquí, la página le pone el audio de Duolingo; si no, sale al final bajo el nombre de su unidad. Una vez al día, Claude revisa lo nuevo siguiendo scripts/frases-guide.md: pasa esas frases a un grupo y escribe frases con las palabras nuevas. words_reviewed es el número (seq en data/words.json) de la última palabra que ya revisó. La pronunciación con letras del español se arma sola con las palabras de tu cuaderno.",
  "fr": {
+  "words_reviewed": 48,
   "groups": [
    {"id": "saludos", "title": "Saludos y despedidas", "sentences": [
     {"fr": "Bonjour, ça va ?", "es": "Hola, ¿cómo estás?", "star": true, "use": "Con amigos, compañeros o gente que ya conoces. A un desconocido, como en una tienda, basta con bonjour."},
@@ -26,6 +27,17 @@
     {"fr": "Non, merci.", "es": "No, gracias.", "star": true, "use": "Para rechazar algo con educación."},
     {"fr": "Parfait, merci !", "es": "¡Perfecto, gracias!", "use": "Para decir que todo está bien, por ejemplo cuando te traen el pedido."},
     {"fr": "Merci, au revoir !", "es": "¡Gracias, adiós!", "star": true, "use": "Lo que se dice al salir de una tienda o de un café."}
+   ]},
+   {"id": "familia", "title": "La familia", "sentences": [
+    {"fr": "Tu as un frère ?", "es": "¿Tienes un hermano?", "star": true, "use": "La pregunta típica cuando alguien te cuenta de su familia. Es de tú; a alguien a quien tratas de usted le dices Vous avez un frère ?", "added": "2026-11-15"},
+    {"fr": "Oui, j'ai un frère et une sœur.", "es": "Sí, tengo un hermano y una hermana.", "star": true, "use": "Para contar cómo es tu familia. Cambia frère y sœur por lo que tengas: un va con las palabras masculinas (un frère, un oncle) y une con las femeninas (une sœur, une tante).", "added": "2026-11-15"},
+    {"fr": "Tu as une sœur ?", "es": "¿Tienes una hermana?", "use": "Igual que con frère, pero sœur es femenino y por eso va con une.", "added": "2026-11-15"},
+    {"fr": "Moi aussi, j'ai une sœur !", "es": "¡Yo también tengo una hermana!", "use": "Cuando alguien te cuenta algo de su familia y a ti te pasa lo mismo. Sirve para seguir la conversación.", "added": "2026-11-15"},
+    {"fr": "J'ai une fille.", "es": "Tengo una hija.", "use": "J'ai es «tengo»: je pierde la e porque ai empieza con vocal. Para un hijo se dice J'ai un fils, y en fils la s suena y la l no.", "added": "2026-11-15"},
+    {"fr": "J'ai un neveu et une nièce.", "es": "Tengo un sobrino y una sobrina.", "use": "Neveu es sobrino y nièce, sobrina. Nièce lleva une porque es femenino.", "added": "2026-11-15"},
+    {"fr": "J'ai une tante et un oncle à Lyon.", "es": "Tengo una tía y un tío en Lyon.", "use": "Para contar que tienes familia en una ciudad. Antes del nombre de una ciudad va à: à Lyon, à Paris.", "added": "2026-11-15"},
+    {"fr": "Elle vient de Paris ou de New York ?", "es": "¿Ella es de París o de Nueva York?", "use": "Para preguntar de dónde es otra persona. Elle vient de es para una mujer; para un hombre se dice il vient de.", "added": "2026-11-15"},
+    {"fr": "Oui, elle habite à Lyon maintenant.", "es": "Sí, ella vive en Lyon ahora.", "use": "Habite es «vive»: elle habite para ella, il habite para él. No lo confundas con vient de, que dice de dónde es alguien.", "added": "2026-11-15"}
    ]}
   ]
  }

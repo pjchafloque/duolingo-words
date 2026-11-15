@@ -9,7 +9,7 @@ The GitHub Actions workflow runs this every 15 minutes. Each run:
   4. writes a pronunciation with Spanish letters for each new word,
   5. applies your fixes from data/overrides.json,
   6. for a course with important sentences (data/frases.json), saves the key
-     phrases from the Guidebook of each unit you've done into
+     phrases from the Guidebook of each unit you've done or are doing now into
      data/guidebook.json.
 
 It also merges export files dropped into data/import/ (made with the button on
@@ -339,7 +339,12 @@ def wants_key_phrases(learning: str) -> bool:
 
 
 def done_units(course: dict) -> list[dict]:
-    """Units where at least one lesson is finished, with their Guidebook address."""
+    """Units you've started, with their Guidebook address.
+
+    That's every unit with a finished lesson plus the one you're on now (its
+    next lesson is "active"), so a new unit's key phrases show up as soon as
+    you get to it.
+    """
     out = []
     for si, section in enumerate(course.get("pathSectioned") or []):
         for ui, unit in enumerate((section or {}).get("units") or []):
@@ -347,7 +352,7 @@ def done_units(course: dict) -> list[dict]:
                 continue
             # "unit_test" is the offer to jump ahead, not something you did.
             states = [lv.get("state") for lv in unit.get("levels") or [] if isinstance(lv, dict)]
-            if not any(s not in (None, "locked", "active", "unit_test") for s in states):
+            if not any(s not in (None, "locked", "unit_test") for s in states):
                 continue
             url = (unit.get("guidebook") or {}).get("url")
             if isinstance(url, str) and url.startswith("https://"):
@@ -390,7 +395,7 @@ def guidebook_phrases(url: str) -> list[dict]:
 
 
 def update_key_phrases(course: dict, learning: str, source: str) -> str | None:
-    """Save the key phrases of the units you've done. Returns a line for the log, if anything changed."""
+    """Save the key phrases of the units you've started. Returns a line for the log, if anything changed."""
     if not wants_key_phrases(learning):
         return None
     store = load_json(GUIDEBOOK_FILE, {})

@@ -20,7 +20,11 @@
  },
  "fr": {
   "un": "an",
-  "croissant": "quasan"
+  "croissant": "quasan",
+  "fils": {
+   "pron": "fis",
+   "note": "la s suena y la l no"
+  }
  },
  "pt": {}
 }

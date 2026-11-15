@@ -56,10 +56,26 @@ The French notebook has two divider tabs too: "Duolingo" (the words) and "Frases
 
 The sentences come from two places:
 
-- Duolingo's key phrases. Each unit has a Guidebook whose first part, "Frases clave", lists a few sentences with a translation and a recording. Once a unit has a finished lesson, the sync saves its key phrases in `data/guidebook.json` (only for courses that have an entry in `data/frases.json`, so French for now). They play Duolingo's own recording, and a line under each one says which unit it's from.
+- Duolingo's key phrases. Each unit has a Guidebook whose first part, "Frases clave", lists a few sentences with a translation and a recording. As soon as I get to a new unit, the sync saves its key phrases in `data/guidebook.json` (only for courses that have an entry in `data/frases.json`, so French for now). They play Duolingo's own recording, and a line under each one says which unit it's from.
 - Sentences written with my own words, which only use words already in my notebook. They play with the browser's French voice.
 
-`data/frases.json` decides the groups, the order, the stars and the notes, and the key phrases I already have are in it too. A key phrase from a new unit that isn't in any group yet shows up at the end under "Nuevas de Duolingo" until it's added to a group. To add a sentence, put a line like `{"fr": "Un sandwich, s'il vous plaît.", "es": "Un sándwich, por favor.", "star": true, "use": "Para pedir algo de comer."}` in a group's `sentences`.
+`data/frases.json` decides the groups, the order, the stars and the notes, and the key phrases I already have are in it too. To add a sentence by hand, put a line like `{"fr": "Un sandwich, s'il vous plaît.", "es": "Un sándwich, por favor.", "star": true, "use": "Para pedir algo de comer."}` in a group's `sentences`.
+
+### How the list keeps growing
+
+New sentences show up on their own, in two steps:
+
+1. Within about 15 minutes of starting a new unit, its key phrases are on the page at the end of the list, under the unit's name ("Habla sobre tu familia"), with Duolingo's audio but no note or star yet.
+2. Every night around 9:30 (Chicago time), a scheduled Claude task reviews what's new. It moves those key phrases into their situation (a new group if none fits) with a note and a star for the must-knows, and writes sentences with the words I learned that day, using only words from my notebook. It commits `data/frases.json`, and the page updates a minute or two later. A sentence added in the last 7 days is marked "nueva".
+
+The review follows `scripts/frases-guide.md`, so changing that file changes how it writes. It never edits or deletes sentences that are already there, so my own changes to `data/frases.json` stay. `"words_reviewed"` in that file is the number of the last word it looked at (`seq` in `data/words.json`). To have it write sentences for some words again, lower that number. The task lives in Claude's scheduled tasks, where it can be paused or deleted.
+
+Two commands help, by hand or in the review:
+
+```
+python3 scripts/frases.py --todo   # key phrases not in a group yet, and words learned since the last review
+python3 scripts/frases.py --check  # is data/frases.json in order? (meaning and note on each sentence, no repeats, only notebook words)
+```
 
 On each run, `scripts/frases.py` writes how each sentence reads into `data/frases-pron.json`. It builds the reading from the pronunciations of my own words, so a fix to a word carries over to every sentence that uses it, and it adds the liaison after words like "un" ("un éclair" reads "an necler"). Names and words that aren't in the notebook yet go through eSpeak NG. To fix a whole sentence, use Editar on its blue text, or add the sentence to `data/overrides.json` under "fr".
 

@@ -18,10 +18,24 @@ The sync workflow runs this on every run. To run it by hand:
 
 Without eSpeak NG installed, a sentence with a word that isn't in your notebook
 keeps the pronunciation it had before.
+
+Two more commands help keep the list growing (see scripts/frases-guide.md,
+which the daily review follows):
+
+    python3 scripts/frases.py --todo   # what's new since the last review
+    python3 scripts/frases.py --check  # is data/frases.json in order?
+
+--todo lists the key phrases from your Duolingo units that aren't in a group
+yet and the words you've learned since the last review ("words_reviewed" in
+data/frases.json), with your whole notebook for writing new sentences.
+--check makes sure every sentence has its meaning and note, nothing is there
+twice, and the sentences that aren't Duolingo's only use words from your
+notebook. It exits with 1 if something needs fixing.
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import re
 import sys
@@ -169,6 +183,227 @@ class Speller:
         return ", ".join(spelled)
 
 
+# --- Keeping the list growing: --todo and --check ----------------------------
+
+def notebook_words(words: dict, lang: str) -> list[dict]:
+    """Every word in your notebooks for that language, oldest first."""
+    seen, out = set(), []
+    for course in (words.get("courses") or {}).values():
+        if not isinstance(course, dict) or course.get("learning") != lang:
+            continue
+        for w in course.get("words") or []:
+            if not isinstance(w, dict) or not isinstance(w.get("text"), str):
+                continue
+            key = look_key(w["text"])
+            if key and key not in seen:
+                seen.add(key)
+                out.append(w)
+    return sorted(out, key=lambda w: (w.get("added") or "", w.get("seq") or 0))
+
+
+def key_phrases(guidebook: dict, lang: str) -> list[dict]:
+    """Duolingo's key phrases for that language, unit by unit, without repeats."""
+    out, seen = [], set()
+    for key, entry in guidebook.items():
+        if not key.startswith(lang + "-") or not isinstance(entry, dict):
+            continue
+        for unit in entry.get("units") or []:
+            for ph in unit.get("phrases") or []:
+                if not (isinstance(ph, dict) and isinstance(ph.get("fr"), str) and ph["fr"].strip()):
+                    continue
+                k = look_key(ph["fr"])
+                if k in seen:
+                    continue
+                seen.add(k)
+                out.append({**ph, "section": unit.get("section") or 0, "unit": unit.get("unit") or 0,
+                            "title": unit.get("title") or ""})
+    return out
+
+
+def placed(part: dict) -> dict:
+    """Every sentence already in a group, by how it's looked up, with its group."""
+    out = {}
+    for group in part.get("groups") or []:
+        if not isinstance(group, dict):
+            continue
+        for item in group.get("sentences") or []:
+            if isinstance(item, dict) and isinstance(item.get("fr"), str):
+                out.setdefault(look_key(item["fr"]), group.get("id"))
+    return out
+
+
+def outside_notebook(text: str, vocab: set[str]) -> tuple[list[str], list[str]]:
+    """Words of a sentence that aren't in your notebook, and the ones taken as names.
+
+    A phrase from your notebook counts as a whole ("s'il vous plaît"). A
+    capitalized word that isn't in the notebook is taken as a name (Marie,
+    Lyon), except as the very first word of the sentence.
+    """
+    unknown, names, first = [], [], True
+    for part in PAUSE.split(clean(text)):
+        tokens = [t for t in part.split() if look_key(t)]
+        keys = [look_key(t) for t in tokens]
+        i = 0
+        while i < len(tokens):
+            for j in range(min(len(tokens), i + MAX_SPAN), i, -1):
+                if " ".join(keys[i:j]) in vocab:
+                    i = j
+                    break
+            else:
+                word = tokens[i].strip(EDGES)
+                if word[:1].isupper() and not first:
+                    names.append(word)
+                else:
+                    unknown.append(word)
+                i += 1
+            first = False
+    return unknown, names
+
+
+def todo(lang: str = "fr") -> int:
+    source = load(SOURCE, None)
+    if not isinstance(source, dict) or not isinstance(source.get(lang), dict):
+        print(f"data/frases.json has no part for {lang!r}.")
+        return 1
+    part = source[lang]
+    guidebook = load(GUIDEBOOK, {})
+    words = load(WORDS, {})
+    guidebook = guidebook if isinstance(guidebook, dict) else {}
+    words = words if isinstance(words, dict) else {}
+
+    have = placed(part)
+    fresh = [ph for ph in key_phrases(guidebook, lang) if look_key(ph["fr"]) not in have]
+    notebook = notebook_words(words, lang)
+    reviewed = part.get("words_reviewed")
+    reviewed = reviewed if isinstance(reviewed, int) else 0
+    newest = max((w.get("seq") or 0 for w in notebook), default=0)
+    new_words = [w for w in notebook if (w.get("seq") or 0) > reviewed]
+
+    if not fresh and not new_words:
+        print(f"Nothing new: every key phrase is in a group and no word came after #{reviewed}.")
+        return 0
+
+    def means(w: dict) -> str:
+        return ", ".join(w.get("translations") or []) or "?"
+
+    print(f"== Key phrases from Duolingo that aren't in a group yet ({len(fresh)}) ==")
+    unit = None
+    for ph in fresh:
+        here = (ph["section"], ph["unit"])
+        if here != unit:
+            unit = here
+            print(f"Section {ph['section'] + 1}, unit {ph['unit'] + 1}: {ph['title'] or '(no title)'}")
+        print(f"  {ph['fr']}  =  {ph.get('es') or '?'}")
+    if not fresh:
+        print("  (none)")
+
+    print(f"\n== Words learned since the last review ({len(new_words)}; words_reviewed is {reviewed}, newest is {newest}) ==")
+    for w in new_words:
+        print(f"  #{w.get('seq')}  {w['text']}  =  {means(w)}")
+    if not new_words:
+        print("  (none)")
+
+    print(f"\n== Your whole notebook ({len(notebook)} words; your own sentences can only use these, plus names) ==")
+    print("  " + " | ".join(f"{w['text']} ({means(w)})" for w in notebook))
+
+    print("\n== Groups now ==")
+    for group in part.get("groups") or []:
+        items = [x for x in group.get("sentences") or [] if isinstance(x, dict)]
+        stars = sum(1 for x in items if x.get("star"))
+        print(f"  {group.get('id')}: {group.get('title')} ({len(items)} sentences, {stars} with a star)")
+        for x in items:
+            print(f"      {'★ ' if x.get('star') else ''}{x.get('fr')}")
+
+    print(f"\nWhen you're done, set \"words_reviewed\" to {newest} and run: python3 scripts/frases.py --check")
+    return 0
+
+
+def check(lang_only: str | None = None) -> int:
+    source = load(SOURCE, None)
+    if not isinstance(source, dict):
+        print("data/frases.json isn't valid JSON.")
+        return 1
+    guidebook = load(GUIDEBOOK, {})
+    words = load(WORDS, {})
+    guidebook = guidebook if isinstance(guidebook, dict) else {}
+    words = words if isinstance(words, dict) else {}
+    problems: list[str] = []
+    notes: list[str] = []
+    for lang, part in source.items():
+        if lang.startswith("_") or (lang_only and lang != lang_only):
+            continue
+        if not isinstance(part, dict) or not isinstance(part.get("groups"), list):
+            problems.append(f"{lang}: needs a \"groups\" list.")
+            continue
+        notebook = notebook_words(words, lang)
+        vocab = {look_key(w["text"]) for w in notebook}
+        newest = max((w.get("seq") or 0 for w in notebook), default=0)
+        duo = {look_key(ph["fr"]) for ph in key_phrases(guidebook, lang)}
+        reviewed = part.get("words_reviewed")
+        if not isinstance(reviewed, int) or reviewed < 0:
+            problems.append(f"{lang}: \"words_reviewed\" should be a whole number (the newest word now is #{newest}).")
+        elif reviewed > newest and notebook:
+            problems.append(f"{lang}: \"words_reviewed\" is {reviewed}, but the newest word is #{newest}.")
+        ids, seen, total, stars, all_names = set(), {}, 0, 0, set()
+        for gi, group in enumerate(part["groups"]):
+            if not isinstance(group, dict):
+                problems.append(f"{lang}: group {gi + 1} isn't an object.")
+                continue
+            gid = group.get("id")
+            where = f"{lang}/{gid or gi + 1}"
+            if not isinstance(gid, str) or not re.fullmatch(r"[a-z0-9-]+", gid):
+                problems.append(f"{where}: the id should be lowercase letters, digits and dashes.")
+            elif gid in ids:
+                problems.append(f"{where}: two groups have this id.")
+            ids.add(gid)
+            if not isinstance(group.get("title"), str) or not group["title"].strip():
+                problems.append(f"{where}: needs a title.")
+            items = group.get("sentences")
+            if not isinstance(items, list) or not items:
+                problems.append(f"{where}: needs at least one sentence.")
+                continue
+            for item in items:
+                if not isinstance(item, dict) or not isinstance(item.get("fr"), str) or not item["fr"].strip():
+                    problems.append(f"{where}: a sentence has no \"fr\".")
+                    continue
+                fr = item["fr"]
+                total += 1
+                stars += bool(item.get("star"))
+                key = look_key(fr)
+                if key in seen:
+                    problems.append(f"{where}: «{fr}» is also in {seen[key]}.")
+                seen[key] = where
+                for field in ("es", "use"):
+                    if not isinstance(item.get(field), str) or not item[field].strip():
+                        problems.append(f"{where}: «{fr}» needs \"{field}\".")
+                if "star" in item and not isinstance(item["star"], bool):
+                    problems.append(f"{where}: «{fr}»: \"star\" should be true or false.")
+                if "added" in item and not (isinstance(item["added"], str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", item["added"])):
+                    problems.append(f"{where}: «{fr}»: \"added\" should be a date like 2026-11-15.")
+                for field in ("fr", "es", "use"):
+                    if isinstance(item.get(field), str) and re.search("[–—]", item[field]):
+                        problems.append(f"{where}: «{fr}»: \"{field}\" has a long dash; use a comma or a period.")
+                if key in duo or not vocab:
+                    continue
+                unknown, names = outside_notebook(fr, vocab)
+                all_names.update(names)
+                if unknown:
+                    problems.append(f"{where}: «{fr}» uses words that aren't in the notebook: {', '.join(unknown)}.")
+        left = sum(1 for k in duo if k not in seen)
+        notes.append(f"{lang}: {total} sentences in {len(ids)} groups, {stars} with a star" +
+                     (f"; {left} key phrase{'s' if left != 1 else ''} from Duolingo not in a group yet" if left else "") +
+                     (f"; taken as names: {', '.join(sorted(all_names))}" if all_names else "") + ".")
+    for line in notes:
+        print(line)
+    if problems:
+        print(f"\n{len(problems)} thing{'s' if len(problems) != 1 else ''} to fix:")
+        for line in problems:
+            print(f"  - {line}")
+        return 1
+    print("All good.")
+    return 0
+
+
 def main() -> int:
     source = load(SOURCE, None)
     if not isinstance(source, dict):
@@ -219,6 +454,15 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Readings for the important sentences, and help to keep them growing.")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--todo", action="store_true", help="list new key phrases and words since the last review")
+    mode.add_argument("--check", action="store_true", help="check data/frases.json")
+    args = parser.parse_args()
+    if args.todo:
+        sys.exit(todo())
+    if args.check:
+        sys.exit(check())
     try:
         sys.exit(main())
     except Exception as err:  # noqa: BLE001  never break the word sync because of the sentences

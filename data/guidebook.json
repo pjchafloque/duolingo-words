@@ -66,6 +66,39 @@
       "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/eeb42e8bff453c57a6007e0fc9faeab3"
      }
     ]
+   },
+   {
+    "section": 0,
+    "unit": 2,
+    "title": "Habla sobre tu familia",
+    "url": "https://d1btvuu4dwu627.cloudfront.net/guidebook/compiled/fr/es/iOS/1/0c7392e980c82ca24ca039d685253ee46c115ec67b9d3afb6d94373be588e45072b53b63b787e90c0a01693b46153ec1484929d53bfa881dae2ccd8f96dcf704/3.json",
+    "phrases": [
+     {
+      "fr": "J'ai une fille.",
+      "es": "Tengo una hija.",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/9ef9f63cd6eb0eb0bcd875930a5bcf53"
+     },
+     {
+      "fr": "Elle vient de Paris ou de New York ?",
+      "es": "¿Ella es de París o de Nueva York?",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/380b16d3e17694ed098cf1b393927b7a"
+     },
+     {
+      "fr": "Tu as un frère ?",
+      "es": "¿Tienes un hermano?",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/3304831dfbedf1e84bb999a179be9927"
+     },
+     {
+      "fr": "J'ai un neveu et une nièce.",
+      "es": "Tengo un sobrino y una sobrina.",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/2487ceea7eb5fae9ddaa8bacc71dd870"
+     },
+     {
+      "fr": "Oui, elle habite à Lyon maintenant.",
+      "es": "Sí, ella vive en Lyon ahora.",
+      "audio": "https://d1vq87e9lcf771.cloudfront.net/danielle/210aecc870f853077ace775802dccb5b"
+     }
+    ]
    }
   ]
  }

@@ -1,7 +1,7 @@
 {
  "version": 1,
  "current": "fr-es",
- "updated": "2026-11-14T20:08:24Z",
+ "updated": "2026-11-15T18:15:39Z",
  "courses": {
   "fr-es": {
    "learning": "fr",
@@ -223,10 +223,11 @@
      "audio": "https://d1vq87e9lcf771.cloudfront.net/beafr/ede05c4664f58cc1aeddd4a81e9e038e",
      "added": "2026-11-14T20:08:24Z",
      "seq": 33,
-     "pron": "fil",
+     "pron": "fis",
      "ipa": "fˈil",
      "pron_v": 2,
-     "pron_src": "auto"
+     "pron_src": "you",
+     "note": "la s suena y la l no"
     },
     {
      "text": "tu as",
@@ -664,7 +665,7 @@
    "dropped": {},
    "duolingo_total": 48,
    "count": 48,
-   "updated": "2026-11-14T20:08:24Z"
+   "updated": "2026-11-15T18:15:39Z"
   },
   "pt-es": {
    "learning": "pt",

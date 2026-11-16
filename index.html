@@ -434,7 +434,7 @@ body.editing .pron[data-key].is-editing { text-decoration: none; background: non
   .key .btns { margin-top: 10px; }
 }
 
-/* ---- Divider tabs: Duolingo | Aula (Portuguese), Duolingo | Frases importantes (French) ---- */
+/* ---- Divider tabs: Duolingo | Aula (Portuguese), Duolingo | Frases importantes | Sonidos (French) ---- */
 .views { display: flex; gap: 0 10px; height: 32px; margin: -32px 0 32px; }
 .view {
   position: relative;
@@ -475,6 +475,32 @@ body.editing .pron[data-key].is-editing { text-decoration: none; background: non
 .seg .seg-label { color: var(--ink-soft); font: italic 400 16px/32px var(--serif); }
 body.view-frases .group { scroll-margin-top: 150px; }
 @media (max-width: 719px) { body.view-frases .group { scroll-margin-top: 16px; } }
+
+/* ---- Sounds (Sonidos), in the French notebook: how the letters read, and pairs to tell apart by ear ---- */
+.view[data-view="sonidos"] { --tab-bg: rgba(206, 130, 255, .17); }
+body.view-sonidos .group { scroll-margin-top: 150px; }
+@media (max-width: 719px) { body.view-sonidos .group { scroll-margin-top: 16px; } }
+.card > :is(.pairs, .sws, .ear, .vid) { margin-top: 32px; }
+.vid { max-width: 760px; aspect-ratio: 16 / 9; border: 1px solid var(--tape-edge); border-radius: 6px; overflow: hidden; background: #000; }
+.vid iframe { display: block; width: 100%; height: 100%; border: 0; }
+.vid-by { margin: 8px 0 0; color: var(--ink-soft); font-style: italic; font-size: 16px; line-height: 24px; }
+.card > .use + :is(.sws) { margin-top: 0; }
+.fr-w { font-weight: 600; }
+.pairs { list-style: none; margin: 0; padding: 0; max-width: 760px; }
+.pairs li { display: grid; grid-template-columns: minmax(0, 1fr) 2em minmax(0, 1fr); column-gap: 12px; }
+.pairs .vs-mid { color: var(--ink-soft); font-style: italic; text-align: center; }
+.pairs .pn { grid-column: 1 / -1; color: var(--ink-soft); font-style: italic; font-size: 16px; line-height: 24px; margin-bottom: 8px; }
+.pairs-h { margin: 32px 0 0; color: var(--ink-soft); font: italic 400 16px/32px var(--serif); }
+.pairs-h + .pairs { margin-top: 0; }
+.ear > p { margin: 0; }
+.ear > .opts { margin-top: 12px; }
+.ear > .dq { margin-top: 16px; font-size: 19px; }
+.ear > .fb { margin-top: 12px; }
+.ear .opts { display: flex; flex-wrap: wrap; gap: 8px 12px; }
+.ear .opt { height: 36px; padding: 0 18px; border-radius: 18px; font-size: 19px; line-height: 32px; }
+.ear .listen { border-color: var(--pen); color: var(--pen); }
+.ear .listen.playing { background: var(--pen); color: var(--paper); }
+@media (max-width: 479px) { .pairs li { grid-template-columns: minmax(0, 1fr) 1.2em minmax(0, 1fr); column-gap: 6px; } }
 
 /* ---- Class notebook (Aula) ---- */
 .secs { display: flex; flex-wrap: wrap; gap: 0 20px; flex: 1 1 100%; }
@@ -875,6 +901,18 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       newDuoIntro: "Recién llegadas de esta unidad de Duolingo. En la revisión de cada día pasan a su situación, con nota y estrella.",
       fresh: "nueva", freshTitle: "Agregada en los últimos 7 días",
       noMatchSent: q => `Ninguna frase coincide con «${q}».`, noSent: "No hay frases para mostrar.",
+      sonidosTab: "Sonidos",
+      sonidosSummary: (mine) => "Cómo se leen las letras del francés y los sonidos que más cuestan a quien habla español, con palabras para comparar. Toca cualquier palabra para oírla." +
+        (mine ? ` Las ${num(mine)} con ✓ son de tu lista de Duolingo y suenan con su grabación.` : ""),
+      sonidosSearch: "Buscar un sonido o una palabra", sonidosLabel: "Sonidos",
+      sonidosAbout: "Las explicaciones y los ejemplos están en data/sonidos.json. Las palabras con ✓ usan tu pronunciación y la grabación de Duolingo, y las demás la voz francesa de tu navegador. «Lento» también funciona aquí.",
+      sonidosLoading: "Abriendo los sonidos…", sonidosError: "No se pudo leer data/sonidos.json.",
+      noMatchSound: q => `Ningún sonido ni palabra coincide con «${q}».`,
+      compare: "Compara (toca cada una):", openYT: "Abrir en YouTube",
+      earTitle: "Entrena el oído",
+      earUse: "Pulsa «Escuchar», oye una de las dos palabras y elige cuál fue. Puedes volver a escucharla antes de elegir. Elige qué sonidos practicar:",
+      listen: "Escuchar", listenAgain: "Otra vez", whichOne: "¿Cuál oíste?", earNext: "Otra",
+      earEmpty: "Elige al menos un sonido.", earRight: "¡Bien!", earWrong: w => `Era ${w}.`,
       edit: "Editar", editTitle: "Corregir cómo se lee una palabra",
       editHint: "Toca un texto azul para cambiarlo. Enter guarda y Esc cancela. Si lo dejas vacío, vuelve la pronunciación automática.",
       editHintTouch: "Toca un texto azul para cambiarlo. Se guarda cuando tocas «Listo» o fuera del texto, y la × cancela. Si lo dejas vacío, vuelve la pronunciación automática.",
@@ -966,6 +1004,18 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
       newDuoIntro: "Just arrived from this Duolingo unit. The daily review moves them into their situation, with a note and a star.",
       fresh: "new", freshTitle: "Added in the last 7 days",
       noMatchSent: q => `No sentence matches “${q}”.`, noSent: "No sentences to show.",
+      sonidosTab: "Sounds",
+      sonidosSummary: (mine) => "How French letters read and the sounds Spanish speakers find hardest, with words to compare. Tap any word to hear it." +
+        (mine ? ` The ${num(mine)} with a ✓ are in your Duolingo list and play Duolingo's recording.` : ""),
+      sonidosSearch: "Search a sound or a word", sonidosLabel: "Sounds",
+      sonidosAbout: "The explanations and examples are in data/sonidos.json. Words with a ✓ use your pronunciation and Duolingo's recording; the rest use your browser's French voice. “Slow” works here too.",
+      sonidosLoading: "Opening the sounds…", sonidosError: "Couldn't read data/sonidos.json.",
+      noMatchSound: q => `No sound or word matches “${q}”.`,
+      compare: "Compare (tap each one):", openYT: "Open on YouTube",
+      earTitle: "Train your ear",
+      earUse: "Press “Listen”, hear one of the two words and pick which one it was. You can listen again before you choose. Pick which sounds to practice:",
+      listen: "Listen", listenAgain: "Again", whichOne: "Which one did you hear?", earNext: "Next",
+      earEmpty: "Pick at least one sound.", earRight: "Right!", earWrong: w => `It was ${w}.`,
       edit: "Edit", editTitle: "Fix how a word reads",
       editHint: "Tap a blue text to change it. Enter saves and Esc cancels. Leave it empty to get the automatic pronunciation back.",
       editHintTouch: "Tap a blue text to change it. It saves when you tap Done or anywhere else, and × cancels. Leave it empty to get the automatic pronunciation back.",
@@ -1100,7 +1150,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
   };
   const revealed = new Set();
   // Notebooks with more than one part, under divider tabs. The first part is your Duolingo words.
-  const VIEWS = { pt: ["duolingo", "aula"], fr: ["duolingo", "frases"] };
+  const VIEWS = { pt: ["duolingo", "aula"], fr: ["duolingo", "frases", "sonidos"] };
   function viewOf(c) {
     const parts = c && VIEWS[c.learning];
     const v = parts && state.views[c.learning];
@@ -1141,7 +1191,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     return keys.find((k) => k === h) || keys.find((k) => k.split("-")[0] === h) || null;
   }
   // "#aula" and "#aula/verbos" open the class notebook inside the Portuguese one,
-  // and "#frases" the important sentences inside the French one.
+  // "#frases" the important sentences inside the French one and "#sonidos" its sounds.
   function routeHash() {
     const h = decodeURIComponent(location.hash.slice(1));
     const m = h.match(/^aula(?:\/([\w-]+))?$/);
@@ -1153,9 +1203,9 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
         return k;
       }
     }
-    if (h === "frases") {
+    if (h === "frases" || h === "sonidos") {
       const k = courseKeys().find((x) => x.split("-")[0] === "fr");
-      if (k) { state.views.fr = "frases"; return k; }
+      if (k) { state.views.fr = h; return k; }
     }
     const k = keyFromHash();
     if (k && VIEWS[k.split("-")[0]]) state.views[k.split("-")[0]] = "duolingo";
@@ -1166,7 +1216,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     if (c && c.learning === "pt" && viewOf(c) === "aula") {
       return aula.sec && aula.sec !== "vocabulario" ? `aula/${aula.sec}` : "aula";
     }
-    if (c && c.learning === "fr" && viewOf(c) === "frases") return "frases";
+    if (c && c.learning === "fr" && (viewOf(c) === "frases" || viewOf(c) === "sonidos")) return viewOf(c);
     return hashFor(state.courseKey);
   }
   function syncHash() {
@@ -1345,10 +1395,11 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     const part = viewOf(c);
     const onAula = !!parts && part === "aula";
     const onFrases = !!parts && part === "frases";
+    const onSonidos = !!parts && part === "sonidos";
     const views = $("#views");
     views.hidden = !parts;
     if (parts) {
-      const label = { duolingo: "Duolingo", aula: "Aula", frases: s.frasesTab };
+      const label = { duolingo: "Duolingo", aula: "Aula", frases: s.frasesTab, sonidos: s.sonidosTab };
       const hadFocus = views.contains(document.activeElement); // keep it when a part finishes loading
       views.setAttribute("aria-label", s.views);
       views.innerHTML = parts.map((v) =>
@@ -1357,9 +1408,11 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     }
     document.body.classList.toggle("view-aula", onAula);
     document.body.classList.toggle("view-frases", onFrases);
-    $("#sortGroup").hidden = onAula || onFrases;
-    $("#week").hidden = onAula || onFrases;
-    $("#secs").hidden = !(onAula || onFrases);
+    document.body.classList.toggle("view-sonidos", onSonidos);
+    $("#sortGroup").hidden = onAula || onFrases || onSonidos;
+    $("#week").hidden = onAula || onFrases || onSonidos;
+    $("#quiz").hidden = onSonidos;
+    $("#secs").hidden = !(onAula || onFrases || onSonidos);
     $("#lessonWrap").hidden = !onAula;
     $("#stars").hidden = !onFrases;
     $("#coverGroup").hidden = !(onFrases && state.quiz);
@@ -1384,6 +1437,11 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
         b.textContent = langName(b.dataset.cover === "fr" ? c.learning : c.from);
         b.setAttribute("aria-pressed", String(b.dataset.cover === state.cover));
       }
+    }
+    if (onSonidos) {
+      $("#q").placeholder = s.sonidosSearch;
+      $("#about").textContent = s.sonidosAbout;
+      $("#secs").setAttribute("aria-label", s.sonidosLabel);
     }
     // Editing: the button only exists where your token is saved.
     const canEdit = !!repoName();
@@ -1481,6 +1539,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     applyChrome();
     if (inAula()) { renderAula(); return; }
     if (inFrases()) { renderFrases(); return; }
+    if (inSonidos()) { renderSonidos(); return; }
     const c = course();
     const words = c ? c.words || [] : [];
     const first = firstBatch(words);
@@ -1586,6 +1645,7 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
   $("#list").addEventListener("click", (e) => {
     if (inAula()) { aulaClick(e); return; }
     if (inFrases()) { frasesClick(e); return; }
+    if (inSonidos()) { sonidosClick(e); return; }
     const row = e.target.closest(".entry");
     if (!row) return;
     const w = shown[Number(row.dataset.i)];
@@ -2527,6 +2587,224 @@ body.view-aula .group, body.view-aula .group > h2, body.view-aula .aula-sec { sc
     const row = e.target.closest(".entry.sent");
     const it = row && frases.shown[Number(row.dataset.i)];
     if (it && e.target.closest(".play, .word, .pron")) play({ text: it.fr, audio: it.duo && it.duo.audio ? it.duo.audio : null }, row);
+  }
+
+  // ===== Sounds ("Sonidos"), a third part of the French notebook =====
+  // data/sonidos.json is written by hand: how the letters read, the sounds Spanish
+  // doesn't have, and pairs of words that differ in only one sound. Examples that
+  // are in your Duolingo list use your pronunciation and Duolingo's recording; the
+  // rest read from "words" in that file and play with the browser's French voice.
+  // The pairs also feed "Entrena el oído", a listen-and-pick drill.
+  const sonidos = { status: "idle", sections: [], words: {}, ear: null, earSecs: store.get("earSecs", null), score: { ok: 0, n: 0 } };
+  function inSonidos() {
+    const c = course();
+    return !!c && c.learning === "fr" && viewOf(c) === "sonidos";
+  }
+  function loadSonidos() {
+    if (sonidos.status === "loading" || sonidos.status === "ready") return;
+    sonidos.status = "loading";
+    getJSON("data/sonidos.json").then((d) => {
+      const fr = (d && d.fr) || {};
+      sonidos.words = (fr.words && typeof fr.words === "object") ? fr.words : {};
+      sonidos.sections = (fr.sections || []).filter((x) => x && x.id && Array.isArray(x.blocks));
+      sonidos.status = "ready";
+    }).catch(() => { sonidos.status = "error"; })
+      .then(() => { if (inSonidos()) render(); });
+  }
+  // A word's reading, meaning and recording: your notebook first, data/sonidos.json otherwise.
+  function soundWord(text) {
+    const w = duoMap().get(norm(text));
+    if (w) return { pron: pendingPron("fr", w.text) || w.pron || "", es: (w.translations || []).slice(0, 2).join(", "), audio: w.audio || null, mine: true };
+    const x = sonidos.words[text] || [];
+    return { pron: x[0] || "", es: x[1] || "", audio: null, mine: false };
+  }
+  function sayFr(text, el) {
+    play({ text, audio: soundWord(text).audio }, el);
+  }
+  // *mot* in the explanations is French you can tap to hear.
+  const frMd = (text) => esc(text).replace(/\*([^*]+)\*/g, (m, inner) => `<span class="fr-w say" lang="fr" data-say="${inner}">${inner}</span>`);
+  function chipHTML(text, withMeaning) {
+    const s = t();
+    const w = soundWord(text);
+    return `<span class="sw say" lang="fr" data-say="${esc(text)}"${w.es && !withMeaning ? ` title="${esc(w.es)}"` : ""}><span class="fr-w">${esc(text)}</span>` +
+      (w.mine ? `<span class="duo" title="${esc(s.inDuo)}" aria-label="${esc(s.inDuo)}">✓</span>` : "") +
+      (w.pron ? ` <span class="fp">${esc(w.pron)}</span>` : "") +
+      (withMeaning && w.es ? ` <span class="pes" lang="es">${esc(w.es)}</span>` : "") + `</span>`;
+  }
+  function soundRowsHTML(rows) {
+    return `<dl class="sounds">` + rows.map(([label, expl, ws]) =>
+      `<dt lang="fr">${esc(label)}</dt><dd><span class="rexp">${frMd(expl || "")}</span>` +
+      `<span class="sws">${(ws || []).map((w) => chipHTML(w)).join("")}</span></dd>`).join("") + `</dl>`;
+  }
+  function pairsHTML(rows) {
+    return `<p class="pairs-h">${esc(t().compare)}</p><ol class="pairs">` + rows.map(([a, b, note]) =>
+      `<li>${chipHTML(a, true)}<span class="vs-mid">/</span>${chipHTML(b, true)}${note ? `<span class="pn">${esc(note)}</span>` : ""}</li>`).join("") + `</ol>`;
+  }
+  // Search: a section whose title or explanation matches shows whole; otherwise only its matching rows.
+  const anyHit = (parts, q) => parts.some((x) => fold(x).includes(q));
+  const wordHit = (text, q) => { const w = soundWord(text); return anyHit([text, w.pron, w.es], q); };
+  function soundSectionHTML(sec, q) {
+    const whole = !q || anyHit([sec.title, sec.use || ""], q);
+    let body = "";
+    for (const b of sec.blocks) {
+      if (Array.isArray(b.sounds)) {
+        const rows = whole ? b.sounds : b.sounds.filter(([l, e, ws]) => anyHit([l, e || ""], q) || (ws || []).some((w) => wordHit(w, q)));
+        if (rows.length) body += soundRowsHTML(rows);
+      } else if (Array.isArray(b.say)) {
+        const ws = whole ? b.say : b.say.filter((w) => wordHit(w, q));
+        if (ws.length) body += `<p class="sws">${ws.map((w) => chipHTML(w)).join("")}</p>`;
+      } else if (Array.isArray(b.pairs)) {
+        const rows = whole ? b.pairs : b.pairs.filter((p) => wordHit(p[0], q) || wordHit(p[1], q) || anyHit([p[2] || ""], q));
+        if (rows.length) body += pairsHTML(rows);
+      } else if (b.ojo && whole) body += `<p class="ojo">${frMd(b.ojo)}</p>`;
+      else if (b.video && b.video.playlist && whole) body += videoHTML(b.video);
+    }
+    if (!body) return "";
+    return `<section class="group card" id="g-${esc(sec.id)}"><h2><span class="when">${esc(sec.title)}</span></h2>` +
+      (sec.use ? `<p class="use">${frMd(sec.use)}</p>` : "") + body + `</section>`;
+  }
+
+  // A YouTube playlist, embedded (the privacy-enhanced player) with a link to open it on YouTube.
+  function videoHTML(v) {
+    const list = encodeURIComponent(v.playlist);
+    const s = t();
+    return `<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=${list}" title="${esc(v.title || "YouTube")}" loading="lazy" ` +
+      `allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>` +
+      `<p class="vid-by">${esc([v.title, v.by].filter(Boolean).join(" · "))} · <a href="https://www.youtube.com/playlist?list=${list}" target="_blank" rel="noopener">${esc(s.openYT)}</a></p>`;
+  }
+
+  // ---- Train your ear: hear one word of a pair, pick which one it was ----
+  function pairPool() {
+    const pool = [];
+    for (const sec of sonidos.sections) for (const b of sec.blocks) for (const p of b.pairs || []) {
+      if (Array.isArray(p) && p[0] && p[1]) pool.push({ sec: sec.id, a: p[0], b: p[1], note: p[2] || "" });
+    }
+    return pool;
+  }
+  function earChoice() {
+    const ids = [...new Set(pairPool().map((p) => p.sec))];
+    const picked = Array.isArray(sonidos.earSecs) ? sonidos.earSecs.filter((x) => ids.includes(x)) : ids;
+    return { ids, picked };
+  }
+  function newEar() {
+    const { picked } = earChoice();
+    const pool = pairPool().filter((p) => picked.includes(p.sec));
+    const prev = sonidos.ear;
+    sonidos.ear = null;
+    if (!pool.length) return;
+    let p = pool[Math.floor(Math.random() * pool.length)];
+    for (let i = 0; i < 5 && pool.length > 1 && prev && p.a === prev.a && p.b === prev.b; i++) p = pool[Math.floor(Math.random() * pool.length)];
+    sonidos.ear = { ...p, answer: Math.random() < 0.5 ? p.a : p.b, pick: null, heard: false };
+  }
+  function earHTML() {
+    const s = t();
+    if (!sonidos.ear) newEar();
+    const d = sonidos.ear;
+    const { ids, picked } = earChoice();
+    const title = (id) => (sonidos.sections.find((x) => x.id === id) || { title: id }).title;
+    let h = `<section class="group card ear" id="g-oido"><h2><span class="when">${esc(s.earTitle)}</span><span class="score">${sonidos.score.ok}/${sonidos.score.n}</span></h2>` +
+      `<p class="use">${esc(s.earUse)}</p><p class="dt-row">` +
+      ids.map((id) => `<button type="button" class="toggle" data-esec="${esc(id)}" aria-pressed="${picked.includes(id)}">${esc(title(id))}</button>`).join("") + `</p>`;
+    if (!d) return h + `<p class="message">${esc(s.earEmpty)}</p></section>`;
+    h += `<p class="opts"><button type="button" class="opt listen" data-ear="listen">${esc(d.heard ? s.listenAgain : s.listen)}</button></p>` +
+      `<p class="dq">${esc(s.whichOne)}</p><p class="opts">` + [d.a, d.b].map((w) => {
+        let cls = "opt";
+        if (d.pick && w === d.answer) cls += " ok";
+        else if (d.pick && w === d.pick) cls += " bad";
+        return `<button type="button" class="${cls}" data-pick="${esc(w)}" lang="fr"${d.pick || !d.heard ? " disabled" : ""}>${esc(w)}</button>`;
+      }).join("") + `</p>`;
+    if (d.pick) {
+      const ok = d.pick === d.answer;
+      h += `<p class="fb ${ok ? "ok" : "bad"}">${esc(ok ? s.earRight : s.earWrong(d.answer))}</p>` +
+        pairsHTML([[d.a, d.b, d.note]]) +
+        `<p class="opts"><button type="button" class="opt" data-ear="next">${esc(s.earNext)}</button></p>`;
+    }
+    return h + `</section>`;
+  }
+  function redrawEar() {
+    const el = $("#g-oido");
+    if (el) el.outerHTML = earHTML();
+  }
+  function earListen(btn) {
+    const d = sonidos.ear;
+    if (!d) return;
+    if (!d.heard) {
+      d.heard = true;
+      btn.textContent = t().listenAgain;
+      for (const b of document.querySelectorAll("#g-oido [data-pick]")) b.disabled = false;
+    }
+    sayFr(d.answer, btn);
+  }
+  function earPick(w) {
+    const d = sonidos.ear;
+    if (!d || d.pick || !d.heard) return;
+    d.pick = w;
+    sonidos.score.n++;
+    if (w === d.answer) sonidos.score.ok++;
+    redrawEar();
+    const next = document.querySelector('#g-oido [data-ear="next"]');
+    if (next) next.focus();
+  }
+  function earNext() {
+    newEar();
+    redrawEar();
+    const btn = document.querySelector('#g-oido [data-ear="listen"]');
+    if (btn) { earListen(btn); btn.focus(); } // plays the new word right away
+  }
+
+  function renderSonidos() {
+    const s = t();
+    const list = $("#list");
+    $("#status").hidden = true;
+    $("#demo").hidden = true;
+    $("#legend").hidden = true;
+    if (sonidos.status !== "ready") {
+      if (sonidos.status === "idle") loadSonidos();
+      $("#summary").textContent = " ";
+      $("#secs").innerHTML = "";
+      list.innerHTML = `<p class="message">${esc(sonidos.status === "error" ? s.sonidosError : s.sonidosLoading)}</p>`;
+      return;
+    }
+    const used = new Set();
+    for (const sec of sonidos.sections) for (const b of sec.blocks) {
+      for (const r of b.sounds || []) for (const w of r[2] || []) used.add(w);
+      for (const w of b.say || []) used.add(w);
+      for (const p of b.pairs || []) { used.add(p[0]); used.add(p[1]); }
+    }
+    $("#summary").textContent = s.sonidosSummary([...used].filter((w) => soundWord(w).mine).length);
+    const q = fold(state.q.trim());
+    const present = new Set();
+    let html = "";
+    for (const sec of sonidos.sections) {
+      const h = soundSectionHTML(sec, q);
+      if (h) { html += h; present.add(sec.id); }
+    }
+    const ear = pairPool().length > 0;
+    if (ear && !q) { html += earHTML(); present.add("oido"); }
+    const nav = sonidos.sections.map((x) => [x.id, x.title]);
+    if (ear) nav.push(["oido", s.earTitle]);
+    $("#secs").innerHTML = nav.map(([id, title]) =>
+      `<button type="button" data-group="${esc(id)}"${present.has(id) ? "" : ' class="dim"'}>${esc(title)}</button>`).join("");
+    list.innerHTML = html || `<p class="message">${esc(s.noMatchSound(state.q.trim()))}</p>`;
+  }
+  function sonidosClick(e) {
+    const tg = e.target;
+    const tog = tg.closest("[data-esec]");
+    if (tog) {
+      const id = tog.dataset.esec;
+      const { picked } = earChoice();
+      sonidos.earSecs = picked.includes(id) ? picked.filter((x) => x !== id) : [...picked, id];
+      store.set("earSecs", sonidos.earSecs);
+      newEar();
+      redrawEar();
+      return;
+    }
+    const act = tg.closest("[data-ear]");
+    if (act) { if (act.dataset.ear === "listen") earListen(act); else earNext(); return; }
+    const pick = tg.closest("[data-pick]");
+    if (pick) { if (!pick.disabled) earPick(pick.dataset.pick); return; }
+    const say = tg.closest("[data-say]");
+    if (say) sayFr(say.dataset.say, say);
   }
 
   // ===== Fixing a pronunciation from the page =====

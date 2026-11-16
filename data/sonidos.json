@@ -1,0 +1,897 @@
+{
+ "_how": "Lo que muestra la parte «Sonidos» del cuaderno de francés. Cada sección tiene un título, una explicación (use) y bloques: sounds (filas de [letras, explicación, ejemplos]), say (palabras para oír), pairs ([palabra, palabra, nota opcional]: dos palabras que solo cambian en un sonido; también salen en «Entrena el oído») ojo (un aviso) y video (una lista de YouTube: playlist con su id, title y by). En el texto, *palabra* es francés que se puede tocar para oír. Las palabras de tu lista de Duolingo usan tu pronunciación y la grabación de Duolingo. Las demás necesitan una línea en words: [cómo se lee, significado].",
+ "fr": {
+  "words": {
+   "bain": [
+    "ben",
+    "baño"
+   ],
+   "beaucoup": [
+    "bocú",
+    "mucho"
+   ],
+   "bol": [
+    "bol",
+    "tazón"
+   ],
+   "bon": [
+    "bon",
+    "bueno"
+   ],
+   "bonne": [
+    "bon",
+    "buena"
+   ],
+   "bout": [
+    "bu",
+    "punta, pedazo"
+   ],
+   "chat": [
+    "sha",
+    "gato"
+   ],
+   "chocolat": [
+    "shocolá",
+    "chocolate"
+   ],
+   "chou": [
+    "shu",
+    "repollo"
+   ],
+   "cousine": [
+    "cuzín",
+    "prima"
+   ],
+   "des": [
+    "de",
+    "unos, unas"
+   ],
+   "dessert": [
+    "deser",
+    "postre"
+   ],
+   "dessous": [
+    "desú",
+    "debajo"
+   ],
+   "dessus": [
+    "desǘ",
+    "encima"
+   ],
+   "deux": [
+    "dö",
+    "dos"
+   ],
+   "deux amis": [
+    "dözamí",
+    "dos amigos"
+   ],
+   "désert": [
+    "dezer",
+    "desierto"
+   ],
+   "Espagne": [
+    "españ",
+    "España"
+   ],
+   "famille": [
+    "famiy",
+    "familia"
+   ],
+   "fromage": [
+    "fromash",
+    "queso"
+   ],
+   "grand": [
+    "gran",
+    "grande (m.)"
+   ],
+   "grande": [
+    "grand",
+    "grande (f.)"
+   ],
+   "il parle": [
+    "il parl",
+    "él habla"
+   ],
+   "ils ont": [
+    "ilzón",
+    "ellos tienen"
+   ],
+   "ils parlent": [
+    "il parl",
+    "ellos hablan"
+   ],
+   "ils sont": [
+    "il son",
+    "ellos son, ellos están"
+   ],
+   "joue": [
+    "yu",
+    "mejilla"
+   ],
+   "le": [
+    "le",
+    "el"
+   ],
+   "le chat": [
+    "le sha",
+    "el gato"
+   ],
+   "les": [
+    "le",
+    "los, las"
+   ],
+   "les amis": [
+    "lezamí",
+    "los amigos"
+   ],
+   "les chats": [
+    "le sha",
+    "los gatos"
+   ],
+   "maison": [
+    "mezón",
+    "casa"
+   ],
+   "montagne": [
+    "montañ",
+    "montaña"
+   ],
+   "neuf": [
+    "nöf",
+    "nueve; nuevo"
+   ],
+   "nous avons": [
+    "nuzavón",
+    "tenemos"
+   ],
+   "nous savons": [
+    "nu savón",
+    "sabemos"
+   ],
+   "pain": [
+    "pen",
+    "pan"
+   ],
+   "Paris": [
+    "parí",
+    "París"
+   ],
+   "parler": [
+    "parlé",
+    "hablar"
+   ],
+   "petit": [
+    "petí",
+    "pequeño"
+   ],
+   "petite": [
+    "petit",
+    "pequeña"
+   ],
+   "poison": [
+    "puazón",
+    "veneno"
+   ],
+   "poisson": [
+    "puasón",
+    "pescado, pez"
+   ],
+   "pont": [
+    "pon",
+    "puente"
+   ],
+   "quatre": [
+    "catr",
+    "cuatro"
+   ],
+   "qui": [
+    "qui",
+    "quién"
+   ],
+   "rose": [
+    "roz",
+    "rosa"
+   ],
+   "roue": [
+    "ru",
+    "rueda"
+   ],
+   "rouge": [
+    "rush",
+    "rojo"
+   ],
+   "rue": [
+    "rü",
+    "calle"
+   ],
+   "sac": [
+    "sac",
+    "bolso"
+   ],
+   "salut": [
+    "salǘ",
+    "hola, chao"
+   ],
+   "tout": [
+    "tu",
+    "todo"
+   ],
+   "très": [
+    "tre",
+    "muy"
+   ],
+   "tu": [
+    "tü",
+    "tú"
+   ],
+   "un ami": [
+    "anamí",
+    "un amigo"
+   ],
+   "vent": [
+    "van",
+    "viento"
+   ],
+   "vert": [
+    "ver",
+    "verde (m.)"
+   ],
+   "verte": [
+    "vert",
+    "verde (f.)"
+   ],
+   "vin": [
+    "ven",
+    "vino"
+   ],
+   "vol": [
+    "vol",
+    "vuelo"
+   ],
+   "vont": [
+    "von",
+    "ellos van"
+   ],
+   "vous": [
+    "vu",
+    "usted, ustedes"
+   ],
+   "vous avez": [
+    "vuzavé",
+    "usted tiene, ustedes tienen"
+   ],
+   "vu": [
+    "vü",
+    "visto"
+   ],
+   "zéro": [
+    "zeró",
+    "cero"
+   ]
+  },
+  "sections": [
+   {
+    "id": "video",
+    "title": "Clases en video",
+    "use": "Nelson es bilingüe en español y francés, vive en Francia y enseña francés en español, pensando en lo que nos cuesta a quienes hablamos español. Esta es su lista de 15 clases de pronunciación para hispanohablantes. Los videos siguen uno tras otro, y con el botón de lista del reproductor puedes saltar a cualquiera.",
+    "blocks": [
+     {
+      "video": {
+       "playlist": "PLpU3d-do7Pcf7g8qLh61HEf1qvwVTQxsx",
+       "title": "Pronunciación francesa para hispanohablantes",
+       "by": "Clases de Francés Fácil con Nelson"
+      }
+     }
+    ]
+   },
+   {
+    "id": "letras",
+    "title": "Cómo se leen las letras",
+    "use": "Las letras y combinaciones que en francés no suenan como en español. Toca un ejemplo para oírlo.",
+    "blocks": [
+     {
+      "sounds": [
+       [
+        "ou",
+        "Suena «u».",
+        [
+         "ou",
+         "bonjour",
+         "je voudrais"
+        ]
+       ],
+       [
+        "u",
+        "Suena «ü»: una i con los labios redondeados (más abajo, en «u y ou»).",
+        [
+         "une",
+         "tu as",
+         "salut"
+        ]
+       ],
+       [
+        "oi",
+        "Suena «ua».",
+        [
+         "moi aussi",
+         "et toi",
+         "au revoir"
+        ]
+       ],
+       [
+        "au, eau",
+        "Suenan «o».",
+        [
+         "au revoir",
+         "moi aussi",
+         "beaucoup"
+        ]
+       ],
+       [
+        "ai, ei",
+        "Suenan «e».",
+        [
+         "parfait",
+         "j'ai",
+         "s'il vous plaît"
+        ]
+       ],
+       [
+        "eu, œu",
+        "Suenan «ö»: una e con los labios redondeados.",
+        [
+         "monsieur",
+         "neveu",
+         "sœur"
+        ]
+       ],
+       [
+        "é, è, ê",
+        "Todas son «e». La é es cerrada, como la del español, y la è y la ê son un poco más abiertas.",
+        [
+         "café",
+         "thé",
+         "frère",
+         "nièce"
+        ]
+       ],
+       [
+        "e",
+        "Sin tilde y al final de la palabra, no suena. En palabras cortas como *je* y *de* es una e floja, casi «ö».",
+        [
+         "tante",
+         "madame",
+         "je",
+         "de"
+        ]
+       ],
+       [
+        "an, en",
+        "Vocal nasal «an». La n no se pronuncia: el aire sale también por la nariz.",
+        [
+         "enchanté",
+         "tante",
+         "maintenant"
+        ]
+       ],
+       [
+        "on",
+        "Vocal nasal «on».",
+        [
+         "bonjour",
+         "non",
+         "oncle"
+        ]
+       ],
+       [
+        "in, ain, ien",
+        "Vocal nasal parecida a «en». Ojo: en francés «en» se lee «an» y «in» se lee «en».",
+        [
+         "bien",
+         "il vient",
+         "pain"
+        ]
+       ],
+       [
+        "ch",
+        "Suena «sh», como en «show».",
+        [
+         "enchanté",
+         "chat",
+         "chocolat"
+        ]
+       ],
+       [
+        "j, ge",
+        "Como la «ll» argentina de «yo». La pronunciación la escribe «y», y «sh» al final de la palabra.",
+        [
+         "je",
+         "j'ai",
+         "bonjour",
+         "fromage"
+        ]
+       ],
+       [
+        "gn",
+        "Suena «ñ».",
+        [
+         "Espagne",
+         "montagne"
+        ]
+       ],
+       [
+        "ill",
+        "Después de vocal suena «y».",
+        [
+         "fille",
+         "famille"
+        ]
+       ],
+       [
+        "qu",
+        "Suena «k». La u no se pronuncia.",
+        [
+         "qui",
+         "quatre"
+        ]
+       ],
+       [
+        "ç, ce, ci",
+        "Suenan «s».",
+        [
+         "ça va",
+         "merci",
+         "nièce"
+        ]
+       ],
+       [
+        "s",
+        "Entre dos vocales suena «z», una s que zumba.",
+        [
+         "maison",
+         "rose",
+         "cousine"
+        ]
+       ],
+       [
+        "h",
+        "Nunca suena.",
+        [
+         "il habite",
+         "elle habite",
+         "oh"
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "u",
+    "title": "u y ou",
+    "use": "Para la u francesa, di «i» y, sin mover la lengua, redondea los labios como para silbar. La pronunciación la escribe «ü». La «ou» es la u del español. Si las confundes, cambias la palabra: *tu* es «tú» y *tout* es «todo».",
+    "blocks": [
+     {
+      "sounds": [
+       [
+        "u → ü",
+        "Lengua de i, labios de u.",
+        [
+         "une",
+         "tu as",
+         "salut"
+        ]
+       ],
+       [
+        "ou → u",
+        "La u de siempre.",
+        [
+         "ou",
+         "bonjour",
+         "beaucoup"
+        ]
+       ]
+      ]
+     },
+     {
+      "pairs": [
+       [
+        "tu",
+        "tout"
+       ],
+       [
+        "vu",
+        "vous"
+       ],
+       [
+        "rue",
+        "roue"
+       ],
+       [
+        "dessus",
+        "dessous"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "eu",
+    "title": "La e redondeada y la e floja",
+    "use": "Para la «ö», di «e» y redondea los labios como para decir «o». La e de las palabras cortas (*je*, *de*, *le*) se parece, pero es más floja y corta. Las dos son distintas de la «e» clara del español, y esa diferencia importa: *le* es singular y *les* es plural.",
+    "blocks": [
+     {
+      "sounds": [
+       [
+        "eu → ö",
+        "Lengua de e, labios de o.",
+        [
+         "monsieur",
+         "neveu",
+         "sœur",
+         "deux"
+        ]
+       ],
+       [
+        "e floja",
+        "Sin fuerza, casi una «ö» rápida. La pronunciación la escribe «e».",
+        [
+         "je",
+         "de",
+         "le"
+        ]
+       ]
+      ]
+     },
+     {
+      "pairs": [
+       [
+        "le",
+        "les",
+        "e floja · e clara"
+       ],
+       [
+        "de",
+        "des",
+        "e floja · e clara"
+       ],
+       [
+        "je",
+        "j'ai",
+        "e floja · e clara"
+       ],
+       [
+        "deux",
+        "des",
+        "ö · e"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "nasales",
+    "title": "Vocales nasales",
+    "use": "El español no las tiene. La vocal sale por la boca y por la nariz a la vez, y la n o la m que la sigue no se pronuncia: en *non* la lengua nunca toca el paladar para hacer la n. Para comprobarlo, tápate la nariz: si la vocal cambia, la estás haciendo nasal.",
+    "blocks": [
+     {
+      "sounds": [
+       [
+        "an, en",
+        "Una a nasal, con la boca abierta.",
+        [
+         "enchanté",
+         "tante",
+         "maintenant"
+        ]
+       ],
+       [
+        "on",
+        "Una o nasal, con los labios redondeados.",
+        [
+         "bonjour",
+         "non",
+         "oncle"
+        ]
+       ],
+       [
+        "in, ain, ien",
+        "Una e nasal. La pronunciación la escribe «en».",
+        [
+         "bien",
+         "il vient",
+         "pain"
+        ]
+       ]
+      ]
+     },
+     {
+      "ojo": "Si después de la n o la m viene una vocal, o una segunda n o m, ya no es nasal y la n suena entera, como en español. *bon* es nasal, pero *bonne* se dice «bon» con n de verdad."
+     },
+     {
+      "pairs": [
+       [
+        "vent",
+        "vont",
+        "an · on"
+       ],
+       [
+        "vin",
+        "vent",
+        "en · an"
+       ],
+       [
+        "pain",
+        "pont",
+        "en · on"
+       ],
+       [
+        "bon",
+        "bonne",
+        "nasal, sin n · o normal y n de verdad"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "r",
+    "title": "La r francesa",
+    "use": "Se hace al fondo de la garganta, en el mismo lugar que la j española, pero suave y con voz, casi como hacer gárgaras. La punta de la lengua se queda abajo, detrás de los dientes. Nunca es la r de «pero» ni la de «perro». Para practicar, di «aja» y luego hazlo más suave, haciendo vibrar la garganta.",
+    "blocks": [
+     {
+      "say": [
+       "merci",
+       "frère",
+       "au revoir",
+       "sœur",
+       "bonjour",
+       "très",
+       "rouge"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "j-ch-z",
+    "title": "j, ch y la s que zumba",
+    "use": "Tres sonidos que el español no tiene o no distingue. Los tres se hacen igual que su pareja, pero con voz: pon la mano en la garganta y la sentirás vibrar en la j y en la z, y no en la ch ni en la s.",
+    "blocks": [
+     {
+      "sounds": [
+       [
+        "j, ge",
+        "Como la «ll» argentina de «yo», con voz.",
+        [
+         "je",
+         "j'ai",
+         "bonjour"
+        ]
+       ],
+       [
+        "ch",
+        "La misma posición, sin voz: «sh».",
+        [
+         "enchanté",
+         "chat",
+         "chocolat"
+        ]
+       ],
+       [
+        "z, s entre vocales",
+        "Una s que zumba, con voz. La s sola al inicio, o doble (ss), es la s del español.",
+        [
+         "maison",
+         "zéro",
+         "cousine"
+        ]
+       ]
+      ]
+     },
+     {
+      "pairs": [
+       [
+        "chou",
+        "joue",
+        "sh · y"
+       ],
+       [
+        "poisson",
+        "poison",
+        "s · z"
+       ],
+       [
+        "dessert",
+        "désert",
+        "s · z"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "v-b",
+    "title": "La v no es b",
+    "use": "En español la b y la v suenan igual; en francés no. Para la v, apoya los dientes de arriba sobre el labio de abajo y deja salir el aire con voz, como una f que vibra. La b se hace con los dos labios, como en español.",
+    "blocks": [
+     {
+      "say": [
+       "je voudrais",
+       "au revoir",
+       "ça va",
+       "il vient"
+      ]
+     },
+     {
+      "pairs": [
+       [
+        "vous",
+        "bout"
+       ],
+       [
+        "vin",
+        "bain"
+       ],
+       [
+        "vol",
+        "bol"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "mudas",
+    "title": "Letras que no suenan",
+    "use": "El francés escribe muchas letras que ya no pronuncia. Es lo que más confunde al leer.",
+    "blocks": [
+     {
+      "sounds": [
+       [
+        "e final",
+        "No suena, pero hace sonar la consonante de antes: en *tante* se oye la t.",
+        [
+         "tante",
+         "madame",
+         "une",
+         "fille"
+        ]
+       ],
+       [
+        "consonante final",
+        "Casi nunca suena: *parfait* termina en «e», y *s'il vous plaît* también. Las excepciones más comunes son c, r, f y l (piensa en la palabra inglesa «careful»), aunque la r de los verbos en -er tampoco suena.",
+        [
+         "parfait",
+         "s'il vous plaît",
+         "bonjour",
+         "sac",
+         "neuf",
+         "parler"
+        ]
+       ],
+       [
+        "s del plural",
+        "No suena. *le chat* y *les chats* solo se distinguen por el artículo.",
+        [
+         "le chat",
+         "les chats"
+        ]
+       ],
+       [
+        "-ent",
+        "En los verbos con ils y elles no suena: *ils parlent* se dice igual que *il parle*.",
+        [
+         "il parle",
+         "ils parlent"
+        ]
+       ],
+       [
+        "h",
+        "Nunca suena.",
+        [
+         "il habite",
+         "elle habite",
+         "oh"
+        ]
+       ]
+      ]
+     },
+     {
+      "ojo": "*fils* (hijo) es una excepción: la s suena y la l no, «fis»."
+     },
+     {
+      "pairs": [
+       [
+        "petit",
+        "petite",
+        "sin t · con t"
+       ],
+       [
+        "grand",
+        "grande",
+        "sin d · con d"
+       ],
+       [
+        "vert",
+        "verte",
+        "sin t · con t"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "enlace",
+    "title": "Palabras que se unen",
+    "use": "En francés las palabras de un grupo se leen pegadas, como si fueran una sola. Tres reglas explican casi todo.",
+    "blocks": [
+     {
+      "sounds": [
+       [
+        "apóstrofo",
+        "Antes de vocal o h, je, de, le, la, ne y si pierden la vocal y se pegan a la palabra siguiente.",
+        [
+         "j'ai",
+         "tu viens d'où",
+         "s'il vous plaît",
+         "je m'appelle"
+        ]
+       ],
+       [
+        "enlace",
+        "Una consonante final que normalmente no suena se pronuncia si la palabra siguiente empieza con vocal, y se pega a ella. La s y la x suenan «z».",
+        [
+         "les amis",
+         "vous avez",
+         "deux amis",
+         "un ami"
+        ]
+       ],
+       [
+        "encadenamiento",
+        "Una consonante que ya sonaba pasa a la palabra siguiente: *il habite* se dice como «ilabít».",
+        [
+         "il habite",
+         "elle habite"
+        ]
+       ]
+      ]
+     },
+     {
+      "pairs": [
+       [
+        "ils sont",
+        "ils ont",
+        "ellos son: s · ellos tienen: z"
+       ],
+       [
+        "nous savons",
+        "nous avons",
+        "sabemos: s · tenemos: z"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "fuerza",
+    "title": "La fuerza va al final",
+    "use": "En francés la sílaba fuerte es siempre la última que suena, y en una frase, la última de cada grupo de palabras. Por eso la pronunciación lleva tilde donde el español la necesita: *merci* se escribe «mersí». Ojo con las palabras que se parecen al español: *Paris* se dice «parí».",
+    "blocks": [
+     {
+      "say": [
+       "merci",
+       "café",
+       "enchanté",
+       "monsieur",
+       "Paris",
+       "chocolat"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

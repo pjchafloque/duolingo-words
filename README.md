@@ -79,6 +79,16 @@ python3 scripts/frases.py --check  # is data/frases.json in order? (meaning and 
 
 On each run, `scripts/frases.py` writes how each sentence reads into `data/frases-pron.json`. It builds the reading from the pronunciations of my own words, so a fix to a word carries over to every sentence that uses it, and it adds the liaison after words like "un" ("un éclair" reads "an necler"). Names and words that aren't in the notebook yet go through eSpeak NG. To fix a whole sentence, use Editar on its blue text, or add the sentence to `data/overrides.json` under "fr".
 
+## Sounds (Sonidos)
+
+The French notebook's third divider tab, "Sonidos", is a pronunciation guide for Spanish speakers. It starts with how French letters read ("ou" is "u", "oi" is "ua", "en" is a nasal "an") and then covers the sounds Spanish doesn't have: the French u, the rounded e, the nasal vowels, the r, j and ch, the v that isn't a b, the letters you don't say, and how words join together (liaison). Every example is a button to hear it. Words with a ✓ are in my Duolingo list, so they use my pronunciation and Duolingo's recording. The rest use the browser's French voice. Direct link: `…/duolingo-words/#sonidos`.
+
+At the top there's an embedded YouTube playlist, "Pronunciación francesa para hispanohablantes" by Nelson (Clases de Francés Fácil), a bilingual teacher who explains French pronunciation in Spanish. To swap it, change the `video` block in `data/sonidos.json`.
+
+Most sections end with pairs of words that differ in only one sound (tu / tout, vin / vent, poisson / poison). The same pairs feed "Entrena el oído" at the bottom: press Escuchar, hear one of the two words and pick which one it was. The buttons above it pick which sounds to practice.
+
+Everything is in `data/sonidos.json`, written by hand. A word that isn't in my Duolingo list needs a line under `words` with how it reads and what it means, like `"vin": ["ven", "vino"]`. Those readings were made with the same converter as the Duolingo words (`scripts/pronounce.py`), so they follow the same rules.
+
 ## Fixing a pronunciation
 
 ### From the page
